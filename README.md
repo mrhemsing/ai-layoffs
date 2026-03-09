@@ -101,6 +101,16 @@ Only verified entries are published to the public dataset.
 - `schema/` — JSON schema for entries and candidates
 - `app/` or framework scaffold — public site + admin workflow
 
+## Public v1 categories
+- Consulting
+- Finance
+- Government
+- Media
+- Recruitment
+- Technology
+
+Use `Other` internally only when something is clearly real but does not fit the six public launch categories yet.
+
 ## Next build steps
 
 1. define schemas

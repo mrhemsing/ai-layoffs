@@ -35,6 +35,14 @@ Build the most trustworthy public tracker for layoffs tied to AI, automation, an
 - confidence
 - source quality
 
+### Public v1 industries
+- Consulting
+- Finance
+- Government
+- Media
+- Recruitment
+- Technology
+
 ### Main list
 Columns/cards:
 - company

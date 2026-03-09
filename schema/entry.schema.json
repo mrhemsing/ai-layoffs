@@ -16,7 +16,18 @@
   "properties": {
     "id": { "type": "string" },
     "company": { "type": "string" },
-    "industry": { "type": "string" },
+    "industry": {
+      "type": "string",
+      "enum": [
+        "Consulting",
+        "Finance",
+        "Government",
+        "Media",
+        "Recruitment",
+        "Technology",
+        "Other"
+      ]
+    },
     "geography": { "type": "string" },
     "eventDate": { "type": "string", "format": "date" },
     "layoffsCount": { "type": ["integer", "null"], "minimum": 0 },
