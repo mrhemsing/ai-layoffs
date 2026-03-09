@@ -1,13 +1,68 @@
 [
   {
     "id": "candidate-001",
-    "title": "Sample candidate story for review",
-    "url": "https://example.com/sample-candidate-story",
-    "source": "Example News",
-    "publishedDate": "2026-03-08",
-    "excerpt": "A company reportedly cut staff while citing automation and productivity tooling.",
-    "status": "new",
+    "title": "Companies cutting jobs as investments shift toward AI",
+    "url": "https://news.google.com/search?q=AI%20layoffs%20Reuters",
+    "source": "Reuters",
+    "publishedDate": "2026-02-27",
+    "excerpt": "Reuters roundup on companies cutting jobs as spending shifts toward AI.",
+    "status": "reviewing",
     "duplicateOf": null,
-    "notes": "Sample candidate queue item for admin workflow scaffolding."
+    "notes": "Reputable-source lead. Needs clean direct article URL and quote extraction before public verification."
+  },
+  {
+    "id": "candidate-002",
+    "title": "WiseTech to axe a third of global workforce in two-year AI pivot",
+    "url": "https://news.google.com/search?q=AI%20layoffs%20Reuters",
+    "source": "Reuters",
+    "publishedDate": "2026-02-25",
+    "excerpt": "Reuters reports WiseTech cutting roughly a third of its workforce during an AI-focused pivot.",
+    "status": "reviewing",
+    "duplicateOf": null,
+    "notes": "Strong candidate for explicit AI-related classification pending direct-source verification."
+  },
+  {
+    "id": "candidate-003",
+    "title": "Block shares soar as Dorsey leans on AI to trim workforce",
+    "url": "https://news.google.com/search?q=AI%20layoffs%20Reuters",
+    "source": "Reuters",
+    "publishedDate": "2026-02-27",
+    "excerpt": "Reuters reports Block trimming workforce while leaning more heavily on AI.",
+    "status": "reviewing",
+    "duplicateOf": null,
+    "notes": "Likely high-value entry once quote and direct Reuters URL are pinned down."
+  },
+  {
+    "id": "candidate-004",
+    "title": "Jack Dorsey's Block to cut nearly half its workforce in AI overhaul, shares surge",
+    "url": "https://news.google.com/search?q=AI%20layoffs%20Reuters",
+    "source": "Reuters",
+    "publishedDate": "2026-02-27",
+    "excerpt": "Reuters framing explicitly connects Block's workforce cuts to an AI overhaul.",
+    "status": "reviewing",
+    "duplicateOf": null,
+    "notes": "May be same underlying event as candidate-003; likely duplicate cluster."
+  },
+  {
+    "id": "candidate-005",
+    "title": "Oracle plans thousands of job cuts as data center costs rise, Bloomberg News reports",
+    "url": "https://news.google.com/search?q=AI%20layoffs%20Reuters",
+    "source": "Reuters citing Bloomberg News",
+    "publishedDate": "2026-03-05",
+    "excerpt": "Reuters report on Oracle job cuts amid rising data center costs.",
+    "status": "reviewing",
+    "duplicateOf": null,
+    "notes": "Reputable lead, but AI causality may be weaker than headline implies; needs careful classification."
+  },
+  {
+    "id": "candidate-006",
+    "title": "Corporate America continues job cuts in 2026 in efficiency push",
+    "url": "https://news.google.com/search?q=AI%20layoffs%20Reuters",
+    "source": "Reuters",
+    "publishedDate": "2026-03-04",
+    "excerpt": "Reuters overview of job cuts continuing under an efficiency push narrative.",
+    "status": "reviewing",
+    "duplicateOf": null,
+    "notes": "Useful sector-wide context piece; may inform trends rather than a single company entry."
   }
 ]
