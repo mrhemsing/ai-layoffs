@@ -9,7 +9,7 @@
     "status": "verified",
     "aiRelevance": "explicit_ai_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Block said it would cut more than 4,000 jobs as part of an overhaul to embed artificial intelligence across its operations.",
+    "summary": "Block said it would cut over 4,000 jobs as part of an overhaul to embed artificial intelligence across its operations.",
     "evidenceQuote": "Block said it will cut over 4,000 jobs, nearly half its workforce, as part of an overhaul to embed artificial intelligence across its operations.",
     "notes": "Reuters reported the move as a major AI-linked workforce cut.",
     "sources": [
@@ -25,6 +25,31 @@
     "updatedAt": "2026-03-09T03:30:00Z"
   },
   {
+    "id": "amazon-2026-01-28",
+    "company": "Amazon",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-01-28",
+    "layoffsCount": 16000,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the company’s rising AI adoption.",
+    "evidenceQuote": "The latest cuts mark the second major round of layoffs in three months after Amazon pared 14,000 jobs in October, saying at the time that artificial intelligence and concerns over shifting corporate culture were to blame.",
+    "notes": "Reuters also reported Andy Jassy had said rising use of AI tools would mean more automation of duties and corporate job losses.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/legal/litigation/amazon-cuts-16000-jobs-globally-broader-restructuring-2026-01-28/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-01-28",
+        "quote": "The latest cuts mark the second major round of layoffs in three months after Amazon pared 14,000 jobs in October, saying at the time that artificial intelligence and concerns over shifting corporate culture were to blame."
+      }
+    ],
+    "createdAt": "2026-03-09T15:40:00Z",
+    "updatedAt": "2026-03-09T15:40:00Z"
+  },
+  {
     "id": "pinterest-2026-01-27",
     "company": "Pinterest",
     "industry": "Technology",
@@ -34,20 +59,20 @@
     "status": "verified",
     "aiRelevance": "explicit_ai_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Pinterest said it planned to lay off less than 15% of its workforce while reallocating resources toward AI initiatives.",
-    "evidenceQuote": "Pinterest said on Tuesday that it plans to lay off less than 15% of its workforce to cut back on office space and reallocate resources for its AI initiatives.",
-    "notes": "TechCrunch cited a regulatory filing and estimated roughly 700 workers would be affected.",
+    "summary": "Pinterest said it planned to lay off less than 15% of its workforce while reallocating resources toward AI-focused teams.",
+    "evidenceQuote": "Pinterest said Tuesday it plans to lay off less than 15% of its workforce and cut back on office space as the company embraces artificial intelligence.",
+    "notes": "CNBC reported Pinterest had more than 4,500 employees globally as of its most recent proxy filing.",
     "sources": [
       {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/01/27/pinterest-layoffs-impact-15-of-staff-as-resources-redirected-to-ai",
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html",
         "type": "reputable_reporting",
         "publishedDate": "2026-01-27",
-        "quote": "Pinterest said on Tuesday that it plans to lay off less than 15% of its workforce to cut back on office space and reallocate resources for its AI initiatives."
+        "quote": "Pinterest said Tuesday it plans to lay off less than 15% of its workforce and cut back on office space as the company embraces artificial intelligence."
       }
     ],
     "createdAt": "2026-03-09T03:30:00Z",
-    "updatedAt": "2026-03-09T03:30:00Z"
+    "updatedAt": "2026-03-09T15:40:00Z"
   },
   {
     "id": "salesforce-2025-09-02",
@@ -73,5 +98,105 @@
     ],
     "createdAt": "2026-03-09T03:30:00Z",
     "updatedAt": "2026-03-09T03:30:00Z"
+  },
+  {
+    "id": "deepwatch-2025-11-12",
+    "company": "Deepwatch",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-11-12",
+    "layoffsCount": 80,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Cybersecurity firm Deepwatch laid off dozens of employees while saying it was accelerating investments in AI and automation.",
+    "evidenceQuote": "John DiLullo, CEO at Deepwatch, told TechCrunch in an email that the company \"is aligning our organization to accelerate our significant investments in AI and automation.\"",
+    "notes": "TechCrunch reported current and former employees indicated roughly 60 to 80 staffers were affected.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2025/11/12/cybersecurity-firm-deepwatch-lays-off-dozens-citing-move-to-accelerate-ai-investment/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-11-12",
+        "quote": "John DiLullo, CEO at Deepwatch, told TechCrunch in an email that the company \"is aligning our organization to accelerate our significant investments in AI and automation.\""
+      }
+    ],
+    "createdAt": "2026-03-09T15:40:00Z",
+    "updatedAt": "2026-03-09T15:40:00Z"
+  },
+  {
+    "id": "autodesk-2026-01-22",
+    "company": "Autodesk",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-01-22",
+    "layoffsCount": 1000,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters listed Autodesk among companies making AI-linked cuts, saying it would shed about 7% of its workforce while redirecting spending to cloud and AI initiatives.",
+    "evidenceQuote": "The U.S. design-software maker said on Jan. 22 it would shed about 7% of its global workforce, or roughly 1,000 jobs, as it redirects spending to its cloud platform and AI initiatives.",
+    "notes": "Captured from Reuters’ February 2026 roundup of global layoffs linked to AI.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The U.S. design-software maker said on Jan. 22 it would shed about 7% of its global workforce, or roughly 1,000 jobs, as it redirects spending to its cloud platform and AI initiatives."
+      }
+    ],
+    "createdAt": "2026-03-09T15:40:00Z",
+    "updatedAt": "2026-03-09T15:40:00Z"
+  },
+  {
+    "id": "dow-2026-01-29",
+    "company": "Dow",
+    "industry": "Other",
+    "geography": "United States",
+    "eventDate": "2026-01-29",
+    "layoffsCount": 4500,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters linked Dow’s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
+    "evidenceQuote": "The U.S. chemical producer said on January 29 it will slash about 4,500 jobs, 13% of its total workforce, as it streamlines all its end-to-end work processes by using automation and AI.",
+    "notes": "Included from Reuters’ roundup of AI-linked layoffs.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The U.S. chemical producer said on January 29 it will slash about 4,500 jobs, 13% of its total workforce, as it streamlines all its end-to-end work processes by using automation and AI."
+      }
+    ],
+    "createdAt": "2026-03-09T15:40:00Z",
+    "updatedAt": "2026-03-09T15:40:00Z"
+  },
+  {
+    "id": "bat-2026-02-12",
+    "company": "British American Tobacco",
+    "industry": "Other",
+    "geography": "United Kingdom",
+    "eventDate": "2026-02-12",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported British American Tobacco announced an AI-driven productivity programme expected to lead to job cuts.",
+    "evidenceQuote": "The cigarettes, tobacco and nicotine products seller announced on February 12 a new AI-driven productivity programme expected to lead to job cuts, without specifying how much of the workforce would be affected.",
+    "notes": "No layoff total specified in the Reuters roundup.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The cigarettes, tobacco and nicotine products seller announced on February 12 a new AI-driven productivity programme expected to lead to job cuts, without specifying how much of the workforce would be affected."
+      }
+    ],
+    "createdAt": "2026-03-09T15:40:00Z",
+    "updatedAt": "2026-03-09T15:40:00Z"
   }
 ]
