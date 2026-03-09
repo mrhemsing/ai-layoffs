@@ -13,8 +13,6 @@
       .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 1px rgba(0,0,0,0.03); }
       .grid { display: grid; gap: 16px; }
       .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; margin-right: 6px; background: #f2f4f7; }
-      .high { background: #e8f7e8; }
-      .medium { background: #fff3cd; }
       .explicit_ai_cited { background: #e7f0ff; }
       .automation_efficiency_cited { background: #eef8e8; }
       .ai_adjacent_restructuring { background: #fff3cd; }
@@ -43,7 +41,6 @@
       <h2>Why this exists</h2>
       <ul>
         <li>AI-specific relevance labels</li>
-        <li>Confidence levels instead of fake certainty</li>
         <li>Evidence quotes and source links</li>
         <li>Candidate queue separated from verified public entries</li>
         <li>Six clean launch categories: Consulting, Finance, Government, Media, Recruitment, Technology</li>
@@ -59,12 +56,6 @@
           <option value="automation_efficiency_cited">Automation / efficiency cited</option>
           <option value="ai_adjacent_restructuring">AI-adjacent restructuring</option>
           <option value="speculative_or_unclear">Speculative / unclear</option>
-        </select>
-        <select id="filterConfidence">
-          <option value="">All confidence</option>
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
         </select>
         <select id="filterIndustry">
           <option value="">All industries</option>
@@ -82,7 +73,6 @@
             <th>Layoffs</th>
             <th>Industry</th>
             <th>AI relevance</th>
-            <th>Confidence</th>
             <th>Source</th>
           </tr>
         </thead>
@@ -96,7 +86,7 @@
       <div id="evidencePreview" class="muted">Select filters or browse entries — evidence quotes appear here as a reminder that receipts matter.</div>
     </div>
 
-    <p class="footer-note">Current entries are sample scaffold data while the tracker structure is being built.</p>
+    <p class="footer-note">Entries are sourced from reputable publications and labeled by AI relevance.</p>
 
     <script>
       let allEntries = [];
@@ -132,11 +122,9 @@
 
       function getFilteredEntries() {
         const relevance = document.getElementById('filterRelevance').value;
-        const confidence = document.getElementById('filterConfidence').value;
         const industry = document.getElementById('filterIndustry').value;
         return allEntries.filter((entry) => {
           if (relevance && entry.aiRelevance !== relevance) return false;
-          if (confidence && entry.confidence !== confidence) return false;
           if (industry && entry.industry !== industry) return false;
           return true;
         }).sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)));
@@ -158,7 +146,6 @@
             <td>${entry.layoffsCount ?? '—'}</td>
             <td>${entry.industry || '—'}</td>
             <td><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span></td>
-            <td><span class="pill ${entry.confidence}">${labelize(entry.confidence)}</span></td>
             <td>${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : '—'}</td>
           `;
           body.appendChild(tr);
@@ -178,7 +165,7 @@
         allEntries = await resp.json();
         updateStats(allEntries);
         fillIndustryOptions(allEntries);
-        ['filterRelevance', 'filterConfidence', 'filterIndustry'].forEach((id) => {
+        ['filterRelevance', 'filterIndustry'].forEach((id) => {
           document.getElementById(id).addEventListener('change', render);
         });
         render();
@@ -186,7 +173,7 @@
 
       init().catch((err) => {
         console.error(err);
-        document.getElementById('entriesBody').innerHTML = `<tr><td colspan="7" class="muted">Failed to load entries.</td></tr>`;
+        document.getElementById('entriesBody').innerHTML = `<tr><td colspan="6" class="muted">Failed to load entries.</td></tr>`;
       });
     </script>
   </body>

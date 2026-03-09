@@ -9,7 +9,6 @@
     "eventDate",
     "status",
     "aiRelevance",
-    "confidence",
     "sourceQuality",
     "sources"
   ],
@@ -43,10 +42,6 @@
         "ai_adjacent_restructuring",
         "speculative_or_unclear"
       ]
-    },
-    "confidence": {
-      "type": "string",
-      "enum": ["high", "medium", "low"]
     },
     "sourceQuality": {
       "type": "string",

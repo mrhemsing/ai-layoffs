@@ -1,80 +1,77 @@
 [
   {
-    "id": "techcorp-2025-02-15",
-    "company": "TechCorp",
-    "industry": "Technology",
+    "id": "block-2026-02-26",
+    "company": "Block",
+    "industry": "Finance",
     "geography": "United States",
-    "eventDate": "2025-02-15",
-    "layoffsCount": 220,
+    "eventDate": "2026-02-26",
+    "layoffsCount": 4000,
     "status": "verified",
     "aiRelevance": "explicit_ai_cited",
-    "confidence": "high",
-    "sourceQuality": "primary",
-    "summary": "TechCorp said its restructuring and workforce reduction were tied in part to AI-driven efficiency gains.",
-    "evidenceQuote": "We are reorganizing several teams as AI tools let us operate more efficiently with fewer manual workflows.",
-    "notes": "Sample seeded entry for MVP scaffolding.",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Block said it would cut more than 4,000 jobs as part of an overhaul to embed artificial intelligence across its operations.",
+    "evidenceQuote": "Block said it will cut over 4,000 jobs, nearly half its workforce, as part of an overhaul to embed artificial intelligence across its operations.",
+    "notes": "Reuters reported the move as a major AI-linked workforce cut.",
     "sources": [
       {
-        "name": "TechCorp Newsroom",
-        "url": "https://example.com/techcorp-layoffs-ai",
-        "type": "primary",
-        "publishedDate": "2025-02-15",
-        "quote": "We are reorganizing several teams as AI tools let us operate more efficiently with fewer manual workflows."
+        "name": "Reuters",
+        "url": "http://www.reuters.com/business/blocks-fourth-quarter-profit-rises-announces-over-4000-job-cuts-2026-02-26/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-26",
+        "quote": "Block said it will cut over 4,000 jobs, nearly half its workforce, as part of an overhaul to embed artificial intelligence across its operations."
       }
     ],
-    "createdAt": "2026-03-08T17:58:00Z",
-    "updatedAt": "2026-03-08T17:58:00Z"
+    "createdAt": "2026-03-09T03:30:00Z",
+    "updatedAt": "2026-03-09T03:30:00Z"
   },
   {
-    "id": "mediaflow-2025-06-03",
-    "company": "MediaFlow",
-    "industry": "Media",
-    "geography": "Canada",
-    "eventDate": "2025-06-03",
-    "layoffsCount": 48,
+    "id": "pinterest-2026-01-27",
+    "company": "Pinterest",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-01-27",
+    "layoffsCount": 700,
     "status": "verified",
-    "aiRelevance": "automation_efficiency_cited",
-    "confidence": "medium",
+    "aiRelevance": "explicit_ai_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "MediaFlow cut editorial operations staff during a restructuring framed around automation and productivity tools.",
-    "evidenceQuote": "Executives said new automation systems reduced the need for portions of the previous workflow.",
-    "notes": "Sample seeded entry for MVP scaffolding.",
+    "summary": "Pinterest said it planned to lay off less than 15% of its workforce while reallocating resources toward AI initiatives.",
+    "evidenceQuote": "Pinterest said on Tuesday that it plans to lay off less than 15% of its workforce to cut back on office space and reallocate resources for its AI initiatives.",
+    "notes": "TechCrunch cited a regulatory filing and estimated roughly 700 workers would be affected.",
     "sources": [
       {
-        "name": "Example Business News",
-        "url": "https://example.com/mediaflow-restructuring",
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/01/27/pinterest-layoffs-impact-15-of-staff-as-resources-redirected-to-ai",
         "type": "reputable_reporting",
-        "publishedDate": "2025-06-03",
-        "quote": "Executives said new automation systems reduced the need for portions of the previous workflow."
+        "publishedDate": "2026-01-27",
+        "quote": "Pinterest said on Tuesday that it plans to lay off less than 15% of its workforce to cut back on office space and reallocate resources for its AI initiatives."
       }
     ],
-    "createdAt": "2026-03-08T17:58:00Z",
-    "updatedAt": "2026-03-08T17:58:00Z"
+    "createdAt": "2026-03-09T03:30:00Z",
+    "updatedAt": "2026-03-09T03:30:00Z"
   },
   {
-    "id": "supportops-2025-09-21",
-    "company": "SupportOps",
-    "industry": "Customer Support",
-    "geography": "United Kingdom",
-    "eventDate": "2025-09-21",
-    "layoffsCount": 130,
+    "id": "salesforce-2025-09-02",
+    "company": "Salesforce",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-09-02",
+    "layoffsCount": 4000,
     "status": "verified",
-    "aiRelevance": "ai_adjacent_restructuring",
-    "confidence": "medium",
+    "aiRelevance": "explicit_ai_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "SupportOps reduced support headcount while shifting investment toward AI-assisted support tooling.",
-    "evidenceQuote": "The company said it would focus future investment on AI-assisted support infrastructure and a leaner support organization.",
-    "notes": "Sample seeded entry for MVP scaffolding.",
+    "summary": "Salesforce CEO Marc Benioff said the company cut 4,000 customer support roles as AI reduced the need for headcount.",
+    "evidenceQuote": "Salesforce has cut 4,000 of its customer support roles, CEO Marc Benioff recently said while discussing how artificial intelligence has helped reduce the company headcount.",
+    "notes": "CNBC framed the cuts directly around Benioff's remarks about needing fewer heads with AI.",
     "sources": [
       {
-        "name": "Global Tech Journal",
-        "url": "https://example.com/supportops-ai-shift",
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2025/09/02/salesforce-ceo-confirms-4000-layoffs-because-i-need-less-heads-with-ai.html",
         "type": "reputable_reporting",
-        "publishedDate": "2025-09-21",
-        "quote": "The company said it would focus future investment on AI-assisted support infrastructure and a leaner support organization."
+        "publishedDate": "2025-09-02",
+        "quote": "Salesforce has cut 4,000 of its customer support roles, CEO Marc Benioff recently said while discussing how artificial intelligence has helped reduce the company headcount."
       }
     ],
-    "createdAt": "2026-03-08T17:58:00Z",
-    "updatedAt": "2026-03-08T17:58:00Z"
+    "createdAt": "2026-03-09T03:30:00Z",
+    "updatedAt": "2026-03-09T03:30:00Z"
   }
 ]
