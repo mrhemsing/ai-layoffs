@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/ai-layoffs/candidate.schema.json",
+  "title": "AI Layoffs Candidate",
+  "type": "object",
+  "required": ["id", "title", "url", "source", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "source": { "type": "string" },
+    "publishedDate": { "type": "string", "format": "date" },
+    "excerpt": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["new", "reviewing", "approved", "rejected", "duplicate"]
+    },
+    "duplicateOf": { "type": ["string", "null"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

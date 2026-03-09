@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/ai-layoffs/entry.schema.json",
+  "title": "AI Layoffs Entry",
+  "type": "object",
+  "required": [
+    "id",
+    "company",
+    "eventDate",
+    "status",
+    "aiRelevance",
+    "confidence",
+    "sourceQuality",
+    "sources"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "company": { "type": "string" },
+    "industry": { "type": "string" },
+    "geography": { "type": "string" },
+    "eventDate": { "type": "string", "format": "date" },
+    "layoffsCount": { "type": ["integer", "null"], "minimum": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["verified", "needs_review", "rejected"]
+    },
+    "aiRelevance": {
+      "type": "string",
+      "enum": [
+        "explicit_ai_cited",
+        "automation_efficiency_cited",
+        "ai_adjacent_restructuring",
+        "speculative_or_unclear"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "sourceQuality": {
+      "type": "string",
+      "enum": ["primary", "reputable_reporting", "secondary_lead"]
+    },
+    "summary": { "type": "string" },
+    "evidenceQuote": { "type": "string" },
+    "notes": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "url", "type"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "type": {
+            "type": "string",
+            "enum": ["primary", "reputable_reporting", "secondary_lead"]
+          },
+          "publishedDate": { "type": "string", "format": "date" },
+          "quote": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
