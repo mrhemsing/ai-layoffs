@@ -1,0 +1,13 @@
+[
+  {
+    "id": "candidate-001",
+    "title": "Sample candidate story for review",
+    "url": "https://example.com/sample-candidate-story",
+    "source": "Example News",
+    "publishedDate": "2026-03-08",
+    "excerpt": "A company reportedly cut staff while citing automation and productivity tooling.",
+    "status": "new",
+    "duplicateOf": null,
+    "notes": "Sample candidate queue item for admin workflow scaffolding."
+  }
+]

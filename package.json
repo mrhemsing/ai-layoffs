@@ -1,0 +1,10 @@
+{
+  "name": "ai-layoffs",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "candidates:add": "node scripts/ingest-candidates.mjs",
+    "dev": "npx serve . -l 3000"
+  }
+}

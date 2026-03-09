@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Layoffs Tracker</title>
     <style>
-      body { font-family: Arial, sans-serif; max-width: 1100px; margin: 40px auto; padding: 0 16px; color: #111; }
+      body { font-family: Arial, sans-serif; max-width: 1100px; margin: 40px auto; padding: 0 16px; color: #111; background: #fafafa; }
       h1 { margin-bottom: 8px; }
+      h2 { margin-top: 0; }
       .muted { color: #666; }
       .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
-      .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; background: #fff; }
-      .entries { display: grid; gap: 14px; }
+      .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 1px rgba(0,0,0,0.03); }
+      .grid { display: grid; gap: 16px; }
       .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; margin-right: 6px; background: #f2f4f7; }
       .high { background: #e8f7e8; }
       .medium { background: #fff3cd; }
+      .explicit_ai_cited { background: #e7f0ff; }
+      .automation_efficiency_cited { background: #eef8e8; }
+      .ai_adjacent_restructuring { background: #fff3cd; }
+      .speculative_or_unclear { background: #fdecef; }
       table { width: 100%; border-collapse: collapse; }
       th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+      .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin: 18px 0; }
+      select { padding: 8px 10px; border-radius: 8px; border: 1px solid #ccc; background: #fff; }
+      .quote { padding: 12px; border-left: 4px solid #ddd; background: #fafafa; color: #444; margin-top: 8px; }
+      .footer-note { margin-top: 20px; color: #666; font-size: 14px; }
       @media (max-width: 800px) { .stats { grid-template-columns: repeat(2, 1fr); } }
     </style>
   </head>
@@ -24,24 +33,46 @@
     <p class="muted">Track layoffs tied to AI, automation, and AI-driven restructuring — with receipts.</p>
 
     <div class="stats">
-      <div class="card"><div class="muted">Verified entries</div><div><b>3</b></div></div>
-      <div class="card"><div class="muted">Tracked layoffs</div><div><b>398</b></div></div>
-      <div class="card"><div class="muted">Explicit AI-cited</div><div><b>1</b></div></div>
-      <div class="card"><div class="muted">Last updated</div><div><b>Mar 8, 2026</b></div></div>
+      <div class="card"><div class="muted">Verified entries</div><div><b id="statEntries">0</b></div></div>
+      <div class="card"><div class="muted">Tracked layoffs</div><div><b id="statLayoffs">0</b></div></div>
+      <div class="card"><div class="muted">Explicit AI-cited</div><div><b id="statExplicit">0</b></div></div>
+      <div class="card"><div class="muted">Last updated</div><div><b id="statUpdated">—</b></div></div>
     </div>
 
     <div class="card" style="margin-bottom: 20px;">
-      <h2 style="margin-top:0;">What makes this different</h2>
+      <h2>Why this exists</h2>
       <ul>
         <li>AI-specific relevance labels</li>
-        <li>Confidence levels</li>
-        <li>Source-backed evidence quotes</li>
-        <li>Built for trust, not rumor volume</li>
+        <li>Confidence levels instead of fake certainty</li>
+        <li>Evidence quotes and source links</li>
+        <li>Candidate queue separated from verified public entries</li>
       </ul>
     </div>
 
+    <div class="card" style="margin-bottom: 20px;">
+      <h2>Filters</h2>
+      <div class="toolbar">
+        <select id="filterRelevance">
+          <option value="">All AI relevance</option>
+          <option value="explicit_ai_cited">Explicit AI-cited</option>
+          <option value="automation_efficiency_cited">Automation / efficiency cited</option>
+          <option value="ai_adjacent_restructuring">AI-adjacent restructuring</option>
+          <option value="speculative_or_unclear">Speculative / unclear</option>
+        </select>
+        <select id="filterConfidence">
+          <option value="">All confidence</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <select id="filterIndustry">
+          <option value="">All industries</option>
+        </select>
+      </div>
+    </div>
+
     <div class="card">
-      <h2 style="margin-top:0;">Latest verified entries</h2>
+      <h2>Latest verified entries</h2>
       <table>
         <thead>
           <tr>
@@ -51,35 +82,111 @@
             <th>Industry</th>
             <th>AI relevance</th>
             <th>Confidence</th>
+            <th>Source</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><b>SupportOps</b><br><span class="muted">United Kingdom</span></td>
-            <td>2025-09-21</td>
-            <td>130</td>
-            <td>Customer Support</td>
-            <td><span class="pill">AI-adjacent restructuring</span></td>
-            <td><span class="pill medium">Medium</span></td>
-          </tr>
-          <tr>
-            <td><b>MediaFlow</b><br><span class="muted">Canada</span></td>
-            <td>2025-06-03</td>
-            <td>48</td>
-            <td>Media</td>
-            <td><span class="pill">Automation / efficiency cited</span></td>
-            <td><span class="pill medium">Medium</span></td>
-          </tr>
-          <tr>
-            <td><b>TechCorp</b><br><span class="muted">United States</span></td>
-            <td>2025-02-15</td>
-            <td>220</td>
-            <td>Technology</td>
-            <td><span class="pill">Explicit AI-cited</span></td>
-            <td><span class="pill high">High</span></td>
-          </tr>
-        </tbody>
+        <tbody id="entriesBody"></tbody>
       </table>
+      <div id="emptyState" class="muted" style="display:none; padding-top: 12px;">No entries match those filters yet.</div>
     </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h2>Evidence preview</h2>
+      <div id="evidencePreview" class="muted">Select filters or browse entries — evidence quotes appear here as a reminder that receipts matter.</div>
+    </div>
+
+    <p class="footer-note">Current entries are sample scaffold data while the tracker structure is being built.</p>
+
+    <script>
+      let allEntries = [];
+
+      function fmtDate(v) {
+        if (!v) return '—';
+        const d = new Date(v);
+        return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+      }
+
+      function labelize(v) {
+        return String(v || '').replaceAll('_', ' ');
+      }
+
+      function updateStats(entries) {
+        document.getElementById('statEntries').textContent = String(entries.length);
+        document.getElementById('statLayoffs').textContent = String(entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0));
+        document.getElementById('statExplicit').textContent = String(entries.filter((e) => e.aiRelevance === 'explicit_ai_cited').length);
+        const latest = entries.slice().sort((a, b) => String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')))[0];
+        document.getElementById('statUpdated').textContent = latest ? fmtDate(latest.updatedAt) : '—';
+      }
+
+      function fillIndustryOptions(entries) {
+        const sel = document.getElementById('filterIndustry');
+        const industries = [...new Set(entries.map((e) => e.industry).filter(Boolean))].sort();
+        industries.forEach((industry) => {
+          const opt = document.createElement('option');
+          opt.value = industry;
+          opt.textContent = industry;
+          sel.appendChild(opt);
+        });
+      }
+
+      function getFilteredEntries() {
+        const relevance = document.getElementById('filterRelevance').value;
+        const confidence = document.getElementById('filterConfidence').value;
+        const industry = document.getElementById('filterIndustry').value;
+        return allEntries.filter((entry) => {
+          if (relevance && entry.aiRelevance !== relevance) return false;
+          if (confidence && entry.confidence !== confidence) return false;
+          if (industry && entry.industry !== industry) return false;
+          return true;
+        }).sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)));
+      }
+
+      function render() {
+        const entries = getFilteredEntries();
+        const body = document.getElementById('entriesBody');
+        const empty = document.getElementById('emptyState');
+        body.innerHTML = '';
+        empty.style.display = entries.length ? 'none' : 'block';
+
+        entries.forEach((entry) => {
+          const tr = document.createElement('tr');
+          const source = (entry.sources && entry.sources[0]) || null;
+          tr.innerHTML = `
+            <td><b>${entry.company}</b><br><span class="muted">${entry.geography || '—'}</span></td>
+            <td>${fmtDate(entry.eventDate)}</td>
+            <td>${entry.layoffsCount ?? '—'}</td>
+            <td>${entry.industry || '—'}</td>
+            <td><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span></td>
+            <td><span class="pill ${entry.confidence}">${labelize(entry.confidence)}</span></td>
+            <td>${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : '—'}</td>
+          `;
+          body.appendChild(tr);
+        });
+
+        const top = entries[0];
+        const preview = document.getElementById('evidencePreview');
+        if (top && top.evidenceQuote) {
+          preview.innerHTML = `<div><b>${top.company}</b></div><div class="quote">${top.evidenceQuote}</div>`;
+        } else {
+          preview.textContent = 'No evidence quote available for the current selection.';
+        }
+      }
+
+      async function init() {
+        const resp = await fetch('./data/entries/index.json');
+        allEntries = await resp.json();
+        updateStats(allEntries);
+        fillIndustryOptions(allEntries);
+        ['filterRelevance', 'filterConfidence', 'filterIndustry'].forEach((id) => {
+          document.getElementById(id).addEventListener('change', render);
+        });
+        render();
+      }
+
+      init().catch((err) => {
+        console.error(err);
+        document.getElementById('entriesBody').innerHTML = `<tr><td colspan="7" class="muted">Failed to load entries.</td></tr>`;
+      });
+    </script>
   </body>
 </html>
