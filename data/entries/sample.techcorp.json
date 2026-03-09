@@ -1,0 +1,26 @@
+{
+  "id": "techcorp-2025-02-15",
+  "company": "TechCorp",
+  "industry": "Technology",
+  "geography": "United States",
+  "eventDate": "2025-02-15",
+  "layoffsCount": 220,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "confidence": "high",
+  "sourceQuality": "primary",
+  "summary": "TechCorp said its restructuring and workforce reduction were tied in part to AI-driven efficiency gains.",
+  "evidenceQuote": "We are reorganizing several teams as AI tools let us operate more efficiently with fewer manual workflows.",
+  "notes": "Sample seeded entry for MVP scaffolding.",
+  "sources": [
+    {
+      "name": "TechCorp Newsroom",
+      "url": "https://example.com/techcorp-layoffs-ai",
+      "type": "primary",
+      "publishedDate": "2025-02-15",
+      "quote": "We are reorganizing several teams as AI tools let us operate more efficiently with fewer manual workflows."
+    }
+  ],
+  "createdAt": "2026-03-08T17:58:00Z",
+  "updatedAt": "2026-03-08T17:58:00Z"
+}

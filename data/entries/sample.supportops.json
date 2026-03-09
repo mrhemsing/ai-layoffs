@@ -1,0 +1,26 @@
+{
+  "id": "supportops-2025-09-21",
+  "company": "SupportOps",
+  "industry": "Customer Support",
+  "geography": "United Kingdom",
+  "eventDate": "2025-09-21",
+  "layoffsCount": 130,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "confidence": "medium",
+  "sourceQuality": "reputable_reporting",
+  "summary": "SupportOps reduced support headcount while shifting investment toward AI-assisted support tooling.",
+  "evidenceQuote": "The company said it would focus future investment on AI-assisted support infrastructure and a leaner support organization.",
+  "notes": "Sample seeded entry for MVP scaffolding.",
+  "sources": [
+    {
+      "name": "Global Tech Journal",
+      "url": "https://example.com/supportops-ai-shift",
+      "type": "reputable_reporting",
+      "publishedDate": "2025-09-21",
+      "quote": "The company said it would focus future investment on AI-assisted support infrastructure and a leaner support organization."
+    }
+  ],
+  "createdAt": "2026-03-08T17:58:00Z",
+  "updatedAt": "2026-03-08T17:58:00Z"
+}

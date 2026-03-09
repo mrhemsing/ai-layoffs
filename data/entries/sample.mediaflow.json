@@ -1,0 +1,26 @@
+{
+  "id": "mediaflow-2025-06-03",
+  "company": "MediaFlow",
+  "industry": "Media",
+  "geography": "Canada",
+  "eventDate": "2025-06-03",
+  "layoffsCount": 48,
+  "status": "verified",
+  "aiRelevance": "automation_efficiency_cited",
+  "confidence": "medium",
+  "sourceQuality": "reputable_reporting",
+  "summary": "MediaFlow cut editorial operations staff during a restructuring framed around automation and productivity tools.",
+  "evidenceQuote": "Executives said new automation systems reduced the need for portions of the previous workflow.",
+  "notes": "Sample seeded entry for MVP scaffolding.",
+  "sources": [
+    {
+      "name": "Example Business News",
+      "url": "https://example.com/mediaflow-restructuring",
+      "type": "reputable_reporting",
+      "publishedDate": "2025-06-03",
+      "quote": "Executives said new automation systems reduced the need for portions of the previous workflow."
+    }
+  ],
+  "createdAt": "2026-03-08T17:58:00Z",
+  "updatedAt": "2026-03-08T17:58:00Z"
+}

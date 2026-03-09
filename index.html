@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Layoffs Tracker</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 1100px; margin: 40px auto; padding: 0 16px; color: #111; }
+      h1 { margin-bottom: 8px; }
+      .muted { color: #666; }
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+      .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; background: #fff; }
+      .entries { display: grid; gap: 14px; }
+      .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; margin-right: 6px; background: #f2f4f7; }
+      .high { background: #e8f7e8; }
+      .medium { background: #fff3cd; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+      @media (max-width: 800px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+  </head>
+  <body>
+    <h1>AI Layoffs Tracker</h1>
+    <p class="muted">Track layoffs tied to AI, automation, and AI-driven restructuring — with receipts.</p>
+
+    <div class="stats">
+      <div class="card"><div class="muted">Verified entries</div><div><b>3</b></div></div>
+      <div class="card"><div class="muted">Tracked layoffs</div><div><b>398</b></div></div>
+      <div class="card"><div class="muted">Explicit AI-cited</div><div><b>1</b></div></div>
+      <div class="card"><div class="muted">Last updated</div><div><b>Mar 8, 2026</b></div></div>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+      <h2 style="margin-top:0;">What makes this different</h2>
+      <ul>
+        <li>AI-specific relevance labels</li>
+        <li>Confidence levels</li>
+        <li>Source-backed evidence quotes</li>
+        <li>Built for trust, not rumor volume</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;">Latest verified entries</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Date</th>
+            <th>Layoffs</th>
+            <th>Industry</th>
+            <th>AI relevance</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>SupportOps</b><br><span class="muted">United Kingdom</span></td>
+            <td>2025-09-21</td>
+            <td>130</td>
+            <td>Customer Support</td>
+            <td><span class="pill">AI-adjacent restructuring</span></td>
+            <td><span class="pill medium">Medium</span></td>
+          </tr>
+          <tr>
+            <td><b>MediaFlow</b><br><span class="muted">Canada</span></td>
+            <td>2025-06-03</td>
+            <td>48</td>
+            <td>Media</td>
+            <td><span class="pill">Automation / efficiency cited</span></td>
+            <td><span class="pill medium">Medium</span></td>
+          </tr>
+          <tr>
+            <td><b>TechCorp</b><br><span class="muted">United States</span></td>
+            <td>2025-02-15</td>
+            <td>220</td>
+            <td>Technology</td>
+            <td><span class="pill">Explicit AI-cited</span></td>
+            <td><span class="pill high">High</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
