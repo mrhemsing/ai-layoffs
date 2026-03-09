@@ -34,7 +34,7 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the company’s rising AI adoption.",
+    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the company\u2019s rising AI adoption.",
     "evidenceQuote": "The latest cuts mark the second major round of layoffs in three months after Amazon pared 14,000 jobs in October, saying at the time that artificial intelligence and concerns over shifting corporate culture were to blame.",
     "notes": "Reuters also reported Andy Jassy had said rising use of AI tools would mean more automation of duties and corporate job losses.",
     "sources": [
@@ -136,7 +136,7 @@
     "sourceQuality": "reputable_reporting",
     "summary": "Reuters listed Autodesk among companies making AI-linked cuts, saying it would shed about 7% of its workforce while redirecting spending to cloud and AI initiatives.",
     "evidenceQuote": "The U.S. design-software maker said on Jan. 22 it would shed about 7% of its global workforce, or roughly 1,000 jobs, as it redirects spending to its cloud platform and AI initiatives.",
-    "notes": "Captured from Reuters’ February 2026 roundup of global layoffs linked to AI.",
+    "notes": "Captured from Reuters\u2019 February 2026 roundup of global layoffs linked to AI.",
     "sources": [
       {
         "name": "Reuters",
@@ -159,9 +159,9 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Reuters linked Dow’s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
+    "summary": "Reuters linked Dow\u2019s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
     "evidenceQuote": "The U.S. chemical producer said on January 29 it will slash about 4,500 jobs, 13% of its total workforce, as it streamlines all its end-to-end work processes by using automation and AI.",
-    "notes": "Included from Reuters’ roundup of AI-linked layoffs.",
+    "notes": "Included from Reuters\u2019 roundup of AI-linked layoffs.",
     "sources": [
       {
         "name": "Reuters",
@@ -198,5 +198,255 @@
     ],
     "createdAt": "2026-03-09T15:40:00Z",
     "updatedAt": "2026-03-09T15:40:00Z"
+  },
+  {
+    "id": "agora-2025-12-01",
+    "company": "Agora",
+    "industry": "Media",
+    "geography": "Poland",
+    "eventDate": "2025-12-01",
+    "layoffsCount": 166,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters included Poland's Agora among AI-linked layoffs, saying it planned to cut up to 166 jobs as part of a digital-business restructuring.",
+    "evidenceQuote": "Polish media group in December said it planned to lay off up to 166 employees, or 6.56% of its workforce, as part of a restructuring to improve its digital business.",
+    "notes": "Captured from Reuters' February 2026 roundup of global layoffs linked to AI.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "Polish media group in December said it planned to lay off up to 166 employees, or 6.56% of its workforce, as part of a restructuring to improve its digital business."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "allianz-2025-11-01",
+    "company": "Allianz",
+    "industry": "Finance",
+    "geography": "Germany",
+    "eventDate": "2025-11-01",
+    "layoffsCount": 1800,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported Allianz planned up to 1,800 cuts in travel insurance as AI replaced manual processes.",
+    "evidenceQuote": "The German insurance group plans to cut up to 1,800 jobs in its travel insurance division as AI increasingly replaces manual processes, a source familiar with the plans told Reuters last November.",
+    "notes": "Included in Reuters' February 2026 roundup of AI-linked layoffs.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The German insurance group plans to cut up to 1,800 jobs in its travel insurance division as AI increasingly replaces manual processes, a source familiar with the plans told Reuters last November."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "hp-2025-11-01",
+    "company": "HP Inc",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-11-01",
+    "layoffsCount": 6000,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters listed HP among companies cutting jobs while streamlining operations and adopting AI.",
+    "evidenceQuote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI.",
+    "notes": "Used the upper bound of Reuters' reported range in layoffsCount.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "mercadolibre-2026-01-12",
+    "company": "MercadoLibre",
+    "industry": "Technology",
+    "geography": "Brazil",
+    "eventDate": "2026-01-12",
+    "layoffsCount": 119,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters included MercadoLibre in its AI-layoff roundup, citing local reporting that the company cut 119 roles in an AI-expansion move.",
+    "evidenceQuote": "The Brazilian e-commerce company laid off 119 people in an AI-expansion move, Folha de S. Paulo reported on Jan. 12.",
+    "notes": "Reuters cited Folha de S. Paulo in its roundup.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The Brazilian e-commerce company laid off 119 people in an AI-expansion move, Folha de S. Paulo reported on Jan. 12."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "meta-reality-labs-2026-01-13",
+    "company": "Meta",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-01-13",
+    "layoffsCount": 1000,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported Meta was cutting more than 1,000 Reality Labs jobs as it pivoted from the metaverse toward AI devices.",
+    "evidenceQuote": "The owner of Facebook and Instagram is cutting over 1,000 jobs at its Reality Labs unit in a pivot from the Metaverse to AI devices, Bloomberg reported on Jan. 13.",
+    "notes": "AI linkage is the product-strategy pivot rather than direct automation replacement.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The owner of Facebook and Instagram is cutting over 1,000 jobs at its Reality Labs unit in a pivot from the Metaverse to AI devices, Bloomberg reported on Jan. 13."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "meta-superintelligence-labs-2025-10-01",
+    "company": "Meta",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-10-01",
+    "layoffsCount": 600,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters said Meta also cut about 600 roles in its Superintelligence Labs organization.",
+    "evidenceQuote": "Meta is also cutting around 600 positions out of the several thousand roles in its Superintelligence Labs, the social media platforms owner said in October.",
+    "notes": "Included separately because Reuters treated it as a distinct AI-related cut inside Meta.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "Meta is also cutting around 600 positions out of the several thousand roles in its Superintelligence Labs, the social media platforms owner said in October."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "nike-2026-01-01",
+    "company": "Nike",
+    "industry": "Other",
+    "geography": "United States",
+    "eventDate": "2026-01-01",
+    "layoffsCount": 775,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported Nike was laying off 775 employees as it pushed profits higher and accelerated automation.",
+    "evidenceQuote": "The sportswear giant is laying off 775 employees, a source familiar with the matter told Reuters in January, as the firm looks to boost profits and accelerate its use of automation.",
+    "notes": "Reuters roundup frames the cuts as AI-linked through broader automation adoption.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The sportswear giant is laying off 775 employees, a source familiar with the matter told Reuters in January, as the firm looks to boost profits and accelerate its use of automation."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "seb-2026-02-25",
+    "company": "SEB",
+    "industry": "Other",
+    "geography": "France",
+    "eventDate": "2026-02-25",
+    "layoffsCount": 2100,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported French appliance maker SEB launched a restructuring that could affect up to 2,100 jobs while taking full advantage of AI.",
+    "evidenceQuote": "The French small appliance and cookware maker said on February 25 it would launch a restructuring plan that also takes \"full advantage\" of the possibilities offered by AI that may impact up to 2,100 jobs worldwide by 2027.",
+    "notes": "Reuters tied the restructuring directly to leveraging AI.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The French small appliance and cookware maker said on February 25 it would launch a restructuring plan that also takes \"full advantage\" of the possibilities offered by AI that may impact up to 2,100 jobs worldwide by 2027."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "telstra-2026-02-11",
+    "company": "Telstra",
+    "industry": "Technology",
+    "geography": "Australia",
+    "eventDate": "2026-02-11",
+    "layoffsCount": 650,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters included Telstra among AI-linked cuts, citing local reporting that it planned 650 job reductions in an AI-driven restructure with Infosys.",
+    "evidenceQuote": "Australia's biggest telecoms firm plans to cut 650 jobs in an AI-driven restructure with India's Infosys, The Australian reported on Feb. 11.",
+    "notes": "Reuters cited The Australian in its roundup.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "Australia's biggest telecoms firm plans to cut 650 jobs in an AI-driven restructure with India's Infosys, The Australian reported on Feb. 11."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "wisetech-2026-02-25",
+    "company": "WiseTech",
+    "industry": "Technology",
+    "geography": "Australia",
+    "eventDate": "2026-02-25",
+    "layoffsCount": 2000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported WiseTech would axe about 2,000 jobs as it integrated AI into customer software and internal operations.",
+    "evidenceQuote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations.",
+    "notes": "One of the clearest Reuters examples of AI-driven workforce reduction.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
   }
 ]
