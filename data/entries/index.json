@@ -448,5 +448,130 @@
     ],
     "createdAt": "2026-03-09T16:00:00Z",
     "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "dbs-2025-02-24",
+    "company": "DBS Group",
+    "industry": "Finance",
+    "geography": "Singapore",
+    "eventDate": "2025-02-24",
+    "layoffsCount": 4000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "DBS Group said it planned to cut about 4,000 roles over three years as AI takes on work currently done by humans.",
+    "evidenceQuote": "DBS Group plans to cut 4,000 jobs over the next three years as it expects artificial intelligence (AI) increasingly take on roles carried out by humans.",
+    "notes": "Reuters-backed report also said DBS expected to add about 1,000 AI-related jobs.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://whtc.com/2025/02/24/dbs-group-set-to-cut-4000-jobs-in-next-3-years-ceo-says/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-02-24",
+        "quote": "DBS Group plans to cut 4,000 jobs over the next three years as it expects artificial intelligence (AI) increasingly take on roles carried out by humans."
+      }
+    ],
+    "createdAt": "2026-03-10T02:15:00Z",
+    "updatedAt": "2026-03-10T02:15:00Z"
+  },
+  {
+    "id": "just-eat-takeaway-2025-09-25",
+    "company": "Just Eat Takeaway",
+    "industry": "Technology",
+    "geography": "Netherlands",
+    "eventDate": "2025-09-25",
+    "layoffsCount": 450,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Just Eat said it would lay off around 450 employees while integrating automation and AI into its operations.",
+    "evidenceQuote": "Just Eat is integrating automation and artificial intelligence into its operations, including transitioning manual customer service tasks to automated systems, it said.",
+    "notes": "Reuters-backed coverage; clean AI/automation linkage.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://hr.economictimes.indiatimes.com/amp/news/workplace-4-0/talent-management/update-1-just-eat-to-lay-off-around-450-employees-partly-automating-operations/124127485",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-09-25",
+        "quote": "Just Eat is integrating automation and artificial intelligence into its operations, including transitioning manual customer service tasks to automated systems, it said."
+      }
+    ],
+    "createdAt": "2026-03-10T02:15:00Z",
+    "updatedAt": "2026-03-10T02:15:00Z"
+  },
+  {
+    "id": "chegg-2025-05-12",
+    "company": "Chegg",
+    "industry": "Other",
+    "geography": "United States",
+    "eventDate": "2025-05-12",
+    "layoffsCount": 248,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Chegg said it would lay off about 22% of its workforce as students increasingly turned to AI-powered tools such as ChatGPT over traditional edtech platforms.",
+    "evidenceQuote": "Chegg said on Monday it would lay off about 22% of its workforce, or 248 employees, to cut costs and streamline its operations as students increasingly turn to AI-powered tools such as ChatGPT over traditional edtech platforms.",
+    "notes": "Reuters tied the layoffs directly to AI competition, including ChatGPT and Google's AI Overviews.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/work/chegg-lay-off-22-workforce-ai-tools-shake-up-edtech-industry-2025-05-12/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-05-12",
+        "quote": "Chegg said on Monday it would lay off about 22% of its workforce, or 248 employees, to cut costs and streamline its operations as students increasingly turn to AI-powered tools such as ChatGPT over traditional edtech platforms."
+      }
+    ],
+    "createdAt": "2026-03-10T02:15:00Z",
+    "updatedAt": "2026-03-10T02:15:00Z"
+  },
+  {
+    "id": "recruit-holdings-2025-07-11",
+    "company": "Recruit Holdings",
+    "industry": "Recruitment",
+    "geography": "United States",
+    "eventDate": "2025-07-11",
+    "layoffsCount": 1300,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Recruit Holdings said it would cut about 1,300 jobs at Indeed and Glassdoor as it adapted its hiring products around AI.",
+    "evidenceQuote": "Recruit Holdings, the Japanese parent of Indeed and Glassdoor, said on Friday that it is laying off about 1,300 employees, or 6% of the staff, at the two job sites.",
+    "notes": "TechCrunch, citing Reuters reporting and an internal memo, said the company was adapting around AI.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2025/07/11/indeed-glassdoor-to-lay-off-1300-staff/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-07-11",
+        "quote": "Recruit Holdings, the Japanese parent of Indeed and Glassdoor, said on Friday that it is laying off about 1,300 employees, or 6% of the staff, at the two job sites."
+      }
+    ],
+    "createdAt": "2026-03-10T02:15:00Z",
+    "updatedAt": "2026-03-10T02:15:00Z"
+  },
+  {
+    "id": "workday-2025-02-05",
+    "company": "Workday",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-02-05",
+    "layoffsCount": 1750,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "primary",
+    "summary": "Workday said it would reduce its workforce by about 1,750 employees while continuing to invest aggressively in AI and platform innovation.",
+    "evidenceQuote": "Today, we are announcing a workforce reduction of approximately 1,750 employees, or 8.5% of our current workforce.",
+    "notes": "Primary company statement also said Workday would continue investing aggressively in AI and platform innovation.",
+    "sources": [
+      {
+        "name": "Workday",
+        "url": "https://blog.workday.com/en-us/2025/employee-message-from-carl-eschenbach.html",
+        "type": "primary",
+        "publishedDate": "2025-02-05",
+        "quote": "Today, we are announcing a workforce reduction of approximately 1,750 employees, or 8.5% of our current workforce."
+      }
+    ],
+    "createdAt": "2026-03-10T02:15:00Z",
+    "updatedAt": "2026-03-10T02:15:00Z"
   }
 ]
