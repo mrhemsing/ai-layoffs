@@ -184,9 +184,9 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Reuters linked Dow’s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
+    "summary": "Reuters linked Dow\u00e2\u20ac\u2122s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
     "evidenceQuote": "The U.S. chemical producer said on January 29 it will slash about 4,500 jobs, 13% of its total workforce, as it streamlines all its end-to-end work processes by using automation and AI.",
-    "notes": "Included from Reuters’ roundup of AI-linked layoffs.",
+    "notes": "Included from Reuters\u00e2\u20ac\u2122 roundup of AI-linked layoffs.",
     "sources": [
       {
         "name": "Reuters",
@@ -209,7 +209,7 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the company’s rising AI adoption.",
+    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the company\u00e2\u20ac\u2122s rising AI adoption.",
     "evidenceQuote": "The latest cuts mark the second major round of layoffs in three months after Amazon pared 14,000 jobs in October, saying at the time that artificial intelligence and concerns over shifting corporate culture were to blame.",
     "notes": "Reuters also reported Andy Jassy had said rising use of AI tools would mean more automation of duties and corporate job losses.",
     "sources": [
@@ -261,7 +261,7 @@
     "sourceQuality": "reputable_reporting",
     "summary": "Reuters listed Autodesk among companies making AI-linked cuts, saying it would shed about 7% of its workforce while redirecting spending to cloud and AI initiatives.",
     "evidenceQuote": "The U.S. design-software maker said on Jan. 22 it would shed about 7% of its global workforce, or roughly 1,000 jobs, as it redirects spending to its cloud platform and AI initiatives.",
-    "notes": "Captured from Reuters’ February 2026 roundup of global layoffs linked to AI.",
+    "notes": "Captured from Reuters\u00e2\u20ac\u2122 February 2026 roundup of global layoffs linked to AI.",
     "sources": [
       {
         "name": "Reuters",
@@ -550,6 +550,31 @@
     "updatedAt": "2026-03-10T02:15:00Z"
   },
   {
+    "id": "tomtom-2025-06-30",
+    "company": "TomTom",
+    "industry": "Technology",
+    "geography": "Netherlands",
+    "eventDate": "2025-06-30",
+    "layoffsCount": 300,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported TomTom would cut 300 jobs as it realigned the company and embraced artificial intelligence as part of its product-led strategy.",
+    "evidenceQuote": "Dutch location technology company TomTom said on Monday it would cut 300 jobs as it realigns its organization and embraces artificial intelligence as part of its product-led strategy.",
+    "notes": "Strong Reuters item with direct company language tying the cuts to an AI-led organizational shift.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/technology/tomtom-cut-300-jobs-amid-ai-shift-2025-06-30/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-06-30",
+        "quote": "Dutch location technology company TomTom said on Monday it would cut 300 jobs as it realigns its organization and embraces artificial intelligence as part of its product-led strategy."
+      }
+    ],
+    "createdAt": "2026-03-10T17:10:00Z",
+    "updatedAt": "2026-03-10T17:10:00Z"
+  },
+  {
     "id": "chegg-2025-05-12",
     "company": "Chegg",
     "industry": "Other",
@@ -623,5 +648,30 @@
     ],
     "createdAt": "2026-03-10T02:15:00Z",
     "updatedAt": "2026-03-10T02:15:00Z"
+  },
+  {
+    "id": "bt-group-2023-05-18",
+    "company": "BT Group",
+    "industry": "Other",
+    "geography": "United Kingdom",
+    "eventDate": "2023-05-18",
+    "layoffsCount": 55000,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported BT Group planned to cut up to 55,000 jobs by 2030, with automation and AI expected to replace another 10,000 roles.",
+    "evidenceQuote": "BT Group, Britain's biggest broadband and mobile provider, will cut up to 55,000 jobs including contractors by 2030 as it completes its fibre roll-out and adapts to new technologies such as AI.",
+    "notes": "Reuters reported BT explicitly said technologies like automation and AI would replace another 10,000 jobs within the broader workforce reduction plan.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/uk/bt-cut-up-55000-jobs-by-2030-fibre-ai-arrive-2023-05-18/",
+        "type": "reputable_reporting",
+        "publishedDate": "2023-05-18",
+        "quote": "Jansen said around 10,000 fewer network engineers would be needed to run digital networks, while technologies like automation and AI would replace another 10,000."
+      }
+    ],
+    "createdAt": "2026-03-10T17:10:00Z",
+    "updatedAt": "2026-03-10T17:10:00Z"
   }
 ]
