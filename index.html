@@ -101,6 +101,7 @@
       .date-link:hover { color: #0a58ca; }
       td { overflow-wrap: break-word; }
       .mobile-only { display: none; }
+      .mobile-date { display: none; }
       @media (max-width: 800px) {
         .stats { grid-template-columns: repeat(2, 1fr); }
         table { font-size: 14px; table-layout: auto; }
@@ -111,6 +112,8 @@
         th:nth-child(5), td:nth-child(5) { width: auto; }
         th:nth-child(5), td:nth-child(5) { display: none; }
         .mobile-only { display: inline-flex; }
+        .desktop-date { display: none; }
+        .mobile-date { display: inline; }
       }
     </style>
   </head>
@@ -201,6 +204,12 @@
         if (!v) return '—';
         const d = new Date(v);
         return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+      }
+
+      function fmtDateShort(v) {
+        if (!v) return '—';
+        const d = new Date(v);
+        return d.toLocaleDateString(undefined, { year: '2-digit', month: '2-digit', day: '2-digit' });
       }
 
       function fmtNumber(v) {
@@ -315,7 +324,7 @@
           if (isSelected) tr.classList.add('selected');
           tr.innerHTML = `
             <td><b>${entry.company}</b><br><span class="muted">${entry.geography || '—'}</span></td>
-            <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer">${fmtDate(entry.eventDate)}</a>` : fmtDate(entry.eventDate)}</td>
+            <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span></a>` : `<span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span>`}</td>
             <td>${entry.layoffsCount == null ? '—' : fmtNumber(entry.layoffsCount)}</td>
             <td>${entry.industry || '—'}</td>
             <td><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span></td>
