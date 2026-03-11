@@ -6,7 +6,34 @@
     <title>/ai layoffs_</title>
     <style>
       body { font-family: Arial, sans-serif; max-width: 1100px; margin: 40px auto; padding: 0 16px; color: #111; background: #fafafa; }
-      h1 { margin-bottom: 8px; }
+      h1 { margin: 0; }
+      .hero { margin-bottom: 8px; }
+      .prompt-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        background: #111;
+        color: #f5f5f5;
+        border-radius: 12px;
+        font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace;
+        font-size: clamp(28px, 5vw, 42px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      }
+      .prompt-symbol { color: #7CFF6B; }
+      .prompt-cursor {
+        display: inline-block;
+        width: 0.65ch;
+        height: 1.05em;
+        background: #7CFF6B;
+        vertical-align: -0.12em;
+        animation: blink 1s steps(1, end) infinite;
+      }
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
       h2 { margin-top: 0; }
       .muted { color: #666; }
       .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
@@ -35,7 +62,9 @@
     </style>
   </head>
   <body>
-    <h1>/ai layoffs_</h1>
+    <div class="hero">
+      <h1 class="prompt-title"><span class="prompt-symbol">&gt;</span><span>/ai layoffs</span><span class="prompt-cursor" aria-hidden="true"></span></h1>
+    </div>
     <p class="muted">Track layoffs tied to AI, automation, and AI-driven restructuring — with receipts.</p>
 
     <div class="stats">
