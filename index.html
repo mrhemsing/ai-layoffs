@@ -13,29 +13,6 @@
         padding: 0 16px;
         color: #111;
         background-color: #f7f8fa;
-        position: relative;
-        overflow-x: hidden;
-      }
-      body::before,
-      body::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 38vw;
-        pointer-events: none;
-        z-index: -1;
-        background-image: linear-gradient(to right, rgba(247,248,250,0.81), rgba(247,248,250,0.81)), url('./background-ai.jpg');
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-      }
-      body::before {
-        left: 0;
-      }
-      body::after {
-        right: 0;
-        transform: scaleX(-1);
       }
       h1 { margin: 0; }
       .hero { margin-bottom: 8px; }
