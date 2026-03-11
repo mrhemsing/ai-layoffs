@@ -86,6 +86,7 @@
       .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items: center; }
       .quote-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 2px; }
       .why-included { font-size: 14px; color: #444; }
+      .detail-notes { margin-top: 6px; }
       .source-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 8px; background: #f3f4f6; color: #333; font-size: 13px; }
       .source-chip a { color: inherit; text-decoration: none; }
       .source-chip a:hover { text-decoration: underline; }
@@ -284,7 +285,7 @@
               </div>
               <div class="quote">${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
               <div class="why-included">${whyIncluded}</div>
-              <div>${entry.notes || ''}</div>
+              <div class="detail-notes">${entry.notes || ''}</div>
             </div>
           </div>
         `;
