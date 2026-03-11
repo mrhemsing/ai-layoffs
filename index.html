@@ -26,7 +26,10 @@
           pointer-events: none;
           z-index: -1;
           opacity: 0.10;
-          background: url('./background-right.jpg') left center / cover no-repeat;
+          background-image: linear-gradient(to right, rgba(247,248,250,0), rgba(247,248,250,1)), url('./background-right.jpg');
+          background-size: cover, cover;
+          background-position: left center, left center;
+          background-repeat: no-repeat, no-repeat;
         }
       }
       h1 { margin: 0; }
