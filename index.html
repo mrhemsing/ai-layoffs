@@ -242,7 +242,7 @@
         const summary = document.getElementById('resultSummary');
         body.innerHTML = '';
         empty.style.display = entries.length ? 'none' : 'block';
-        summary.textContent = `${entries.length} matching entries out of ${allEntries.length} total.`;
+        summary.textContent = `(${entries.length} matching entries out of ${allEntries.length} total)`;
 
         if (!entries.some((entry) => entry.id === selectedEntryId)) {
           selectedEntryId = entries[0]?.id || null;
