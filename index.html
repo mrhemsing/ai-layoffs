@@ -12,9 +12,30 @@
         margin: 40px auto;
         padding: 0 16px;
         color: #111;
-        background:
-          linear-gradient(rgba(250,250,250,0.86), rgba(250,250,250,0.86)),
-          url('./background-ai.jpg') center top / cover fixed no-repeat;
+        background-color: #fafafa;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body::before,
+      body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 38vw;
+        pointer-events: none;
+        z-index: -1;
+        background-image: linear-gradient(to right, rgba(250,250,250,0.35), rgba(250,250,250,0.92)), url('./background-ai.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+      }
+      body::before {
+        left: 0;
+      }
+      body::after {
+        right: 0;
+        transform: scaleX(-1);
       }
       h1 { margin: 0; }
       .hero { margin-bottom: 8px; }
