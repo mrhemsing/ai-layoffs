@@ -75,6 +75,11 @@
       .filters-head { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
       .filters-head h2 { margin: 0; }
       .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items: center; }
+      .quote-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      .why-included { font-size: 14px; color: #444; }
+      .source-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #f3f4f6; color: #333; font-size: 13px; }
+      .source-chip a { color: inherit; text-decoration: none; }
+      .source-chip a:hover { text-decoration: underline; }
       select, input { padding: 8px 10px; border-radius: 8px; border: 1px solid #ccc; background: #fff; }
       input[type="search"] { min-width: 220px; flex: 1 1 240px; }
       .quote { padding: 12px; border-left: 4px solid #ddd; background: #fafafa; color: #444; margin-top: 8px; }
@@ -145,6 +150,14 @@
         <select id="filterIndustry">
           <option value="">All industries</option>
         </select>
+        <select id="filterYear">
+          <option value="">All years</option>
+        </select>
+        <select id="sortBy">
+          <option value="newest">Newest first</option>
+          <option value="largest">Biggest layoffs</option>
+          <option value="company">Company A–Z</option>
+        </select>
       </div>
     </div>
 
@@ -209,14 +222,28 @@
         });
       }
 
+      function fillYearOptions(entries) {
+        const sel = document.getElementById('filterYear');
+        const years = [...new Set(entries.map((e) => String(e.eventDate || '').slice(0, 4)).filter((v) => /^\d{4}$/.test(v)))].sort().reverse();
+        years.forEach((year) => {
+          const opt = document.createElement('option');
+          opt.value = year;
+          opt.textContent = year;
+          sel.appendChild(opt);
+        });
+      }
+
       function getFilteredEntries() {
         const relevance = document.getElementById('filterRelevance').value;
         const industry = document.getElementById('filterIndustry').value;
+        const year = document.getElementById('filterYear').value;
+        const sortBy = document.getElementById('sortBy').value;
         const search = document.getElementById('filterSearch').value.trim().toLowerCase();
 
-        return allEntries.filter((entry) => {
+        const filtered = allEntries.filter((entry) => {
           if (relevance && entry.aiRelevance !== relevance) return false;
           if (industry && entry.industry !== industry) return false;
+          if (year && String(entry.eventDate || '').slice(0, 4) !== year) return false;
           if (search) {
             const haystack = [entry.company, entry.geography, entry.summary, entry.notes, entry.industry]
               .filter(Boolean)
@@ -225,7 +252,15 @@
             if (!haystack.includes(search)) return false;
           }
           return true;
-        }).sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)) || String(a.company).localeCompare(String(b.company)));
+        });
+
+        if (sortBy === 'largest') {
+          return filtered.sort((a, b) => (Number(b.layoffsCount) || -1) - (Number(a.layoffsCount) || -1) || String(b.eventDate).localeCompare(String(a.eventDate)));
+        }
+        if (sortBy === 'company') {
+          return filtered.sort((a, b) => String(a.company).localeCompare(String(b.company)) || String(b.eventDate).localeCompare(String(a.eventDate)));
+        }
+        return filtered.sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)) || String(a.company).localeCompare(String(b.company)));
       }
 
       function renderEvidence(entry) {
@@ -235,14 +270,24 @@
           return;
         }
         const source = (entry.sources && entry.sources[0]) || null;
+        const whyIncluded = entry.aiRelevance === 'explicit_ai_cited'
+          ? 'Included because the source explicitly ties the layoffs to AI.'
+          : entry.aiRelevance === 'automation_efficiency_cited'
+            ? 'Included because the source ties the cuts to automation or AI-driven efficiency.'
+            : entry.aiRelevance === 'ai_adjacent_restructuring'
+              ? 'Included because the layoffs are tied to an AI-focused restructuring or reallocation.'
+              : 'Included as a more tentative AI-related lead.';
         preview.innerHTML = `
           <div class="details">
             <div><b>${entry.company}</b> · ${fmtDate(entry.eventDate)} · ${entry.geography || '—'}</div>
-            <div><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span><span class="pill">${entry.sourceQuality}</span></div>
+            <div class="quote-meta">
+              <span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span>
+              <span class="source-chip">${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : 'Source unavailable'}</span>
+            </div>
             <div>${entry.summary || ''}</div>
             <div class="quote">${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
+            <div class="why-included">${whyIncluded}</div>
             <div>${entry.notes || ''}</div>
-            <div>${source ? `Source: <a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : ''}</div>
           </div>
         `;
       }
@@ -286,7 +331,8 @@
         allEntries = await resp.json();
         updateStats(allEntries);
         fillIndustryOptions(allEntries);
-        ['filterSearch', 'filterRelevance', 'filterIndustry'].forEach((id) => {
+        fillYearOptions(allEntries);
+        ['filterSearch', 'filterRelevance', 'filterIndustry', 'filterYear', 'sortBy'].forEach((id) => {
           document.getElementById(id).addEventListener(id === 'filterSearch' ? 'input' : 'change', render);
         });
         render();
