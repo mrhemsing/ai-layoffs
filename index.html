@@ -133,12 +133,6 @@
         <select id="filterIndustry">
           <option value="">All industries</option>
         </select>
-        <select id="filterSourceQuality">
-          <option value="">All source quality</option>
-          <option value="primary">Primary</option>
-          <option value="reputable_reporting">Reputable reporting</option>
-          <option value="secondary_lead">Secondary lead</option>
-        </select>
       </div>
     </div>
 
@@ -206,13 +200,11 @@
       function getFilteredEntries() {
         const relevance = document.getElementById('filterRelevance').value;
         const industry = document.getElementById('filterIndustry').value;
-        const sourceQuality = document.getElementById('filterSourceQuality').value;
         const search = document.getElementById('filterSearch').value.trim().toLowerCase();
 
         return allEntries.filter((entry) => {
           if (relevance && entry.aiRelevance !== relevance) return false;
           if (industry && entry.industry !== industry) return false;
-          if (sourceQuality && entry.sourceQuality !== sourceQuality) return false;
           if (search) {
             const haystack = [entry.company, entry.geography, entry.summary, entry.notes, entry.industry]
               .filter(Boolean)
@@ -282,7 +274,7 @@
         allEntries = await resp.json();
         updateStats(allEntries);
         fillIndustryOptions(allEntries);
-        ['filterSearch', 'filterRelevance', 'filterIndustry', 'filterSourceQuality'].forEach((id) => {
+        ['filterSearch', 'filterRelevance', 'filterIndustry'].forEach((id) => {
           document.getElementById(id).addEventListener(id === 'filterSearch' ? 'input' : 'change', render);
         });
         render();
