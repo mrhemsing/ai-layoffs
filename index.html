@@ -100,6 +100,7 @@
       .details a { word-break: break-word; }
       .date-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
       .date-link:hover { color: #0a58ca; }
+      .company-line { display: inline-block; margin-bottom: 4px; }
       td { overflow-wrap: break-word; }
       .mobile-only { display: none; }
       .mobile-date { display: none; }
@@ -329,7 +330,7 @@
           const isSelected = entry.id === selectedEntryId;
           if (isSelected) tr.classList.add('selected');
           tr.innerHTML = `
-            <td><b>${entry.company}</b><br><span class="muted">${entry.geography || '—'}</span></td>
+            <td><span class="company-line"><b>${entry.company}</b></span><br><span class="muted">${entry.geography || '—'}</span></td>
             <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span></a>` : `<span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span>`}</td>
             <td>${entry.layoffsCount == null ? '—' : fmtNumber(entry.layoffsCount)}</td>
             <td>${entry.industry || '—'}</td>
