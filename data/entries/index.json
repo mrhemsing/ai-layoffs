@@ -500,7 +500,7 @@
     "sourceQuality": "reputable_reporting",
     "summary": "Reuters listed Autodesk among companies making AI-linked cuts, saying it would shed about 7% of its workforce while redirecting spending to cloud and AI initiatives.",
     "evidenceQuote": "The U.S. design-software maker said on Jan. 22 it would shed about 7% of its global workforce, or roughly 1,000 jobs, as it redirects spending to its cloud platform and AI initiatives.",
-    "notes": "Captured from Reuters\u00e2\u20ac\u2122 February 2026 roundup of global layoffs linked to AI.",
+    "notes": "Captured from Reutersâ€™ February 2026 roundup of global layoffs linked to AI.",
     "sources": [
       {
         "name": "Reuters",
@@ -548,7 +548,7 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the company\u00e2\u20ac\u2122s rising AI adoption.",
+    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the companyâ€™s rising AI adoption.",
     "evidenceQuote": "The latest cuts mark the second major round of layoffs in three months after Amazon pared 14,000 jobs in October, saying at the time that artificial intelligence and concerns over shifting corporate culture were to blame.",
     "notes": "Reuters also reported Andy Jassy had said rising use of AI tools would mean more automation of duties and corporate job losses.",
     "sources": [
@@ -573,9 +573,9 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Reuters linked Dow\u00e2\u20ac\u2122s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
+    "summary": "Reuters linked Dowâ€™s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
     "evidenceQuote": "The U.S. chemical producer said on January 29 it will slash about 4,500 jobs, 13% of its total workforce, as it streamlines all its end-to-end work processes by using automation and AI.",
-    "notes": "Included from Reuters\u00e2\u20ac\u2122 roundup of AI-linked layoffs.",
+    "notes": "Included from Reutersâ€™ roundup of AI-linked layoffs.",
     "sources": [
       {
         "name": "Reuters",
@@ -819,5 +819,101 @@
     ],
     "createdAt": "2026-03-11T05:30:00Z",
     "updatedAt": "2026-03-11T05:30:00Z"
+  },
+  {
+    "id": "grammarly-2024-02-09",
+    "company": "Grammarly",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2024-02-09",
+    "layoffsCount": 230,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Grammarly laid off about 230 employees and said the restructuring would deepen its technical investments in AI and push toward an AI-enabled workplace.",
+    "evidenceQuote": "As we strengthen our focus toward driving the AI-enabled workplace and deepen our technical investments in AI, we will need a different mix of capabilities and skillsets.",
+    "notes": "Company framed the cuts as a restructuring for the AI-enabled workplace rather than a cost-cutting exercise.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2024/02/09/grammarly-lays-off-230-employees-as-part-of-a-business-restructuring/",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-02-09",
+        "quote": "Grammarly is laying off 230 employees worldwide as part of a \"business restructuring\"... The layoffs are part of Grammarly's efforts to advance its focus on \"the AI-enabled workplace of the future.\""
+      },
+      {
+        "name": "Business Insider",
+        "url": "https://www.businessinsider.com/layoffs-happening-at-tech-firms-that-are-doing-just-fine-2024-2",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-02-12",
+        "quote": "Roy-Chowdhury insisted that the company's \"financial position is, and remains, strong.\" Instead, he said the layoffs had been conducted as a means of recalibrating resources for ?the AI-enabled workplace of the future.?"
+      }
+    ],
+    "createdAt": "2026-03-11T18:20:00Z",
+    "updatedAt": "2026-03-11T18:20:00Z"
+  },
+  {
+    "id": "cisco-2024-08-14",
+    "company": "Cisco",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2024-08-14",
+    "layoffsCount": 6300,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Cisco said it would cut about 7% of its workforce as it restructured to invest more heavily in AI, cybersecurity, and related growth areas.",
+    "evidenceQuote": "California technology company Cisco says it is cutting 7% of its workforce as it shifts its focus to AI, cybersecurity.",
+    "notes": "AP and Network World both tied the August 2024 restructuring directly to Cisco's AI push and resource reallocation into AI growth areas.",
+    "sources": [
+      {
+        "name": "Associated Press via ABC News",
+        "url": "https://abcnews.go.com/Business/wireStory/california-technology-company-cisco-cutting-7-workforce-shifts-112844330",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-08-14",
+        "quote": "California technology company Cisco says it is cutting 7% of its workforce as it shifts its focus to AI, cybersecurity."
+      },
+      {
+        "name": "Network World",
+        "url": "https://www.networkworld.com/article/3486901/cisco-to-cut-7-of-workforce-restructure-product-groups.html",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-08-14",
+        "quote": "Cisco is trying to move more quickly into three core areas ? AI networking, security and collaboration... \"We actually are shifting hundreds of millions of dollars into AI,\" Robbins said."
+      }
+    ],
+    "createdAt": "2026-03-11T18:20:00Z",
+    "updatedAt": "2026-03-11T18:20:00Z"
+  },
+  {
+    "id": "recruit-holdings-2025-07-10",
+    "company": "Recruit Holdings",
+    "industry": "Technology",
+    "geography": "Japan",
+    "eventDate": "2025-07-10",
+    "layoffsCount": 1300,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Recruit Holdings cut about 1,300 jobs across Indeed and Glassdoor while telling staff it had to adapt to AI-driven change in hiring and product development.",
+    "evidenceQuote": "AI is changing the world, and we must adapt by ensuring our product delivers truly great experiences for job seekers and employers.",
+    "notes": "Reuters-described internal memo and CBS coverage both connect the cuts to Recruit's AI-driven simplification of hiring and internal productivity work.",
+    "sources": [
+      {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/indeed-glassdoor-layoffs-ai-job-search/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-07-10",
+        "quote": "Indeed and Glassdoor, the job search and employee review firms, are slashing a total of roughly 1,300 jobs as their parent company, Japan's Recruit Holdings, embraces artificial intelligence."
+      },
+      {
+        "name": "India Today citing Reuters",
+        "url": "https://www.indiatoday.in/technology/news/story/recruit-holdings-job-cuts-ai-restructuring-glassdoor-indeed-integration-2754152-2025-07-11",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-07-11",
+        "quote": "Recruit Holdings... is set to reduce its workforce by approximately 1,300, according to a memo accessed by Reuters... \"AI is changing the world, and we must adapt...\""
+      }
+    ],
+    "createdAt": "2026-03-11T18:20:00Z",
+    "updatedAt": "2026-03-11T18:20:00Z"
   }
 ]
