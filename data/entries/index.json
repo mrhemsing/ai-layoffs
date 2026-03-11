@@ -325,7 +325,7 @@
     "sourceQuality": "reputable_reporting",
     "summary": "Reuters listed HP among companies cutting jobs while streamlining operations and adopting AI.",
     "evidenceQuote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI.",
-    "notes": "Used the upper bound of Reuters' reported range in layoffsCount.",
+    "notes": "Reuters reported a range of 4,000 to 6,000 job cuts.",
     "sources": [
       {
         "name": "Reuters",
