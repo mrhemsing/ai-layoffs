@@ -13,6 +13,21 @@
         padding: 0 16px;
         color: #111;
         background-color: #f7f8fa;
+        position: relative;
+      }
+      @media (min-width: 801px) {
+        body::after {
+          content: '';
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 34vw;
+          height: 100vh;
+          pointer-events: none;
+          z-index: -1;
+          opacity: 0.16;
+          background: url('./background-right.jpg') right center / cover no-repeat;
+        }
       }
       h1 { margin: 0; }
       .hero { margin-bottom: 8px; }
