@@ -279,12 +279,10 @@
         return `
           <div class="detail-panel">
             <div class="details">
-              <div><b>${entry.company}</b> · ${fmtDate(entry.eventDate)} · ${entry.geography || '—'}</div>
               <div class="quote-meta">
                 <span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span>
                 <span class="source-chip">${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : 'Source unavailable'}</span>
               </div>
-              <div>${entry.summary || ''}</div>
               <div class="quote">${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
               <div class="why-included">${whyIncluded}</div>
               <div>${entry.notes || ''}</div>
