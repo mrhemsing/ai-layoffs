@@ -500,7 +500,7 @@
     "sourceQuality": "reputable_reporting",
     "summary": "Reuters listed Autodesk among companies making AI-linked cuts, saying it would shed about 7% of its workforce while redirecting spending to cloud and AI initiatives.",
     "evidenceQuote": "The U.S. design-software maker said on Jan. 22 it would shed about 7% of its global workforce, or roughly 1,000 jobs, as it redirects spending to its cloud platform and AI initiatives.",
-    "notes": "Captured from Reutersâ€™ February 2026 roundup of global layoffs linked to AI.",
+    "notes": "Captured from Reuters\u00e2\u20ac\u2122 February 2026 roundup of global layoffs linked to AI.",
     "sources": [
       {
         "name": "Reuters",
@@ -548,7 +548,7 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the companyâ€™s rising AI adoption.",
+    "summary": "Amazon confirmed 16,000 corporate job cuts as part of an efficiency drive that Reuters tied directly to the company\u00e2\u20ac\u2122s rising AI adoption.",
     "evidenceQuote": "The latest cuts mark the second major round of layoffs in three months after Amazon pared 14,000 jobs in October, saying at the time that artificial intelligence and concerns over shifting corporate culture were to blame.",
     "notes": "Reuters also reported Andy Jassy had said rising use of AI tools would mean more automation of duties and corporate job losses.",
     "sources": [
@@ -573,9 +573,9 @@
     "status": "verified",
     "aiRelevance": "automation_efficiency_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Reuters linked Dowâ€™s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
+    "summary": "Reuters linked Dow\u00e2\u20ac\u2122s 4,500 job cuts to a plan to streamline work processes using automation and AI.",
     "evidenceQuote": "The U.S. chemical producer said on January 29 it will slash about 4,500 jobs, 13% of its total workforce, as it streamlines all its end-to-end work processes by using automation and AI.",
-    "notes": "Included from Reutersâ€™ roundup of AI-linked layoffs.",
+    "notes": "Included from Reuters\u00e2\u20ac\u2122 roundup of AI-linked layoffs.",
     "sources": [
       {
         "name": "Reuters",
@@ -762,5 +762,62 @@
     ],
     "createdAt": "2026-03-09T03:30:00Z",
     "updatedAt": "2026-03-09T03:30:00Z"
+  },
+  {
+    "id": "crowdstrike-2025-05-07",
+    "company": "CrowdStrike",
+    "industry": "Cybersecurity",
+    "geography": "United States",
+    "eventDate": "2025-05-07",
+    "layoffsCount": 500,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "primary_source",
+    "summary": "CrowdStrike said it would cut about 500 jobs as AI-driven efficiencies flattened its hiring curve and reshaped how it operates.",
+    "evidenceQuote": "AI flattens our hiring curve, and helps us innovate from idea to product faster. It streamlines go-to-market, improves customer outcomes, and drives efficiencies across both the front and back office.",
+    "notes": "CEO George Kurtz tied the 5% workforce cut directly to AI in a memo attached to the SEC filing; Reuters roundup and trade coverage echoed the linkage.",
+    "sources": [
+      {
+        "name": "CrowdStrike SEC filing / CEO memo",
+        "url": "https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1535527/000153552725000091/crwd-20250507.htm",
+        "type": "primary_source",
+        "publishedDate": "2025-05-07",
+        "quote": "AI flattens our hiring curve, and helps us innovate from idea to product faster. It streamlines go-to-market, improves customer outcomes, and drives efficiencies across both the front and back office."
+      },
+      {
+        "name": "Cybersecurity Dive",
+        "url": "https://www.cybersecuritydive.com/news/crowdstrike-to-cut-500-jobs-in-plan-to-scale-business/747401/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-05-07",
+        "quote": "CrowdStrike said Wednesday that it would cut 500 jobs, or 5% of its global workforce, as part of a plan to scale its business and meet a goal of  billion in annual recurring revenue, according to a regulatory filing."
+      }
+    ],
+    "createdAt": "2026-03-11T05:30:00Z",
+    "updatedAt": "2026-03-11T05:30:00Z"
+  },
+  {
+    "id": "chegg-2025-10-28",
+    "company": "Chegg",
+    "industry": "Education Technology",
+    "geography": "United States",
+    "eventDate": "2025-10-28",
+    "layoffsCount": 388,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Chegg said it would cut 388 jobs, about 45% of its workforce, as the company said the new realities of AI had sharply reduced traffic and revenue.",
+    "evidenceQuote": "Educational technology company Chegg said on Monday it would cut 388 roles globally, or about 45% of the workforce, to reduce costs and streamline operations as it works to adapt to the growing shift toward AI-powered tools.",
+    "notes": "Distinct from Chegg's May 2025 layoff round; Reuters said Chegg blamed the new realities of AI and reduced Google traffic to publishers.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/work/chegg-lay-off-45-workforce-ai-disruption-hits-business-2025-10-28/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-10-28",
+        "quote": "Educational technology company Chegg said on Monday it would cut 388 roles globally, or about 45% of the workforce, to reduce costs and streamline operations as it works to adapt to the growing shift toward AI-powered tools."
+      }
+    ],
+    "createdAt": "2026-03-11T05:30:00Z",
+    "updatedAt": "2026-03-11T05:30:00Z"
   }
 ]
