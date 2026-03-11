@@ -55,6 +55,8 @@
       .footer-note { margin-top: 20px; color: #666; font-size: 14px; }
       .details { display: grid; gap: 8px; }
       .details a { word-break: break-word; }
+      .date-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+      .date-link:hover { color: #0a58ca; }
       @media (max-width: 800px) {
         .stats { grid-template-columns: repeat(2, 1fr); }
         table { font-size: 14px; }
@@ -108,7 +110,6 @@
             <th>Layoffs</th>
             <th>Industry</th>
             <th>AI relevance</th>
-            <th>Source</th>
           </tr>
         </thead>
         <tbody id="entriesBody"></tbody>
@@ -219,11 +220,10 @@
           if (entry.id === selectedEntryId) tr.classList.add('selected');
           tr.innerHTML = `
             <td><b>${entry.company}</b><br><span class="muted">${entry.geography || '—'}</span></td>
-            <td>${fmtDate(entry.eventDate)}</td>
+            <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer">${fmtDate(entry.eventDate)}</a>` : fmtDate(entry.eventDate)}</td>
             <td>${entry.layoffsCount == null ? '—' : fmtNumber(entry.layoffsCount)}</td>
             <td>${entry.industry || '—'}</td>
             <td><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span></td>
-            <td>${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : '—'}</td>
           `;
           tr.addEventListener('click', () => {
             selectedEntryId = entry.id;
@@ -248,7 +248,7 @@
 
       init().catch((err) => {
         console.error(err);
-        document.getElementById('entriesBody').innerHTML = `<tr><td colspan="6" class="muted">Failed to load entries.</td></tr>`;
+        document.getElementById('entriesBody').innerHTML = `<tr><td colspan="5" class="muted">Failed to load entries.</td></tr>`;
       });
     </script>
   </body>
