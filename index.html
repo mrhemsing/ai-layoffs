@@ -74,6 +74,13 @@
       tbody tr { cursor: pointer; }
       tbody tr:hover { background: #fafcff; }
       tbody tr.selected { background: #f5f9ff; }
+      tr.detail-row { cursor: default; }
+      tr.detail-row:hover { background: transparent; }
+      .detail-cell { padding: 0; border-bottom: 1px solid #eee; }
+      .detail-panel {
+        padding: 16px 18px 18px;
+        background: #fcfcfd;
+      }
       .filters-head { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
       .filters-head h2 { margin: 0; }
       .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items: center; }
@@ -178,11 +185,6 @@
     </div>
 
     <div class="card" style="margin-top:20px;">
-      <h2>Evidence preview</h2>
-      <div id="evidencePreview" class="muted">Select a row to inspect the evidence and notes behind that entry.</div>
-    </div>
-
-    <div class="card" style="margin-top:20px;">
       <h2>Disclaimer</h2>
       <p class="footer-note data-note-text" style="margin-top: 0;">Entries are sourced from primary statements or reputable reporting and labeled by AI relevance. Many of these announcements have been questioned by economists and analysts who argue companies use "AI washing" as cover for financial restructuring and pandemic-era overhiring. That skepticism is noted where relevant — the receipts are included so you can judge for yourself.</p>
     </div>
@@ -265,12 +267,7 @@
         return filtered.sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)) || String(a.company).localeCompare(String(b.company)));
       }
 
-      function renderEvidence(entry) {
-        const preview = document.getElementById('evidencePreview');
-        if (!entry) {
-          preview.textContent = 'No evidence quote available for the current selection.';
-          return;
-        }
+      function renderDetailPanel(entry) {
         const source = (entry.sources && entry.sources[0]) || null;
         const whyIncluded = entry.aiRelevance === 'explicit_ai_cited'
           ? 'Included because the source explicitly ties the layoffs to AI.'
@@ -279,17 +276,19 @@
             : entry.aiRelevance === 'ai_adjacent_restructuring'
               ? 'Included because the layoffs are tied to an AI-focused restructuring or reallocation.'
               : 'Included as a more tentative AI-related lead.';
-        preview.innerHTML = `
-          <div class="details">
-            <div><b>${entry.company}</b> · ${fmtDate(entry.eventDate)} · ${entry.geography || '—'}</div>
-            <div class="quote-meta">
-              <span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span>
-              <span class="source-chip">${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : 'Source unavailable'}</span>
+        return `
+          <div class="detail-panel">
+            <div class="details">
+              <div><b>${entry.company}</b> · ${fmtDate(entry.eventDate)} · ${entry.geography || '—'}</div>
+              <div class="quote-meta">
+                <span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span>
+                <span class="source-chip">${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : 'Source unavailable'}</span>
+              </div>
+              <div>${entry.summary || ''}</div>
+              <div class="quote">${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
+              <div class="why-included">${whyIncluded}</div>
+              <div>${entry.notes || ''}</div>
             </div>
-            <div>${entry.summary || ''}</div>
-            <div class="quote">${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
-            <div class="why-included">${whyIncluded}</div>
-            <div>${entry.notes || ''}</div>
           </div>
         `;
       }
@@ -310,7 +309,8 @@
         entries.forEach((entry) => {
           const tr = document.createElement('tr');
           const source = (entry.sources && entry.sources[0]) || null;
-          if (entry.id === selectedEntryId) tr.classList.add('selected');
+          const isSelected = entry.id === selectedEntryId;
+          if (isSelected) tr.classList.add('selected');
           tr.innerHTML = `
             <td><b>${entry.company}</b><br><span class="muted">${entry.geography || '—'}</span></td>
             <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer">${fmtDate(entry.eventDate)}</a>` : fmtDate(entry.eventDate)}</td>
@@ -319,13 +319,18 @@
             <td><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span></td>
           `;
           tr.addEventListener('click', () => {
-            selectedEntryId = entry.id;
+            selectedEntryId = isSelected ? null : entry.id;
             render();
           });
           body.appendChild(tr);
-        });
 
-        renderEvidence(entries.find((entry) => entry.id === selectedEntryId) || null);
+          if (isSelected) {
+            const detailRow = document.createElement('tr');
+            detailRow.className = 'detail-row';
+            detailRow.innerHTML = `<td class="detail-cell" colspan="5">${renderDetailPanel(entry)}</td>`;
+            body.appendChild(detailRow);
+          }
+        });
       }
 
       async function init() {
