@@ -209,7 +209,10 @@
       function fmtDateShort(v) {
         if (!v) return '—';
         const d = new Date(v);
-        return d.toLocaleDateString(undefined, { year: '2-digit', month: '2-digit', day: '2-digit' });
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        const yy = String(d.getFullYear()).slice(-2);
+        return `${mm}/${dd}/${yy}`;
       }
 
       function fmtNumber(v) {
