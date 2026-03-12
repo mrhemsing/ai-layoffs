@@ -213,7 +213,7 @@
       <div class="card stat-card">
         <div class="stat-copy"><div class="stat-top"><div class="stat-value" id="statUpdated">—</div><div class="stat-icon icon-updated" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M3 11h18"/></svg>
-        </div></div><div class="stat-label">last updated on</div></div>
+        </div></div><div class="stat-label" id="statUpdatedLabel">last updated on</div></div>
       </div>
     </div>
 
@@ -285,6 +285,12 @@
         return `${mm}/${dd}/${yy}`;
       }
 
+      function fmtDateMedium(v) {
+        if (!v) return '—';
+        const d = new Date(v);
+        return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+      }
+
       function fmtNumber(v) {
         return Number(v || 0).toLocaleString();
       }
@@ -311,8 +317,11 @@
         document.getElementById('statExplicit').textContent = String(entries.filter((e) => e.aiRelevance === 'explicit_ai_cited').length);
         const latest = entries.slice().sort((a, b) => String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')))[0];
         document.getElementById('statUpdated').innerHTML = latest
-          ? `<span class="desktop-date">${fmtDate(latest.updatedAt)}</span><span class="mobile-date">${fmtDateShort(latest.updatedAt)}</span>`
+          ? `<span class="desktop-date">${fmtDateMedium(latest.updatedAt)}</span><span class="mobile-date">${fmtDateShort(latest.updatedAt)}</span>`
           : '—';
+        document.getElementById('statUpdatedLabel').textContent = latest
+          ? `last updated on ${fmtDateShort(latest.updatedAt)}`
+          : 'last updated on';
       }
 
       function fillIndustryOptions(entries) {
