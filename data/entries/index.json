@@ -285,6 +285,31 @@
     "updatedAt": "2026-03-10T02:15:00Z"
   },
   {
+    "id": "google-2025-02-27",
+    "company": "Google",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-02-27",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Google cut staff in People Operations and cloud teams as it pursued cost cuts while expanding spending on AI infrastructure in 2025.",
+    "evidenceQuote": "The latest cuts come after finance chief Anat Ashkenazi said one of her top priorities would be to drive more cost-cutting as Google expands its spending on AI infrastructure in 2025.",
+    "notes": "CNBC reported HR buyouts plus cloud-team layoffs, but Google said the number affected was small and did not disclose a total.",
+    "sources": [
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2025/02/27/google-announces-layoffs-in-its-hr-cloud-units-as-part-of-ongoing-cost-cuts.html",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-02-27",
+        "quote": "The latest cuts come after finance chief Anat Ashkenazi said one of her top priorities would be to drive more cost-cutting as Google expands its spending on AI infrastructure in 2025."
+      }
+    ],
+    "createdAt": "2026-03-12T15:10:00Z",
+    "updatedAt": "2026-03-12T15:10:00Z"
+  },
+  {
     "id": "crowdstrike-2025-05-07",
     "company": "CrowdStrike",
     "industry": "Cybersecurity",
@@ -497,6 +522,31 @@
     ],
     "createdAt": "2026-03-09T16:00:00Z",
     "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "paycom-2025-10-01",
+    "company": "Paycom",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-10-01",
+    "layoffsCount": 500,
+    "status": "verified",
+    "aiRelevance": "ai_replacement_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Paycom cut about 500 jobs and said non-client-facing roles had been automated by AI.",
+    "evidenceQuote": "Reductions will affect \"only non-client-facing roles,\" which have been automated by AI, the company said in a statement.",
+    "notes": "KOSU/KGOU reported the layoffs as taking effect immediately and attributed the AI explanation directly to the company statement.",
+    "sources": [
+      {
+        "name": "KGOU",
+        "url": "https://www.kgou.org/business-and-economy/2025-10-01/paycom-lays-off-500-employees-will-replace-jobs-with-ai",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-10-01",
+        "quote": "Reductions will affect \"only non-client-facing roles,\" which have been automated by AI, the company said in a statement."
+      }
+    ],
+    "createdAt": "2026-03-12T15:10:00Z",
+    "updatedAt": "2026-03-12T15:10:00Z"
   },
   {
     "id": "chegg-2025-10-28",
