@@ -92,6 +92,8 @@
       .filters-head { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
       .filters-head h2 { margin: 0; }
       .filters-toggle { display: none; }
+      .filters-label { display: inline-flex; align-items: center; gap: 6px; }
+      .filters-caret { display: none; font-size: 12px; }
       .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items: center; }
       .quote-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 2px; }
       .why-included { font-size: 14px; color: #444; }
@@ -126,6 +128,7 @@
         }
         .hero + .muted { line-height: 1.6; }
         .filters-head { align-items: center; }
+        .filters-caret { display: inline-block; }
         .filters-toggle {
           display: inline-flex;
           margin-left: auto;
@@ -190,7 +193,7 @@
 
     <div class="card list-card" style="margin-bottom: 20px;">
       <div class="filters-head">
-        <h2>Filters</h2>
+        <h2 class="filters-label">Filters <span class="filters-caret" id="filtersCaret">▾</span></h2>
         <button type="button" class="filters-toggle" id="filtersToggle" aria-expanded="true">Show filters</button>
         <div class="muted" id="resultSummary">Loading…</div>
       </div>
@@ -406,11 +409,13 @@
         });
         const listCard = document.querySelector('.list-card');
         const filtersToggle = document.getElementById('filtersToggle');
+        const filtersCaret = document.getElementById('filtersCaret');
         const setFiltersOpen = (open) => {
           if (!listCard || !filtersToggle) return;
           listCard.setAttribute('data-filters-open', open ? 'true' : 'false');
           filtersToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
           filtersToggle.textContent = open ? 'Hide filters' : 'Show filters';
+          if (filtersCaret) filtersCaret.textContent = open ? '▴' : '▾';
         };
         const mobile = window.matchMedia('(max-width: 800px)').matches;
         setFiltersOpen(!mobile);
