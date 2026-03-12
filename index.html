@@ -93,6 +93,7 @@
       }
       .filters-head { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
       .filters-head h2 { margin: 0; }
+      .filters-summary { text-align: right; }
       .filters-toggle { display: none; }
       .filters-label { display: inline-flex; align-items: center; gap: 6px; }
       .filters-caret { display: none; font-size: 12px; }
@@ -146,6 +147,7 @@
         }
         .quote-meta::-webkit-scrollbar { display: none; }
         .filters-head { align-items: center; }
+        .filters-summary { width: 100%; text-align: left; }
         .filters-label { display: none; }
         .filters-caret { display: none; }
         .filters-toggle {
@@ -222,7 +224,10 @@
       <div class="filters-head">
         <h2 class="filters-label">Filters <span class="filters-caret" id="filtersCaret">▾</span></h2>
         <button type="button" class="filters-toggle" id="filtersToggle" aria-expanded="true">Show filters</button>
-        <div class="muted" id="resultSummary">Loading…</div>
+        <div class="filters-summary">
+          <div class="muted" id="resultSummary">Loading…</div>
+          <div class="muted" id="resultJobsImpacted"></div>
+        </div>
       </div>
       <div class="toolbar" id="filtersToolbar" style="margin-bottom: 26px;">
         <input id="filterSearch" type="search" placeholder="Search company, geography, or notes" />
@@ -448,6 +453,7 @@
         body.innerHTML = '';
         empty.style.display = entries.length ? 'none' : 'block';
         summary.textContent = `(${entries.length} matching entries out of ${allEntries.length} total)`;
+        document.getElementById('resultJobsImpacted').textContent = `${fmtNumber(entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0))} jobs impacted`;
 
         if (!entries.some((entry) => entry.id === selectedEntryId)) {
           selectedEntryId = entries[0]?.id || null;
