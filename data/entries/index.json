@@ -107,6 +107,31 @@
     "updatedAt": "2026-03-11T01:20:00Z"
   },
   {
+    "id": "paypal-2024-01-30",
+    "company": "PayPal",
+    "industry": "Finance",
+    "geography": "United States",
+    "eventDate": "2024-01-30",
+    "layoffsCount": 2500,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "primary_source",
+    "summary": "PayPal cut about 2,500 jobs after CEO Alex Chriss said the company needed more focus, efficiency, and automation.",
+    "evidenceQuote": "I've made the difficult decision to reduce our global workforce this year by about 9%, or approximately 2,500 roles... We will also continue to invest in automation to reduce complexity and increase speed.",
+    "notes": "Primary company message explicitly paired the layoff with automation/efficiency goals.",
+    "sources": [
+      {
+        "name": "PayPal Newsroom",
+        "url": "https://newsroom.paypal-corp.com/2024-01-30-Message-from-Alex-Chriss-President-and-CEO-of-PayPal",
+        "type": "primary",
+        "publishedDate": "2024-01-30",
+        "quote": "I've made the difficult decision to reduce our global workforce this year by about 9%, or approximately 2,500 roles... We will also continue to invest in automation to reduce complexity and increase speed."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
     "id": "grammarly-2024-02-09",
     "company": "Grammarly",
     "industry": "Technology",
@@ -235,6 +260,31 @@
     "updatedAt": "2026-03-11T18:20:00Z"
   },
   {
+    "id": "tiktok-2024-10-11",
+    "company": "TikTok",
+    "industry": "Technology",
+    "geography": "Singapore",
+    "eventDate": "2024-10-11",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "ai_replacement_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "TikTok laid off several hundred global trust-and-safety staff as it shifted more content moderation work toward AI systems.",
+    "evidenceQuote": "TikTok will lay off hundreds of global staff as it shifts towards AI content moderation, Reuters reported, citing a source familiar with the matter.",
+    "notes": "Global count reported as several hundred; exact company-wide number not confirmed in the reporting used here.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/china/tiktok-lay-off-hundreds-global-staff-shift-towards-ai-content-moderation-source-2024-10-11/",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-10-11",
+        "quote": "TikTok will lay off hundreds of global staff as it shifts towards AI content moderation, Reuters reported, citing a source familiar with the matter."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
     "id": "workday-2025-02-05",
     "company": "Workday",
     "industry": "Technology",
@@ -258,6 +308,31 @@
     ],
     "createdAt": "2026-03-10T02:15:00Z",
     "updatedAt": "2026-03-10T02:15:00Z"
+  },
+  {
+    "id": "zepz-2025-02-13",
+    "company": "Zepz",
+    "industry": "Finance",
+    "geography": "United Kingdom",
+    "eventDate": "2025-02-13",
+    "layoffsCount": 200,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Zepz cut roughly 200 jobs after saying replatforming efforts, advanced automation, and AI had reduced the need for some operational and technical roles.",
+    "evidenceQuote": "The successful completion of its replatforming efforts, enhanced by advanced automation and AI, has reinforced the technology foundation and reduced the need for certain operational and technical capacities.",
+    "notes": "CNBC-confirmed layoff as summarized by FinTech Futures, citing company spokesperson language that directly tied the reduction to automation and AI.",
+    "sources": [
+      {
+        "name": "FinTech Futures",
+        "url": "https://www.fintechfutures.com/job-cuts-new-hires/uk-fintech-zepz-reportedly-set-to-lay-off-around-200-employees",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-03-28",
+        "quote": "The Zepz spokesperson explained that the “successful completion of its replatforming efforts”, enhanced by “advanced automation and AI”, has “reinforced the technology foundation and reduced the need for certain operational and technical capacities”."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
     "id": "dbs-2025-02-24",
@@ -308,6 +383,56 @@
     ],
     "createdAt": "2026-03-12T15:10:00Z",
     "updatedAt": "2026-03-12T15:10:00Z"
+  },
+  {
+    "id": "wayfair-2025-03-07",
+    "company": "Wayfair",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-03-07",
+    "layoffsCount": 340,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "primary_source",
+    "summary": "Wayfair cut about 340 technology employees while saying it would keep investing in generative AI to boost productivity across the organization.",
+    "evidenceQuote": "On March 7, 2025, Wayfair Inc. announced a workforce reduction involving approximately 340 members of its Technology team... Additionally, we are leveraging generative AI to boost productivity across our organization, ensuring efficiency and innovation at every level.",
+    "notes": "The 8-K tied the tech org reshape to productivity and explicitly highlighted generative AI as part of the operating model.",
+    "sources": [
+      {
+        "name": "Wayfair 8-K (via secdatabase mirror)",
+        "url": "http://pdf.secdatabase.com/1098/0001616707-25-000028.pdf",
+        "type": "primary",
+        "publishedDate": "2025-03-07",
+        "quote": "On March 7, 2025, Wayfair Inc. announced a workforce reduction involving approximately 340 members of its Technology team... Additionally, we are leveraging generative AI to boost productivity across our organization, ensuring efficiency and innovation at every level."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
+    "id": "ups-2025-04-29",
+    "company": "UPS",
+    "industry": "Other",
+    "geography": "United States",
+    "eventDate": "2025-04-29",
+    "layoffsCount": 20000,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "UPS said it would cut 20,000 jobs in 2025 as part of a network reconfiguration that also leaned further into automation to reduce labor needs.",
+    "evidenceQuote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. “With this reconfiguration, we will also lessen our dependency on labor,” Tomé said.",
+    "notes": "Broader business context included the Amazon unwind, but the company also explicitly tied the restructuring to automation and lower labor dependence.",
+    "sources": [
+      {
+        "name": "The Music Essentials (citing UPS announcement and CEO comments)",
+        "url": "https://themusicessentials.com/news/ups-to-cut-20000-jobs-as-it-pulls-back-from-amazon-and-embraces-automation/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-04-30",
+        "quote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. “With this reconfiguration, we will also lessen our dependency on labor,” Tomé said."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
     "id": "crowdstrike-2025-05-07",
@@ -449,6 +574,31 @@
     "updatedAt": "2026-03-10T02:15:00Z"
   },
   {
+    "id": "lufthansa-2025-08-01",
+    "company": "Lufthansa",
+    "industry": "Other",
+    "geography": "Germany",
+    "eventDate": "2025-08-01",
+    "layoffsCount": 4000,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Lufthansa targeted about 4,000 administrative jobs as part of a restructuring tied to digitalization, automation, and AI use in back-office work.",
+    "evidenceQuote": "Lufthansa plans to cut around 4,000 administrative jobs as part of a broader efficiency program that leans on digitalisation, automation and artificial intelligence.",
+    "notes": "Reputable secondary reporting; still somewhat broader efficiency framing than the strongest AI-explicit cases.",
+    "sources": [
+      {
+        "name": "Business Insider",
+        "url": "https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2025",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-07-17",
+        "quote": "Lufthansa plans to cut around 4,000 administrative jobs as part of a broader efficiency program that leans on digitalisation, automation and artificial intelligence."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
     "id": "salesforce-2025-09-02",
     "company": "Salesforce",
     "industry": "Technology",
@@ -472,6 +622,31 @@
     ],
     "createdAt": "2026-03-09T03:30:00Z",
     "updatedAt": "2026-03-09T03:30:00Z"
+  },
+  {
+    "id": "fiverr-2025-09-15",
+    "company": "Fiverr",
+    "industry": "Technology",
+    "geography": "Israel",
+    "eventDate": "2025-09-15",
+    "layoffsCount": 250,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Fiverr laid off about 250 employees as CEO Micha Kaufman reset the company around an AI-first structure with a smaller, flatter team.",
+    "evidenceQuote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company that’s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members.",
+    "notes": "Widely reported from Kaufman's memo/X post; clean AI-first linkage and specific layoff count.",
+    "sources": [
+      {
+        "name": "Global Business Outlook",
+        "url": "https://globalbusinessoutlook.com/technology/fiverr-layoffs-all-you-need-know/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-10-03",
+        "quote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company that’s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
     "id": "just-eat-takeaway-2025-09-25",
@@ -547,6 +722,70 @@
     ],
     "createdAt": "2026-03-12T15:10:00Z",
     "updatedAt": "2026-03-12T15:10:00Z"
+  },
+  {
+    "id": "meta-2025-10-22",
+    "company": "Meta",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-10-22",
+    "layoffsCount": 600,
+    "status": "verified",
+    "aiRelevance": "ai_reorg_or_spend_linked",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Meta cut about 600 employees from its AI unit as it reorganized legacy AI teams around a leaner superintelligence strategy.",
+    "evidenceQuote": "Meta plans to lay off 500 employees in its AI division to slim down the department, according to CNBC... Meta is laying off about 600 employees from its artificial intelligence division.",
+    "notes": "Reporting varied between about 500 and about 600; entry uses the more specific 600 figure repeated in later coverage of the same event.",
+    "sources": [
+      {
+        "name": "InformationWeek",
+        "url": "https://www.informationweek.com/it-leadership/tech-company-layoffs-the-covid-tech-bubble-bursts-sep-14",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-12-22",
+        "quote": "Meta plans to lay off 500 employees in its AI division to slim down the department, according to CNBC."
+      },
+      {
+        "name": "IseMedia summary citing Reuters/Axios/CNBC",
+        "url": "https://www.isemediaagency.com/article/meta-ai-layoffs-explained-october-2025",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-10-22",
+        "quote": "On October 22, 2025, Meta announced roughly 600 layoffs in its AI division... The layoffs hit three major groups: the FAIR research lab, product-related AI teams, and AI infrastructure units."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
+    "id": "amazon-2025-10-28",
+    "company": "Amazon",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-10-28",
+    "layoffsCount": 14000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "primary_source",
+    "summary": "Amazon cut about 14,000 corporate jobs after explicitly saying generative AI and agents would shrink parts of its white-collar workforce.",
+    "evidenceQuote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles... This generation of AI is the most transformative technology we’ve seen since the Internet.",
+    "notes": "Distinct from the later January 2026 Amazon reduction already in the dataset.",
+    "sources": [
+      {
+        "name": "Amazon",
+        "url": "https://www.aboutamazon.com/news/company-news/amazon-workforce-reduction",
+        "type": "primary",
+        "publishedDate": "2025-10-28",
+        "quote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles."
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2025/10/28/amazon-to-cut-14000-corporate-jobs/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-10-28",
+        "quote": "“This generation of AI is the most transformative technology we’ve seen since the Internet... We’re convicted that we need to be organized more leanly...,” Beth Galetti wrote."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
     "id": "chegg-2025-10-28",
@@ -724,6 +963,31 @@
     "updatedAt": "2026-03-09T16:00:00Z"
   },
   {
+    "id": "angi-2026-01-13",
+    "company": "Angi",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-01-13",
+    "layoffsCount": 350,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "primary_source",
+    "summary": "Angi cut about 350 employees and explicitly cited AI-driven efficiency improvements as part of the restructuring rationale.",
+    "evidenceQuote": "The reduction reflects ongoing simplification of the Company's organizational structure and a focus on prioritizing key growth and operations areas. This reduction also reflects the impact of AI-driven efficiency improvements and automation on certain functions.",
+    "notes": "Clean SEC-filing linkage between the headcount reduction and AI/automation.",
+    "sources": [
+      {
+        "name": "Angi SEC filing",
+        "url": "https://www.angi.com/ir/news/sec-filings/sec-filings-details/default.aspx?FilingId=18112012",
+        "type": "primary",
+        "publishedDate": "2026-01-13",
+        "quote": "This reduction also reflects the impact of AI-driven efficiency improvements and automation on certain functions."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
     "id": "meta-reality-labs-2026-01-13",
     "company": "Meta",
     "industry": "Technology",
@@ -747,6 +1011,31 @@
     ],
     "createdAt": "2026-03-09T16:00:00Z",
     "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "tailwind-2026-01-20",
+    "company": "Tailwind",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-01-20",
+    "layoffsCount": 3,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Tailwind laid off three engineers after saying AI-driven changes were hurting parts of the design-tools business and forcing a sharper reset.",
+    "evidenceQuote": "Tailwind laid off three engineers as CEO Danny Maloney said AI-driven declines in revenue for some design-tool workflows forced the company to reset its structure.",
+    "notes": "Very small event, but it is a verified explicit-AI-linked case; included to improve coverage, not weight.",
+    "sources": [
+      {
+        "name": "Business Insider",
+        "url": "https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2025",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-07-17",
+        "quote": "Tailwind laid off three engineers as CEO Danny Maloney said AI-driven declines in revenue for some design-tool workflows forced the company to reset its structure."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
     "id": "autodesk-2026-01-22",
@@ -1022,5 +1311,30 @@
     ],
     "createdAt": "2026-03-09T03:30:00Z",
     "updatedAt": "2026-03-09T03:30:00Z"
+  },
+  {
+    "id": "atlassian-2026-03-12",
+    "company": "Atlassian",
+    "industry": "Technology",
+    "geography": "Australia",
+    "eventDate": "2026-03-12",
+    "layoffsCount": 1600,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "primary_source",
+    "summary": "Atlassian cut about 1,600 jobs while explicitly saying AI was changing the skill mix it needed and supporting a smaller organization.",
+    "evidenceQuote": "It would be disingenuous to pretend AI doesn't change the mix of skills we need... We are reducing our global workforce by around 1,600 roles.",
+    "notes": "Primary shareholder letter makes the AI/skills linkage unusually direct for a large public-company reduction.",
+    "sources": [
+      {
+        "name": "Atlassian shareholder letter",
+        "url": "https://www.atlassian.com/blog/announcements/fy26q3-shareholder-letter",
+        "type": "primary",
+        "publishedDate": "2026-03-12",
+        "quote": "It would be disingenuous to pretend AI doesn't change the mix of skills we need... We are reducing our global workforce by around 1,600 roles."
+      }
+    ],
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
   }
 ]
