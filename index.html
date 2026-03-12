@@ -295,15 +295,20 @@
         return Number(v || 0).toLocaleString();
       }
 
+      function fmtNumberPadded(v) {
+        return String(Math.round(Number(v || 0))).padStart(6, '0').replace(/(\d{3})(\d{3})/, '$1,$2');
+      }
+
       function animateCount(el, target) {
         if (!el) return;
         const end = Number(target || 0);
+        el.textContent = fmtNumberPadded(0);
         const duration = 900;
         const start = performance.now();
         const step = (now) => {
           const t = Math.min(1, (now - start) / duration);
           const eased = 1 - Math.pow(1 - t, 3);
-          el.textContent = fmtNumber(Math.round(end * eased));
+          el.textContent = t < 1 ? fmtNumberPadded(end * eased) : fmtNumber(end);
           if (t < 1) requestAnimationFrame(step);
         };
         requestAnimationFrame(step);
