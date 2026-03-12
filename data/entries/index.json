@@ -57,6 +57,31 @@
     "updatedAt": "2026-03-10T17:10:00Z"
   },
   {
+    "id": "duolingo-2024-01-09",
+    "company": "Duolingo",
+    "industry": "Education Technology",
+    "geography": "United States",
+    "eventDate": "2024-01-09",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "ai_replacement_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "TechCrunch reported Duolingo cut about 10% of its contractor workforce as it shifted more translation and content work to AI tools including GPT-4.",
+    "evidenceQuote": "The company confirmed it cut around 10% of its contractor workforce at the end of 2023, as it turns to AI models like OpenAI?s GPT-4 to streamline content production and translations.",
+    "notes": "Applies to contractors rather than full-time employees; absolute number not disclosed. Company said AI was only part of the reason and disputed calling the departures layoffs.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2024/01/09/duolingo-cut-10-of-its-contractor-workforce-as-the-company-embraces-ai/",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-01-09",
+        "quote": "The company confirmed it cut around 10% of its contractor workforce at the end of 2023, as it turns to AI models like OpenAI?s GPT-4 to streamline content production and translations."
+      }
+    ],
+    "createdAt": "2026-03-12T04:20:00Z",
+    "updatedAt": "2026-03-12T04:20:00Z"
+  },
+  {
     "id": "sap-2024-01-24",
     "company": "SAP",
     "industry": "Technology",
@@ -80,6 +105,38 @@
     ],
     "createdAt": "2026-03-11T01:20:00Z",
     "updatedAt": "2026-03-11T01:20:00Z"
+  },
+  {
+    "id": "grammarly-2024-02-09",
+    "company": "Grammarly",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2024-02-09",
+    "layoffsCount": 230,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Grammarly laid off about 230 employees and said the restructuring would deepen its technical investments in AI and push toward an AI-enabled workplace.",
+    "evidenceQuote": "As we strengthen our focus toward driving the AI-enabled workplace and deepen our technical investments in AI, we will need a different mix of capabilities and skillsets.",
+    "notes": "Company framed the cuts as a restructuring for the AI-enabled workplace rather than a cost-cutting exercise.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2024/02/09/grammarly-lays-off-230-employees-as-part-of-a-business-restructuring/",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-02-09",
+        "quote": "Grammarly is laying off 230 employees worldwide as part of a \"business restructuring\"... The layoffs are part of Grammarly's efforts to advance its focus on \"the AI-enabled workplace of the future.\""
+      },
+      {
+        "name": "Business Insider",
+        "url": "https://www.businessinsider.com/layoffs-happening-at-tech-firms-that-are-doing-just-fine-2024-2",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-02-12",
+        "quote": "Roy-Chowdhury insisted that the company's \"financial position is, and remains, strong.\" Instead, he said the layoffs had been conducted as a means of recalibrating resources for ?the AI-enabled workplace of the future.?"
+      }
+    ],
+    "createdAt": "2026-03-11T18:20:00Z",
+    "updatedAt": "2026-03-11T18:20:00Z"
   },
   {
     "id": "intuit-2024-07-10",
@@ -112,6 +169,70 @@
     ],
     "createdAt": "2026-03-11T01:20:00Z",
     "updatedAt": "2026-03-11T01:20:00Z"
+  },
+  {
+    "id": "dell-2024-08-05",
+    "company": "Dell Technologies",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2024-08-05",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "ai_reorg_or_spend_linked",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Dell began another round of layoffs while reorganizing sales around a new AI-focused unit and streamlining management layers.",
+    "evidenceQuote": "Dell Technologies Inc. is cutting jobs as part of a reorganization of its sales teams that includes a new group focused on artificial intelligence products and services.",
+    "notes": "No official layoff total disclosed. Bloomberg reported the cuts; Business Insider later published memo excerpts showing the company was reorganizing for AI and getting leaner.",
+    "sources": [
+      {
+        "name": "Bloomberg (via Sahm Capital syndication)",
+        "url": "https://www.sahmcapital.com/news/content/dell-cuts-workers-in-sales-team-reorganization-with-new-ai-focused-unit-we-are-getting-leaner-executives-write-in-memo-to-employees-new-team-will-put-more-emphasis-on-ai-sales-and-dell-servers-bloomberg-news-2024-08-05",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-08-05",
+        "quote": "Dell Technologies Inc. is cutting jobs as part of a reorganization of its sales teams that includes a new group focused on artificial intelligence products and services."
+      },
+      {
+        "name": "Business Insider",
+        "url": "https://www.businessinsider.com/read-memo-dell-staff-restructuring-layoffs-jobs-ai-2024-8",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-08-07",
+        "quote": "Almost a year ago, we kicked off our Modern Dell efforts across the company to simplify how we operate and reimagine work and customer experiences with AI."
+      }
+    ],
+    "createdAt": "2026-03-12T04:20:00Z",
+    "updatedAt": "2026-03-12T04:20:00Z"
+  },
+  {
+    "id": "cisco-2024-08-14",
+    "company": "Cisco",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2024-08-14",
+    "layoffsCount": 6300,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Cisco said it would cut about 7% of its workforce as it restructured to invest more heavily in AI, cybersecurity, and related growth areas.",
+    "evidenceQuote": "California technology company Cisco says it is cutting 7% of its workforce as it shifts its focus to AI, cybersecurity.",
+    "notes": "AP and Network World both tied the August 2024 restructuring directly to Cisco's AI push and resource reallocation into AI growth areas.",
+    "sources": [
+      {
+        "name": "Associated Press via ABC News",
+        "url": "https://abcnews.go.com/Business/wireStory/california-technology-company-cisco-cutting-7-workforce-shifts-112844330",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-08-14",
+        "quote": "California technology company Cisco says it is cutting 7% of its workforce as it shifts its focus to AI, cybersecurity."
+      },
+      {
+        "name": "Network World",
+        "url": "https://www.networkworld.com/article/3486901/cisco-to-cut-7-of-workforce-restructure-product-groups.html",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-08-14",
+        "quote": "Cisco is trying to move more quickly into three core areas ? AI networking, security and collaboration... \"We actually are shifting hundreds of millions of dollars into AI,\" Robbins said."
+      }
+    ],
+    "createdAt": "2026-03-11T18:20:00Z",
+    "updatedAt": "2026-03-11T18:20:00Z"
   },
   {
     "id": "workday-2025-02-05",
@@ -164,6 +285,38 @@
     "updatedAt": "2026-03-10T02:15:00Z"
   },
   {
+    "id": "crowdstrike-2025-05-07",
+    "company": "CrowdStrike",
+    "industry": "Cybersecurity",
+    "geography": "United States",
+    "eventDate": "2025-05-07",
+    "layoffsCount": 500,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "primary_source",
+    "summary": "CrowdStrike said it would cut about 500 jobs as AI-driven efficiencies flattened its hiring curve and reshaped how it operates.",
+    "evidenceQuote": "AI flattens our hiring curve, and helps us innovate from idea to product faster. It streamlines go-to-market, improves customer outcomes, and drives efficiencies across both the front and back office.",
+    "notes": "CEO George Kurtz tied the 5% workforce cut directly to AI in a memo attached to the SEC filing; Reuters roundup and trade coverage echoed the linkage.",
+    "sources": [
+      {
+        "name": "CrowdStrike SEC filing / CEO memo",
+        "url": "https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1535527/000153552725000091/crwd-20250507.htm",
+        "type": "primary_source",
+        "publishedDate": "2025-05-07",
+        "quote": "AI flattens our hiring curve, and helps us innovate from idea to product faster. It streamlines go-to-market, improves customer outcomes, and drives efficiencies across both the front and back office."
+      },
+      {
+        "name": "Cybersecurity Dive",
+        "url": "https://www.cybersecuritydive.com/news/crowdstrike-to-cut-500-jobs-in-plan-to-scale-business/747401/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-05-07",
+        "quote": "CrowdStrike said Wednesday that it would cut 500 jobs, or 5% of its global workforce, as part of a plan to scale its business and meet a goal of  billion in annual recurring revenue, according to a regulatory filing."
+      }
+    ],
+    "createdAt": "2026-03-11T05:30:00Z",
+    "updatedAt": "2026-03-11T05:30:00Z"
+  },
+  {
     "id": "chegg-2025-05-12",
     "company": "Chegg",
     "industry": "Other",
@@ -212,6 +365,38 @@
     ],
     "createdAt": "2026-03-10T17:10:00Z",
     "updatedAt": "2026-03-10T17:10:00Z"
+  },
+  {
+    "id": "recruit-holdings-2025-07-10",
+    "company": "Recruit Holdings",
+    "industry": "Technology",
+    "geography": "Japan",
+    "eventDate": "2025-07-10",
+    "layoffsCount": 1300,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Recruit Holdings cut about 1,300 jobs across Indeed and Glassdoor while telling staff it had to adapt to AI-driven change in hiring and product development.",
+    "evidenceQuote": "AI is changing the world, and we must adapt by ensuring our product delivers truly great experiences for job seekers and employers.",
+    "notes": "Reuters-described internal memo and CBS coverage both connect the cuts to Recruit's AI-driven simplification of hiring and internal productivity work.",
+    "sources": [
+      {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/indeed-glassdoor-layoffs-ai-job-search/",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-07-10",
+        "quote": "Indeed and Glassdoor, the job search and employee review firms, are slashing a total of roughly 1,300 jobs as their parent company, Japan's Recruit Holdings, embraces artificial intelligence."
+      },
+      {
+        "name": "India Today citing Reuters",
+        "url": "https://www.indiatoday.in/technology/news/story/recruit-holdings-job-cuts-ai-restructuring-glassdoor-indeed-integration-2754152-2025-07-11",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-07-11",
+        "quote": "Recruit Holdings... is set to reduce its workforce by approximately 1,300, according to a memo accessed by Reuters... \"AI is changing the world, and we must adapt...\""
+      }
+    ],
+    "createdAt": "2026-03-11T18:20:00Z",
+    "updatedAt": "2026-03-11T18:20:00Z"
   },
   {
     "id": "recruit-holdings-2025-07-11",
@@ -314,29 +499,29 @@
     "updatedAt": "2026-03-09T16:00:00Z"
   },
   {
-    "id": "hp-2025-11-01",
-    "company": "HP Inc",
-    "industry": "Technology",
+    "id": "chegg-2025-10-28",
+    "company": "Chegg",
+    "industry": "Education Technology",
     "geography": "United States",
-    "eventDate": "2025-11-01",
-    "layoffsCount": 6000,
+    "eventDate": "2025-10-28",
+    "layoffsCount": 388,
     "status": "verified",
-    "aiRelevance": "automation_efficiency_cited",
+    "aiRelevance": "explicit_ai_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Reuters listed HP among companies cutting jobs while streamlining operations and adopting AI.",
-    "evidenceQuote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI.",
-    "notes": "Reuters reported a range of 4,000 to 6,000 job cuts.",
+    "summary": "Chegg said it would cut 388 jobs, about 45% of its workforce, as the company said the new realities of AI had sharply reduced traffic and revenue.",
+    "evidenceQuote": "Educational technology company Chegg said on Monday it would cut 388 roles globally, or about 45% of the workforce, to reduce costs and streamline operations as it works to adapt to the growing shift toward AI-powered tools.",
+    "notes": "Distinct from Chegg's May 2025 layoff round; Reuters said Chegg blamed the new realities of AI and reduced Google traffic to publishers.",
     "sources": [
       {
         "name": "Reuters",
-        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "url": "https://www.reuters.com/world/work/chegg-lay-off-45-workforce-ai-disruption-hits-business-2025-10-28/",
         "type": "reputable_reporting",
-        "publishedDate": "2026-02-27",
-        "quote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI."
+        "publishedDate": "2025-10-28",
+        "quote": "Educational technology company Chegg said on Monday it would cut 388 roles globally, or about 45% of the workforce, to reduce costs and streamline operations as it works to adapt to the growing shift toward AI-powered tools."
       }
     ],
-    "createdAt": "2026-03-09T16:00:00Z",
-    "updatedAt": "2026-03-09T16:00:00Z"
+    "createdAt": "2026-03-11T05:30:00Z",
+    "updatedAt": "2026-03-11T05:30:00Z"
   },
   {
     "id": "allianz-2025-11-01",
@@ -358,6 +543,31 @@
         "type": "reputable_reporting",
         "publishedDate": "2026-02-27",
         "quote": "The German insurance group plans to cut up to 1,800 jobs in its travel insurance division as AI increasingly replaces manual processes, a source familiar with the plans told Reuters last November."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "hp-2025-11-01",
+    "company": "HP Inc",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-11-01",
+    "layoffsCount": 6000,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters listed HP among companies cutting jobs while streamlining operations and adopting AI.",
+    "evidenceQuote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI.",
+    "notes": "Reuters reported a range of 4,000 to 6,000 job cuts.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI."
       }
     ],
     "createdAt": "2026-03-09T16:00:00Z",
@@ -689,31 +899,6 @@
     "updatedAt": "2026-03-10T15:20:00Z"
   },
   {
-    "id": "wisetech-2026-02-25",
-    "company": "WiseTech",
-    "industry": "Technology",
-    "geography": "Australia",
-    "eventDate": "2026-02-25",
-    "layoffsCount": 2000,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Reuters reported WiseTech would axe about 2,000 jobs as it integrated AI into customer software and internal operations.",
-    "evidenceQuote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations.",
-    "notes": "One of the clearest Reuters examples of AI-driven workforce reduction.",
-    "sources": [
-      {
-        "name": "Reuters",
-        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
-        "type": "reputable_reporting",
-        "publishedDate": "2026-02-27",
-        "quote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations."
-      }
-    ],
-    "createdAt": "2026-03-09T16:00:00Z",
-    "updatedAt": "2026-03-09T16:00:00Z"
-  },
-  {
     "id": "seb-2026-02-25",
     "company": "SEB",
     "industry": "Other",
@@ -733,6 +918,31 @@
         "type": "reputable_reporting",
         "publishedDate": "2026-02-27",
         "quote": "The French small appliance and cookware maker said on February 25 it would launch a restructuring plan that also takes \"full advantage\" of the possibilities offered by AI that may impact up to 2,100 jobs worldwide by 2027."
+      }
+    ],
+    "createdAt": "2026-03-09T16:00:00Z",
+    "updatedAt": "2026-03-09T16:00:00Z"
+  },
+  {
+    "id": "wisetech-2026-02-25",
+    "company": "WiseTech",
+    "industry": "Technology",
+    "geography": "Australia",
+    "eventDate": "2026-02-25",
+    "layoffsCount": 2000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported WiseTech would axe about 2,000 jobs as it integrated AI into customer software and internal operations.",
+    "evidenceQuote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations.",
+    "notes": "One of the clearest Reuters examples of AI-driven workforce reduction.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations."
       }
     ],
     "createdAt": "2026-03-09T16:00:00Z",
@@ -762,158 +972,5 @@
     ],
     "createdAt": "2026-03-09T03:30:00Z",
     "updatedAt": "2026-03-09T03:30:00Z"
-  },
-  {
-    "id": "crowdstrike-2025-05-07",
-    "company": "CrowdStrike",
-    "industry": "Cybersecurity",
-    "geography": "United States",
-    "eventDate": "2025-05-07",
-    "layoffsCount": 500,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "primary_source",
-    "summary": "CrowdStrike said it would cut about 500 jobs as AI-driven efficiencies flattened its hiring curve and reshaped how it operates.",
-    "evidenceQuote": "AI flattens our hiring curve, and helps us innovate from idea to product faster. It streamlines go-to-market, improves customer outcomes, and drives efficiencies across both the front and back office.",
-    "notes": "CEO George Kurtz tied the 5% workforce cut directly to AI in a memo attached to the SEC filing; Reuters roundup and trade coverage echoed the linkage.",
-    "sources": [
-      {
-        "name": "CrowdStrike SEC filing / CEO memo",
-        "url": "https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1535527/000153552725000091/crwd-20250507.htm",
-        "type": "primary_source",
-        "publishedDate": "2025-05-07",
-        "quote": "AI flattens our hiring curve, and helps us innovate from idea to product faster. It streamlines go-to-market, improves customer outcomes, and drives efficiencies across both the front and back office."
-      },
-      {
-        "name": "Cybersecurity Dive",
-        "url": "https://www.cybersecuritydive.com/news/crowdstrike-to-cut-500-jobs-in-plan-to-scale-business/747401/",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-05-07",
-        "quote": "CrowdStrike said Wednesday that it would cut 500 jobs, or 5% of its global workforce, as part of a plan to scale its business and meet a goal of  billion in annual recurring revenue, according to a regulatory filing."
-      }
-    ],
-    "createdAt": "2026-03-11T05:30:00Z",
-    "updatedAt": "2026-03-11T05:30:00Z"
-  },
-  {
-    "id": "chegg-2025-10-28",
-    "company": "Chegg",
-    "industry": "Education Technology",
-    "geography": "United States",
-    "eventDate": "2025-10-28",
-    "layoffsCount": 388,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Chegg said it would cut 388 jobs, about 45% of its workforce, as the company said the new realities of AI had sharply reduced traffic and revenue.",
-    "evidenceQuote": "Educational technology company Chegg said on Monday it would cut 388 roles globally, or about 45% of the workforce, to reduce costs and streamline operations as it works to adapt to the growing shift toward AI-powered tools.",
-    "notes": "Distinct from Chegg's May 2025 layoff round; Reuters said Chegg blamed the new realities of AI and reduced Google traffic to publishers.",
-    "sources": [
-      {
-        "name": "Reuters",
-        "url": "https://www.reuters.com/world/work/chegg-lay-off-45-workforce-ai-disruption-hits-business-2025-10-28/",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-10-28",
-        "quote": "Educational technology company Chegg said on Monday it would cut 388 roles globally, or about 45% of the workforce, to reduce costs and streamline operations as it works to adapt to the growing shift toward AI-powered tools."
-      }
-    ],
-    "createdAt": "2026-03-11T05:30:00Z",
-    "updatedAt": "2026-03-11T05:30:00Z"
-  },
-  {
-    "id": "grammarly-2024-02-09",
-    "company": "Grammarly",
-    "industry": "Technology",
-    "geography": "United States",
-    "eventDate": "2024-02-09",
-    "layoffsCount": 230,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Grammarly laid off about 230 employees and said the restructuring would deepen its technical investments in AI and push toward an AI-enabled workplace.",
-    "evidenceQuote": "As we strengthen our focus toward driving the AI-enabled workplace and deepen our technical investments in AI, we will need a different mix of capabilities and skillsets.",
-    "notes": "Company framed the cuts as a restructuring for the AI-enabled workplace rather than a cost-cutting exercise.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2024/02/09/grammarly-lays-off-230-employees-as-part-of-a-business-restructuring/",
-        "type": "reputable_reporting",
-        "publishedDate": "2024-02-09",
-        "quote": "Grammarly is laying off 230 employees worldwide as part of a \"business restructuring\"... The layoffs are part of Grammarly's efforts to advance its focus on \"the AI-enabled workplace of the future.\""
-      },
-      {
-        "name": "Business Insider",
-        "url": "https://www.businessinsider.com/layoffs-happening-at-tech-firms-that-are-doing-just-fine-2024-2",
-        "type": "reputable_reporting",
-        "publishedDate": "2024-02-12",
-        "quote": "Roy-Chowdhury insisted that the company's \"financial position is, and remains, strong.\" Instead, he said the layoffs had been conducted as a means of recalibrating resources for ?the AI-enabled workplace of the future.?"
-      }
-    ],
-    "createdAt": "2026-03-11T18:20:00Z",
-    "updatedAt": "2026-03-11T18:20:00Z"
-  },
-  {
-    "id": "cisco-2024-08-14",
-    "company": "Cisco",
-    "industry": "Technology",
-    "geography": "United States",
-    "eventDate": "2024-08-14",
-    "layoffsCount": 6300,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Cisco said it would cut about 7% of its workforce as it restructured to invest more heavily in AI, cybersecurity, and related growth areas.",
-    "evidenceQuote": "California technology company Cisco says it is cutting 7% of its workforce as it shifts its focus to AI, cybersecurity.",
-    "notes": "AP and Network World both tied the August 2024 restructuring directly to Cisco's AI push and resource reallocation into AI growth areas.",
-    "sources": [
-      {
-        "name": "Associated Press via ABC News",
-        "url": "https://abcnews.go.com/Business/wireStory/california-technology-company-cisco-cutting-7-workforce-shifts-112844330",
-        "type": "reputable_reporting",
-        "publishedDate": "2024-08-14",
-        "quote": "California technology company Cisco says it is cutting 7% of its workforce as it shifts its focus to AI, cybersecurity."
-      },
-      {
-        "name": "Network World",
-        "url": "https://www.networkworld.com/article/3486901/cisco-to-cut-7-of-workforce-restructure-product-groups.html",
-        "type": "reputable_reporting",
-        "publishedDate": "2024-08-14",
-        "quote": "Cisco is trying to move more quickly into three core areas ? AI networking, security and collaboration... \"We actually are shifting hundreds of millions of dollars into AI,\" Robbins said."
-      }
-    ],
-    "createdAt": "2026-03-11T18:20:00Z",
-    "updatedAt": "2026-03-11T18:20:00Z"
-  },
-  {
-    "id": "recruit-holdings-2025-07-10",
-    "company": "Recruit Holdings",
-    "industry": "Technology",
-    "geography": "Japan",
-    "eventDate": "2025-07-10",
-    "layoffsCount": 1300,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Recruit Holdings cut about 1,300 jobs across Indeed and Glassdoor while telling staff it had to adapt to AI-driven change in hiring and product development.",
-    "evidenceQuote": "AI is changing the world, and we must adapt by ensuring our product delivers truly great experiences for job seekers and employers.",
-    "notes": "Reuters-described internal memo and CBS coverage both connect the cuts to Recruit's AI-driven simplification of hiring and internal productivity work.",
-    "sources": [
-      {
-        "name": "CBS News",
-        "url": "https://www.cbsnews.com/news/indeed-glassdoor-layoffs-ai-job-search/",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-07-10",
-        "quote": "Indeed and Glassdoor, the job search and employee review firms, are slashing a total of roughly 1,300 jobs as their parent company, Japan's Recruit Holdings, embraces artificial intelligence."
-      },
-      {
-        "name": "India Today citing Reuters",
-        "url": "https://www.indiatoday.in/technology/news/story/recruit-holdings-job-cuts-ai-restructuring-glassdoor-indeed-integration-2754152-2025-07-11",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-07-11",
-        "quote": "Recruit Holdings... is set to reduce its workforce by approximately 1,300, according to a memo accessed by Reuters... \"AI is changing the world, and we must adapt...\""
-      }
-    ],
-    "createdAt": "2026-03-11T18:20:00Z",
-    "updatedAt": "2026-03-11T18:20:00Z"
   }
 ]
