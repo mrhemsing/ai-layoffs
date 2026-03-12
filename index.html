@@ -286,6 +286,14 @@
         return `${mm}/${dd}/${yy}`;
       }
 
+      function fmtDateMobileCompact(v) {
+        if (!v) return '—';
+        const d = new Date(v);
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        return `${mm}/${dd}`;
+      }
+
       function fmtDateMedium(v) {
         if (!v) return '—';
         const d = new Date(v);
@@ -344,7 +352,7 @@
         document.getElementById('statExplicit').textContent = String(entries.filter((e) => e.aiRelevance === 'explicit_ai_cited').length);
         const latest = entries.slice().sort((a, b) => String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')))[0];
         document.getElementById('statUpdated').innerHTML = latest
-          ? `<span class="desktop-date">${fmtDateMedium(latest.updatedAt)}</span><span class="mobile-date">${fmtDateShort(latest.updatedAt)}</span>`
+          ? `<span class="desktop-date">${fmtDateMedium(latest.updatedAt)}</span><span class="mobile-date">${fmtDateMobileCompact(latest.updatedAt)}</span>`
           : '—';
         document.getElementById('statUpdatedLabel').textContent = latest
           ? `last updated on ${fmtDateShort(latest.updatedAt)}`
