@@ -91,6 +91,7 @@
       }
       .filters-head { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
       .filters-head h2 { margin: 0; }
+      .filters-toggle { display: none; }
       .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items: center; }
       .quote-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 2px; }
       .why-included { font-size: 14px; color: #444; }
@@ -124,6 +125,19 @@
           background-image: linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
         }
         .hero + .muted { line-height: 1.6; }
+        .filters-head { align-items: center; }
+        .filters-toggle {
+          display: inline-flex;
+          margin-left: auto;
+          padding: 6px 10px;
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          background: #fff;
+          color: #111;
+          font-size: 13px;
+        }
+        #resultSummary { width: 100%; margin-top: 6px; }
+        .list-card[data-filters-open='false'] #filtersToolbar { display: none; }
         .list-card {
           border: 0;
           border-radius: 0;
@@ -177,9 +191,10 @@
     <div class="card list-card" style="margin-bottom: 20px;">
       <div class="filters-head">
         <h2>Filters</h2>
+        <button type="button" class="filters-toggle" id="filtersToggle" aria-expanded="true">Show filters</button>
         <div class="muted" id="resultSummary">Loading…</div>
       </div>
-      <div class="toolbar" style="margin-bottom: 26px;">
+      <div class="toolbar" id="filtersToolbar" style="margin-bottom: 26px;">
         <input id="filterSearch" type="search" placeholder="Search company, geography, or notes" />
         <select id="filterRelevance">
           <option value="">All AI relevance</option>
@@ -388,6 +403,20 @@
         fillYearOptions(allEntries);
         ['filterSearch', 'filterRelevance', 'filterIndustry', 'filterYear', 'sortBy'].forEach((id) => {
           document.getElementById(id).addEventListener(id === 'filterSearch' ? 'input' : 'change', render);
+        });
+        const listCard = document.querySelector('.list-card');
+        const filtersToggle = document.getElementById('filtersToggle');
+        const setFiltersOpen = (open) => {
+          if (!listCard || !filtersToggle) return;
+          listCard.setAttribute('data-filters-open', open ? 'true' : 'false');
+          filtersToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          filtersToggle.textContent = open ? 'Hide filters' : 'Show filters';
+        };
+        const mobile = window.matchMedia('(max-width: 800px)').matches;
+        setFiltersOpen(!mobile);
+        filtersToggle?.addEventListener('click', () => {
+          const isOpen = listCard?.getAttribute('data-filters-open') === 'true';
+          setFiltersOpen(!isOpen);
         });
         render();
       }
