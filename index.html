@@ -454,7 +454,7 @@
         body.innerHTML = '';
         empty.style.display = entries.length ? 'none' : 'block';
         summary.textContent = `${entries.length} matching entries out of ${allEntries.length} total`;
-        document.getElementById('resultJobsImpacted').textContent = `${fmtNumber(entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0))} jobs impacted`;
+        document.getElementById('resultJobsImpacted').textContent = `(${fmtNumber(entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0))} jobs impacted)`;
 
         if (!entries.some((entry) => entry.id === selectedEntryId)) {
           selectedEntryId = entries[0]?.id || null;
