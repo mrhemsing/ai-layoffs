@@ -279,6 +279,10 @@
         return String(v || '').replaceAll('_', ' ');
       }
 
+      function fmtGeography(v) {
+        return v === 'United Kingdom' ? 'UK' : (v || '—');
+      }
+
       function updateStats(entries) {
         document.getElementById('statEntries').textContent = String(entries.length);
         document.getElementById('statLayoffs').textContent = fmtNumber(entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0));
@@ -389,7 +393,7 @@
           const isSelected = entry.id === selectedEntryId;
           if (isSelected) tr.classList.add('selected');
           tr.innerHTML = `
-            <td><span class="company-line"><b>${entry.company}</b></span><br><span class="muted">${entry.geography || '—'}</span></td>
+            <td><span class="company-line"><b>${entry.company}</b></span><br><span class="muted"><span class="desktop-date">${entry.geography || '—'}</span><span class="mobile-date">${fmtGeography(entry.geography)}</span></span></td>
             <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span></a>` : `<span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span>`}</td>
             <td>${entry.layoffsCount == null ? '—' : fmtNumber(entry.layoffsCount)}</td>
             <td>${entry.industry || '—'}</td>
