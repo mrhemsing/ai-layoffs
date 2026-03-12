@@ -385,7 +385,7 @@
             <div class="details">
               <div class="quote-meta">
                 <span class="source-chip">${source ? `<a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>` : 'Source unavailable'}</span>
-                <span class="source-chip mobile-only">${fmtAiRelevanceShort(entry.aiRelevance)}</span>
+                <span class="pill ${entry.aiRelevance} mobile-only">${fmtAiRelevanceShort(entry.aiRelevance)}</span>
               </div>
               <div class="quote">${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
               <div class="why-included">${whyIncluded}</div>
