@@ -97,6 +97,7 @@
       .filters-caret { display: none; font-size: 12px; }
       .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items: center; }
       .quote-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 2px; }
+      .source-chip { white-space: nowrap; }
       .why-included { font-size: 14px; color: #444; }
       .detail-notes { margin-top: 6px; }
       .source-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 8px; background: #f3f4f6; color: #333; font-size: 13px; }
@@ -130,6 +131,13 @@
         .hero + .muted { line-height: 1.6; }
         .receipts-mark { margin-right: 4px; }
         blockquote.data-note-text { max-width: none; }
+        .quote-meta {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+        .quote-meta::-webkit-scrollbar { display: none; }
         .filters-head { align-items: center; }
         .filters-label { display: none; }
         .filters-caret { display: none; }
