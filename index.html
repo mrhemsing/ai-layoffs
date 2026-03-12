@@ -132,16 +132,20 @@
         .filters-caret { display: none; }
         .filters-toggle {
           display: inline-flex;
+          align-items: center;
           justify-content: center;
           margin-left: auto;
-          min-width: 92px;
+          width: 92px;
+          min-height: 44px;
           padding: 6px 10px;
           border: 1px solid #111;
           border-radius: 8px;
           background: #fff;
           color: #111;
           font-size: 13px;
-          white-space: nowrap;
+          line-height: 1.15;
+          text-align: center;
+          white-space: normal;
         }
         #resultSummary { width: 100%; margin-top: 2px; }
         .list-card[data-filters-open='false'] #filtersToolbar { display: none; }
@@ -418,7 +422,7 @@
           if (!listCard || !filtersToggle) return;
           listCard.setAttribute('data-filters-open', open ? 'true' : 'false');
           filtersToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-          filtersToggle.textContent = open ? 'Hide filters' : 'Show filters';
+          filtersToggle.innerHTML = open ? 'Hide<br>filters' : 'Show<br>filters';
         };
         const mobile = window.matchMedia('(max-width: 800px)').matches;
         setFiltersOpen(!mobile);
