@@ -295,6 +295,20 @@
         return Number(v || 0).toLocaleString();
       }
 
+      function animateCount(el, target) {
+        if (!el) return;
+        const end = Number(target || 0);
+        const duration = 900;
+        const start = performance.now();
+        const step = (now) => {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = fmtNumber(Math.round(end * eased));
+          if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+
       function labelize(v) {
         return String(v || '').replaceAll('_', ' ');
       }
@@ -313,7 +327,14 @@
 
       function updateStats(entries) {
         document.getElementById('statEntries').textContent = String(entries.length);
-        document.getElementById('statLayoffs').textContent = fmtNumber(entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0));
+        const layoffsTotal = entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0);
+        const layoffsEl = document.getElementById('statLayoffs');
+        if (layoffsEl && !layoffsEl.dataset.animated) {
+          layoffsEl.dataset.animated = 'true';
+          animateCount(layoffsEl, layoffsTotal);
+        } else if (layoffsEl) {
+          layoffsEl.textContent = fmtNumber(layoffsTotal);
+        }
         document.getElementById('statExplicit').textContent = String(entries.filter((e) => e.aiRelevance === 'explicit_ai_cited').length);
         const latest = entries.slice().sort((a, b) => String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')))[0];
         document.getElementById('statUpdated').innerHTML = latest
