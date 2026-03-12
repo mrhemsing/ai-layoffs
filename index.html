@@ -130,7 +130,11 @@
         }
         .hero + .muted { line-height: 1.6; }
         .receipts-mark { margin-right: 4px; }
-        blockquote.data-note-text { max-width: none; }
+        blockquote.data-note-text {
+          max-width: none;
+          width: 100%;
+          box-sizing: border-box;
+        }
         .quote-meta {
           flex-wrap: nowrap;
           overflow-x: auto;
