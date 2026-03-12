@@ -549,31 +549,6 @@
     "updatedAt": "2026-03-11T18:20:00Z"
   },
   {
-    "id": "recruit-holdings-2025-07-11",
-    "company": "Recruit Holdings",
-    "industry": "Recruitment",
-    "geography": "United States",
-    "eventDate": "2025-07-11",
-    "layoffsCount": 1300,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Recruit Holdings said it would cut about 1,300 jobs at Indeed and Glassdoor as it adapted its hiring products around AI.",
-    "evidenceQuote": "Recruit Holdings, the Japanese parent of Indeed and Glassdoor, said on Friday that it is laying off about 1,300 employees, or 6% of the staff, at the two job sites.",
-    "notes": "TechCrunch, citing Reuters reporting and an internal memo, said the company was adapting around AI.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2025/07/11/indeed-glassdoor-to-lay-off-1300-staff/",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-07-11",
-        "quote": "Recruit Holdings, the Japanese parent of Indeed and Glassdoor, said on Friday that it is laying off about 1,300 employees, or 6% of the staff, at the two job sites."
-      }
-    ],
-    "createdAt": "2026-03-10T02:15:00Z",
-    "updatedAt": "2026-03-10T02:15:00Z"
-  },
-  {
     "id": "lufthansa-2025-08-01",
     "company": "Lufthansa",
     "industry": "Other",
