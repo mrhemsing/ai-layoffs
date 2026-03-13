@@ -1311,5 +1311,119 @@
     ],
     "createdAt": "2026-03-12T11:45:00-07:00",
     "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
+    "id": "morgan-stanley-2025-03-19",
+    "company": "Morgan Stanley",
+    "industry": "Finance",
+    "geography": "United States",
+    "eventDate": "2025-03-19",
+    "layoffsCount": 2000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Morgan Stanley planned to cut about 2,000 jobs, with Bloomberg reporting that a small but growing share of the reductions was tied to AI and automation replacing roles.",
+    "evidenceQuote": "Some employees impacted by the layoffs will be let go because AI and automation have replaced their roles within the bank.",
+    "notes": "Bloomberg-reported layoff event as summarized by Entrepreneur and others; broader cost/attrition factors were also cited, but AI linkage was explicit for part of the reduction.",
+    "sources": [
+      {
+        "name": "Entrepreneur summarizing Bloomberg",
+        "url": "https://www.entrepreneur.com/business-news/morgan-stanley-plans-to-cut-2000-workers-partly-due-to-ai/488752",
+        "type": "report",
+        "publishedDate": "2025-03-19",
+        "quote": "Some employees impacted by the layoffs will be let go because AI and automation have replaced their roles within the bank."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
+  },
+  {
+    "id": "intel-2025-06-20",
+    "company": "Intel",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-06-20",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Intel told marketing employees it would outsource much of the function to Accenture and AI-driven systems, warning of significant team changes and potential headcount reductions.",
+    "evidenceQuote": "The transition of our marketing and operations functions will result in significant changes to team structures, including potential headcount reductions... We are partnering with Accenture to leverage AI-driven technologies.",
+    "notes": "OregonLive reviewed Intel internal materials; exact job count was not disclosed, so layoffsCount remains null.",
+    "sources": [
+      {
+        "name": "OregonLive",
+        "url": "https://www.oregonlive.com/silicon-forest/2025/06/intel-will-outsource-marketing-to-accenture-and-ai-laying-off-many-of-its-own-workers.html",
+        "type": "report",
+        "publishedDate": "2025-06-20",
+        "quote": "The transition of our marketing and operations functions will result in significant changes to team structures, including potential headcount reductions... We are partnering with Accenture to leverage AI-driven technologies."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
+  },
+  {
+    "id": "nestle-2025-10-16",
+    "company": "Nestlé",
+    "industry": "Food & Beverage",
+    "geography": "Switzerland",
+    "eventDate": "2025-10-16",
+    "layoffsCount": 16000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Nestlé said it would cut about 16,000 jobs over two years, including white-collar roles as it simplified the organization and automated processes.",
+    "evidenceQuote": "Nestlé will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency.",
+    "notes": "Reported by Fortune and CNN from company disclosure; automation/process simplification was part of the stated rationale.",
+    "sources": [
+      {
+        "name": "Fortune",
+        "url": "https://fortune.com/2025/10/16/nestle-layoffs-job-cuts-philipp-navratil-turnaround-automation/",
+        "type": "report",
+        "publishedDate": "2025-10-16",
+        "quote": "Nestlé will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency."
+      },
+      {
+        "name": "ABC7/CNN",
+        "url": "https://abc7.com/post/nestl-worlds-largest-food-company-cut-16000-jobs-worldwide-due-partly-automation/18018385/",
+        "type": "report",
+        "publishedDate": "2025-10-16",
+        "quote": "Nestlé will cut around 16,000 jobs worldwide over the next two years as it works to slash costs, including through automation."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
+  },
+  {
+    "id": "c3-ai-2026-02-25",
+    "company": "C3.ai",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-02-25",
+    "layoffsCount": 312,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "C3.ai cut about 26% of its workforce after its new CEO said the company had restructured functions to leverage agentic AI and dramatically increase productivity.",
+    "evidenceQuote": "I have restructured products, engineering, sales, marketing, and customer services to leverage state-of-the-art agentic AI... Based on these productivity enhancements, the company has slashed $60 million in headcount-related expenses.",
+    "notes": "Regulatory filing established the 26% workforce reduction; CEO comments tied the restructuring to agentic AI productivity, though some analysts argued the move also reflected conventional cost pressure. Layoffs count estimated from nearly 1,200 workers disclosed by Bloomberg Law.",
+    "sources": [
+      {
+        "name": "CIO.com",
+        "url": "https://www.cio.com/article/4138095/c3-ai-slashes-26-of-its-workforce-ceo-attributes-the-move-in-part-to-ai-efficiency.html",
+        "type": "report",
+        "publishedDate": "2026-02-26",
+        "quote": "I have restructured products, engineering, sales, marketing, and customer services to leverage state-of-the-art agentic AI... Based on these productivity enhancements, the company has slashed $60 million in headcount-related expenses."
+      },
+      {
+        "name": "Bloomberg Law",
+        "url": "https://news.bloomberglaw.com/employment/c3-ai-to-cut-26-of-workforce-following-ceo-transition",
+        "type": "report",
+        "publishedDate": "2026-02-25",
+        "quote": "About 26% of the company’s global workforce will be eliminated to materially improve operating efficiency and position the company for success. C3.ai had nearly 1,200 workers as of April 2025."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
   }
 ]
