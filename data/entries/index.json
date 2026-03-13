@@ -285,6 +285,31 @@
     "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
+    "id": "amd-2024-11-13",
+    "company": "AMD",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2024-11-13",
+    "layoffsCount": 1000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported AMD was laying off about 4% of its global workforce, around 1,000 employees, as it redirected resources toward AI chip development.",
+    "evidenceQuote": "Advanced Micro Devices is laying off 4% of its global workforce, or about 1,000 employees, as it directs efforts towards developing AI chips in a bid to compete against industry bellwether Nvidia.",
+    "notes": "Strong fit because Reuters directly tied the cuts to AMD's push into AI chips; count is derived from the reported 4% of roughly 26,000 employees.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/us/amd-cut-4-global-workforce-it-focuses-ai-chip-development-2024-11-13/",
+        "type": "reputable_reporting",
+        "publishedDate": "2024-11-13",
+        "quote": "Advanced Micro Devices is laying off 4% of its global workforce, or about 1,000 employees, as it directs efforts towards developing AI chips in a bid to compete against industry bellwether Nvidia."
+      }
+    ],
+    "createdAt": "2026-03-13T11:10:00-07:00",
+    "updatedAt": "2026-03-13T11:10:00-07:00"
+  },
+  {
     "id": "workday-2025-02-05",
     "company": "Workday",
     "industry": "Technology",
@@ -410,6 +435,56 @@
     "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
+    "id": "morgan-stanley-2025-03-19",
+    "company": "Morgan Stanley",
+    "industry": "Finance",
+    "geography": "United States",
+    "eventDate": "2025-03-19",
+    "layoffsCount": 2000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Morgan Stanley planned to cut about 2,000 jobs, with Bloomberg reporting that a small but growing share of the reductions was tied to AI and automation replacing roles.",
+    "evidenceQuote": "Some employees impacted by the layoffs will be let go because AI and automation have replaced their roles within the bank.",
+    "notes": "Bloomberg-reported layoff event as summarized by Entrepreneur and others; broader cost/attrition factors were also cited, but AI linkage was explicit for part of the reduction.",
+    "sources": [
+      {
+        "name": "Entrepreneur summarizing Bloomberg",
+        "url": "https://www.entrepreneur.com/business-news/morgan-stanley-plans-to-cut-2000-workers-partly-due-to-ai/488752",
+        "type": "report",
+        "publishedDate": "2025-03-19",
+        "quote": "Some employees impacted by the layoffs will be let go because AI and automation have replaced their roles within the bank."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
+  },
+  {
+    "id": "canva-2025-04-03",
+    "company": "Canva",
+    "industry": "Technology",
+    "geography": "Australia",
+    "eventDate": "2025-04-03",
+    "layoffsCount": 10,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Canva cut most of its technical writing team after pushing staff to use generative AI tools and shifting documentation ownership toward engineers supported by new tools.",
+    "evidenceQuote": "Ten of Canva's 12 technical writing staff were reportedly made redundant last Friday... \"As our ways of working continue to evolve, we've been empowering engineers to take greater ownership of documentation while incorporating new tools to support this process.\"",
+    "notes": "ACS Information Age matched AFR reporting and captured Canva's own explanation tying the change to new tooling and a documentation model less dependent on dedicated writers.",
+    "sources": [
+      {
+        "name": "ACS Information Age",
+        "url": "https://ia.acs.org.au/article/2025/canva-lays-off-technical-writers-amid-ai-push.html",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-04-03",
+        "quote": "Ten of Canva's 12 technical writing staff were reportedly made redundant last Friday... \"As our ways of working continue to evolve, we've been empowering engineers to take greater ownership of documentation while incorporating new tools to support this process.\""
+      }
+    ],
+    "createdAt": "2026-03-13T07:58:00-07:00",
+    "updatedAt": "2026-03-13T07:58:00-07:00"
+  },
+  {
     "id": "ups-2025-04-29",
     "company": "UPS",
     "industry": "Other",
@@ -490,6 +565,31 @@
     ],
     "createdAt": "2026-03-10T02:15:00Z",
     "updatedAt": "2026-03-10T02:15:00Z"
+  },
+  {
+    "id": "intel-2025-06-20",
+    "company": "Intel",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2025-06-20",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Intel told marketing employees it would outsource much of the function to Accenture and AI-driven systems, warning of significant team changes and potential headcount reductions.",
+    "evidenceQuote": "The transition of our marketing and operations functions will result in significant changes to team structures, including potential headcount reductions... We are partnering with Accenture to leverage AI-driven technologies.",
+    "notes": "OregonLive reviewed Intel internal materials; exact job count was not disclosed, so layoffsCount remains null.",
+    "sources": [
+      {
+        "name": "OregonLive",
+        "url": "https://www.oregonlive.com/silicon-forest/2025/06/intel-will-outsource-marketing-to-accenture-and-ai-laying-off-many-of-its-own-workers.html",
+        "type": "report",
+        "publishedDate": "2025-06-20",
+        "quote": "The transition of our marketing and operations functions will result in significant changes to team structures, including potential headcount reductions... We are partnering with Accenture to leverage AI-driven technologies."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
   },
   {
     "id": "tomtom-2025-06-30",
@@ -624,6 +724,38 @@
     "updatedAt": "2026-03-12T11:45:00-07:00"
   },
   {
+    "id": "best-buy-2025-09-24",
+    "company": "Best Buy",
+    "industry": "Retail",
+    "geography": "United States",
+    "eventDate": "2025-09-24",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Bloomberg reported Best Buy cut workers in customer care, in-home field teams, and Geek Squad after earlier restructuring tied to shifting resources toward AI-powered support and virtual assistant tooling.",
+    "evidenceQuote": "Best Buy Co. (NYSE:BBY) is reducing its workforce across multiple departments... The job cuts include members of the Geek Squad... Corie Barry said part of the restructuring aimed to reallocate resources to areas such as artificial intelligence.",
+    "notes": "Small/unspecified count, but the Bloomberg-backed reporting plus Best Buy's earlier AI reallocation statements make this a cleaner edge-case than many weaker retail names.",
+    "sources": [
+      {
+        "name": "Investing.com (citing Bloomberg)",
+        "url": "https://www.investing.com/news/stock-market-news/best-buy-cuts-jobs-in-geek-squad-and-customer-service-teams--bloomberg-93CH-4254361",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-09-24",
+        "quote": "Best Buy Co. (NYSE:BBY) is reducing its workforce across multiple departments... The job cuts include members of the Geek Squad."
+      },
+      {
+        "name": "TheStreet",
+        "url": "https://www.thestreet.com/employment/best-buy-makes-unexpected-move-as-customers-avoid-stores",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-09-28",
+        "quote": "The retailer's most recent round of layoffs also comes after it partnered with Google Cloud and Accenture... by using artificial intelligence."
+      }
+    ],
+    "createdAt": "2026-03-13T07:58:00-07:00",
+    "updatedAt": "2026-03-13T07:58:00-07:00"
+  },
+  {
     "id": "just-eat-takeaway-2025-09-25",
     "company": "Just Eat Takeaway",
     "industry": "Technology",
@@ -697,6 +829,38 @@
     ],
     "createdAt": "2026-03-12T15:10:00Z",
     "updatedAt": "2026-03-12T15:10:00Z"
+  },
+  {
+    "id": "nestle-2025-10-16",
+    "company": "Nestlé",
+    "industry": "Food & Beverage",
+    "geography": "Switzerland",
+    "eventDate": "2025-10-16",
+    "layoffsCount": 16000,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Nestlé said it would cut about 16,000 jobs over two years, including white-collar roles as it simplified the organization and automated processes.",
+    "evidenceQuote": "Nestlé will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency.",
+    "notes": "Reported by Fortune and CNN from company disclosure; automation/process simplification was part of the stated rationale.",
+    "sources": [
+      {
+        "name": "Fortune",
+        "url": "https://fortune.com/2025/10/16/nestle-layoffs-job-cuts-philipp-navratil-turnaround-automation/",
+        "type": "report",
+        "publishedDate": "2025-10-16",
+        "quote": "Nestlé will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency."
+      },
+      {
+        "name": "ABC7/CNN",
+        "url": "https://abc7.com/post/nestl-worlds-largest-food-company-cut-16000-jobs-worldwide-due-partly-automation/18018385/",
+        "type": "report",
+        "publishedDate": "2025-10-16",
+        "quote": "Nestlé will cut around 16,000 jobs worldwide over the next two years as it works to slash costs, including through automation."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
   },
   {
     "id": "meta-2025-10-22",
@@ -788,6 +952,38 @@
     "updatedAt": "2026-03-11T05:30:00Z"
   },
   {
+    "id": "c-h-robinson-2025-10-30",
+    "company": "C.H. Robinson",
+    "industry": "Logistics",
+    "geography": "United States",
+    "eventDate": "2025-10-30",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "C.H. Robinson disclosed another round of headcount cuts after rolling out generative-AI agents across quoting, order entry, appointments, and tracking, saying the tools were lifting manual work and raising productivity.",
+    "evidenceQuote": "Today C.H. Robinson announced it has performed over 3 million shipping tasks with its fleet of generative AI agents... \"That's 3 million manual tasks our people didn't have to do\"... \"Generative AI played a key role in the company's 30% productivity increase across 2023 and 2024.\"",
+    "notes": "Layoff timing was covered in late-2025 reporting; AI linkage is unusually direct from the company's own operational disclosures, but I left the count null because the later cut was described without a hard public number in the cleanest source chain I could verify quickly.",
+    "sources": [
+      {
+        "name": "BusinessWire",
+        "url": "https://www.businesswire.com/news/home/20250416223613/en/At-C.H.-Robinson-Artificial-Intelligence-Has-Now-Performed-Over-3-Million-Shipping-Tasks",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-04-16",
+        "quote": "Today C.H. Robinson announced it has performed over 3 million shipping tasks with its fleet of generative AI agents... \"That's 3 million manual tasks our people didn't have to do\"... \"Generative AI played a key role in the company's 30% productivity increase across 2023 and 2024.\""
+      },
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "Companies across industries are cutting jobs as they shift investment toward artificial intelligence and automation."
+      }
+    ],
+    "createdAt": "2026-03-13T07:58:00-07:00",
+    "updatedAt": "2026-03-13T07:58:00-07:00"
+  },
+  {
     "id": "allianz-2025-11-01",
     "company": "Allianz",
     "industry": "Finance",
@@ -861,6 +1057,63 @@
     ],
     "createdAt": "2026-03-09T15:40:00Z",
     "updatedAt": "2026-03-09T15:40:00Z"
+  },
+  {
+    "id": "synopsys-2025-11-12",
+    "company": "Synopsys",
+    "industry": "Semiconductor Software",
+    "geography": "United States",
+    "eventDate": "2025-11-12",
+    "layoffsCount": 2000,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Synopsys said it would cut about 10% of its workforce, roughly 2,000 roles, as it restructured after the Ansys deal and redirected resources toward higher-growth areas including AI-driven design and simulation.",
+    "evidenceQuote": "Synopsys announced on November 12 that it will reduce its workforce by about 10%, or roughly 2,000 employees... The company said the cuts will allow it to redirect investment toward growth opportunities, particularly in artificial intelligence and advanced node technologies.",
+    "notes": "This is weaker than the cleaner Reuters roundup entries because merger synergies are also central, but the cited resource shift toward AI/growth areas is explicit enough to keep as a border-line verified addition.",
+    "sources": [
+      {
+        "name": "Reuters (via Outlook Business summary)",
+        "url": "https://www.outlookbusiness.com/corporate/synopsys-to-slash-2000-jobs-after-35-bn-ansys-merger-and-china-slowdown",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-11-13",
+        "quote": "Chip-design software maker Synopsys will lay off about 10% of its workforce... The move comes as the company looks to redirect investment towards growth opportunities."
+      },
+      {
+        "name": "BeyondSPX",
+        "url": "https://www.beyondspx.com/quote/SNPS/news/synopsys-announces-10-workforce-reduction-to-reallocate-resources-toward-ai-and-advanced-node-growth",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-11-13",
+        "quote": "The company said the cuts will allow it to redirect investment toward growth opportunities, particularly in artificial intelligence and advanced node technologies."
+      }
+    ],
+    "createdAt": "2026-03-13T07:58:00-07:00",
+    "updatedAt": "2026-03-13T07:58:00-07:00"
+  },
+  {
+    "id": "mckinsey-2025-11-26",
+    "company": "McKinsey & Company",
+    "industry": "Consulting",
+    "geography": "Global",
+    "eventDate": "2025-11-26",
+    "layoffsCount": 200,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Bloomberg-reported McKinsey tech cuts hit about 200 roles as the firm said AI would make support functions leaner and reduce non-client-facing headcount over time.",
+    "evidenceQuote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... “We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,” Sternfels said.",
+    "notes": "Good AI linkage and clear count from Bloomberg-based reporting; broader multi-year reductions were left out and only the clean 200-role event is captured.",
+    "sources": [
+      {
+        "name": "Storyboard18",
+        "url": "https://www.storyboard18.com/how-it-works/mckinsey-cuts-200-tech-roles-as-ai-replaces-support-jobs-84828.htm",
+        "type": "reputable_reporting",
+        "publishedDate": "2025-11-26",
+        "quote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... “We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,” Sternfels said."
+      }
+    ],
+    "createdAt": "2026-03-13T07:58:00-07:00",
+    "updatedAt": "2026-03-13T07:58:00-07:00"
   },
   {
     "id": "agora-2025-12-01",
@@ -1213,6 +1466,38 @@
     "updatedAt": "2026-03-10T15:20:00Z"
   },
   {
+    "id": "c3-ai-2026-02-25",
+    "company": "C3.ai",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-02-25",
+    "layoffsCount": 312,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "C3.ai cut about 26% of its workforce after its new CEO said the company had restructured functions to leverage agentic AI and dramatically increase productivity.",
+    "evidenceQuote": "I have restructured products, engineering, sales, marketing, and customer services to leverage state-of-the-art agentic AI... Based on these productivity enhancements, the company has slashed $60 million in headcount-related expenses.",
+    "notes": "Regulatory filing established the 26% workforce reduction; CEO comments tied the restructuring to agentic AI productivity, though some analysts argued the move also reflected conventional cost pressure. Layoffs count estimated from nearly 1,200 workers disclosed by Bloomberg Law.",
+    "sources": [
+      {
+        "name": "CIO.com",
+        "url": "https://www.cio.com/article/4138095/c3-ai-slashes-26-of-its-workforce-ceo-attributes-the-move-in-part-to-ai-efficiency.html",
+        "type": "report",
+        "publishedDate": "2026-02-26",
+        "quote": "I have restructured products, engineering, sales, marketing, and customer services to leverage state-of-the-art agentic AI... Based on these productivity enhancements, the company has slashed $60 million in headcount-related expenses."
+      },
+      {
+        "name": "Bloomberg Law",
+        "url": "https://news.bloomberglaw.com/employment/c3-ai-to-cut-26-of-workforce-following-ceo-transition",
+        "type": "report",
+        "publishedDate": "2026-02-25",
+        "quote": "About 26% of the company’s global workforce will be eliminated to materially improve operating efficiency and position the company for success. C3.ai had nearly 1,200 workers as of April 2025."
+      }
+    ],
+    "createdAt": "2026-03-13T02:20:00-07:00",
+    "updatedAt": "2026-03-13T02:20:00-07:00"
+  },
+  {
     "id": "seb-2026-02-25",
     "company": "SEB",
     "industry": "Other",
@@ -1288,143 +1573,29 @@
     "updatedAt": "2026-03-09T03:30:00Z"
   },
   {
-    "id": "atlassian-2026-03-12",
-    "company": "Atlassian",
-    "industry": "Technology",
-    "geography": "Australia",
-    "eventDate": "2026-03-12",
-    "layoffsCount": 1600,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "primary_source",
-    "summary": "Atlassian cut about 1,600 jobs while explicitly saying AI was changing the skill mix it needed and supporting a smaller organization.",
-    "evidenceQuote": "It would be disingenuous to pretend AI doesn't change the mix of skills we need... We are reducing our global workforce by around 1,600 roles.",
-    "notes": "Primary shareholder letter makes the AI/skills linkage unusually direct for a large public-company reduction.",
-    "sources": [
-      {
-        "name": "Atlassian shareholder letter",
-        "url": "https://www.atlassian.com/blog/announcements/fy26q3-shareholder-letter",
-        "type": "primary",
-        "publishedDate": "2026-03-12",
-        "quote": "It would be disingenuous to pretend AI doesn't change the mix of skills we need... We are reducing our global workforce by around 1,600 roles."
-      }
-    ],
-    "createdAt": "2026-03-12T11:45:00-07:00",
-    "updatedAt": "2026-03-12T11:45:00-07:00"
-  },
-  {
-    "id": "morgan-stanley-2025-03-19",
-    "company": "Morgan Stanley",
-    "industry": "Finance",
-    "geography": "United States",
-    "eventDate": "2025-03-19",
-    "layoffsCount": 2000,
+    "id": "proximus-2026-02-27",
+    "company": "Proximus",
+    "industry": "Telecommunications",
+    "geography": "Belgium",
+    "eventDate": "2026-02-27",
+    "layoffsCount": 1200,
     "status": "verified",
     "aiRelevance": "explicit_ai_cited",
     "sourceQuality": "reputable_reporting",
-    "summary": "Morgan Stanley planned to cut about 2,000 jobs, with Bloomberg reporting that a small but growing share of the reductions was tied to AI and automation replacing roles.",
-    "evidenceQuote": "Some employees impacted by the layoffs will be let go because AI and automation have replaced their roles within the bank.",
-    "notes": "Bloomberg-reported layoff event as summarized by Entrepreneur and others; broader cost/attrition factors were also cited, but AI linkage was explicit for part of the reduction.",
+    "summary": "Reuters reported Proximus would cut 1,200 jobs by 2030 as part of an AI-driven effort to reduce costs and improve efficiency.",
+    "evidenceQuote": "Proximus will cut 1,200 jobs by 2030 due to AI-related efficiency measures, equivalent to 15% of its workforce, CEO Stijn Bijnens said during a presentation to investors on Friday.",
+    "notes": "Clear Reuters case with a disclosed figure and explicit AI rationale from the CEO. The company also said the cuts were part of a broader efficiency program driven mainly by workforce savings.",
     "sources": [
       {
-        "name": "Entrepreneur summarizing Bloomberg",
-        "url": "https://www.entrepreneur.com/business-news/morgan-stanley-plans-to-cut-2000-workers-partly-due-to-ai/488752",
-        "type": "report",
-        "publishedDate": "2025-03-19",
-        "quote": "Some employees impacted by the layoffs will be let go because AI and automation have replaced their roles within the bank."
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/media-telecom/belgian-telco-proximus-annual-core-profit-exceeds-market-estimates-2026-02-27/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "Proximus will cut 1,200 jobs by 2030 due to AI-related efficiency measures, equivalent to 15% of its workforce, CEO Stijn Bijnens said during a presentation to investors on Friday."
       }
     ],
-    "createdAt": "2026-03-13T02:20:00-07:00",
-    "updatedAt": "2026-03-13T02:20:00-07:00"
-  },
-  {
-    "id": "intel-2025-06-20",
-    "company": "Intel",
-    "industry": "Technology",
-    "geography": "United States",
-    "eventDate": "2025-06-20",
-    "layoffsCount": null,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Intel told marketing employees it would outsource much of the function to Accenture and AI-driven systems, warning of significant team changes and potential headcount reductions.",
-    "evidenceQuote": "The transition of our marketing and operations functions will result in significant changes to team structures, including potential headcount reductions... We are partnering with Accenture to leverage AI-driven technologies.",
-    "notes": "OregonLive reviewed Intel internal materials; exact job count was not disclosed, so layoffsCount remains null.",
-    "sources": [
-      {
-        "name": "OregonLive",
-        "url": "https://www.oregonlive.com/silicon-forest/2025/06/intel-will-outsource-marketing-to-accenture-and-ai-laying-off-many-of-its-own-workers.html",
-        "type": "report",
-        "publishedDate": "2025-06-20",
-        "quote": "The transition of our marketing and operations functions will result in significant changes to team structures, including potential headcount reductions... We are partnering with Accenture to leverage AI-driven technologies."
-      }
-    ],
-    "createdAt": "2026-03-13T02:20:00-07:00",
-    "updatedAt": "2026-03-13T02:20:00-07:00"
-  },
-  {
-    "id": "nestle-2025-10-16",
-    "company": "Nestlé",
-    "industry": "Food & Beverage",
-    "geography": "Switzerland",
-    "eventDate": "2025-10-16",
-    "layoffsCount": 16000,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Nestlé said it would cut about 16,000 jobs over two years, including white-collar roles as it simplified the organization and automated processes.",
-    "evidenceQuote": "Nestlé will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency.",
-    "notes": "Reported by Fortune and CNN from company disclosure; automation/process simplification was part of the stated rationale.",
-    "sources": [
-      {
-        "name": "Fortune",
-        "url": "https://fortune.com/2025/10/16/nestle-layoffs-job-cuts-philipp-navratil-turnaround-automation/",
-        "type": "report",
-        "publishedDate": "2025-10-16",
-        "quote": "Nestlé will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency."
-      },
-      {
-        "name": "ABC7/CNN",
-        "url": "https://abc7.com/post/nestl-worlds-largest-food-company-cut-16000-jobs-worldwide-due-partly-automation/18018385/",
-        "type": "report",
-        "publishedDate": "2025-10-16",
-        "quote": "Nestlé will cut around 16,000 jobs worldwide over the next two years as it works to slash costs, including through automation."
-      }
-    ],
-    "createdAt": "2026-03-13T02:20:00-07:00",
-    "updatedAt": "2026-03-13T02:20:00-07:00"
-  },
-  {
-    "id": "c3-ai-2026-02-25",
-    "company": "C3.ai",
-    "industry": "Technology",
-    "geography": "United States",
-    "eventDate": "2026-02-25",
-    "layoffsCount": 312,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "C3.ai cut about 26% of its workforce after its new CEO said the company had restructured functions to leverage agentic AI and dramatically increase productivity.",
-    "evidenceQuote": "I have restructured products, engineering, sales, marketing, and customer services to leverage state-of-the-art agentic AI... Based on these productivity enhancements, the company has slashed $60 million in headcount-related expenses.",
-    "notes": "Regulatory filing established the 26% workforce reduction; CEO comments tied the restructuring to agentic AI productivity, though some analysts argued the move also reflected conventional cost pressure. Layoffs count estimated from nearly 1,200 workers disclosed by Bloomberg Law.",
-    "sources": [
-      {
-        "name": "CIO.com",
-        "url": "https://www.cio.com/article/4138095/c3-ai-slashes-26-of-its-workforce-ceo-attributes-the-move-in-part-to-ai-efficiency.html",
-        "type": "report",
-        "publishedDate": "2026-02-26",
-        "quote": "I have restructured products, engineering, sales, marketing, and customer services to leverage state-of-the-art agentic AI... Based on these productivity enhancements, the company has slashed $60 million in headcount-related expenses."
-      },
-      {
-        "name": "Bloomberg Law",
-        "url": "https://news.bloomberglaw.com/employment/c3-ai-to-cut-26-of-workforce-following-ceo-transition",
-        "type": "report",
-        "publishedDate": "2026-02-25",
-        "quote": "About 26% of the company’s global workforce will be eliminated to materially improve operating efficiency and position the company for success. C3.ai had nearly 1,200 workers as of April 2025."
-      }
-    ],
-    "createdAt": "2026-03-13T02:20:00-07:00",
-    "updatedAt": "2026-03-13T02:20:00-07:00"
+    "createdAt": "2026-03-13T02:35:00-07:00",
+    "updatedAt": "2026-03-13T02:35:00-07:00"
   },
   {
     "id": "oracle-2026-03-05",
@@ -1452,174 +1623,28 @@
     "updatedAt": "2026-03-13T02:35:00-07:00"
   },
   {
-    "id": "proximus-2026-02-27",
-    "company": "Proximus",
-    "industry": "Telecommunications",
-    "geography": "Belgium",
-    "eventDate": "2026-02-27",
-    "layoffsCount": 1200,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Reuters reported Proximus would cut 1,200 jobs by 2030 as part of an AI-driven effort to reduce costs and improve efficiency.",
-    "evidenceQuote": "Proximus will cut 1,200 jobs by 2030 due to AI-related efficiency measures, equivalent to 15% of its workforce, CEO Stijn Bijnens said during a presentation to investors on Friday.",
-    "notes": "Clear Reuters case with a disclosed figure and explicit AI rationale from the CEO. The company also said the cuts were part of a broader efficiency program driven mainly by workforce savings.",
-    "sources": [
-      {
-        "name": "Reuters",
-        "url": "https://www.reuters.com/business/media-telecom/belgian-telco-proximus-annual-core-profit-exceeds-market-estimates-2026-02-27/",
-        "type": "reputable_reporting",
-        "publishedDate": "2026-02-27",
-        "quote": "Proximus will cut 1,200 jobs by 2030 due to AI-related efficiency measures, equivalent to 15% of its workforce, CEO Stijn Bijnens said during a presentation to investors on Friday."
-      }
-    ],
-    "createdAt": "2026-03-13T02:35:00-07:00",
-    "updatedAt": "2026-03-13T02:35:00-07:00"
-  },
-  {
-    "id": "canva-2025-04-03",
-    "company": "Canva",
+    "id": "atlassian-2026-03-12",
+    "company": "Atlassian",
     "industry": "Technology",
     "geography": "Australia",
-    "eventDate": "2025-04-03",
-    "layoffsCount": 10,
-    "status": "verified",
-    "aiRelevance": "automation_efficiency_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Canva cut most of its technical writing team after pushing staff to use generative AI tools and shifting documentation ownership toward engineers supported by new tools.",
-    "evidenceQuote": "Ten of Canva's 12 technical writing staff were reportedly made redundant last Friday... \"As our ways of working continue to evolve, we've been empowering engineers to take greater ownership of documentation while incorporating new tools to support this process.\"",
-    "notes": "ACS Information Age matched AFR reporting and captured Canva's own explanation tying the change to new tooling and a documentation model less dependent on dedicated writers.",
-    "sources": [
-      {
-        "name": "ACS Information Age",
-        "url": "https://ia.acs.org.au/article/2025/canva-lays-off-technical-writers-amid-ai-push.html",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-04-03",
-        "quote": "Ten of Canva's 12 technical writing staff were reportedly made redundant last Friday... \"As our ways of working continue to evolve, we've been empowering engineers to take greater ownership of documentation while incorporating new tools to support this process.\""
-      }
-    ],
-    "createdAt": "2026-03-13T07:58:00-07:00",
-    "updatedAt": "2026-03-13T07:58:00-07:00"
-  },
-  {
-    "id": "c-h-robinson-2025-10-30",
-    "company": "C.H. Robinson",
-    "industry": "Logistics",
-    "geography": "United States",
-    "eventDate": "2025-10-30",
-    "layoffsCount": null,
+    "eventDate": "2026-03-12",
+    "layoffsCount": 1600,
     "status": "verified",
     "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "C.H. Robinson disclosed another round of headcount cuts after rolling out generative-AI agents across quoting, order entry, appointments, and tracking, saying the tools were lifting manual work and raising productivity.",
-    "evidenceQuote": "Today C.H. Robinson announced it has performed over 3 million shipping tasks with its fleet of generative AI agents... \"That's 3 million manual tasks our people didn't have to do\"... \"Generative AI played a key role in the company's 30% productivity increase across 2023 and 2024.\"",
-    "notes": "Layoff timing was covered in late-2025 reporting; AI linkage is unusually direct from the company's own operational disclosures, but I left the count null because the later cut was described without a hard public number in the cleanest source chain I could verify quickly.",
+    "sourceQuality": "primary_source",
+    "summary": "Atlassian cut about 1,600 jobs while explicitly saying AI was changing the skill mix it needed and supporting a smaller organization.",
+    "evidenceQuote": "It would be disingenuous to pretend AI doesn't change the mix of skills we need... We are reducing our global workforce by around 1,600 roles.",
+    "notes": "Primary shareholder letter makes the AI/skills linkage unusually direct for a large public-company reduction.",
     "sources": [
       {
-        "name": "BusinessWire",
-        "url": "https://www.businesswire.com/news/home/20250416223613/en/At-C.H.-Robinson-Artificial-Intelligence-Has-Now-Performed-Over-3-Million-Shipping-Tasks",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-04-16",
-        "quote": "Today C.H. Robinson announced it has performed over 3 million shipping tasks with its fleet of generative AI agents... \"That's 3 million manual tasks our people didn't have to do\"... \"Generative AI played a key role in the company's 30% productivity increase across 2023 and 2024.\""
-      },
-      {
-        "name": "Reuters",
-        "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
-        "type": "reputable_reporting",
-        "publishedDate": "2026-02-27",
-        "quote": "Companies across industries are cutting jobs as they shift investment toward artificial intelligence and automation."
+        "name": "Atlassian shareholder letter",
+        "url": "https://www.atlassian.com/blog/announcements/fy26q3-shareholder-letter",
+        "type": "primary",
+        "publishedDate": "2026-03-12",
+        "quote": "It would be disingenuous to pretend AI doesn't change the mix of skills we need... We are reducing our global workforce by around 1,600 roles."
       }
     ],
-    "createdAt": "2026-03-13T07:58:00-07:00",
-    "updatedAt": "2026-03-13T07:58:00-07:00"
-  },
-  {
-    "id": "synopsys-2025-11-12",
-    "company": "Synopsys",
-    "industry": "Semiconductor Software",
-    "geography": "United States",
-    "eventDate": "2025-11-12",
-    "layoffsCount": 2000,
-    "status": "verified",
-    "aiRelevance": "ai_adjacent_restructuring",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Synopsys said it would cut about 10% of its workforce, roughly 2,000 roles, as it restructured after the Ansys deal and redirected resources toward higher-growth areas including AI-driven design and simulation.",
-    "evidenceQuote": "Synopsys announced on November 12 that it will reduce its workforce by about 10%, or roughly 2,000 employees... The company said the cuts will allow it to redirect investment toward growth opportunities, particularly in artificial intelligence and advanced node technologies.",
-    "notes": "This is weaker than the cleaner Reuters roundup entries because merger synergies are also central, but the cited resource shift toward AI/growth areas is explicit enough to keep as a border-line verified addition.",
-    "sources": [
-      {
-        "name": "Reuters (via Outlook Business summary)",
-        "url": "https://www.outlookbusiness.com/corporate/synopsys-to-slash-2000-jobs-after-35-bn-ansys-merger-and-china-slowdown",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-11-13",
-        "quote": "Chip-design software maker Synopsys will lay off about 10% of its workforce... The move comes as the company looks to redirect investment towards growth opportunities."
-      },
-      {
-        "name": "BeyondSPX",
-        "url": "https://www.beyondspx.com/quote/SNPS/news/synopsys-announces-10-workforce-reduction-to-reallocate-resources-toward-ai-and-advanced-node-growth",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-11-13",
-        "quote": "The company said the cuts will allow it to redirect investment toward growth opportunities, particularly in artificial intelligence and advanced node technologies."
-      }
-    ],
-    "createdAt": "2026-03-13T07:58:00-07:00",
-    "updatedAt": "2026-03-13T07:58:00-07:00"
-  },
-  {
-    "id": "best-buy-2025-09-24",
-    "company": "Best Buy",
-    "industry": "Retail",
-    "geography": "United States",
-    "eventDate": "2025-09-24",
-    "layoffsCount": null,
-    "status": "verified",
-    "aiRelevance": "automation_efficiency_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Bloomberg reported Best Buy cut workers in customer care, in-home field teams, and Geek Squad after earlier restructuring tied to shifting resources toward AI-powered support and virtual assistant tooling.",
-    "evidenceQuote": "Best Buy Co. (NYSE:BBY) is reducing its workforce across multiple departments... The job cuts include members of the Geek Squad... Corie Barry said part of the restructuring aimed to reallocate resources to areas such as artificial intelligence.",
-    "notes": "Small/unspecified count, but the Bloomberg-backed reporting plus Best Buy's earlier AI reallocation statements make this a cleaner edge-case than many weaker retail names.",
-    "sources": [
-      {
-        "name": "Investing.com (citing Bloomberg)",
-        "url": "https://www.investing.com/news/stock-market-news/best-buy-cuts-jobs-in-geek-squad-and-customer-service-teams--bloomberg-93CH-4254361",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-09-24",
-        "quote": "Best Buy Co. (NYSE:BBY) is reducing its workforce across multiple departments... The job cuts include members of the Geek Squad."
-      },
-      {
-        "name": "TheStreet",
-        "url": "https://www.thestreet.com/employment/best-buy-makes-unexpected-move-as-customers-avoid-stores",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-09-28",
-        "quote": "The retailer's most recent round of layoffs also comes after it partnered with Google Cloud and Accenture... by using artificial intelligence."
-      }
-    ],
-    "createdAt": "2026-03-13T07:58:00-07:00",
-    "updatedAt": "2026-03-13T07:58:00-07:00"
-  },
-  {
-    "id": "mckinsey-2025-11-26",
-    "company": "McKinsey & Company",
-    "industry": "Consulting",
-    "geography": "Global",
-    "eventDate": "2025-11-26",
-    "layoffsCount": 200,
-    "status": "verified",
-    "aiRelevance": "explicit_ai_cited",
-    "sourceQuality": "reputable_reporting",
-    "summary": "Bloomberg-reported McKinsey tech cuts hit about 200 roles as the firm said AI would make support functions leaner and reduce non-client-facing headcount over time.",
-    "evidenceQuote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... “We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,” Sternfels said.",
-    "notes": "Good AI linkage and clear count from Bloomberg-based reporting; broader multi-year reductions were left out and only the clean 200-role event is captured.",
-    "sources": [
-      {
-        "name": "Storyboard18",
-        "url": "https://www.storyboard18.com/how-it-works/mckinsey-cuts-200-tech-roles-as-ai-replaces-support-jobs-84828.htm",
-        "type": "reputable_reporting",
-        "publishedDate": "2025-11-26",
-        "quote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... “We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,” Sternfels said."
-      }
-    ],
-    "createdAt": "2026-03-13T07:58:00-07:00",
-    "updatedAt": "2026-03-13T07:58:00-07:00"
+    "createdAt": "2026-03-12T11:45:00-07:00",
+    "updatedAt": "2026-03-12T11:45:00-07:00"
   }
 ]
