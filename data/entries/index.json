@@ -1425,5 +1425,55 @@
     ],
     "createdAt": "2026-03-13T02:20:00-07:00",
     "updatedAt": "2026-03-13T02:20:00-07:00"
+  },
+  {
+    "id": "oracle-2026-03-05",
+    "company": "Oracle",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-03-05",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported Oracle was planning thousands of job cuts as it faced a cash crunch from a massive AI data center expansion, with some cuts aimed at roles expected to shrink because of AI.",
+    "evidenceQuote": "The layoffs will impact divisions across Oracle and may be implemented as soon as this month... Some cuts will be aimed at job categories that the company expects will shrink due to AI.",
+    "notes": "Reuters attributed the report to Bloomberg and said Oracle declined comment; exact number not confirmed, so layoffsCount remains null. Strong fit because the reported reductions were tied both to AI infrastructure spending and direct AI-related role shrinkage.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/oracle-plans-thousands-job-cuts-data-center-costs-rise-bloomberg-news-reports-2026-03-05/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-03-05",
+        "quote": "The layoffs will impact divisions across Oracle and may be implemented as soon as this month... Some cuts will be aimed at job categories that the company expects will shrink due to AI."
+      }
+    ],
+    "createdAt": "2026-03-13T02:35:00-07:00",
+    "updatedAt": "2026-03-13T02:35:00-07:00"
+  },
+  {
+    "id": "proximus-2026-02-27",
+    "company": "Proximus",
+    "industry": "Telecommunications",
+    "geography": "Belgium",
+    "eventDate": "2026-02-27",
+    "layoffsCount": 1200,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported Proximus would cut 1,200 jobs by 2030 as part of an AI-driven effort to reduce costs and improve efficiency.",
+    "evidenceQuote": "Proximus will cut 1,200 jobs by 2030 due to AI-related efficiency measures, equivalent to 15% of its workforce, CEO Stijn Bijnens said during a presentation to investors on Friday.",
+    "notes": "Clear Reuters case with a disclosed figure and explicit AI rationale from the CEO. The company also said the cuts were part of a broader efficiency program driven mainly by workforce savings.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/media-telecom/belgian-telco-proximus-annual-core-profit-exceeds-market-estimates-2026-02-27/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-27",
+        "quote": "Proximus will cut 1,200 jobs by 2030 due to AI-related efficiency measures, equivalent to 15% of its workforce, CEO Stijn Bijnens said during a presentation to investors on Friday."
+      }
+    ],
+    "createdAt": "2026-03-13T02:35:00-07:00",
+    "updatedAt": "2026-03-13T02:35:00-07:00"
   }
 ]
