@@ -1573,6 +1573,31 @@
     "updatedAt": "2026-03-09T03:30:00Z"
   },
   {
+    "id": "ebay-2026-02-26",
+    "company": "eBay",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-02-26",
+    "layoffsCount": 800,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported eBay was cutting about 6% of its workforce, roughly 800 jobs, as the company realigned operations amid broader tech-sector restructuring around AI.",
+    "evidenceQuote": "EBay plans to cut around 800 jobs globally, or 6% of its workforce, amid a bigger push by the e-commerce and auction platform into artificial intelligence.",
+    "notes": "Added with restrained framing: Reuters-grade reporting tied the cuts to a broader AI-shaped workforce context, but the company statement itself emphasized strategic priorities and realignment rather than direct AI replacement.",
+    "sources": [
+      {
+        "name": "Reuters / MarketWatch syndication of Reuters-linked reporting",
+        "url": "https://www.morningstar.com/news/marketwatch/20260226238/ebay-to-cut-800-jobs-joining-other-tech-names-in-announcing-layoffs-as-ai-reshapes-workforces",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-02-26",
+        "quote": "EBay plans to cut around 800 jobs globally, or 6% of its workforce, amid a bigger push by the e-commerce and auction platform into artificial intelligence."
+      }
+    ],
+    "createdAt": "2026-03-13T11:12:00-07:00",
+    "updatedAt": "2026-03-13T11:12:00-07:00"
+  },
+  {
     "id": "proximus-2026-02-27",
     "company": "Proximus",
     "industry": "Telecommunications",
