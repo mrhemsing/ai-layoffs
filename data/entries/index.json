@@ -1671,5 +1671,30 @@
     ],
     "createdAt": "2026-03-12T11:45:00-07:00",
     "updatedAt": "2026-03-12T11:45:00-07:00"
+  },
+  {
+    "id": "dell-2026-03-16",
+    "company": "Dell",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-03-16",
+    "layoffsCount": 11000,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Reuters reported Dell's workforce fell by about 10%, or roughly 11,000 employees, in fiscal 2026 as the company limited hiring and managed costs while leaning harder into AI-optimized servers.",
+    "evidenceQuote": "Dell's total workforce declined by about 10%, or 11,000 employees, in fiscal 2026 ... a sign that the AI server maker is limiting external hiring to reduce costs.",
+    "notes": "Added with restrained framing: Reuters tied the reduction to Dell's identity as an AI server maker and its cost discipline around that shift, but not to direct AI replacement of specific roles.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/world-at-work/dell-workforce-drops-10-fiscal-2026-filing-shows-2026-03-16/",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-03-16",
+        "quote": "Dell's total workforce declined by about 10%, or 11,000 employees, in fiscal 2026 ... a sign that the AI server maker is limiting external hiring to reduce costs."
+      }
+    ],
+    "createdAt": "2026-03-17T19:40:00-07:00",
+    "updatedAt": "2026-03-17T19:40:00-07:00"
   }
 ]
