@@ -1698,6 +1698,31 @@
     "updatedAt": "2026-03-17T19:40:00-07:00"
   },
   {
+    "id": "crypto-com-2026-03-19",
+    "company": "Crypto.com",
+    "industry": "Crypto",
+    "geography": "Singapore",
+    "eventDate": "2026-03-19",
+    "layoffsCount": 180,
+    "status": "verified",
+    "aiRelevance": "explicit_ai_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "CNBC reported Crypto.com cut about 12% of its workforce as the company integrated AI across the business, with the CEO saying roles that did not adapt were part of the reduction.",
+    "evidenceQuote": "We are joining the list of companies integrating enterprise-wide AI... As part of this step, we have also made a targeted ~12% workforce reduction of roles that do not adapt in our new world.",
+    "notes": "Strong fit because the CEO explicitly tied the cuts to enterprise-wide AI integration. Layoffs count estimated at about 180 based on widely reported prior headcount of roughly 1,500.",
+    "sources": [
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/03/19/crypto-com-layoffs-12percent-ai-job-loss.html",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-03-19",
+        "quote": "We are joining the list of companies integrating enterprise-wide AI... As part of this step, we have also made a targeted ~12% workforce reduction of roles that do not adapt in our new world."
+      }
+    ],
+    "createdAt": "2026-03-19T14:33:00-07:00",
+    "updatedAt": "2026-03-19T14:33:00-07:00"
+  },
+  {
     "id": "fiscalnote-2026-03-19",
     "company": "FiscalNote",
     "industry": "Technology",
