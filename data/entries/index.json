@@ -1746,5 +1746,30 @@
     ],
     "createdAt": "2026-03-19T14:32:00-07:00",
     "updatedAt": "2026-03-19T14:32:00-07:00"
+  },
+  {
+    "id": "hsbc-2026-03-19",
+    "company": "HSBC",
+    "industry": "Finance",
+    "geography": "United Kingdom",
+    "eventDate": "2026-03-19",
+    "layoffsCount": 20000,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Bloomberg reported HSBC was weighing cutting nearly 20,000 jobs over the next three to five years as AI took center stage in plans to streamline operations and reduce costs.",
+    "evidenceQuote": "HSBC weighs cutting 20,000 jobs as AI takes centre stage.",
+    "notes": "Added with restrained framing: Bloomberg tied the potential cuts to an AI-centered streamlining effort, but the reported reduction is framed as a multi-year plan rather than a single immediate layoff event.",
+    "sources": [
+      {
+        "name": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/newsletters/2026-03-19/hsbc-weighs-cutting-20k-jobs-as-ai-takes-centre-stage",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-03-19",
+        "quote": "HSBC weighs cutting 20,000 jobs as AI takes centre stage."
+      }
+    ],
+    "createdAt": "2026-03-19T16:05:00-07:00",
+    "updatedAt": "2026-03-19T16:05:00-07:00"
   }
 ]
