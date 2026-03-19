@@ -12,7 +12,79 @@
         margin: 40px auto;
         padding: 0 16px;
         color: #111;
-        background-color: #f7f8fa;
+        background:
+          radial-gradient(circle at top, rgba(255,255,255,0.72), rgba(255,255,255,0.36) 30%, rgba(229,233,239,0.68) 58%, rgba(214,220,228,0.92) 100%),
+          #e1e6ed;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+      .ambient-bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        opacity: 1;
+      }
+      .ambient-shape {
+        position: absolute;
+        border-radius: 28px;
+        border: 2px solid rgba(53, 70, 92, 0.28);
+        background: rgba(255,255,255,0.14);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 30px rgba(34,44,60,0.08);
+        will-change: transform, opacity;
+      }
+      .ambient-shape.one {
+        width: 420px;
+        height: 420px;
+        top: 5%;
+        left: -40px;
+        transform: rotate(18deg);
+        animation: geoOne 20s ease-in-out infinite alternate;
+      }
+      .ambient-shape.two {
+        width: 300px;
+        height: 300px;
+        top: 22%;
+        right: 10px;
+        transform: rotate(34deg);
+        animation: geoTwo 24s ease-in-out infinite alternate;
+      }
+      .ambient-shape.three {
+        width: 240px;
+        height: 240px;
+        bottom: 10%;
+        left: 40px;
+        transform: rotate(12deg);
+        animation: geoThree 18s ease-in-out infinite alternate;
+      }
+      .ambient-shape.four {
+        width: 200px;
+        height: 200px;
+        bottom: 16%;
+        right: 80px;
+        transform: rotate(46deg);
+        animation: geoFour 26s ease-in-out infinite alternate;
+      }
+      @keyframes geoOne {
+        0% { transform: translate3d(0, 0, 0) rotate(18deg); opacity: 0.34; }
+        100% { transform: translate3d(46px, 24px, 0) rotate(26deg); opacity: 0.2; }
+      }
+      @keyframes geoTwo {
+        0% { transform: translate3d(0, 0, 0) rotate(34deg); opacity: 0.26; }
+        100% { transform: translate3d(-38px, 34px, 0) rotate(22deg); opacity: 0.16; }
+      }
+      @keyframes geoThree {
+        0% { transform: translate3d(0, 0, 0) rotate(12deg); opacity: 0.2; }
+        100% { transform: translate3d(24px, -16px, 0) rotate(20deg); opacity: 0.12; }
+      }
+      @keyframes geoFour {
+        0% { transform: translate3d(0, 0, 0) rotate(46deg); opacity: 0.18; }
+        100% { transform: translate3d(-18px, -26px, 0) rotate(56deg); opacity: 0.1; }
       }
       h1 { margin: 0; }
       .hero { margin-bottom: 8px; }
@@ -83,8 +155,10 @@
       th:nth-child(4), td:nth-child(4) { width: 15%; }
       th:nth-child(5), td:nth-child(5) { width: 30%; }
       tbody tr { cursor: pointer; }
-      tbody tr:hover { background: #fafcff; }
-      tbody tr.selected { background: #f5f9ff; }
+      tbody tr:nth-child(odd) { background: rgba(255,255,255,0.88); }
+      tbody tr:nth-child(even) { background: rgba(250,251,253,0.985); }
+      tbody tr:hover { background: #eef4ff; }
+      tbody tr.selected { background: #e8f1ff; }
       tr.detail-row { cursor: default; }
       tr.detail-row:hover { background: transparent; }
       .detail-cell { padding: 0; border-bottom: 1px solid #eee; }
@@ -128,9 +202,14 @@
         .stat-copy { width: 100%; }
         .stat-value { font-size: 24px; }
         body {
-          background-color: #ffffff;
-          background-image: linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
+          background:
+            radial-gradient(circle at top, rgba(255,255,255,0.94), rgba(255,255,255,0.84) 36%, rgba(255,255,255,0.96) 66%),
+            linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
         }
+        .ambient-shape.one { width: 220px; height: 220px; top: 10%; left: -70px; }
+        .ambient-shape.two { width: 180px; height: 180px; top: 34%; right: -60px; }
+        .ambient-shape.three { width: 150px; height: 150px; bottom: 10%; left: 6%; }
+        .ambient-shape.four { width: 120px; height: 120px; bottom: 22%; right: 4%; }
         .hero + .muted { line-height: 1.6; }
         .prompt-title { font-size: clamp(29.5px, 5.2vw, 43.7px); }
         .receipts-mark { margin-right: 4px; }
@@ -193,6 +272,12 @@
     </style>
   </head>
   <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-shape one"></div>
+      <div class="ambient-shape two"></div>
+      <div class="ambient-shape three"></div>
+      <div class="ambient-shape four"></div>
+    </div>
     <div class="hero">
       <h1 class="prompt-title"><span class="prompt-symbol">&gt;</span><span>/replace -ai</span><span class="prompt-cursor" aria-hidden="true"></span></h1>
     </div>
