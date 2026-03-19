@@ -361,6 +361,7 @@
     <script>
       let allEntries = [];
       let selectedEntryId = null;
+      let pendingAnchorId = null;
 
       function fmtDate(v) {
         if (!v) return '—';
@@ -536,6 +537,9 @@
         const body = document.getElementById('entriesBody');
         const empty = document.getElementById('emptyState');
         const summary = document.getElementById('resultSummary');
+        const anchorBeforeTop = pendingAnchorId
+          ? document.querySelector(`tr[data-entry-id="${pendingAnchorId}"]`)?.getBoundingClientRect().top
+          : null;
         body.innerHTML = '';
         empty.style.display = entries.length ? 'none' : 'block';
         summary.textContent = `${entries.length} matching entries out of ${allEntries.length} total`;
@@ -547,6 +551,7 @@
 
         entries.forEach((entry) => {
           const tr = document.createElement('tr');
+          tr.dataset.entryId = entry.id;
           const source = (entry.sources && entry.sources[0]) || null;
           const isSelected = entry.id === selectedEntryId;
           if (isSelected) tr.classList.add('selected');
@@ -558,6 +563,7 @@
             <td><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span></td>
           `;
           tr.addEventListener('click', () => {
+            pendingAnchorId = entry.id;
             selectedEntryId = isSelected ? null : entry.id;
             render();
           });
@@ -570,6 +576,17 @@
             body.appendChild(detailRow);
           }
         });
+
+        if (pendingAnchorId) {
+          requestAnimationFrame(() => {
+            const anchorAfter = document.querySelector(`tr[data-entry-id="${pendingAnchorId}"]`);
+            if (anchorAfter && anchorBeforeTop != null) {
+              const anchorAfterTop = anchorAfter.getBoundingClientRect().top;
+              window.scrollBy({ top: anchorAfterTop - anchorBeforeTop, left: 0, behavior: 'auto' });
+            }
+            pendingAnchorId = null;
+          });
+        }
       }
 
       async function init() {
