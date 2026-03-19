@@ -1696,5 +1696,30 @@
     ],
     "createdAt": "2026-03-17T19:40:00-07:00",
     "updatedAt": "2026-03-17T19:40:00-07:00"
+  },
+  {
+    "id": "fiscalnote-2026-03-19",
+    "company": "FiscalNote",
+    "industry": "Technology",
+    "geography": "United States",
+    "eventDate": "2026-03-19",
+    "layoffsCount": 110,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "FiscalNote said it would lay off about a quarter of its workforce, roughly 110 employees, as it turned to AI and offshoring to reshape operations.",
+    "evidenceQuote": "FiscalNote to lay off a quarter of its workforce as it turns to AI, offshoring.",
+    "notes": "Added with restrained framing: the reported cuts were explicitly tied to AI and offshoring in the company's earnings context; count is based on prior headcount reports cited in coverage.",
+    "sources": [
+      {
+        "name": "Washington Business Journal",
+        "url": "https://www.bizjournals.com/washington/news/2026/03/19/fiscalnote-layoffs-ai-offshoring-dc.html",
+        "type": "reputable_reporting",
+        "publishedDate": "2026-03-19",
+        "quote": "FiscalNote to lay off a quarter of its workforce as it turns to AI, offshoring."
+      }
+    ],
+    "createdAt": "2026-03-19T14:32:00-07:00",
+    "updatedAt": "2026-03-19T14:32:00-07:00"
   }
 ]
