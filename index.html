@@ -121,6 +121,7 @@
       #resultJobsImpacted { font-size: 12px; }
       .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
       .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 1px rgba(0,0,0,0.03); }
+      .stats .card { border-color: #7CFF6B; border-width: 2px; }
       .stat-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
       .stat-copy { min-width: 0; }
       .stat-value { font-size: 28px; font-weight: 700; line-height: 1.05; font-variant-numeric: tabular-nums; }
@@ -198,6 +199,7 @@
       .mobile-date { display: none; }
       @media (max-width: 800px) {
         .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .stats .card { border-width: 1px; }
         .stat-card { display: block; padding-top: 12px; }
         .stat-copy { width: 100%; }
         .stat-value { font-size: 24px; }
