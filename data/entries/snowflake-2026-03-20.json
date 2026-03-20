@@ -1,0 +1,25 @@
+{
+  "id": "snowflake-2026-03-20",
+  "company": "Snowflake",
+  "industry": "Technology",
+  "geography": "United States",
+  "eventDate": "2026-03-20",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Business Insider reported Snowflake made targeted cuts affecting its technical writing and documentation team as the company emphasized long-term strategy, operational efficiency, and more AI product investment.",
+  "evidenceQuote": "Snowflake CEO Sridhar Ramaswamy previously told Business Insider that the company is focusing on becoming more operationally efficient while building more AI products.",
+  "notes": "Snowflake did not disclose a layoff total and declined to specify every affected team, but BI reported the cuts hit technical writing and documentation. This is a solid AI-adjacent restructuring case rather than a direct AI-replacement admission.",
+  "sources": [
+    {
+      "name": "Business Insider",
+      "url": "https://www.businessinsider.com/snowflake-layoffs-strategy-ai-growth-2026-3",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-03-20",
+      "quote": "Snowflake CEO Sridhar Ramaswamy previously told Business Insider that the company is focusing on becoming more operationally efficient while building more AI products."
+    }
+  ],
+  "createdAt": "2026-03-20T08:53:00-07:00",
+  "updatedAt": "2026-03-20T08:53:00-07:00"
+}
