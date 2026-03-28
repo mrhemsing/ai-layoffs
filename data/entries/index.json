@@ -5,13 +5,13 @@
         "industry":  "Technology",
         "geography":  "United States",
         "eventDate":  "2026-03-25",
-        "layoffsCount":  null,
+        "layoffsCount":  700,
         "status":  "verified",
         "aiRelevance":  "ai_adjacent_restructuring",
         "sourceQuality":  "reputable_reporting",
-        "summary":  "The New York Times reported Meta began another round of layoffs that current and former employees described as part of a broader reallocation of spending and leadership attention toward AI, computing infrastructure, and superintelligence efforts.",
+        "summary":  "The New York Times reported Meta laid off about 700 employees on Wednesday as the company continued shifting spending and leadership attention toward AI, chips, data centers, and superintelligence efforts.",
         "evidenceQuote":  "The company has poured tens of billions of dollars into artificial intelligence, chips and data centers, while also making periodic staff cuts and reorganizing teams.",
-        "notes":  "The NYT framing is more AI-adjacent restructuring than a direct AI-replacement admission. A precise layoff count was not disclosed in the report, so layoffsCount remains null.",
+        "notes":  "The NYT framing is still better classified as AI-adjacent restructuring than a direct AI-replacement admission, but the reported cut count was about 700 employees.",
         "sources":  [
                         {
                             "name":  "The New York Times",
@@ -22,7 +22,7 @@
                         }
                     ],
         "createdAt":  "2026-03-28T16:15:00-07:00",
-        "updatedAt":  "2026-03-28T16:15:00-07:00"
+        "updatedAt":  "2026-03-28T16:50:00-07:00"
     },
     {
         "id":  "snowflake-2026-03-20",
