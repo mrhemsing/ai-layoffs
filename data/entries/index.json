@@ -1682,9 +1682,9 @@
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "Reuters first reported Oracle was planning thousands of job cuts as AI data center costs surged, and CNBC later confirmed Oracle had started telling employees about a latest layoff round as the company continued ramping AI spending.",
+        "summary": "Reuters first reported Oracle was planning thousands of job cuts as AI data center costs surged, CNBC later confirmed Oracle had started telling employees about a latest layoff round, and MarketWatch reported the total cuts were estimated to be as many as 30,000 people.",
         "evidenceQuote": "The layoffs will impact divisions across Oracle and may be implemented as soon as this month... Some cuts will be aimed at job categories that the company expects will shrink due to AI.",
-        "notes": "Reuters attributed the initial report to Bloomberg and said Oracle declined comment; exact number remains unconfirmed, so layoffsCount stays null. CNBC later confirmed with people familiar with the matter that Oracle had started telling employees about the cuts. Strong fit because the reported reductions were tied both to AI infrastructure spending and direct AI-related role shrinkage.",
+        "notes": "Reuters attributed the initial report to Bloomberg and said Oracle declined comment; CNBC later confirmed with people familiar with the matter that Oracle had started telling employees about the cuts. MarketWatch reported the layoffs were estimated to be as many as 30,000 people, but also noted it was not clear whether all of those layoffs had already occurred or whether more were still coming later in the year, so layoffsCount remains null. Strong fit because the reported reductions were tied both to AI infrastructure spending and direct AI-related role shrinkage.",
         "sources": [
             {
                 "name": "Reuters",
@@ -1699,10 +1699,17 @@
                 "type": "reputable_reporting",
                 "publishedDate": "2026-03-31",
                 "quote": "Oracle has started telling employees that it's cutting thousands of jobs, CNBC has confirmed, as the software maker deals with a plummeting stock price tied to hefty capital commitments for building out AI infrastructure."
+            },
+            {
+                "name": "MarketWatch",
+                "url": "https://www.marketwatch.com/story/fired-via-email-some-of-the-30-000-workers-cut-by-oracle-woke-up-to-a-morning-message-saying-they-were-laid-off-89a7af94",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-04-01",
+                "quote": "The mass layoffs \u2014 which were estimated to be as many as 30,000 people \u2014 were part of the company's cost-cutting measures as it continues to build out expensive data centers for powering artificial intelligence."
             }
         ],
         "createdAt": "2026-03-13T02:35:00-07:00",
-        "updatedAt": "2026-04-01T09:11:28-07:00"
+        "updatedAt": "2026-04-01T19:32:01-07:00"
     },
     {
         "id": "atlassian-2026-03-12",
