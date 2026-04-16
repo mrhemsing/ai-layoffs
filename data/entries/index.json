@@ -5,13 +5,13 @@
         "industry": "Technology",
         "geography": "United States",
         "eventDate": "2026-04-15",
-        "layoffsCount": null,
+        "layoffsCount": 1000,
         "status": "verified",
-        "aiRelevance": "ai_adjacent_restructuring",
+        "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "Reuters reported Snap would lay off about 16% of its staff as it reorganized parts of the business and leaned further into AI-driven products and operations.",
-        "evidenceQuote": "Snap to lay off about 16% of staff.",
-        "notes": "Added from the Reuters report Matt supplied. Use restrained framing until a stronger direct company quote is available on how explicitly the reduction was tied to AI versus broader restructuring.",
+        "summary": "Snap said it would lay off about 16% of staff, around 1,000 workers, with CEO Evan Spiegel telling employees that rapid advancements in artificial intelligence would let teams reduce repetitive work and increase velocity.",
+        "evidenceQuote": "While these changes are necessary to realize Snap's long-term potential, we believe that rapid advancements in artificial intelligence enable our teams to reduce repetitive work, increase velocity, and better support our community, partners, and advertisers.",
+        "notes": "Updated with The Guardian's reporting on Evan Spiegel's internal memo, which provides explicit AI language and supports estimating the reduction at around 1,000 workers from the reported 16% cut.",
         "sources": [
             {
                 "name": "Reuters",
@@ -19,6 +19,13 @@
                 "type": "reputable_reporting",
                 "publishedDate": "2026-04-15",
                 "quote": "Snap to lay off about 16% of staff."
+            },
+            {
+                "name": "The Guardian",
+                "url": "https://www.theguardian.com/technology/2026/apr/15/snap-inc-blames-ai-worker-layoffs",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-04-15",
+                "quote": "While these changes are necessary to realize Snap's long-term potential, we believe that rapid advancements in artificial intelligence enable our teams to reduce repetitive work, increase velocity, and better support our community, partners, and advertisers."
             }
         ],
         "createdAt": "2026-04-16T05:53:00-07:00",
