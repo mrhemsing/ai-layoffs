@@ -1,0 +1,25 @@
+{
+  "id": "meta-2026-04-23",
+  "company": "Meta",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-04-23",
+  "layoffsCount": 8000,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "CNBC reported Meta plans to cut 10% of its workforce, about 8,000 employees, as it continues ramping up investments in artificial intelligence while pursuing efficiency and scrapping plans to fill 6,000 open roles.",
+  "evidenceQuote": "Meta plans to lay off 10% of its workforce, about 8,000 employees, as it continues ramping up investments in artificial intelligence.",
+  "notes": "This is a distinct new Meta event and should not be merged into the earlier March 2026 entry. The company explicitly links the cuts to efficiency and increased AI investment, but the reporting still supports AI-adjacent restructuring more cleanly than direct AI replacement. The separate decision to stop filling 6,000 open roles is notable context but not counted in layoffsCount.",
+  "sources": [
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-04-23",
+      "quote": "Meta plans to lay off 10% of its workforce, about 8,000 employees, as it continues ramping up investments in artificial intelligence."
+    }
+  ],
+  "createdAt": "2026-04-24T12:36:47-07:00",
+  "updatedAt": "2026-04-24T12:36:47-07:00"
+}
