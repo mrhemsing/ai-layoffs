@@ -1,0 +1,25 @@
+{
+  "id": "nike-2026-04-23",
+  "company": "Nike",
+  "industry": "Other",
+  "geography": "Global",
+  "eventDate": "2026-04-23",
+  "layoffsCount": 1400,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "CNBC reported Nike would cut about 1,400 roles in global operations, mostly in technology, as part of a turnaround effort centered on technology-team reshaping, supply-chain integration, and operational modernization.",
+  "evidenceQuote": "Collectively, these changes will result in a reduction of approximately 1,400 roles in global operations, with the majority in technology.",
+  "notes": "Added with restrained framing. This is a meaningful include for the tracker because the cuts are concentrated in technology and tied to modernization, integration, and efficiency work, but the available reporting does not support claiming direct generative-AI replacement. Better treated as AI-adjacent restructuring than a clean explicit-AI case.",
+  "sources": [
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/23/nike-job-cuts-layoffs.html",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-04-23",
+      "quote": "Collectively, these changes will result in a reduction of approximately 1,400 roles in global operations, with the majority in technology."
+    }
+  ],
+  "createdAt": "2026-04-24T12:34:29-07:00",
+  "updatedAt": "2026-04-24T12:34:29-07:00"
+}
