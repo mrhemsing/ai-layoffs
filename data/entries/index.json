@@ -9,9 +9,9 @@
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "Reuters reported Coinbase will cut about 700 jobs, or about 14% of its global workforce, in a restructuring aimed at reducing costs and repositioning the crypto exchange for the artificial intelligence era.",
-        "evidenceQuote": "Coinbase said on Tuesday it will cut about 700 jobs, or about 14% of its global workforce, as part of a restructuring plan aimed at reducing costs and repositioning the business for the artificial intelligence era.",
-        "notes": "Reuters also reported CEO Brian Armstrong cited rapid advances in AI, saying new tools allow non-technical teams to ship code and automate tasks that previously required larger headcounts. Market volatility and cost reduction are also cited drivers, so the entry is explicit-AI-cited but not framed as AI as the only cause.",
+        "summary": "CNBC and Reuters reported Coinbase will cut roughly 14% of its workforce, about 700 jobs, as CEO Brian Armstrong cited market volatility and AI quickly changing how the company operates.",
+        "evidenceQuote": "We are adjusting early and deliberately to rebuild Coinbase to be lean, fast, and AI-native. We need to return to the speed and focus of our startup founding, with AI at our core.",
+        "notes": "CNBC quoted Armstrong saying AI is changing how Coinbase works and that the company is rebuilding to be lean, fast, and AI-native. Reuters also reported new AI tools allow non-technical teams to ship code and automate tasks that previously required larger headcounts. Market volatility and cost reduction are also cited drivers, so the entry is explicit-AI-cited but not framed as AI as the only cause.",
         "sources": [
             {
                 "name": "Reuters",
@@ -19,10 +19,17 @@
                 "type": "reputable_reporting",
                 "publishedDate": "2026-05-05",
                 "quote": "CEO Brian Armstrong also cited rapid advances in artificial intelligence, saying new tools were allowing non-technical teams to ship code and automate tasks that previously required larger headcounts."
+            },
+            {
+                "name": "CNBC",
+                "url": "https://www.cnbc.com/2026/05/05/coinbase-cuts-headcount-by-14percent-citing-ai-acceleration-the-shares-are-gaining.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "We are adjusting early and deliberately to rebuild Coinbase to be lean, fast, and AI-native. We need to return to the speed and focus of our startup founding, with AI at our core."
             }
         ],
         "createdAt": "2026-05-05T06:25:00-07:00",
-        "updatedAt": "2026-05-05T06:25:00-07:00"
+        "updatedAt": "2026-05-05T06:27:00-07:00"
     },
     {
         "id": "meta-2026-04-23",
