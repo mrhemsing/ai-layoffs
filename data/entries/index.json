@@ -1,5 +1,30 @@
 [
     {
+        "id": "coinbase-2026-05-05",
+        "company": "Coinbase",
+        "industry": "Finance",
+        "geography": "Global",
+        "eventDate": "2026-05-05",
+        "layoffsCount": 700,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Reuters reported Coinbase will cut about 700 jobs, or about 14% of its global workforce, in a restructuring aimed at reducing costs and repositioning the crypto exchange for the artificial intelligence era.",
+        "evidenceQuote": "Coinbase said on Tuesday it will cut about 700 jobs, or about 14% of its global workforce, as part of a restructuring plan aimed at reducing costs and repositioning the business for the artificial intelligence era.",
+        "notes": "Reuters also reported CEO Brian Armstrong cited rapid advances in AI, saying new tools allow non-technical teams to ship code and automate tasks that previously required larger headcounts. Market volatility and cost reduction are also cited drivers, so the entry is explicit-AI-cited but not framed as AI as the only cause.",
+        "sources": [
+            {
+                "name": "Reuters",
+                "url": "https://www.reuters.com/business/world-at-work/coinbase-cut-about-14-workforce-2026-05-05/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "CEO Brian Armstrong also cited rapid advances in artificial intelligence, saying new tools were allowing non-technical teams to ship code and automate tasks that previously required larger headcounts."
+            }
+        ],
+        "createdAt": "2026-05-05T06:25:00-07:00",
+        "updatedAt": "2026-05-05T06:25:00-07:00"
+    },
+    {
         "id": "meta-2026-04-23",
         "company": "Meta",
         "industry": "Technology",
