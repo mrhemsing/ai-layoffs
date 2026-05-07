@@ -1,0 +1,25 @@
+{
+  "id": "arctic-wolf-2026-05-06",
+  "company": "Arctic Wolf",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-05-06",
+  "layoffsCount": 250,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "The Register reported cybersecurity vendor Arctic Wolf laid off 250 workers in a restructuring the company said would help it operate more efficiently and continue investing in its Superintelligence platform and agentic Security Operations Center.",
+  "evidenceQuote": "While these decisions are difficult, they position Arctic Wolf to operate more efficiently, continue investing in our Superintelligence platform and Agentic SOC, and deliver strong value to customers.",
+  "notes": "The Register reported the layoffs represented less than 10% of Arctic Wolf's workforce and appeared to affect sales, product development, and marketing. Because the company spokesperson explicitly tied the restructuring to continued investment in its AI-oriented Superintelligence platform and Agentic SOC, this is classified as explicit_ai_cited.",
+  "sources": [
+    {
+      "name": "The Register",
+      "url": "https://www.theregister.com/ai-and-ml/2026/05/06/arctic-wolf-cuts-250-jobs-in-ai-push/5231213",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-06",
+      "quote": "Cybersecurity vendor Arctic Wolf has laid off 250 workers in a restructuring that it says is designed to position the company to invest more in AI through its superintelligence platform and agentic Security Operations Center (SOC), a company spokesperson told The Register."
+    }
+  ],
+  "createdAt": "2026-05-07T16:29:00-07:00",
+  "updatedAt": "2026-05-07T16:29:00-07:00"
+}
