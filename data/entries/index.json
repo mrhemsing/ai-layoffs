@@ -1,5 +1,37 @@
 [
     {
+        "id": "cloudflare-2026-05-07",
+        "company": "Cloudflare",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-05-07",
+        "layoffsCount": 1100,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Reuters reported Cloudflare will cut about 20% of its workforce, more than 1,100 jobs, as part of a shift toward an \"agentic AI-first operating model\" and a restructuring around artificial intelligence.",
+        "evidenceQuote": "Employees across the company from engineering to HR to finance to marketing run thousands of AI agent sessions each day to get their work done. That means we have to be intentional in how we architect our company for the agentic AI era.",
+        "notes": "Reuters reported the cuts as more than 1,100 jobs / about 20% of Cloudflare's workforce. CEO Matthew Prince and co-founder Michelle Zatlyn said the layoffs reflected a shift to an AI-driven operating model and were not a cost-cutting exercise. Cloudflare said its AI usage rose more than 600% over three months. Because AI/agentic operating model is explicitly cited as the restructuring rationale, this is classified as explicit_ai_cited.",
+        "sources": [
+            {
+                "name": "Reuters",
+                "url": "https://www.reuters.com/business/world-at-work/cloudflare-cut-over-1100-jobs-2026-05-07/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-07",
+                "quote": "Cloudflare said on Thursday it would lay off about 20% of its workforce as part of a shift toward an \"agentic AI-first operating model,\" as the internet services company restructures around artificial intelligence."
+            },
+            {
+                "name": "Business Insider",
+                "url": "https://www.businessinsider.com/cloudflare-announces-1100-layoffs-amid-ai-focus-shift-2026-5",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-07",
+                "quote": "Cloudflare on Thursday announced layoffs of 1,100 staff as it reorganizes for \"the agentic AI era.\""
+            }
+        ],
+        "createdAt": "2026-05-07T16:24:00-07:00",
+        "updatedAt": "2026-05-07T16:24:00-07:00"
+    },
+    {
         "id": "coinbase-2026-05-05",
         "company": "Coinbase",
         "industry": "Finance",
