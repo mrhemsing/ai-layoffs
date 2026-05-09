@@ -66,30 +66,16 @@
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "TechCrunch and Bloomberg-syndicated reporting said PayPal plans to cut around 20% of its workforce over two to three years, more than 4,500 jobs, while CEO Enrique Lores described an AI-powered turnaround and a new AI transformation and simplification team intended to help deliver at least $1.5 billion in savings.",
-        "evidenceQuote": "The job eliminations are part of PayPal\u2019s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025.",
+        "summary": "The Wall Street Journal reported PayPal plans to cut 20% of its staff over two to three years, amounting to 4,760 positions, as part of plans to accelerate AI adoption and cut costs. Additional reporting from Bloomberg and TechCrunch described the move as part of CEO Enrique Lores' AI-driven turnaround and simplification push.",
+        "evidenceQuote": "The job eliminations are part of PayPal’s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025.",
         "notes": "Layoffs count is estimated as 20% of PayPal's reported 23,800-person workforce, or about 4,760 roles; Bloomberg/MarketScreener described the cut as around 20% / more than 4,500 jobs over two to three years. AI is not the only rationale: management also cited simplification, cost structure, competition, and technology modernization. Still, Lores explicitly tied the restructuring and savings plan to aggressive AI adoption, AI-enabled processes, and an AI transformation team, so this is classified as explicit_ai_cited.",
         "sources": [
-            {
-                "name": "TechCrunch",
-                "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-05",
-                "quote": "PayPal was pitching an AI-powered turnaround... Bloomberg reported on Tuesday that PayPal plans to cut around 20% of its workforce over the next two to three years as part of its cost-savings plan, equating to north of 4,500 jobs."
-            },
-            {
-                "name": "Quartz",
-                "url": "https://qz.com/paypal-layoffs-ceo-turnaround-cost-cutting-050626",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-06",
-                "quote": "PayPal layoffs CEO turnaround cost cutting."
-            },
             {
                 "name": "Wall Street Journal",
                 "url": "https://www.wsj.com/business/earnings/paypal-to-cut-costs-after-profit-falls-dc42baf9",
                 "type": "reputable_reporting",
                 "publishedDate": "2026-05-05",
-                "quote": "The job eliminations are part of PayPal\u2019s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025."
+                "quote": "The job eliminations are part of PayPal’s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025."
             },
             {
                 "name": "Bloomberg",
@@ -99,11 +85,25 @@
                 "quote": "PayPal, Coinbase Announce Layoffs as AI Impact Bites."
             },
             {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "PayPal was pitching an AI-powered turnaround... Bloomberg reported on Tuesday that PayPal plans to cut around 20% of its workforce over the next two to three years as part of its cost-savings plan, equating to north of 4,500 jobs."
+            },
+            {
                 "name": "The Business Times / Bloomberg",
                 "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/paypal-plans-job-cuts-its-new-ceo-pursues-turnaround-strategy",
                 "type": "reputable_reporting",
                 "publishedDate": "2026-05-05",
                 "quote": "PayPal plans to cut costs and jobs as new chief executive officer Enrique Lores seeks to turn around the payments company."
+            },
+            {
+                "name": "Quartz",
+                "url": "https://qz.com/paypal-layoffs-ceo-turnaround-cost-cutting-050626",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-06",
+                "quote": "PayPal layoffs CEO turnaround cost cutting."
             },
             {
                 "name": "MSN",
@@ -114,7 +114,7 @@
             }
         ],
         "createdAt": "2026-05-08T20:25:00-07:00",
-        "updatedAt": "2026-05-08T20:35:00-07:00"
+        "updatedAt": "2026-05-08T20:38:00-07:00"
     },
     {
         "id": "coinbase-2026-05-05",
@@ -438,7 +438,7 @@
                 "url": "https://www.marketwatch.com/story/fired-via-email-some-of-the-30-000-workers-cut-by-oracle-woke-up-to-a-morning-message-saying-they-were-laid-off-89a7af94",
                 "type": "reputable_reporting",
                 "publishedDate": "2026-04-01",
-                "quote": "The mass layoffs \u2014 which were estimated to be as many as 30,000 people \u2014 were part of the company's cost-cutting measures as it continues to build out expensive data centers for powering artificial intelligence."
+                "quote": "The mass layoffs — which were estimated to be as many as 30,000 people — were part of the company's cost-cutting measures as it continues to build out expensive data centers for powering artificial intelligence."
             }
         ],
         "createdAt": "2026-03-13T02:35:00-07:00",
@@ -595,7 +595,7 @@
                 "url": "https://news.bloomberglaw.com/employment/c3-ai-to-cut-26-of-workforce-following-ceo-transition",
                 "type": "report",
                 "publishedDate": "2026-02-25",
-                "quote": "About 26% of the company\u00e2\u20ac\u2122s global workforce will be eliminated to materially improve operating efficiency and position the company for success. C3.ai had nearly 1,200 workers as of April 2025."
+                "quote": "About 26% of the companyâ€™s global workforce will be eliminated to materially improve operating efficiency and position the company for success. C3.ai had nearly 1,200 workers as of April 2025."
             }
         ],
         "createdAt": "2026-03-13T02:20:00-07:00",
@@ -962,7 +962,7 @@
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
         "summary": "Bloomberg-reported McKinsey tech cuts hit about 200 roles as the firm said AI would make support functions leaner and reduce non-client-facing headcount over time.",
-        "evidenceQuote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... \u00e2\u20ac\u0153We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,\u00e2\u20ac\u009d Sternfels said.",
+        "evidenceQuote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... â€œWe will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,â€ Sternfels said.",
         "notes": "Good AI linkage and clear count from Bloomberg-based reporting; broader multi-year reductions were left out and only the clean 200-role event is captured.",
         "sources": [
             {
@@ -970,7 +970,7 @@
                 "url": "https://www.storyboard18.com/how-it-works/mckinsey-cuts-200-tech-roles-as-ai-replaces-support-jobs-84828.htm",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-11-26",
-                "quote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... \u00e2\u20ac\u0153We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,\u00e2\u20ac\u009d Sternfels said."
+                "quote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... â€œWe will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,â€ Sternfels said."
             }
         ],
         "createdAt": "2026-03-13T07:58:00-07:00",
@@ -1151,7 +1151,7 @@
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "primary_source",
         "summary": "Amazon cut about 14,000 corporate jobs after explicitly saying generative AI and agents would shrink parts of its white-collar workforce.",
-        "evidenceQuote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles... This generation of AI is the most transformative technology we\u00e2\u20ac\u2122ve seen since the Internet.",
+        "evidenceQuote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles... This generation of AI is the most transformative technology weâ€™ve seen since the Internet.",
         "notes": "Distinct from the later January 2026 Amazon reduction already in the dataset.",
         "sources": [
             {
@@ -1166,7 +1166,7 @@
                 "url": "https://techcrunch.com/2025/10/28/amazon-to-cut-14000-corporate-jobs/",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-10-28",
-                "quote": "\u00e2\u20ac\u0153This generation of AI is the most transformative technology we\u00e2\u20ac\u2122ve seen since the Internet... We\u00e2\u20ac\u2122re convicted that we need to be organized more leanly...,\u00e2\u20ac\u009d Beth Galetti wrote."
+                "quote": "â€œThis generation of AI is the most transformative technology weâ€™ve seen since the Internet... Weâ€™re convicted that we need to be organized more leanly...,â€ Beth Galetti wrote."
             }
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
@@ -1206,7 +1206,7 @@
     },
     {
         "id": "nestle-2025-10-16",
-        "company": "Nestl\u00c3\u00a9",
+        "company": "NestlÃ©",
         "industry": "Food & Beverage",
         "geography": "Switzerland",
         "eventDate": "2025-10-16",
@@ -1214,8 +1214,8 @@
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "Nestl\u00c3\u00a9 said it would cut about 16,000 jobs over two years, including white-collar roles as it simplified the organization and automated processes.",
-        "evidenceQuote": "Nestl\u00c3\u00a9 will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency.",
+        "summary": "NestlÃ© said it would cut about 16,000 jobs over two years, including white-collar roles as it simplified the organization and automated processes.",
+        "evidenceQuote": "NestlÃ© will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency.",
         "notes": "Reported by Fortune and CNN from company disclosure; automation/process simplification was part of the stated rationale.",
         "sources": [
             {
@@ -1223,14 +1223,14 @@
                 "url": "https://fortune.com/2025/10/16/nestle-layoffs-job-cuts-philipp-navratil-turnaround-automation/",
                 "type": "report",
                 "publishedDate": "2025-10-16",
-                "quote": "Nestl\u00c3\u00a9 will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency."
+                "quote": "NestlÃ© will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency."
             },
             {
                 "name": "ABC7/CNN",
                 "url": "https://abc7.com/post/nestl-worlds-largest-food-company-cut-16000-jobs-worldwide-due-partly-automation/18018385/",
                 "type": "report",
                 "publishedDate": "2025-10-16",
-                "quote": "Nestl\u00c3\u00a9 will cut around 16,000 jobs worldwide over the next two years as it works to slash costs, including through automation."
+                "quote": "NestlÃ© will cut around 16,000 jobs worldwide over the next two years as it works to slash costs, including through automation."
             }
         ],
         "createdAt": "2026-03-13T02:20:00-07:00",
@@ -1354,7 +1354,7 @@
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
         "summary": "Fiverr laid off about 250 employees as CEO Micha Kaufman reset the company around an AI-first structure with a smaller, flatter team.",
-        "evidenceQuote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company that\u00e2\u20ac\u2122s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members.",
+        "evidenceQuote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company thatâ€™s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members.",
         "notes": "Widely reported from Kaufman's memo/X post; clean AI-first linkage and specific layoff count.",
         "sources": [
             {
@@ -1362,7 +1362,7 @@
                 "url": "https://globalbusinessoutlook.com/technology/fiverr-layoffs-all-you-need-know/",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-10-03",
-                "quote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company that\u00e2\u20ac\u2122s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members."
+                "quote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company thatâ€™s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members."
             }
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
@@ -1568,7 +1568,7 @@
         "aiRelevance": "automation_efficiency_cited",
         "sourceQuality": "reputable_reporting",
         "summary": "UPS said it would cut 20,000 jobs in 2025 as part of a network reconfiguration that also leaned further into automation to reduce labor needs.",
-        "evidenceQuote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. \u00e2\u20ac\u0153With this reconfiguration, we will also lessen our dependency on labor,\u00e2\u20ac\u009d Tom\u00c3\u00a9 said.",
+        "evidenceQuote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. â€œWith this reconfiguration, we will also lessen our dependency on labor,â€ TomÃ© said.",
         "notes": "Broader business context included the Amazon unwind, but the company also explicitly tied the restructuring to automation and lower labor dependence.",
         "sources": [
             {
@@ -1576,7 +1576,7 @@
                 "url": "https://themusicessentials.com/news/ups-to-cut-20000-jobs-as-it-pulls-back-from-amazon-and-embraces-automation/",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-04-30",
-                "quote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. \u00e2\u20ac\u0153With this reconfiguration, we will also lessen our dependency on labor,\u00e2\u20ac\u009d Tom\u00c3\u00a9 said."
+                "quote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. â€œWith this reconfiguration, we will also lessen our dependency on labor,â€ TomÃ© said."
             }
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
@@ -1726,7 +1726,7 @@
                 "url": "https://www.fintechfutures.com/job-cuts-new-hires/uk-fintech-zepz-reportedly-set-to-lay-off-around-200-employees",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-03-28",
-                "quote": "The Zepz spokesperson explained that the \u00e2\u20ac\u0153successful completion of its replatforming efforts\u00e2\u20ac\u009d, enhanced by \u00e2\u20ac\u0153advanced automation and AI\u00e2\u20ac\u009d, has \u00e2\u20ac\u0153reinforced the technology foundation and reduced the need for certain operational and technical capacities\u00e2\u20ac\u009d."
+                "quote": "The Zepz spokesperson explained that the â€œsuccessful completion of its replatforming effortsâ€, enhanced by â€œadvanced automation and AIâ€, has â€œreinforced the technology foundation and reduced the need for certain operational and technical capacitiesâ€."
             }
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
