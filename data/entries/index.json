@@ -57,6 +57,66 @@
         "updatedAt": "2026-05-07T16:29:00-07:00"
     },
     {
+        "id": "paypal-2026-05-05",
+        "company": "PayPal",
+        "industry": "Finance",
+        "geography": "Global",
+        "eventDate": "2026-05-05",
+        "layoffsCount": 4760,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "TechCrunch and Bloomberg-syndicated reporting said PayPal plans to cut around 20% of its workforce over two to three years, more than 4,500 jobs, while CEO Enrique Lores described an AI-powered turnaround and a new AI transformation and simplification team intended to help deliver at least $1.5 billion in savings.",
+        "evidenceQuote": "The job eliminations are part of PayPal\u2019s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025.",
+        "notes": "Layoffs count is estimated as 20% of PayPal's reported 23,800-person workforce, or about 4,760 roles; Bloomberg/MarketScreener described the cut as around 20% / more than 4,500 jobs over two to three years. AI is not the only rationale: management also cited simplification, cost structure, competition, and technology modernization. Still, Lores explicitly tied the restructuring and savings plan to aggressive AI adoption, AI-enabled processes, and an AI transformation team, so this is classified as explicit_ai_cited.",
+        "sources": [
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "PayPal was pitching an AI-powered turnaround... Bloomberg reported on Tuesday that PayPal plans to cut around 20% of its workforce over the next two to three years as part of its cost-savings plan, equating to north of 4,500 jobs."
+            },
+            {
+                "name": "Quartz",
+                "url": "https://qz.com/paypal-layoffs-ceo-turnaround-cost-cutting-050626",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-06",
+                "quote": "PayPal layoffs CEO turnaround cost cutting."
+            },
+            {
+                "name": "Wall Street Journal",
+                "url": "https://www.wsj.com/business/earnings/paypal-to-cut-costs-after-profit-falls-dc42baf9",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "The job eliminations are part of PayPal\u2019s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025."
+            },
+            {
+                "name": "Bloomberg",
+                "url": "https://www.bloomberg.com/news/videos/2026-05-05/paypal-coinbase-announce-layoffs-as-ai-impact-bites-video",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "PayPal, Coinbase Announce Layoffs as AI Impact Bites."
+            },
+            {
+                "name": "The Business Times / Bloomberg",
+                "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/paypal-plans-job-cuts-its-new-ceo-pursues-turnaround-strategy",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "PayPal plans to cut costs and jobs as new chief executive officer Enrique Lores seeks to turn around the payments company."
+            },
+            {
+                "name": "MSN",
+                "url": "https://www.msn.com/en-us/news/insight/paypal-bets-on-ai-overhaul-amid-layoffs-and-stock-slump/gm-GMD1D7BB8A",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-08",
+                "quote": "PayPal bets on AI overhaul amid layoffs and stock slump."
+            }
+        ],
+        "createdAt": "2026-05-08T20:25:00-07:00",
+        "updatedAt": "2026-05-08T20:35:00-07:00"
+    },
+    {
         "id": "coinbase-2026-05-05",
         "company": "Coinbase",
         "industry": "Finance",
