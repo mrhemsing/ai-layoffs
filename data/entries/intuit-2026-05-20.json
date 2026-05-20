@@ -1,0 +1,39 @@
+{
+  "id": "intuit-2026-05-20",
+  "company": "Intuit",
+  "industry": "Finance",
+  "geography": "Global",
+  "eventDate": "2026-05-20",
+  "layoffsCount": 310,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters reported Intuit would cut 1.7% of global jobs to streamline operations. The tracker counts this as a separate 2026 Intuit event from the company's 2024 AI-focused reorganization, with the headcount estimate derived from Intuit's reported 18,200 employees at the end of fiscal 2025.",
+  "evidenceQuote": "Intuit to cut 1.7% of global jobs to streamline operations, memo shows.",
+  "notes": "Reuters verified the new 2026 reduction and described the rationale as streamlining operations. Because the available layoff-specific source language does not directly say AI replaced the affected workers, this is classified conservatively as ai_adjacent_restructuring rather than explicit_ai_cited. The approximate 310-person count is derived from 1.7% of Intuit's 18,200 fiscal-2025 employees.",
+  "sources": [
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/business/world-at-work/intuit-cut-17-global-jobs-streamline-operations-memo-shows-2026-05-20/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-20",
+      "quote": "Intuit to cut 1.7% of global jobs to streamline operations, memo shows."
+    },
+    {
+      "name": "Intuit 2025 Form 10-K",
+      "url": "https://investors.intuit.com/sec-filings/all-sec-filings/content/0000896878-25-000035/intu-20250731.htm",
+      "type": "primary",
+      "publishedDate": "2025-09-03",
+      "quote": "As of July 31, 2025, we had approximately 18,200 employees in seven countries."
+    },
+    {
+      "name": "Intuit",
+      "url": "https://investors.intuit.com/news-events/press-releases/detail/1311/intuit-unlocks-new-phase-of-growth-for-mid-market-businesses-combining-data-and-ai-to-drive-faster-more-profitable-decisions",
+      "type": "primary",
+      "publishedDate": "2026-05-13",
+      "quote": "AI-Native ERP, Intuit Enterprise Suite, is a command center for modern finance teams."
+    }
+  ],
+  "createdAt": "2026-05-20T06:30:00-07:00",
+  "updatedAt": "2026-05-20T06:30:00-07:00"
+}
