@@ -11,7 +11,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "Yahoo Finance / Reuters reported Intuit is laying off about 17% of its workforce, or about 3,000 employees worldwide, to streamline operations and sharpen focus on key bets including AI efforts.",
         "evidenceQuote": "Intuit is laying off about 17% of its workforce, or about 3,000 employees worldwide, to streamline operations and sharpen focus on its key bets including its AI efforts.",
-        "notes": "Yahoo Finance's Reuters syndication says the internal memo frames the cuts around streamlining operations and sharpening focus on key bets, including AI efforts. The article also says the cuts are expected to help Intuit focus on efforts to infuse AI technology across its services. Because AI is explicitly cited in the layoff rationale, this is classified as explicit_ai_cited.",
+        "notes": "Yahoo Finance's Reuters syndication says the internal memo frames the cuts around streamlining operations and sharpening focus on key bets, including AI efforts. The article also says the cuts are expected to help Intuit focus on efforts to infuse AI technology across its services. Because AI is explicitly cited in the layoff rationale, this is classified as explicit AI cited.",
         "sources": [
             {
                 "name": "Yahoo Finance / Reuters",
@@ -50,7 +50,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "Reuters reported Standard Chartered plans to cut more than 7,000 jobs over the next four years as it boosts adoption of artificial intelligence while targeting growth.",
         "evidenceQuote": "Standard Chartered plans to cut more than 7,000 jobs over the next four years as it boosts adoption of artificial intelligence while targeting growth.",
-        "notes": "Reuters reported StanChart would cut 15% of corporate function roles by 2030, which Reuters calculated would result in more than 7,000 redundancies out of more than 52,000 staff in those roles. CEO Bill Winters said the reduction would be driven by automation and adoption of AI as some staff reskill, and described the strategy as replacing some lower-value human capital with financial and investment capital. Because AI and automation are explicitly cited as drivers, this is classified as explicit_ai_cited.",
+        "notes": "Reuters reported StanChart would cut 15% of corporate function roles by 2030, which Reuters calculated would result in more than 7,000 redundancies out of more than 52,000 staff in those roles. CEO Bill Winters said the reduction would be driven by automation and adoption of AI as some staff reskill, and described the strategy as replacing some lower-value human capital with financial and investment capital. Because AI and automation are explicitly cited as drivers, this is classified as explicit AI cited.",
         "sources": [
             {
                 "name": "Reuters",
@@ -125,7 +125,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "TechCrunch reported General Motors laid off more than 10% of its IT department, about 600 salaried employees, as a deliberate skills swap to hire workers with stronger AI-focused backgrounds.",
         "evidenceQuote": "General Motors has laid off more than 10% of its IT department, or about 600 salaried employees — in a deliberate skills swap: clearing out workers whose expertise no longer fits and making room for some with AI-focused backgrounds.",
-        "notes": "TechCrunch reported GM confirmed the layoffs, which Bloomberg first reported. The article says some roles are being replaced rather than permanently removed, with GM still hiring for different IT skills including AI-native development, data engineering and analytics, cloud-based engineering, agent and model development, prompt engineering, and new AI workflows. Because the restructuring is explicitly framed around replacing workers with AI-focused skills, this is classified as explicit_ai_cited.",
+        "notes": "TechCrunch reported GM confirmed the layoffs, which Bloomberg first reported. The article says some roles are being replaced rather than permanently removed, with GM still hiring for different IT skills including AI-native development, data engineering and analytics, cloud-based engineering, agent and model development, prompt engineering, and new AI workflows. Because the restructuring is explicitly framed around replacing workers with AI-focused skills, this is classified as explicit AI cited.",
         "sources": [
             {
                 "name": "TechCrunch",
@@ -150,7 +150,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "Reuters reported Cloudflare will cut about 20% of its workforce, more than 1,100 jobs, as part of a shift toward an \"agentic AI-first operating model\" and a restructuring around artificial intelligence.",
         "evidenceQuote": "Employees across the company from engineering to HR to finance to marketing run thousands of AI agent sessions each day to get their work done. That means we have to be intentional in how we architect our company for the agentic AI era.",
-        "notes": "Reuters reported the cuts as more than 1,100 jobs / about 20% of Cloudflare's workforce. CEO Matthew Prince and co-founder Michelle Zatlyn said the layoffs reflected a shift to an AI-driven operating model and were not a cost-cutting exercise. Cloudflare said its AI usage rose more than 600% over three months. Because AI/agentic operating model is explicitly cited as the restructuring rationale, this is classified as explicit_ai_cited.",
+        "notes": "Reuters reported the cuts as more than 1,100 jobs / about 20% of Cloudflare's workforce. CEO Matthew Prince and co-founder Michelle Zatlyn said the layoffs reflected a shift to an AI-driven operating model and were not a cost-cutting exercise. Cloudflare said its AI usage rose more than 600% over three months. Because AI/agentic operating model is explicitly cited as the restructuring rationale, this is classified as explicit AI cited.",
         "sources": [
             {
                 "name": "Reuters",
@@ -182,7 +182,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "The Register reported cybersecurity vendor Arctic Wolf laid off 250 workers in a restructuring the company said would help it operate more efficiently and continue investing in its Superintelligence platform and agentic Security Operations Center.",
         "evidenceQuote": "While these decisions are difficult, they position Arctic Wolf to operate more efficiently, continue investing in our Superintelligence platform and Agentic SOC, and deliver strong value to customers.",
-        "notes": "The Register reported the layoffs represented less than 10% of Arctic Wolf's workforce and appeared to affect sales, product development, and marketing. Because the company spokesperson explicitly tied the restructuring to continued investment in its AI-oriented Superintelligence platform and Agentic SOC, this is classified as explicit_ai_cited.",
+        "notes": "The Register reported the layoffs represented less than 10% of Arctic Wolf's workforce and appeared to affect sales, product development, and marketing. Because the company spokesperson explicitly tied the restructuring to continued investment in its AI-oriented Superintelligence platform and Agentic SOC, this is classified as explicit AI cited.",
         "sources": [
             {
                 "name": "The Register",
@@ -207,7 +207,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "The Wall Street Journal reported PayPal plans to cut 20% of its staff over two to three years, amounting to 4,760 positions, as part of plans to accelerate AI adoption and cut costs. Additional reporting from Bloomberg and TechCrunch described the move as part of CEO Enrique Lores' AI-driven turnaround and simplification push.",
         "evidenceQuote": "The job eliminations are part of PayPal\u2019s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025.",
-        "notes": "Layoffs count is estimated as 20% of PayPal's reported 23,800-person workforce, or about 4,760 roles; Bloomberg/MarketScreener described the cut as around 20% / more than 4,500 jobs over two to three years. AI is not the only rationale: management also cited simplification, cost structure, competition, and technology modernization. Still, Lores explicitly tied the restructuring and savings plan to aggressive AI adoption, AI-enabled processes, and an AI transformation team, so this is classified as explicit_ai_cited.",
+        "notes": "Layoffs count is estimated as 20% of PayPal's reported 23,800-person workforce, or about 4,760 roles; Bloomberg/MarketScreener described the cut as around 20% / more than 4,500 jobs over two to three years. AI is not the only rationale: management also cited simplification, cost structure, competition, and technology modernization. Still, Lores explicitly tied the restructuring and savings plan to aggressive AI adoption, AI-enabled processes, and an AI transformation team, so this is classified as explicit AI cited.",
         "sources": [
             {
                 "name": "Wall Street Journal",
@@ -299,7 +299,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "Reuters reported Freshworks would cut 11% of its workforce, about 500 jobs, as the business-software company navigated industrywide disruptions caused by rapid advances in artificial intelligence.",
         "evidenceQuote": "Freshworks said on Tuesday it would cut 11% of its workforce, or about 500 jobs, as the business-software company navigates the industrywide disruptions caused by the rapid advances in artificial intelligence.",
-        "notes": "Reuters reported CEO Dennis Woodside said the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business. Because Reuters directly ties the cuts to AI reshaping the software industry and routine-work automation, this is classified as explicit_ai_cited.",
+        "notes": "Reuters reported CEO Dennis Woodside said the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business. Because Reuters directly ties the cuts to AI reshaping the software industry and routine-work automation, this is classified as explicit AI cited.",
         "sources": [
             {
                 "name": "Reuters",

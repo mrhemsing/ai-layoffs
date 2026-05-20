@@ -10,7 +10,7 @@
   "sourceQuality": "reputable_reporting",
   "summary": "Reuters reported Cloudflare will cut about 20% of its workforce, more than 1,100 jobs, as part of a shift toward an \"agentic AI-first operating model\" and a restructuring around artificial intelligence.",
   "evidenceQuote": "Employees across the company from engineering to HR to finance to marketing run thousands of AI agent sessions each day to get their work done. That means we have to be intentional in how we architect our company for the agentic AI era.",
-  "notes": "Reuters reported the cuts as more than 1,100 jobs / about 20% of Cloudflare's workforce. CEO Matthew Prince and co-founder Michelle Zatlyn said the layoffs reflected a shift to an AI-driven operating model and were not a cost-cutting exercise. Cloudflare said its AI usage rose more than 600% over three months. Because AI/agentic operating model is explicitly cited as the restructuring rationale, this is classified as explicit_ai_cited.",
+  "notes": "Reuters reported the cuts as more than 1,100 jobs / about 20% of Cloudflare's workforce. CEO Matthew Prince and co-founder Michelle Zatlyn said the layoffs reflected a shift to an AI-driven operating model and were not a cost-cutting exercise. Cloudflare said its AI usage rose more than 600% over three months. Because AI/agentic operating model is explicitly cited as the restructuring rationale, this is classified as explicit AI cited.",
   "sources": [
     {
       "name": "Reuters",

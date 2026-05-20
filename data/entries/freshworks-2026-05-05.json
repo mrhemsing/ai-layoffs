@@ -10,7 +10,7 @@
   "sourceQuality": "reputable_reporting",
   "summary": "Reuters reported Freshworks would cut 11% of its workforce, about 500 jobs, as the business-software company navigated industrywide disruptions caused by rapid advances in artificial intelligence.",
   "evidenceQuote": "Freshworks said on Tuesday it would cut 11% of its workforce, or about 500 jobs, as the business-software company navigates the industrywide disruptions caused by the rapid advances in artificial intelligence.",
-  "notes": "Reuters reported CEO Dennis Woodside said the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business. Because Reuters directly ties the cuts to AI reshaping the software industry and routine-work automation, this is classified as explicit_ai_cited.",
+  "notes": "Reuters reported CEO Dennis Woodside said the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business. Because Reuters directly ties the cuts to AI reshaping the software industry and routine-work automation, this is classified as explicit AI cited.",
   "sources": [
     {
       "name": "Reuters",

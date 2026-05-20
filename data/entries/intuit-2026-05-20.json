@@ -10,7 +10,7 @@
   "sourceQuality": "reputable_reporting",
   "summary": "Yahoo Finance / Reuters reported Intuit is laying off about 17% of its workforce, or about 3,000 employees worldwide, to streamline operations and sharpen focus on key bets including AI efforts.",
   "evidenceQuote": "Intuit is laying off about 17% of its workforce, or about 3,000 employees worldwide, to streamline operations and sharpen focus on its key bets including its AI efforts.",
-  "notes": "Yahoo Finance's Reuters syndication says the internal memo frames the cuts around streamlining operations and sharpening focus on key bets, including AI efforts. The article also says the cuts are expected to help Intuit focus on efforts to infuse AI technology across its services. Because AI is explicitly cited in the layoff rationale, this is classified as explicit_ai_cited.",
+  "notes": "Yahoo Finance's Reuters syndication says the internal memo frames the cuts around streamlining operations and sharpening focus on key bets, including AI efforts. The article also says the cuts are expected to help Intuit focus on efforts to infuse AI technology across its services. Because AI is explicitly cited in the layoff rationale, this is classified as explicit AI cited.",
   "sources": [
     {
       "name": "Yahoo Finance / Reuters",

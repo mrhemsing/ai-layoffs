@@ -10,7 +10,7 @@
   "sourceQuality": "reputable_reporting",
   "summary": "Reuters reported Standard Chartered plans to cut more than 7,000 jobs over the next four years as it boosts adoption of artificial intelligence while targeting growth.",
   "evidenceQuote": "Standard Chartered plans to cut more than 7,000 jobs over the next four years as it boosts adoption of artificial intelligence while targeting growth.",
-  "notes": "Reuters reported StanChart would cut 15% of corporate function roles by 2030, which Reuters calculated would result in more than 7,000 redundancies out of more than 52,000 staff in those roles. CEO Bill Winters said the reduction would be driven by automation and adoption of AI as some staff reskill, and described the strategy as replacing some lower-value human capital with financial and investment capital. Because AI and automation are explicitly cited as drivers, this is classified as explicit_ai_cited.",
+  "notes": "Reuters reported StanChart would cut 15% of corporate function roles by 2030, which Reuters calculated would result in more than 7,000 redundancies out of more than 52,000 staff in those roles. CEO Bill Winters said the reduction would be driven by automation and adoption of AI as some staff reskill, and described the strategy as replacing some lower-value human capital with financial and investment capital. Because AI and automation are explicitly cited as drivers, this is classified as explicit AI cited.",
   "sources": [
     {
       "name": "Reuters",

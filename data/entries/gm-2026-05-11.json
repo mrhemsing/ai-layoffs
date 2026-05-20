@@ -10,7 +10,7 @@
   "sourceQuality": "reputable_reporting",
   "summary": "TechCrunch reported General Motors laid off more than 10% of its IT department, about 600 salaried employees, as a deliberate skills swap to hire workers with stronger AI-focused backgrounds.",
   "evidenceQuote": "General Motors has laid off more than 10% of its IT department, or about 600 salaried employees — in a deliberate skills swap: clearing out workers whose expertise no longer fits and making room for some with AI-focused backgrounds.",
-  "notes": "TechCrunch reported GM confirmed the layoffs, which Bloomberg first reported. The article says some roles are being replaced rather than permanently removed, with GM still hiring for different IT skills including AI-native development, data engineering and analytics, cloud-based engineering, agent and model development, prompt engineering, and new AI workflows. Because the restructuring is explicitly framed around replacing workers with AI-focused skills, this is classified as explicit_ai_cited.",
+  "notes": "TechCrunch reported GM confirmed the layoffs, which Bloomberg first reported. The article says some roles are being replaced rather than permanently removed, with GM still hiring for different IT skills including AI-native development, data engineering and analytics, cloud-based engineering, agent and model development, prompt engineering, and new AI workflows. Because the restructuring is explicitly framed around replacing workers with AI-focused skills, this is classified as explicit AI cited.",
   "sources": [
     {
       "name": "TechCrunch",
