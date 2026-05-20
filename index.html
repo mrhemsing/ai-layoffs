@@ -441,6 +441,14 @@
         return String(v || '').replaceAll('_', ' ');
       }
 
+      function fmtAiRelevance(v) {
+        if (v === 'explicit_ai_cited') return 'Explicit AI cited';
+        if (v === 'automation_efficiency_cited') return 'Automation / efficiency cited';
+        if (v === 'ai_adjacent_restructuring') return 'AI-adjacent restructuring';
+        if (v === 'speculative_or_unclear') return 'Speculative / unclear';
+        return labelize(v);
+      }
+
       function fmtGeography(v) {
         return v === 'United Kingdom' ? 'UK' : (v || '—');
       }
@@ -582,7 +590,7 @@
             <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span></a>` : `<span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span>`}</td>
             <td>${entry.layoffsCount == null ? '—' : fmtNumber(entry.layoffsCount)}</td>
             <td>${entry.industry || '—'}</td>
-            <td><span class="pill ${entry.aiRelevance}">${labelize(entry.aiRelevance)}</span></td>
+            <td><span class="pill ${entry.aiRelevance}">${fmtAiRelevance(entry.aiRelevance)}</span></td>
           `;
           tr.addEventListener('click', () => {
             pendingAnchorId = entry.id;
