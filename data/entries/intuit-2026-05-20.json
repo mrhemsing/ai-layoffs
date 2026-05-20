@@ -4,20 +4,20 @@
   "industry": "Finance",
   "geography": "Global",
   "eventDate": "2026-05-20",
-  "layoffsCount": 3094,
+  "layoffsCount": 3000,
   "status": "verified",
-  "aiRelevance": "ai_adjacent_restructuring",
+  "aiRelevance": "explicit_ai_cited",
   "sourceQuality": "reputable_reporting",
-  "summary": "Reuters reported Intuit would cut 17% of global jobs to streamline operations. The tracker counts this as a separate 2026 Intuit event from the company's 2024 AI-focused reorganization, with the headcount estimate derived from Intuit's reported 18,200 employees at the end of fiscal 2025.",
-  "evidenceQuote": "Intuit to cut 17% of global jobs to streamline operations, memo shows.",
-  "notes": "Reuters verified the new 2026 reduction and described the rationale as streamlining operations. Because the available layoff-specific source language does not directly say AI replaced the affected workers, this is classified conservatively as ai_adjacent_restructuring rather than explicit_ai_cited. The approximate 3,094-person count is derived from 17% of Intuit's 18,200 fiscal-2025 employees.",
+  "summary": "Yahoo Finance / Reuters reported Intuit is laying off about 17% of its workforce, or about 3,000 employees worldwide, to streamline operations and sharpen focus on key bets including AI efforts.",
+  "evidenceQuote": "Intuit is laying off about 17% of its workforce, or about 3,000 employees worldwide, to streamline operations and sharpen focus on its key bets including its AI efforts.",
+  "notes": "Yahoo Finance's Reuters syndication says the internal memo frames the cuts around streamlining operations and sharpening focus on key bets, including AI efforts. The article also says the cuts are expected to help Intuit focus on efforts to infuse AI technology across its services. Because AI is explicitly cited in the layoff rationale, this is classified as explicit_ai_cited.",
   "sources": [
     {
-      "name": "Reuters",
-      "url": "https://www.reuters.com/business/world-at-work/intuit-cut-17-global-jobs-streamline-operations-memo-shows-2026-05-20/",
+      "name": "Yahoo Finance / Reuters",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/exclusive-intuit-cut-17-global-130424207.html",
       "type": "reputable_reporting",
       "publishedDate": "2026-05-20",
-      "quote": "Intuit to cut 17% of global jobs to streamline operations, memo shows."
+      "quote": "Intuit is laying off about 17% of its workforce, or about 3,000 employees worldwide, to streamline operations and sharpen focus on its key bets including its AI efforts."
     },
     {
       "name": "Intuit 2025 Form 10-K",
@@ -35,5 +35,5 @@
     }
   ],
   "createdAt": "2026-05-20T06:30:00-07:00",
-  "updatedAt": "2026-05-20T06:35:00-07:00"
+  "updatedAt": "2026-05-20T06:45:00-07:00"
 }
