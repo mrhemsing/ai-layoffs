@@ -4,29 +4,22 @@
   "industry": "Finance",
   "geography": "Global",
   "eventDate": "2026-05-19",
-  "layoffsCount": 7800,
+  "layoffsCount": 7000,
   "status": "verified",
   "aiRelevance": "explicit_ai_cited",
   "sourceQuality": "reputable_reporting",
-  "summary": "Yahoo Finance / BeInCrypto reported Standard Chartered will cut more than 15% of corporate function roles by 2030 as the bank scales up artificial intelligence and automation, with reporting from The Guardian putting the reduction at about 7,800 redundancies.",
-  "evidenceQuote": "Standard Chartered will cut more than 15% of corporate function roles by 2030 as the UK-headquartered bank scales up the use of artificial intelligence.",
-  "notes": "The company framed the reductions as part of a strategy update and profitability push, with CEO Bill Winters saying the headcount reduction would be driven by greater use of AI and automation and describing it as replacing some lower-value human capital with financial and investment capital. The Guardian reported 15% of back-office roles would amount to about 7,800 redundancies out of more than 52,000 staff in those roles; the Yahoo Finance / BeInCrypto article described the plan as over 7,000 positions from a workforce of 80,000. Because AI and automation are explicitly cited as drivers, this is classified as explicit_ai_cited.",
+  "summary": "Reuters reported Standard Chartered plans to cut more than 7,000 jobs over the next four years as it boosts adoption of artificial intelligence while targeting growth.",
+  "evidenceQuote": "Standard Chartered plans to cut more than 7,000 jobs over the next four years as it boosts adoption of artificial intelligence while targeting growth.",
+  "notes": "Reuters reported StanChart would cut 15% of corporate function roles by 2030, which Reuters calculated would result in more than 7,000 redundancies out of more than 52,000 staff in those roles. CEO Bill Winters said the reduction would be driven by automation and adoption of AI as some staff reskill, and described the strategy as replacing some lower-value human capital with financial and investment capital. Because AI and automation are explicitly cited as drivers, this is classified as explicit_ai_cited.",
   "sources": [
     {
-      "name": "Yahoo Finance / BeInCrypto",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/standard-chartered-joins-ai-layoff-044218320.html",
+      "name": "Reuters",
+      "url": "https://www.reuters.com/business/world-at-work/stanchart-cut-more-than-7000-jobs-bank-steps-up-ai-adoption-2026-05-19/",
       "type": "reputable_reporting",
       "publishedDate": "2026-05-19",
-      "quote": "Standard Chartered will cut more than 15% of corporate function roles by 2030 as the UK-headquartered bank scales up the use of artificial intelligence."
-    },
-    {
-      "name": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/may/19/standard-chartered-bank-cut-jobs-ai-london",
-      "type": "reputable_reporting",
-      "publishedDate": "2026-05-19",
-      "quote": "StanChart said on Tuesday it would cut 15% of its back-office roles by 2030, which would result in about 7,800 redundancies out of its more than 52,000 staff in such roles."
+      "quote": "Standard Chartered plans to cut more than 7,000 jobs over the next four years as it boosts adoption of artificial intelligence while targeting growth."
     }
   ],
   "createdAt": "2026-05-19T07:40:00-07:00",
-  "updatedAt": "2026-05-19T07:40:00-07:00"
+  "updatedAt": "2026-05-20T06:42:00-07:00"
 }
