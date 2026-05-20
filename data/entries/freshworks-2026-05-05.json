@@ -1,0 +1,32 @@
+{
+  "id": "freshworks-2026-05-05",
+  "company": "Freshworks",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-05-05",
+  "layoffsCount": 500,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters reported Freshworks would cut 11% of its workforce, about 500 jobs, as the business-software company navigated industrywide disruptions caused by rapid advances in artificial intelligence.",
+  "evidenceQuote": "Freshworks said on Tuesday it would cut 11% of its workforce, or about 500 jobs, as the business-software company navigates the industrywide disruptions caused by the rapid advances in artificial intelligence.",
+  "notes": "Reuters reported CEO Dennis Woodside said the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business. Because Reuters directly ties the cuts to AI reshaping the software industry and routine-work automation, this is classified as explicit_ai_cited.",
+  "sources": [
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/business/freshworks-cut-11-jobs-ai-reshapes-software-sector-2026-05-05/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-05",
+      "quote": "Freshworks said on Tuesday it would cut 11% of its workforce, or about 500 jobs, as the business-software company navigates the industrywide disruptions caused by the rapid advances in artificial intelligence."
+    },
+    {
+      "name": "Investing.com / Reuters",
+      "url": "https://www.investing.com/news/stock-market-news/freshworks-to-cut-11-jobs-as-ai-reshapes-software-sector-4660955",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-05",
+      "quote": "CEO Dennis Woodside told Reuters the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business."
+    }
+  ],
+  "createdAt": "2026-05-20T06:55:00-07:00",
+  "updatedAt": "2026-05-20T06:55:00-07:00"
+}

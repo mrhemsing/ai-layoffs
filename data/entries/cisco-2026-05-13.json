@@ -1,0 +1,25 @@
+{
+  "id": "cisco-2026-05-13",
+  "company": "Cisco",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-05-13",
+  "layoffsCount": 4000,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters reported Cisco would cut nearly 4,000 jobs as part of a restructuring aimed at shifting investment toward artificial intelligence and related growth areas while AI infrastructure orders surged.",
+  "evidenceQuote": "Cisco said on Wednesday it would cut nearly 4,000 jobs, as part of a restructuring aimed at shifting investment toward artificial intelligence and related growth areas.",
+  "notes": "Reuters reported the reduction as fewer than 4,000 jobs, representing less than 5% of Cisco's workforce. CEO Chuck Robbins framed the move as shifting investment toward areas where demand and long-term value creation are strongest, including silicon, optics, security, and AI. This is a separate 2026 event from Cisco's 2024 restructuring.",
+  "sources": [
+    {
+      "name": "Yahoo Finance / Reuters",
+      "url": "https://au.finance.yahoo.com/news/cisco-to-cut-about-4000-jobs-in-ai-focused-restructuring-as-orders-surge-200934836.html",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-13",
+      "quote": "Cisco will reduce its workforce by fewer than 4,000 jobs in the fourth quarter, representing less than 5% of its workforce."
+    }
+  ],
+  "createdAt": "2026-05-20T06:55:00-07:00",
+  "updatedAt": "2026-05-20T06:55:00-07:00"
+}

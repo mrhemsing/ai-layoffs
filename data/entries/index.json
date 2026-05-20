@@ -64,6 +64,31 @@
         "updatedAt": "2026-05-20T06:42:00-07:00"
     },
     {
+        "id": "cisco-2026-05-13",
+        "company": "Cisco",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-05-13",
+        "layoffsCount": 4000,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Reuters reported Cisco would cut nearly 4,000 jobs as part of a restructuring aimed at shifting investment toward artificial intelligence and related growth areas while AI infrastructure orders surged.",
+        "evidenceQuote": "Cisco said on Wednesday it would cut nearly 4,000 jobs, as part of a restructuring aimed at shifting investment toward artificial intelligence and related growth areas.",
+        "notes": "Reuters reported the reduction as fewer than 4,000 jobs, representing less than 5% of Cisco's workforce. CEO Chuck Robbins framed the move as shifting investment toward areas where demand and long-term value creation are strongest, including silicon, optics, security, and AI. This is a separate 2026 event from Cisco's 2024 restructuring.",
+        "sources": [
+            {
+                "name": "Yahoo Finance / Reuters",
+                "url": "https://au.finance.yahoo.com/news/cisco-to-cut-about-4000-jobs-in-ai-focused-restructuring-as-orders-surge-200934836.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-13",
+                "quote": "Cisco will reduce its workforce by fewer than 4,000 jobs in the fourth quarter, representing less than 5% of its workforce."
+            }
+        ],
+        "createdAt": "2026-05-20T06:55:00-07:00",
+        "updatedAt": "2026-05-20T06:55:00-07:00"
+    },
+    {
         "id": "walmart-2026-05-12",
         "company": "Walmart",
         "industry": "Other",
@@ -261,6 +286,38 @@
         ],
         "createdAt": "2026-05-05T06:25:00-07:00",
         "updatedAt": "2026-05-05T06:27:00-07:00"
+    },
+    {
+        "id": "freshworks-2026-05-05",
+        "company": "Freshworks",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-05-05",
+        "layoffsCount": 500,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Reuters reported Freshworks would cut 11% of its workforce, about 500 jobs, as the business-software company navigated industrywide disruptions caused by rapid advances in artificial intelligence.",
+        "evidenceQuote": "Freshworks said on Tuesday it would cut 11% of its workforce, or about 500 jobs, as the business-software company navigates the industrywide disruptions caused by the rapid advances in artificial intelligence.",
+        "notes": "Reuters reported CEO Dennis Woodside said the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business. Because Reuters directly ties the cuts to AI reshaping the software industry and routine-work automation, this is classified as explicit_ai_cited.",
+        "sources": [
+            {
+                "name": "Reuters",
+                "url": "https://www.reuters.com/business/freshworks-cut-11-jobs-ai-reshapes-software-sector-2026-05-05/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "Freshworks said on Tuesday it would cut 11% of its workforce, or about 500 jobs, as the business-software company navigates the industrywide disruptions caused by the rapid advances in artificial intelligence."
+            },
+            {
+                "name": "Investing.com / Reuters",
+                "url": "https://www.investing.com/news/stock-market-news/freshworks-to-cut-11-jobs-as-ai-reshapes-software-sector-4660955",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "CEO Dennis Woodside told Reuters the decision was driven partly by AI use in product and engineering, as well as automation of routine work across the business."
+            }
+        ],
+        "createdAt": "2026-05-20T06:55:00-07:00",
+        "updatedAt": "2026-05-20T06:55:00-07:00"
     },
     {
         "id": "meta-2026-04-23",
