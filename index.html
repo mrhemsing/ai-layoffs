@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <title>Replace AI - Track layoffs tied to AI, automation, and AI-driven restructuring with receipts</title>
+    <title>Replaced by AI — AI Layoff Tracker with Receipts</title>
+    <meta name="description" content="AI layoff tracker with sourced receipts for layoffs tied to AI, automation, and AI-driven restructuring." />
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -103,6 +104,22 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.12);
       }
       .prompt-symbol { color: #7CFF6B; }
+      .seo-heading {
+        margin-top: 12px;
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+      .top-nav {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 18px;
+        font-size: 14px;
+      }
+      .top-nav a { color: #111; text-decoration: none; }
+      .top-nav a:hover { text-decoration: underline; }
       .receipts-mark { margin-right: 0; }
       .prompt-cursor {
         display: inline-block;
@@ -214,6 +231,8 @@
         color: #000;
       }
       .company-line { display: inline-block; margin-bottom: 6px; }
+      .company-line a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+      .company-line a:hover { color: #0a58ca; }
       td { overflow-wrap: break-word; }
       .mobile-only { display: none; }
       .mobile-date { display: none; }
@@ -300,8 +319,13 @@
       <div class="ambient-shape three"></div>
       <div class="ambient-shape four"></div>
     </div>
+    <nav class="top-nav" aria-label="Site navigation">
+      <a href="/about/">Methodology</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </nav>
     <div class="hero">
-      <h1 class="prompt-title"><span class="prompt-symbol">&gt;</span><span>/replace -ai</span><span class="prompt-cursor" aria-hidden="true"></span></h1>
+      <div class="prompt-title" aria-label="Replaced by AI"><span class="prompt-symbol">&gt;</span><span>/replace -ai</span><span class="prompt-cursor" aria-hidden="true"></span></div>
+      <h1 class="seo-heading">AI layoff tracker with receipts</h1>
     </div>
     <p class="muted tagline" style="color: #111;">Track layoffs tied to AI, automation, and AI-driven restructuring with <span class="receipts-mark">🧾</span>receipts.</p>
 
@@ -378,7 +402,7 @@
       <blockquote class="footer-note data-note-text" style="margin-top: 0;">Entries are sourced from primary statements or reputable reporting and labeled by AI relevance. Many of these announcements have been questioned by economists and analysts who argue companies use "AI washing" as cover for financial restructuring and pandemic-era overhiring. That skepticism is noted where relevant — the receipts are included so you can judge for yourself.</blockquote>
     </div>
 
-    <p class="footer-note" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;"><span>© 2026</span><a class="ba-badge" href="https://www.b-average.com/" target="_blank" rel="noreferrer">B AVERAGE</a></p>
+    <p class="footer-note" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"></span></span><a class="ba-badge" href="https://www.b-average.com/" target="_blank" rel="noreferrer">B AVERAGE</a></p>
 
     <script>
       let allEntries = [];
@@ -463,6 +487,16 @@
         if (v === 'ai_reorg_or_spend_linked') return 'AI reorg';
         if (v === 'ai_replacement_cited') return 'AI replacement';
         return labelize(v);
+      }
+
+      function companySlug(value) {
+        return String(value || '')
+          .normalize('NFKD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .toLowerCase()
+          .replace(/&/g, ' and ')
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '');
       }
 
       function updateStats(entries) {
@@ -590,7 +624,7 @@
           const isSelected = entry.id === selectedEntryId;
           if (isSelected) tr.classList.add('selected');
           tr.innerHTML = `
-            <td><span class="company-line"><b>${entry.company}</b></span><br><span class="muted"><span class="desktop-date">${entry.geography || '—'}</span><span class="mobile-date">${fmtGeography(entry.geography)}</span></span></td>
+            <td><span class="company-line"><b><a href="/company/${companySlug(entry.company)}/">${entry.company}</a></b></span><br><span class="muted"><span class="desktop-date">${entry.geography || '—'}</span><span class="mobile-date">${fmtGeography(entry.geography)}</span></span></td>
             <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span></a>` : `<span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span>`}</td>
             <td>${entry.layoffsCount == null ? '—' : fmtNumber(entry.layoffsCount)}</td>
             <td>${entry.industry || '—'}</td>
@@ -624,6 +658,7 @@
       }
 
       async function init() {
+        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
         const resp = await fetch('./data/entries/index.json');
         allEntries = await resp.json();
         updateStats(allEntries);

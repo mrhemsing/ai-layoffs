@@ -93,6 +93,14 @@ Candidates should be reviewed before publication.
 ### 3. Verified entry
 Only verified entries are published to the public dataset.
 
+### SEO page generation
+Run `npm run build:seo` after changing `data/entries/index.json`.
+
+This generates:
+- `/about/` methodology page
+- `/company/<company-slug>/` pages for indexable company searches
+- `sitemap.xml`
+
 ## Repo plan
 
 - `docs/` — methodology, product spec
