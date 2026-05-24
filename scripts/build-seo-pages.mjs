@@ -60,6 +60,11 @@ function pageShell({ title, description, canonicalPath, body }) {
     <meta name="description" content="${escapeHtml(description)}" />
     <link rel="canonical" href="${escapeHtml(canonical)}" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="${escapeHtml(title)}" />
+    <meta property="og:description" content="${escapeHtml(description)}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="${escapeHtml(canonical)}" />
+    <meta name="twitter:card" content="summary" />
     <style>
       body { font-family: Arial, sans-serif; max-width: 920px; margin: 40px auto; padding: 0 18px; color: #111; background: #f4f6f8; line-height: 1.55; }
       a { color: #0a58ca; }
@@ -91,6 +96,7 @@ function pageShell({ title, description, canonicalPath, body }) {
     <nav class="nav">
       <a class="brand" href="/">/replace -ai</a>
       <a href="/about/">Methodology</a>
+      <a href="/company/">Companies</a>
       <a href="/">Tracker</a>
     </nav>
 ${body}
@@ -129,17 +135,17 @@ for (const entry of entries) {
 
 await rm(path.join(root, "company"), { recursive: true, force: true });
 
-const sitemapUrls = ["/", "/about/"];
+const sitemapUrls = ["/", "/about/", "/company/"];
 for (const [slug, companyEntries] of companyGroups.entries()) {
   companyEntries.sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")));
   const company = companyEntries[0].company;
   const total = companyEntries.reduce((sum, entry) => sum + Number(entry.layoffsCount || 0), 0);
-  const title = `${company} AI layoffs - Replaced by AI tracker`;
-  const description = `${company} AI layoff tracker entry with sourced evidence, dates, AI relevance labels, and reported job impact.`;
+  const title = `${company} AI layoffs - AI Layoff Tracker with Receipts`;
+  const description = `${company} AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact.`;
   const body = `    <main>
       <p class="muted">AI layoff tracker company page</p>
       <h1>${escapeHtml(company)} AI layoffs</h1>
-      <p class="muted">${escapeHtml(companyEntries.length)} sourced event${companyEntries.length === 1 ? "" : "s"}${total ? ` · ${escapeHtml(fmtNumber(total))} reported jobs impacted` : ""}</p>
+      <p class="muted">${escapeHtml(companyEntries.length)} sourced AI layoff event${companyEntries.length === 1 ? "" : "s"}${total ? ` · ${escapeHtml(fmtNumber(total))} reported jobs impacted` : ""}</p>
       ${companyEntries.map(entryCard).join("\n")}
     </main>`;
   const dir = path.join(root, "company", slug);
@@ -148,10 +154,36 @@ for (const [slug, companyEntries] of companyGroups.entries()) {
   sitemapUrls.push(`/company/${slug}/`);
 }
 
+const companyListBody = `    <main>
+      <p class="muted">Company index</p>
+      <h1>AI layoffs by company</h1>
+      <p>This index lists every company currently tracked in the Replaced by AI layoff tracker. Each company page is built as static HTML for long-tail searches such as company name plus AI layoffs.</p>
+      <section class="card">
+        <h2>Company pages</h2>
+        <ul class="source-list">
+          ${[...companyGroups.entries()]
+            .sort((a, b) => a[1][0].company.localeCompare(b[1][0].company))
+            .map(([slug, companyEntries]) => `<li><a href="/company/${slug}/">${escapeHtml(companyEntries[0].company)} AI layoffs</a></li>`)
+            .join("\n          ")}
+        </ul>
+      </section>
+    </main>`;
+
+await mkdir(path.join(root, "company"), { recursive: true });
+await writeFile(
+  path.join(root, "company", "index.html"),
+  pageShell({
+    title: "AI layoffs by company - Replaced by AI tracker",
+    description: "Browse AI layoffs by company with static, indexable pages for every company in the Replaced by AI layoff tracker.",
+    canonicalPath: "/company/",
+    body: companyListBody,
+  }),
+);
+
 const aboutBody = `    <main>
       <p class="muted">Methodology</p>
       <h1>About the AI layoff tracker</h1>
-      <p>Replaced by AI tracks public layoff events where AI, automation, or AI-driven restructuring is part of the documented rationale. It is not a generic layoff list.</p>
+      <p>Replaced by AI tracks public AI layoffs where AI, automation, AI replacement, or AI-driven restructuring is part of the documented rationale. It is not a generic layoff list.</p>
       <section class="card">
         <h2>Inclusion rules</h2>
         <p>Every entry needs a primary source or reputable reporting source. Weak aggregation and unsourced social posts can be used as leads, but they are not enough for a verified public entry.</p>
@@ -169,7 +201,7 @@ const aboutBody = `    <main>
       </section>
       <section class="card">
         <h2>Receipts first</h2>
-        <p>The tracker separates facts from interpretation. Each entry includes a source quote, a summary, and notes explaining why the event was included and how strong the AI connection is.</p>
+        <p>The AI layoff tracker separates facts from interpretation. Each entry includes a source quote, a summary, and notes explaining why the event was included and how strong the AI connection is.</p>
       </section>
     </main>`;
 
@@ -178,7 +210,7 @@ await writeFile(
   path.join(root, "about", "index.html"),
   pageShell({
     title: "About the AI layoff tracker methodology - Replaced by AI",
-    description: "Methodology for the Replaced by AI layoff tracker, including inclusion rules, source quality standards, and AI relevance classifications.",
+    description: "Methodology for the Replaced by AI layoff tracker, including AI layoffs inclusion rules, source quality standards, and AI relevance classifications.",
     canonicalPath: "/about/",
     body: aboutBody,
   }),
@@ -191,4 +223,11 @@ ${sitemapUrls.map((url) => `  <url><loc>${siteUrl}${url}</loc></url>`).join("\n"
 `;
 await writeFile(path.join(root, "sitemap.xml"), sitemap);
 
-console.log(`Generated ${companyGroups.size} company pages, /about/, and sitemap.xml`);
+const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${siteUrl}/sitemap.xml
+`;
+await writeFile(path.join(root, "robots.txt"), robots);
+
+console.log(`Generated ${companyGroups.size} company pages, /company/, /about/, robots.txt, and sitemap.xml`);

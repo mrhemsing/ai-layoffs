@@ -98,8 +98,10 @@ Run `npm run build:seo` after changing `data/entries/index.json`.
 
 This generates:
 - `/about/` methodology page
+- `/company/` index page
 - `/company/<company-slug>/` pages for indexable company searches
 - `sitemap.xml`
+- `robots.txt`
 
 ## Repo plan
 
