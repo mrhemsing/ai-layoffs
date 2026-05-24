@@ -64,6 +64,56 @@
         "updatedAt": "2026-05-20T06:42:00-07:00"
     },
     {
+        "id": "innovaccer-2026-05-15",
+        "company": "Innovaccer",
+        "industry": "Technology",
+        "geography": "North America",
+        "eventDate": "2026-05-15",
+        "layoffsCount": 340,
+        "status": "needs_review",
+        "aiRelevance": "speculative_or_unclear",
+        "sourceQuality": "secondary_lead",
+        "summary": "InterviewPal reported healthcare data company Innovaccer laid off 340 employees on May 15, 2026, in a restructuring aimed at streamlining operations and improving profitability amid healthcare-tech market pressure.",
+        "evidenceQuote": "Healthcare data unicorn Innovaccer laid off 340 employees on May 15, 2026, marking another significant workforce reduction for the San Francisco-based company.",
+        "notes": "The provided source reports the layoff count and restructuring rationale but does not directly cite AI, automation, or AI investment as a reason for the cuts. Included as needs_review and speculative_or_unclear pending a primary source or stronger reputable reporting.",
+        "sources": [
+            {
+                "name": "InterviewPal",
+                "url": "https://www.interviewpal.com/layoffs/innovaccer",
+                "type": "secondary_lead",
+                "publishedDate": "2026-05-01",
+                "quote": "Healthcare data unicorn Innovaccer laid off 340 employees on May 15, 2026, marking another significant workforce reduction for the San Francisco-based company."
+            }
+        ],
+        "createdAt": "2026-05-23T22:15:00-07:00",
+        "updatedAt": "2026-05-23T22:15:00-07:00"
+    },
+    {
+        "id": "jumia-2026-05-14",
+        "company": "Jumia",
+        "industry": "Other",
+        "geography": "Africa",
+        "eventDate": "2026-05-14",
+        "layoffsCount": 200,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Bloomberg reported Jumia Technologies planned to cut an initial 10% of its roughly 2,000-person workforce as it implemented AI across departments including operations, logistics, finance, and marketing.",
+        "evidenceQuote": "Jumia Technologies AG is planning to cut an initial 10% of its workforce of about 2,000 people as the African e-commerce giant implements artificial intelligence across its departments.",
+        "notes": "Layoffs count is calculated from Bloomberg's reported initial 10% reduction from a workforce of about 2,000 people. Because the CEO directly tied the cuts to implementing AI across departments, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Bloomberg",
+                "url": "https://www.bloomberg.com/news/articles/2026-05-14/africa-e-commerce-giant-jumia-to-cut-workforce-due-to-ai",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-14",
+                "quote": "Jumia Technologies AG is planning to cut an initial 10% of its workforce of about 2,000 people as the African e-commerce giant implements artificial intelligence across its departments."
+            }
+        ],
+        "createdAt": "2026-05-23T22:15:00-07:00",
+        "updatedAt": "2026-05-23T22:15:00-07:00"
+    },
+    {
         "id": "cisco-2026-05-13",
         "company": "Cisco",
         "industry": "Technology",
@@ -171,6 +221,45 @@
         "updatedAt": "2026-05-07T16:24:00-07:00"
     },
     {
+        "id": "upwork-2026-05-07",
+        "company": "Upwork",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-05-07",
+        "layoffsCount": 145,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "Upwork announced a restructuring plan expected to reduce its workforce by approximately 24%, with CEO Hayden Brown telling employees the company had rethought every function around people and technology and that AI lets smaller product and engineering teams have more impact.",
+        "evidenceQuote": "AI means smaller, differently resourced teams in product and engineering can make a bigger impact than ever.",
+        "notes": "Upwork's Form 8-K gives the official reduction as approximately 24% of the company's workforce. Final Round AI estimated the absolute impact at about 145 jobs out of a 600-person headcount; because the company source gives only a percentage, the count should be treated as a secondary estimate. This is classified as explicit AI cited because the CEO memo directly links the new team structure to AI-enabled smaller teams.",
+        "sources": [
+            {
+                "name": "Upwork SEC Form 8-K",
+                "url": "https://investors.upwork.com/static-files/0574d044-06d1-433c-918b-854f710ad10a",
+                "type": "primary",
+                "publishedDate": "2026-05-07",
+                "quote": "The Restructuring Plan includes an expected reduction of the Company's total workforce by approximately 24%."
+            },
+            {
+                "name": "Upwork CEO employee memo",
+                "url": "https://www.upwork.com/press/releases/upwork-ceo-hayden-brown-shared-the-following-message-with-employees-on-may-7-2026",
+                "type": "primary",
+                "publishedDate": "2026-05-07",
+                "quote": "AI means smaller, differently resourced teams in product and engineering can make a bigger impact than ever."
+            },
+            {
+                "name": "Final Round AI",
+                "url": "https://www.finalroundai.com/blog/upwork-layoffs-2026",
+                "type": "secondary_lead",
+                "publishedDate": "2026-05-08",
+                "quote": "On May 7, 2026, Upwork announced it was cutting approximately 24% of its workforce, about 145 jobs out of a 600-person headcount."
+            }
+        ],
+        "createdAt": "2026-05-23T22:15:00-07:00",
+        "updatedAt": "2026-05-23T22:15:00-07:00"
+    },
+    {
         "id": "arctic-wolf-2026-05-06",
         "company": "Arctic Wolf",
         "industry": "Technology",
@@ -194,6 +283,31 @@
         ],
         "createdAt": "2026-05-07T16:29:00-07:00",
         "updatedAt": "2026-05-07T16:29:00-07:00"
+    },
+    {
+        "id": "ticketmaster-2026-05-06",
+        "company": "Ticketmaster",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-05-06",
+        "layoffsCount": 350,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Pollstar reported Ticketmaster cut 8% of global staff, about 350 employees across 25 countries, primarily in engineering, product, and design, as leadership pushed stronger prioritization and a technology-first strategy that included AI.",
+        "evidenceQuote": "Ticketmaster earlier today cut 8% of its global staff - some 350 employees across 25 countries - primarily in its engineering, product and design divisions.",
+        "notes": "Pollstar quotes Ticketmaster Global President Saumil Mehta saying the cuts were about stronger prioritization, flattening layers, consolidating ownership, and changing team structure. The same article ties Mehta's stated future vision to a technology-first approach in the age of AI, but it does not say AI directly replaced the cut workers. Classified as AI-adjacent restructuring.",
+        "sources": [
+            {
+                "name": "Pollstar",
+                "url": "https://news.pollstar.com/2026/05/06/ticketmaster-cuts-8-of-staff-350-employees-primarily-in-engineering-product-design/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-06",
+                "quote": "Ticketmaster earlier today cut 8% of its global staff - some 350 employees across 25 countries - primarily in its engineering, product and design divisions."
+            }
+        ],
+        "createdAt": "2026-05-23T22:15:00-07:00",
+        "updatedAt": "2026-05-23T22:15:00-07:00"
     },
     {
         "id": "paypal-2026-05-05",

@@ -1,0 +1,25 @@
+{
+  "id": "innovaccer-2026-05-15",
+  "company": "Innovaccer",
+  "industry": "Technology",
+  "geography": "North America",
+  "eventDate": "2026-05-15",
+  "layoffsCount": 340,
+  "status": "needs_review",
+  "aiRelevance": "speculative_or_unclear",
+  "sourceQuality": "secondary_lead",
+  "summary": "InterviewPal reported healthcare data company Innovaccer laid off 340 employees on May 15, 2026, in a restructuring aimed at streamlining operations and improving profitability amid healthcare-tech market pressure.",
+  "evidenceQuote": "Healthcare data unicorn Innovaccer laid off 340 employees on May 15, 2026, marking another significant workforce reduction for the San Francisco-based company.",
+  "notes": "The provided source reports the layoff count and restructuring rationale but does not directly cite AI, automation, or AI investment as a reason for the cuts. Included as needs_review and speculative_or_unclear pending a primary source or stronger reputable reporting.",
+  "sources": [
+    {
+      "name": "InterviewPal",
+      "url": "https://www.interviewpal.com/layoffs/innovaccer",
+      "type": "secondary_lead",
+      "publishedDate": "2026-05-01",
+      "quote": "Healthcare data unicorn Innovaccer laid off 340 employees on May 15, 2026, marking another significant workforce reduction for the San Francisco-based company."
+    }
+  ],
+  "createdAt": "2026-05-23T22:15:00-07:00",
+  "updatedAt": "2026-05-23T22:15:00-07:00"
+}

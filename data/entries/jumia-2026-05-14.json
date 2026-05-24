@@ -1,0 +1,25 @@
+{
+  "id": "jumia-2026-05-14",
+  "company": "Jumia",
+  "industry": "Other",
+  "geography": "Africa",
+  "eventDate": "2026-05-14",
+  "layoffsCount": 200,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Bloomberg reported Jumia Technologies planned to cut an initial 10% of its roughly 2,000-person workforce as it implemented AI across departments including operations, logistics, finance, and marketing.",
+  "evidenceQuote": "Jumia Technologies AG is planning to cut an initial 10% of its workforce of about 2,000 people as the African e-commerce giant implements artificial intelligence across its departments.",
+  "notes": "Layoffs count is calculated from Bloomberg's reported initial 10% reduction from a workforce of about 2,000 people. Because the CEO directly tied the cuts to implementing AI across departments, this is classified as explicit AI cited.",
+  "sources": [
+    {
+      "name": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-14/africa-e-commerce-giant-jumia-to-cut-workforce-due-to-ai",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-14",
+      "quote": "Jumia Technologies AG is planning to cut an initial 10% of its workforce of about 2,000 people as the African e-commerce giant implements artificial intelligence across its departments."
+    }
+  ],
+  "createdAt": "2026-05-23T22:15:00-07:00",
+  "updatedAt": "2026-05-23T22:15:00-07:00"
+}

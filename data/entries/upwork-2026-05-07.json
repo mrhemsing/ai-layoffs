@@ -1,0 +1,39 @@
+{
+  "id": "upwork-2026-05-07",
+  "company": "Upwork",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-05-07",
+  "layoffsCount": 145,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "primary",
+  "summary": "Upwork announced a restructuring plan expected to reduce its workforce by approximately 24%, with CEO Hayden Brown telling employees the company had rethought every function around people and technology and that AI lets smaller product and engineering teams have more impact.",
+  "evidenceQuote": "AI means smaller, differently resourced teams in product and engineering can make a bigger impact than ever.",
+  "notes": "Upwork's Form 8-K gives the official reduction as approximately 24% of the company's workforce. Final Round AI estimated the absolute impact at about 145 jobs out of a 600-person headcount; because the company source gives only a percentage, the count should be treated as a secondary estimate. This is classified as explicit AI cited because the CEO memo directly links the new team structure to AI-enabled smaller teams.",
+  "sources": [
+    {
+      "name": "Upwork SEC Form 8-K",
+      "url": "https://investors.upwork.com/static-files/0574d044-06d1-433c-918b-854f710ad10a",
+      "type": "primary",
+      "publishedDate": "2026-05-07",
+      "quote": "The Restructuring Plan includes an expected reduction of the Company's total workforce by approximately 24%."
+    },
+    {
+      "name": "Upwork CEO employee memo",
+      "url": "https://www.upwork.com/press/releases/upwork-ceo-hayden-brown-shared-the-following-message-with-employees-on-may-7-2026",
+      "type": "primary",
+      "publishedDate": "2026-05-07",
+      "quote": "AI means smaller, differently resourced teams in product and engineering can make a bigger impact than ever."
+    },
+    {
+      "name": "Final Round AI",
+      "url": "https://www.finalroundai.com/blog/upwork-layoffs-2026",
+      "type": "secondary_lead",
+      "publishedDate": "2026-05-08",
+      "quote": "On May 7, 2026, Upwork announced it was cutting approximately 24% of its workforce, about 145 jobs out of a 600-person headcount."
+    }
+  ],
+  "createdAt": "2026-05-23T22:15:00-07:00",
+  "updatedAt": "2026-05-23T22:15:00-07:00"
+}

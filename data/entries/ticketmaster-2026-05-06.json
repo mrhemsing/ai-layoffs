@@ -1,0 +1,25 @@
+{
+  "id": "ticketmaster-2026-05-06",
+  "company": "Ticketmaster",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-05-06",
+  "layoffsCount": 350,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Pollstar reported Ticketmaster cut 8% of global staff, about 350 employees across 25 countries, primarily in engineering, product, and design, as leadership pushed stronger prioritization and a technology-first strategy that included AI.",
+  "evidenceQuote": "Ticketmaster earlier today cut 8% of its global staff - some 350 employees across 25 countries - primarily in its engineering, product and design divisions.",
+  "notes": "Pollstar quotes Ticketmaster Global President Saumil Mehta saying the cuts were about stronger prioritization, flattening layers, consolidating ownership, and changing team structure. The same article ties Mehta's stated future vision to a technology-first approach in the age of AI, but it does not say AI directly replaced the cut workers. Classified as AI-adjacent restructuring.",
+  "sources": [
+    {
+      "name": "Pollstar",
+      "url": "https://news.pollstar.com/2026/05/06/ticketmaster-cuts-8-of-staff-350-employees-primarily-in-engineering-product-design/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-06",
+      "quote": "Ticketmaster earlier today cut 8% of its global staff - some 350 employees across 25 countries - primarily in its engineering, product and design divisions."
+    }
+  ],
+  "createdAt": "2026-05-23T22:15:00-07:00",
+  "updatedAt": "2026-05-23T22:15:00-07:00"
+}
