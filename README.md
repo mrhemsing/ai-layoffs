@@ -100,6 +100,10 @@ This generates:
 - `/about/` methodology page
 - `/company/` index page
 - `/company/<company-slug>/` pages for indexable company searches
+- `/industries/<industry-slug>/` topical pages
+- `/industries/customer-support/` topical page
+- `/<year>/` year pages
+- `/explicitly-ai-cited/` and `/relevance/<classification>/` relevance pages
 - `sitemap.xml`
 - `robots.txt`
 

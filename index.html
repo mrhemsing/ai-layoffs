@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <title>Replaced by AI — AI Layoff Tracker with Receipts</title>
-    <meta name="description" content="AI layoffs and AI layoff tracker with sourced receipts for companies cutting jobs because of AI, automation, and AI-driven restructuring." />
-    <meta property="og:title" content="Replaced by AI — AI Layoff Tracker with Receipts" />
-    <meta property="og:description" content="Track AI layoffs with sourced receipts, company pages, dates, job counts, and AI relevance labels." />
+    <title>AI Layoff Tracker — Verified Cases with Receipts | Replaced by AI</title>
+    <meta name="description" content="Track layoffs tied to AI and automation. Verified cases with sourced receipts from primary statements and reporting." />
+    <meta property="og:title" content="AI Layoff Tracker — Verified Cases with Receipts | Replaced by AI" />
+    <meta property="og:description" content="Track layoffs tied to AI and automation. Verified cases with sourced receipts from primary statements and reporting." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.replacedbyai.com/" />
     <meta name="twitter:card" content="summary" />
@@ -125,6 +125,9 @@
       }
       .top-nav a { color: #111; text-decoration: none; }
       .top-nav a:hover { text-decoration: underline; }
+      .freshness { margin: 8px 0 0; font-size: 14px; }
+      .section-link-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 0; }
+      .section-link-grid a { color: #111; text-decoration: underline; text-underline-offset: 2px; }
       .receipts-mark { margin-right: 0; }
       .prompt-cursor {
         display: inline-block;
@@ -327,13 +330,16 @@
     <nav class="top-nav" aria-label="Site navigation">
       <a href="/about/">Methodology</a>
       <a href="/company/">Companies</a>
+      <a href="/industries/tech/">Industries</a>
+      <a href="/2025/">2025</a>
       <a href="/sitemap.xml">Sitemap</a>
     </nav>
     <div class="hero">
       <div class="prompt-title" aria-label="Replaced by AI"><span class="prompt-symbol">&gt;</span><span>/replace -ai</span><span class="prompt-cursor" aria-hidden="true"></span></div>
-      <h1 class="seo-heading">AI layoff tracker with receipts</h1>
+      <h1 class="seo-heading">AI Layoff Tracker</h1>
     </div>
     <p class="muted tagline" style="color: #111;">Track AI layoffs tied to automation, AI replacement, and AI-driven restructuring with <span class="receipts-mark">🧾</span>receipts.</p>
+    <p class="muted freshness">Last updated <time datetime="2026-05-20">May 20, 2026</time></p>
 
     <div class="stats">
       <div class="card stat-card">
@@ -360,7 +366,7 @@
 
     <div class="card list-card" style="margin-bottom: 20px;">
       <div class="filters-head">
-        <h2 class="filters-label">Filters <span class="filters-caret" id="filtersCaret">▾</span></h2>
+        <h2 class="filters-label">Recent AI Layoffs <span class="filters-caret" id="filtersCaret">▾</span></h2>
         <button type="button" class="filters-toggle" id="filtersToggle" aria-expanded="true">Show filters</button>
         <div class="filters-summary">
           <div class="muted" id="resultSummary">Loading…</div>
@@ -403,9 +409,20 @@
       <div id="emptyState" class="muted" style="display:none; padding-top: 12px;">No entries match those filters yet.</div>
     </div>
 
+    <section class="card" style="margin-top:20px;">
+      <h2>By Industry</h2>
+      <div class="section-link-grid">
+        <a href="/industries/tech/">Tech AI Layoffs</a>
+        <a href="/industries/finance/">Finance AI Layoffs</a>
+        <a href="/industries/customer-support/">AI Layoffs in Customer Support</a>
+        <a href="/company/">All Companies</a>
+      </div>
+    </section>
+
     <div class="card" style="margin-top:20px;">
-      <h2>Disclaimer</h2>
+      <h2>Methodology</h2>
       <blockquote class="footer-note data-note-text" style="margin-top: 0;">Entries in this AI layoff tracker are sourced from primary statements or reputable reporting and labeled by AI relevance. Many AI layoffs have been questioned by economists and analysts who argue companies use "AI washing" as cover for financial restructuring and pandemic-era overhiring. That skepticism is noted where relevant — the receipts are included so you can judge for yourself.</blockquote>
+      <p><a href="/about/">Read the full methodology</a></p>
     </div>
 
     <p class="footer-note" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"></span></span><a class="ba-badge" href="https://www.b-average.com/" target="_blank" rel="noreferrer">B AVERAGE</a></p>
@@ -416,7 +433,7 @@
         "@type": "WebSite",
         "name": "Replaced by AI",
         "url": "https://www.replacedbyai.com/",
-        "description": "AI layoffs and AI layoff tracker with sourced receipts for companies cutting jobs because of AI, automation, and AI-driven restructuring.",
+        "description": "Track layoffs tied to AI and automation. Verified cases with sourced receipts from primary statements and reporting.",
         "keywords": ["ai layoffs", "ai layoff tracker", "companies replacing workers with ai", "automation layoffs"]
       }
     </script>
