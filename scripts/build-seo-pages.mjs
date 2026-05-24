@@ -127,7 +127,7 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
   </head>
   <body>
     <nav class="nav">
-      <a class="brand" href="/">/replace -ai</a>
+      <a class="brand" href="/">replaced</a>
       <a href="/about/">Methodology</a>
       <a href="/company/">Companies</a>
       <a href="/industries/tech/">Industries</a>
