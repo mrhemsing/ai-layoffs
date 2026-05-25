@@ -13,10 +13,37 @@
     <meta property="og:url" content="https://www.replacedbyai.com/industries/tech/" />
     <meta name="twitter:card" content="summary" />
     <style>
-      body { font-family: Arial, sans-serif; max-width: 920px; margin: 40px auto; padding: 0 18px; color: #111; background: #f4f6f8; line-height: 1.55; }
+      body { font-family: Arial, sans-serif; max-width: 920px; margin: 20px auto 40px; padding: 0 18px; color: #111; background: #f4f6f8; line-height: 1.55; }
       a { color: #0a58ca; }
-      .nav { display: flex; gap: 14px; align-items: center; margin-bottom: 34px; font-size: 14px; }
-      .brand { font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace; font-weight: 700; color: #111; text-decoration: none; }
+      .site-header { margin-bottom: 28px; }
+      .top-nav { display: flex; gap: 12px; align-items: center; justify-content: flex-end; margin-bottom: 18px; font-size: 14px; }
+      .top-nav a { color: #111; text-decoration: none; }
+      .top-nav a:hover { text-decoration: underline; }
+      .logo-link { display: inline-flex; color: inherit; text-decoration: none; }
+      .prompt-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        background: #111;
+        color: #f5f5f5;
+        border-radius: 12px;
+        font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace;
+        font-size: clamp(26px, 5vw, 40px);
+        line-height: 1.1;
+        letter-spacing: 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      }
+      .prompt-symbol { color: #7CFF6B; }
+      .prompt-cursor {
+        display: inline-block;
+        width: 0.65ch;
+        height: 1.05em;
+        background: #7CFF6B;
+        vertical-align: -0.12em;
+        animation: blink 1s steps(1, end) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
       h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: 0; }
       h2 { margin-top: 34px; }
       .muted { color: #555; }
@@ -25,17 +52,25 @@
       .quote { padding: 12px 14px; border-left: 4px solid #ccd3dc; background: #fafafa; }
       .source-list { padding-left: 20px; }
       .footer { margin-top: 34px; font-size: 13px; color: #666; }
+      @media (max-width: 640px) {
+        .top-nav { justify-content: flex-start; flex-wrap: wrap; }
+        .prompt-title { font-size: clamp(28px, 9vw, 38px); }
+      }
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Tech AI Layoffs - Replaced by AI","description":"Track tech ai layoffs with sourced receipts, company pages, dates, and AI relevance labels.","url":"https://www.replacedbyai.com/industries/tech/","isPartOf":{"@type":"WebSite","name":"Replaced by AI","url":"https://www.replacedbyai.com"}}</script>
   </head>
   <body>
-    <nav class="nav">
-      <a class="brand" href="/">/replaced -ai</a>
-      <a href="/about/">Methodology</a>
-      <a href="/company/">Companies</a>
-      <a href="/industries/tech/">Industries</a>
-      <a href="/">Tracker</a>
-    </nav>
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Site navigation">
+        <a href="/about/">Methodology</a>
+        <a href="/company/">Companies</a>
+        <a href="/industries/tech/">Industries</a>
+        <a href="/">Tracker</a>
+      </nav>
+      <a class="logo-link" href="/" aria-label="Replaced by AI">
+        <span class="prompt-title"><span class="prompt-symbol">&gt;</span><span>/replaced -ai</span><span class="prompt-cursor" aria-hidden="true"></span></span>
+      </a>
+    </header>
     <main>
       <p class="muted">Industry landing page</p>
       <h1>Tech AI Layoffs</h1>
