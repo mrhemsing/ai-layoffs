@@ -669,6 +669,7 @@
           const source = (entry.sources && entry.sources[0]) || null;
           const isSelected = entry.id === selectedEntryId;
           if (isSelected) tr.classList.add('selected');
+          tr.setAttribute('aria-expanded', isSelected ? 'true' : 'false');
           tr.innerHTML = `
             <td><span class="company-line"><b><a href="/company/${companySlug(entry.company)}/">${entry.company}</a></b></span><br><span class="muted"><span class="desktop-date">${entry.geography || '—'}</span><span class="mobile-date">${fmtGeography(entry.geography)}</span></span></td>
             <td>${source ? `<a class="date-link" href="${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span></a>` : `<span class="desktop-date">${fmtDate(entry.eventDate)}</span><span class="mobile-date">${fmtDateShort(entry.eventDate)}</span>`}</td>
@@ -676,7 +677,16 @@
             <td>${entry.industry || '—'}</td>
             <td><span class="pill ${entry.aiRelevance}">${fmtAiRelevance(entry.aiRelevance)}</span></td>
           `;
-          tr.addEventListener('click', () => {
+          tr.addEventListener('click', (event) => {
+            const clickedLink = event.target instanceof Element ? event.target.closest('a') : null;
+            if (clickedLink) {
+              if (!isSelected) {
+                event.preventDefault();
+              } else {
+                event.stopPropagation();
+                return;
+              }
+            }
             pendingAnchorId = entry.id;
             selectedEntryId = isSelected ? null : entry.id;
             render();
