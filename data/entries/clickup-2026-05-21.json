@@ -1,0 +1,25 @@
+{
+  "id": "clickup-2026-05-21",
+  "company": "ClickUp",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-05-21",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "TechCrunch reported ClickUp laid off 22% of its workforce after CEO Zeb Evans announced a 100x organization push built around internal AI agents and AI-enabled productivity gains.",
+  "evidenceQuote": "had laid off 22% of its workforce ... a radical embrace of AI",
+  "notes": "TechCrunch reported Evans characterized the 22% workforce reduction as an AI-driven operating shift rather than a cost-cutting move. The article also says ClickUp recently introduced roughly 3,000 internal AI agents and expects employees to direct and review those agents' work. Because AI agents and AI-enabled productivity are explicitly cited as the restructuring rationale, this is classified as explicit AI cited. No absolute layoff count is used because the source gives only a percentage.",
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-05-25",
+      "quote": "had laid off 22% of its workforce ... a radical embrace of AI"
+    }
+  ],
+  "createdAt": "2026-05-26T13:25:00-07:00",
+  "updatedAt": "2026-05-26T13:25:00-07:00"
+}
