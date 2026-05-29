@@ -71,6 +71,45 @@
         "updatedAt": "2026-05-29T06:20:00-07:00"
     },
     {
+        "id": "groupon-2026-05-21",
+        "company": "Groupon",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-05-21",
+        "layoffsCount": 400,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "Groupon announced an initial restructuring phase expected to reduce up to 400 global positions, including employees and contractors, as part of its strategy to rebuild the company as an AI-native company.",
+        "evidenceQuote": "approved a restructuring plan relating to the Company's previously announced strategy to rebuild the Company as an AI-native company",
+        "notes": "Groupon's May 26 Form 8-K says the board approved the restructuring plan on May 21, 2026, tied to the company's strategy to rebuild as an AI-native company. The reduction covers up to 400 positions globally, including employees and contractors, with most reductions expected by the end of Q3 2026. Because the primary filing explicitly links the reductions to the AI-native strategy, this is classified as explicit AI cited. The count is recorded as 400 because the company frames the impact as up to 400 positions rather than a finalized exact total.",
+        "sources": [
+            {
+                "name": "Groupon Form 8-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1490281/000149028126000013/grpn-20260521.htm",
+                "type": "primary",
+                "publishedDate": "2026-05-26",
+                "quote": "The initial phase of these restructuring actions is expected to include an overall reduction of up to 400 positions globally, including employees and contractors"
+            },
+            {
+                "name": "Los Angeles Times",
+                "url": "https://www.latimes.com/business/story/2026-05-29/another-tech-company-says-it-will-cut-hundreds-of-jobs-amid-pivot-to-ai",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-29",
+                "quote": "Groupon announced in a security filing this month that it will cut up to 400 jobs, or nearly 25% of its worldwide workforce, as part of a broader restructuring plan to make the platform AI-native."
+            },
+            {
+                "name": "PYMNTS",
+                "url": "https://www.pymnts.com/business/2026/groupon-cuts-400-jobs-to-fund-ai-pivot/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-26",
+                "quote": "Groupon plans to eliminate 400 positions globally as it rebuilds itself as an artificial intelligence (AI)-native company."
+            }
+        ],
+        "createdAt": "2026-05-29T14:05:00-07:00",
+        "updatedAt": "2026-05-29T14:05:00-07:00"
+    },
+    {
         "id": "clickup-2026-05-21",
         "company": "ClickUp",
         "industry": "Technology",
