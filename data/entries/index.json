@@ -1,5 +1,37 @@
 [
     {
+        "id": "wix-2026-05-28",
+        "company": "Wix",
+        "industry": "Technology",
+        "geography": "Israel",
+        "eventDate": "2026-05-28",
+        "layoffsCount": 1000,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "CNBC reported Wix is laying off about 20% of its workforce after CEO Avishai Abrahami cited the fast evolution of AI capabilities and pressure from shekel-dollar exchange rates.",
+        "evidenceQuote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates.",
+        "notes": "CNBC reported the reduction as about 20% of Wix's workforce. Reuters-syndicated reporting put the impact at about 1,000 jobs and said Abrahami cited both a strong shekel versus the dollar and the rapid evolution of AI. Because AI was explicitly cited by the CEO as one of the drivers, this is classified as explicit AI cited, while the notes preserve that currency pressure was also a major stated reason.",
+        "sources": [
+            {
+                "name": "CNBC",
+                "url": "https://www.cnbc.com/2026/05/28/wix-layoffs-ai-exchange-rates.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates."
+            },
+            {
+                "name": "Reuters via StreetInsider",
+                "url": "https://www.streetinsider.com/Reuters/Israeli%2Bwebsite%2Bcreator%2BWix.com%2Bcuts%2B1000%2Bjobs%2Bdue%2Bto%2Bstrong%2Bshekel%2C%2Bgrowth%2Bof%2BAI/26560763.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "Wix.com, which helps small businesses build and operate websites, is laying off 20% of its workforce, CEO Avishai Abrahami said on Thursday, citing a strong shekel versus the dollar and the rapid evolution of AI."
+            }
+        ],
+        "createdAt": "2026-05-29T06:15:00-07:00",
+        "updatedAt": "2026-05-29T06:15:00-07:00"
+    },
+    {
         "id": "sentinelone-2026-05-28",
         "company": "SentinelOne",
         "industry": "Technology",
@@ -37,38 +69,6 @@
         ],
         "createdAt": "2026-05-29T06:20:00-07:00",
         "updatedAt": "2026-05-29T06:20:00-07:00"
-    },
-    {
-        "id": "wix-2026-05-28",
-        "company": "Wix",
-        "industry": "Technology",
-        "geography": "Israel",
-        "eventDate": "2026-05-28",
-        "layoffsCount": 1000,
-        "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "CNBC reported Wix is laying off about 20% of its workforce after CEO Avishai Abrahami cited the fast evolution of AI capabilities and pressure from shekel-dollar exchange rates.",
-        "evidenceQuote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates.",
-        "notes": "CNBC reported the reduction as about 20% of Wix's workforce. Reuters-syndicated reporting put the impact at about 1,000 jobs and said Abrahami cited both a strong shekel versus the dollar and the rapid evolution of AI. Because AI was explicitly cited by the CEO as one of the drivers, this is classified as explicit AI cited, while the notes preserve that currency pressure was also a major stated reason.",
-        "sources": [
-            {
-                "name": "CNBC",
-                "url": "https://www.cnbc.com/2026/05/28/wix-layoffs-ai-exchange-rates.html",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-28",
-                "quote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates."
-            },
-            {
-                "name": "Reuters via StreetInsider",
-                "url": "https://www.streetinsider.com/Reuters/Israeli%2Bwebsite%2Bcreator%2BWix.com%2Bcuts%2B1000%2Bjobs%2Bdue%2Bto%2Bstrong%2Bshekel%2C%2Bgrowth%2Bof%2BAI/26560763.html",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-28",
-                "quote": "Wix.com, which helps small businesses build and operate websites, is laying off 20% of its workforce, CEO Avishai Abrahami said on Thursday, citing a strong shekel versus the dollar and the rapid evolution of AI."
-            }
-        ],
-        "createdAt": "2026-05-29T06:15:00-07:00",
-        "updatedAt": "2026-05-29T06:15:00-07:00"
     },
     {
         "id": "clickup-2026-05-21",
