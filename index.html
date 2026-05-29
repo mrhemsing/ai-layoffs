@@ -455,15 +455,21 @@
       let selectedEntryId = null;
       let pendingAnchorId = null;
 
+      function parseEntryDate(v) {
+        const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        if (m) return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+        return v ? new Date(v) : null;
+      }
+
       function fmtDate(v) {
         if (!v) return '—';
-        const d = new Date(v);
+        const d = parseEntryDate(v);
         return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
       }
 
       function fmtDateShort(v) {
         if (!v) return '—';
-        const d = new Date(v);
+        const d = parseEntryDate(v);
         const mm = String(d.getMonth() + 1).padStart(2, '0');
         const dd = String(d.getDate()).padStart(2, '0');
         const yy = String(d.getFullYear()).slice(-2);
@@ -472,7 +478,7 @@
 
       function fmtDateMobileCompact(v) {
         if (!v) return '—';
-        const d = new Date(v);
+        const d = parseEntryDate(v);
         const mm = String(d.getMonth() + 1).padStart(2, '0');
         const dd = String(d.getDate()).padStart(2, '0');
         return `${mm}/${dd}`;
@@ -480,7 +486,7 @@
 
       function fmtDateMedium(v) {
         if (!v) return '—';
-        const d = new Date(v);
+        const d = parseEntryDate(v);
         return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
       }
 
@@ -613,13 +619,19 @@
           return true;
         });
 
+        const sourceOrder = (entry) => {
+          const i = allEntries.indexOf(entry);
+          return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+        };
+        const newestFirst = (a, b) => String(b.eventDate).localeCompare(String(a.eventDate)) || sourceOrder(a) - sourceOrder(b);
+
         if (sortBy === 'largest') {
-          return filtered.sort((a, b) => (Number(b.layoffsCount) || -1) - (Number(a.layoffsCount) || -1) || String(b.eventDate).localeCompare(String(a.eventDate)));
+          return filtered.sort((a, b) => (Number(b.layoffsCount) || -1) - (Number(a.layoffsCount) || -1) || newestFirst(a, b));
         }
         if (sortBy === 'company') {
           return filtered.sort((a, b) => String(a.company).localeCompare(String(b.company)) || String(b.eventDate).localeCompare(String(a.eventDate)));
         }
-        return filtered.sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)) || String(a.company).localeCompare(String(b.company)));
+        return filtered.sort(newestFirst);
       }
 
       function renderDetailPanel(entry) {
