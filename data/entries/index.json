@@ -1,5 +1,76 @@
 [
     {
+        "id": "sentinelone-2026-05-28",
+        "company": "SentinelOne",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-05-28",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "primary",
+        "summary": "SentinelOne announced a restructuring plan to reduce current full-time employees by about 8% while streamlining its organization and concentrating investments in growth areas including AI, Data, Cloud, and Endpoint.",
+        "evidenceQuote": "The Plan includes a reduction of the Company's current full-time employees by approximately 8% of the Company's full-time employees.",
+        "notes": "SentinelOne's Form 8-K directly ties the restructuring plan to streamlining the organization, improving efficiencies, and concentrating investments across high-yielding growth areas including AI, Data, Cloud, and Endpoint. This is classified as AI-adjacent restructuring because AI investment is part of the stated rationale, but the filing does not say AI directly replaced the affected employees. The filing gives an approximate percentage rather than an exact job count, so layoffsCount remains null.",
+        "sources": [
+            {
+                "name": "SentinelOne Form 8-K",
+                "url": "https://www.stocktitan.net/sec-filings/S/8-k-sentinel-one-inc-reports-material-event-295d61d04d63.html",
+                "type": "primary",
+                "publishedDate": "2026-05-28",
+                "quote": "On May 28, 2026, SentinelOne, Inc. announced a restructuring plan to further streamline the Company's organizational structure, improve efficiencies, and concentrate investments across high-yielding growth areas including AI, Data, Cloud and Endpoint."
+            },
+            {
+                "name": "Reuters via KTWB",
+                "url": "https://ktwb.com/2026/05/28/sentinelone-provides-tepid-quarterly-forecast-to-cut-8-jobs/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "SentinelOne forecast second-quarter revenue below analysts' expectations on Thursday and said it would cut about 8% of its workforce as it looks to invest in growth areas such as AI, data and cloud."
+            },
+            {
+                "name": "Silicon Valley Business Journal",
+                "url": "https://www.bizjournals.com/sanjose/news/2026/05/28/sentinelone-ai-layoffs.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "SentinelOne AI layoffs"
+            }
+        ],
+        "createdAt": "2026-05-29T06:20:00-07:00",
+        "updatedAt": "2026-05-29T06:20:00-07:00"
+    },
+    {
+        "id": "wix-2026-05-28",
+        "company": "Wix",
+        "industry": "Technology",
+        "geography": "Israel",
+        "eventDate": "2026-05-28",
+        "layoffsCount": 1000,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "CNBC reported Wix is laying off about 20% of its workforce after CEO Avishai Abrahami cited the fast evolution of AI capabilities and pressure from shekel-dollar exchange rates.",
+        "evidenceQuote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates.",
+        "notes": "CNBC reported the reduction as about 20% of Wix's workforce. Reuters-syndicated reporting put the impact at about 1,000 jobs and said Abrahami cited both a strong shekel versus the dollar and the rapid evolution of AI. Because AI was explicitly cited by the CEO as one of the drivers, this is classified as explicit AI cited, while the notes preserve that currency pressure was also a major stated reason.",
+        "sources": [
+            {
+                "name": "CNBC",
+                "url": "https://www.cnbc.com/2026/05/28/wix-layoffs-ai-exchange-rates.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates."
+            },
+            {
+                "name": "Reuters via StreetInsider",
+                "url": "https://www.streetinsider.com/Reuters/Israeli%2Bwebsite%2Bcreator%2BWix.com%2Bcuts%2B1000%2Bjobs%2Bdue%2Bto%2Bstrong%2Bshekel%2C%2Bgrowth%2Bof%2BAI/26560763.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "Wix.com, which helps small businesses build and operate websites, is laying off 20% of its workforce, CEO Avishai Abrahami said on Thursday, citing a strong shekel versus the dollar and the rapid evolution of AI."
+            }
+        ],
+        "createdAt": "2026-05-29T06:15:00-07:00",
+        "updatedAt": "2026-05-29T06:15:00-07:00"
+    },
+    {
         "id": "clickup-2026-05-21",
         "company": "ClickUp",
         "industry": "Technology",
