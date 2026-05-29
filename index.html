@@ -341,7 +341,7 @@
       <h1 class="seo-heading">AI Layoff Tracker</h1>
     </div>
     <p class="muted tagline" style="color: #111;">Track AI layoffs tied to automation, AI replacement, and AI-driven restructuring with <span class="receipts-mark">🧾</span>receipts.</p>
-    <p class="muted freshness">Last updated <time datetime="2026-05-20">May 20, 2026</time></p>
+    <p class="muted freshness">Last updated <time id="freshnessDate" datetime="2026-05-28">May 28, 2026</time></p>
 
     <div class="stats">
       <div class="card stat-card">
@@ -563,6 +563,11 @@
         }
         document.getElementById('statExplicit').textContent = String(entries.filter((e) => e.aiRelevance === 'explicit_ai_cited').length);
         const latest = entries.slice().sort((a, b) => String(b.eventDate || '').localeCompare(String(a.eventDate || '')))[0];
+        const freshnessDate = document.getElementById('freshnessDate');
+        if (freshnessDate && latest?.eventDate) {
+          freshnessDate.dateTime = latest.eventDate;
+          freshnessDate.textContent = fmtDateMedium(latest.eventDate);
+        }
         document.getElementById('statUpdated').innerHTML = latest
           ? `<span class="desktop-date">${fmtDateMedium(latest.eventDate)}</span><span class="mobile-date">${fmtDateMobileCompact(latest.eventDate)}</span>`
           : '—';
