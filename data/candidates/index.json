@@ -64,5 +64,38 @@
     "status": "reviewing",
     "duplicateOf": null,
     "notes": "Useful sector-wide context piece; may inform trends rather than a single company entry."
+  },
+  {
+    "id": "candidate-007",
+    "title": "Fast Company roundup: Oracle, Capital One, Morgan Stanley, Block, and eBay layoffs",
+    "url": "https://www.fastcompany.com/91504231/tech-finance-banking-layoffs-list-2026-oracle-morgan-stanley-block",
+    "source": "Fast Company",
+    "publishedDate": "2026-03-06",
+    "excerpt": "Fast Company reviewed a brutal week of tech and finance layoffs and explicitly noted that not all of the layoffs were because of AI.",
+    "status": "reviewing",
+    "duplicateOf": null,
+    "notes": "Reviewed 2026-06-03. Oracle, Block, and eBay are already represented in verified entries and now include Fast Company as a source. Capital One is not AI-related per Fast Company. Morgan Stanley 2026 has no clean reputable AI-causal source in the Fast Company/WSJ/AP/Reuters framing; keep as review-only unless stronger original reporting is found."
+  },
+  {
+    "id": "candidate-008",
+    "title": "Capital One lays off more than 1,100 former Discover workers",
+    "url": "https://www.nbcchicago.com/news/local/capital-one-to-lay-off-more-than-1100-in-latest-round-of-cuts-at-suburban-facility/3903806/",
+    "source": "NBC Chicago / Fast Company lead",
+    "publishedDate": "2026-03-05",
+    "excerpt": "Capital One layoffs followed its Discover acquisition and affected former Discover roles in Riverwoods, Illinois.",
+    "status": "rejected",
+    "duplicateOf": null,
+    "notes": "Rejected for public AI-layoffs dataset on 2026-06-03. Fast Company explicitly says these layoffs have nothing to do with AI and ties them to Capital One integrating Discover."
+  },
+  {
+    "id": "candidate-009",
+    "title": "Morgan Stanley 2026 layoff round affecting about 2,500 employees",
+    "url": "https://apnews.com/article/47625e9c2ec04b4e401725a75f99d0e7",
+    "source": "AP / Fast Company lead",
+    "publishedDate": "2026-03-05",
+    "excerpt": "Morgan Stanley laid off roughly 2,500 employees, about 3% of its workforce, across business lines and support functions.",
+    "status": "reviewing",
+    "duplicateOf": null,
+    "notes": "Do not publish yet. Fast Company and WSJ framing ties the cuts to shifting business/location priorities, job performance, and support functions, not a direct AI rationale. Search found secondary commentary claiming a NY Post AI angle, but a stronger original/reputable AI-causal source is needed before adding a separate 2026 public entry. Existing public Morgan Stanley entry is the separate 2025-03-19 event."
   }
 ]

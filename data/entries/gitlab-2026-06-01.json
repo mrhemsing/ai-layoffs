@@ -1,0 +1,46 @@
+{
+  "id": "gitlab-2026-06-01",
+  "company": "GitLab",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-06-01",
+  "layoffsCount": 350,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "primary",
+  "summary": "GitLab approved a restructuring plan expected to impact about 14% of its global workforce, with reporting putting the cut at roughly 350 employees, while CEO Bill Staples framed the move around GitLab's Act 2 strategy for the agentic era and AI-powered ways of working.",
+  "evidenceQuote": "As we shift to a new strategy and way of working, powered by AI, we must revisit the size of staffing for each role to ensure we are optimizing for speed and customer outcomes.",
+  "notes": "GitLab's June 2 Form 8-K says the board approved the plan on June 1, 2026, and that approximately 14% of the global workforce as of January 31, 2026 may be impacted. The same filing says GitLab expects to exit 22 countries and incur $30 million to $35 million in pre-tax restructuring charges. The layoff count is recorded as 350 based on Reuters-syndicated reporting and The Next Web's coverage of the WSJ-reported AI pivot. Because GitLab's CEO letter explicitly ties the restructuring to the agentic era, AI agents, and staffing right-sizing for AI-powered work, this is classified as explicit AI cited.",
+  "sources": [
+    {
+      "name": "GitLab Form 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1653482/000162828026039805/gtlb-20260601.htm",
+      "type": "primary",
+      "publishedDate": "2026-06-02",
+      "quote": "The Company anticipates approximately 14% of its global workforce as of January 31, 2026 may be impacted by the Plan."
+    },
+    {
+      "name": "GitLab CEO letter / Form 8-K exhibit",
+      "url": "https://www.sec.gov/Archives/edgar/data/1653482/000165348226000095/exhibit991-letterfromwilla.htm",
+      "type": "primary",
+      "publishedDate": "2026-05-11",
+      "quote": "As we shift to a new strategy and way of working, powered by AI, we must revisit the size of staffing for each role to ensure we are optimizing for speed and customer outcomes."
+    },
+    {
+      "name": "Investing.com / Reuters",
+      "url": "https://ca.investing.com/news/earnings/gitlab-surges-after-hours-on-quarterly-revenue-jump-raised-profit-guidance-4672328",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-02",
+      "quote": "GTLB on Tuesday said it would reduce its full-time workforce by 350 employees, or about 14%."
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/gitlab-cuts-14-percent-workforce-exits-22-countries",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-03",
+      "quote": "GitLab is cutting about 14% of its full-time workforce, roughly 350 people, and pulling out of 22 countries."
+    }
+  ],
+  "createdAt": "2026-06-03T09:50:00-07:00",
+  "updatedAt": "2026-06-03T09:50:00-07:00"
+}
