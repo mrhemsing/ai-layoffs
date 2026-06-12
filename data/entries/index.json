@@ -1,5 +1,37 @@
 [
     {
+      "id": "salesforce-2026-06-08",
+      "company": "Salesforce",
+      "industry": "Technology",
+      "geography": "United States",
+      "eventDate": "2026-06-08",
+      "layoffsCount": 86,
+      "status": "verified",
+      "aiRelevance": "ai_reorg_or_spend_linked",
+      "sourceQuality": "reputable_reporting",
+      "summary": "Salesforce began another round of layoffs, with a California WARN notice listing 86 cuts and reporting saying affected teams included Agentforce, MuleSoft, and Marketing Cloud as the company reshapes around AI offerings.",
+      "evidenceQuote": "The cuts affected employees working on the company's Agentforce AI product, its Mulesoft IT integration tool, and its Marketing Cloud software.",
+      "notes": "The 86 count reflects the California WARN notice reported by Business Insider and mirrored in WARN-data coverage; Business Insider also reported roles in Washington state and outside the U.S. were affected, but no broader confirmed total was available. This is classified as AI reorg or spending linked because the affected areas include Agentforce and related AI-business-model reporting, while Salesforce did not publicly state that AI replacement caused this specific round.",
+      "sources": [
+        {
+          "name": "Business Insider",
+          "url": "https://www.businessinsider.com/salesforce-cuts-jobs-agentforce-2026-6",
+          "type": "reputable_reporting",
+          "publishedDate": "2026-06-09",
+          "quote": "The cuts affected employees working on the company's Agentforce AI product, its Mulesoft IT integration tool, and its Marketing Cloud software."
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-layoffs-highlight-ai-pivot-061328988.html",
+          "type": "reputable_reporting",
+          "publishedDate": "2026-06-12",
+          "quote": "Salesforce (NYSE:CRM) has begun a new round of layoffs affecting at least 86 employees in California and abroad."
+        }
+      ],
+      "createdAt": "2026-06-12T13:20:00-07:00",
+      "updatedAt": "2026-06-12T13:20:00-07:00"
+    },
+    {
       "id": "gitlab-2026-06-01",
       "company": "GitLab",
       "industry": "Technology",
