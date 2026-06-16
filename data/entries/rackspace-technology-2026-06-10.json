@@ -1,0 +1,39 @@
+{
+  "id": "rackspace-technology-2026-06-10",
+  "company": "Rackspace Technology",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-06-10",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "primary",
+  "summary": "Rackspace Technology approved a workforce realignment expected to terminate approximately 15% of its global workforce as it deemphasizes legacy public-cloud service delivery and redeploys resources toward governed enterprise AI.",
+  "evidenceQuote": "This realignment is predominantly driven by the Company's strategic decision to deemphasize certain legacy service delivery functions (primarily within its Public Cloud business unit) and geographic rationalizations in favor of redeploying resources toward its enterprise AI buildout.",
+  "notes": "Rackspace's Form 8-K directly ties the workforce reduction to its governed enterprise AI strategy, production AI deployment, AI solutions delivery, and enterprise AI infrastructure buildout. The company disclosed the impact as approximately 15% of its global workforce but did not disclose an absolute employee count in the filing, so layoffsCount is left null rather than inferred.",
+  "sources": [
+    {
+      "name": "Rackspace Technology SEC Form 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1810019/000181001926000058/rxt-20260610.htm",
+      "type": "primary",
+      "publishedDate": "2026-06-16",
+      "quote": "This workforce realignment is expected to result in the termination of approximately 15% of the Company's global workforce."
+    },
+    {
+      "name": "MarketScreener / S&P Capital IQ",
+      "url": "https://www.marketscreener.com/news/rackspace-technology-inc-terminates-approximately-15-of-workforce-ce7f5cdfdd81ff21",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-16",
+      "quote": "Rackspace Technology, Inc. announced on June 10, 2026, the Executive Committee of the Board of Directors of the Company approved a workforce realignment plan intended to accelerate the Company's strategic transformation as the operator for governed enterprise AI."
+    },
+    {
+      "name": "San Antonio Business Journal",
+      "url": "https://www.bizjournals.com/sanantonio/news/2026/06/16/rackspace-slashes-local-workforce.html",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-16",
+      "quote": "Rackspace slashes local workforce."
+    }
+  ],
+  "createdAt": "2026-06-16T11:05:00-07:00",
+  "updatedAt": "2026-06-16T11:05:00-07:00"
+}
