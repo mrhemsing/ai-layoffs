@@ -1,0 +1,39 @@
+{
+  "id": "robinhood-2026-06-16",
+  "company": "Robinhood",
+  "industry": "Finance",
+  "geography": "United States",
+  "eventDate": "2026-06-16",
+  "layoffsCount": 290,
+  "status": "needs_review",
+  "aiRelevance": "speculative_or_unclear",
+  "sourceQuality": "primary",
+  "summary": "Robinhood announced a reduction in force affecting approximately 10% of full-time employees, with reporting putting the cut at about 290 roles, as part of a push to stay lean, flatten layers, and accelerate product velocity.",
+  "evidenceQuote": "This reduction in force involves approximately 10% of the Company's full-time employees, and additionally involves the closure of a small number of open roles across the Company.",
+  "notes": "Added as a needs-review narrative case rather than a verified AI-adjacent restructuring. The company filing cites lean operations, high performance, and product velocity, while TechCrunch specifically noted that Vlad Tenev's layoff note made no mention of AI. If a stronger primary or reputable source later ties this restructuring to AI strategy, reclassify to AI-adjacent restructuring.",
+  "sources": [
+    {
+      "name": "Robinhood SEC Form 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000071/hood-20260616.htm",
+      "type": "primary",
+      "publishedDate": "2026-06-16",
+      "quote": "This reduction in force involves approximately 10% of the Company's full-time employees, and additionally involves the closure of a small number of open roles across the Company."
+    },
+    {
+      "name": "The Business Times / Reuters",
+      "url": "https://www.businesstimes.com.sg/international/trading-platform-robinhood-cut-10-workforce-restructuring",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-16",
+      "quote": "Robinhood said on Tuesday (Jun 16) it would cut 10 per cent of its full-time workforce, or about 290 roles, as the trading platform seeks to operate more efficiently by flattening organisational layers."
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/16/robinhoods-note-on-10-layoffs-shows-blaming-ai-isnt-cutting-it/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-16",
+      "quote": "Robinhood's CEO Vlad Tenev conspicuously made no mention of AI in his note about layoffs."
+    }
+  ],
+  "createdAt": "2026-06-16T10:45:00-07:00",
+  "updatedAt": "2026-06-16T10:45:00-07:00"
+}
