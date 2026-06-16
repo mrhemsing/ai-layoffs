@@ -4,13 +4,13 @@
   "industry": "Technology",
   "geography": "Global",
   "eventDate": "2026-06-10",
-  "layoffsCount": null,
+  "layoffsCount": 750,
   "status": "verified",
   "aiRelevance": "explicit_ai_cited",
   "sourceQuality": "primary",
-  "summary": "Rackspace Technology approved a workforce realignment expected to terminate approximately 15% of its global workforce as it deemphasizes legacy public-cloud service delivery and redeploys resources toward governed enterprise AI.",
+  "summary": "Rackspace Technology approved a workforce realignment expected to terminate approximately 15% of its global workforce, roughly 750 roles based on its latest reported 5,000-person employee base, as it deemphasizes legacy public-cloud service delivery and redeploys resources toward governed enterprise AI.",
   "evidenceQuote": "This realignment is predominantly driven by the Company's strategic decision to deemphasize certain legacy service delivery functions (primarily within its Public Cloud business unit) and geographic rationalizations in favor of redeploying resources toward its enterprise AI buildout.",
-  "notes": "Rackspace's Form 8-K directly ties the workforce reduction to its governed enterprise AI strategy, production AI deployment, AI solutions delivery, and enterprise AI infrastructure buildout. The company disclosed the impact as approximately 15% of its global workforce but did not disclose an absolute employee count in the filing, so layoffsCount is left null rather than inferred.",
+  "notes": "Rackspace's Form 8-K directly ties the workforce reduction to its governed enterprise AI strategy, production AI deployment, AI solutions delivery, and enterprise AI infrastructure buildout. The 750 count is an estimate calculated as 15% of the latest reported employee base in Rackspace's 2025 Form 10-K, which describes a team of 5,000 Rackers.",
   "sources": [
     {
       "name": "Rackspace Technology SEC Form 8-K",
@@ -18,6 +18,13 @@
       "type": "primary",
       "publishedDate": "2026-06-16",
       "quote": "This workforce realignment is expected to result in the termination of approximately 15% of the Company's global workforce."
+    },
+    {
+      "name": "Rackspace Technology 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1810019/000181001926000015/rxt-20251231.htm",
+      "type": "primary",
+      "publishedDate": "2026-03-06",
+      "quote": "Our team of 5,000 highly skilled Rackers, including consultants and engineers, partners with companies at every stage of their cloud transformation journey."
     },
     {
       "name": "MarketScreener / S&P Capital IQ",
