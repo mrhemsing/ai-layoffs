@@ -97,5 +97,16 @@
     "status": "reviewing",
     "duplicateOf": null,
     "notes": "Do not publish yet. Fast Company and WSJ framing ties the cuts to shifting business/location priorities, job performance, and support functions, not a direct AI rationale. Search found secondary commentary claiming a NY Post AI angle, but a stronger original/reputable AI-causal source is needed before adding a separate 2026 public entry. Existing public Morgan Stanley entry is the separate 2025-03-19 event."
+  },
+  {
+    "id": "candidate-010",
+    "title": "Uber cuts 23% of People and Places division roles",
+    "url": "https://www.cnbc.com/2026/06/03/uber-layoffs-people-division-ai.html",
+    "source": "CNBC / Bloomberg-syndicated follow-up",
+    "publishedDate": "2026-06-03",
+    "excerpt": "Uber cut 23% of positions in its People and Places division, less than 1% of its global workforce, as part of an organizational restructuring under president Jill Hazelbaker.",
+    "status": "rejected",
+    "duplicateOf": null,
+    "notes": "Rejected for public AI-layoffs dataset on 2026-06-04. The story has AI context in the URL/news cycle, but accessible CNBC/Bloomberg follow-up reporting says a company spokesperson stated the cuts were unrelated to artificial intelligence initiatives. Treat as a false-positive lead unless a stronger primary or reputable source later ties the reduction to AI."
   }
 ]
