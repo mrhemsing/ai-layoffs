@@ -1,0 +1,32 @@
+{
+  "id": "snyk-2026-06-24",
+  "company": "Snyk",
+  "industry": "Cybersecurity",
+  "geography": "Global",
+  "eventDate": "2026-06-24",
+  "layoffsCount": 90,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Globes reported that cybersecurity company Snyk is laying off about 90 employees in Israel and worldwide, while Cybernews reported that the company is reorganizing to prioritize its AI Security Platform development.",
+  "evidenceQuote": "The company is reorganizing to prioritize its AI Security Platform development.",
+  "notes": "Globes reported that Snyk sent an email to about 90 employees in Israel and the rest of the world and that the cuts represent the company's fourth round of layoffs. Cybernews reported that Snyk is flattening leadership, consolidating R&D under one leader, and centering the organization on AI security areas including AI-written code, autonomous agents in production, chained vulnerabilities, and adversaries that never sleep. Because the reporting directly ties the restructuring to AI security strategy and AI-era software development, this is classified as explicit AI cited.",
+  "sources": [
+    {
+      "name": "Cybernews",
+      "url": "https://cybernews.com/security/snyk-cuts-jobs-focus-on-ai-security/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-25",
+      "quote": "The company is reorganizing to prioritize its AI Security Platform development."
+    },
+    {
+      "name": "Globes",
+      "url": "https://en.globes.co.il/en/article-snyk-to-lay-off-90-employees-1001546903",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-06-24",
+      "quote": "Israeli veteran cybersecurity company Snyk is embarking on a fourth round of layoffs. An email was sent out this morning to about 90 of the company's employees in Israel and the rest of the world."
+    }
+  ],
+  "createdAt": "2026-06-25T09:36:00-07:00",
+  "updatedAt": "2026-06-25T09:36:00-07:00"
+}
