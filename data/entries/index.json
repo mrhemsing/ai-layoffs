@@ -1,5 +1,44 @@
 [
     {
+      "id": "elastic-2026-06-24",
+      "company": "Elastic",
+      "industry": "Technology",
+      "geography": "Global",
+      "eventDate": "2026-06-24",
+      "layoffsCount": 281,
+      "status": "verified",
+      "aiRelevance": "explicit_ai_cited",
+      "sourceQuality": "primary",
+      "summary": "Elastic announced an organizational change including an approximately 7% workforce reduction, about 281 workers, while CEO Ash Kulkarni said advances in AI and automation are letting the company operate with leaner teams.",
+      "evidenceQuote": "In others, advances in AI and automation are letting us operate with leaner teams.",
+      "notes": "Elastic's CEO announcement said the company was reducing approximately 7% of its workforce while continuing to hire in customer-facing sales and key strategic areas. San Francisco Business Times reported the cut as about 281 workers. The Register reported Elastic had 4,019 employees in its latest 10-K, so 7% implies slightly less than 300 roles. Because Elastic's own announcement explicitly ties the reorganization to AI and automation changing how work gets done and enabling leaner teams, this is classified as explicit AI cited.",
+      "sources": [
+        {
+          "name": "Elastic",
+          "url": "https://www.elastic.co/blog/ceo-ash-kulkarni-announcement-to-elastic-employees",
+          "type": "primary",
+          "publishedDate": "2026-06-24",
+          "quote": "Today, we announced an organizational change at Elastic, including a reduction of approximately 7% of our workforce."
+        },
+        {
+          "name": "San Francisco Business Times",
+          "url": "https://www.bizjournals.com/sanfrancisco/news/2026/06/24/elastic-layoffs-ai-search.html",
+          "type": "reputable_reporting",
+          "publishedDate": "2026-06-24",
+          "quote": "The data-search company expects to cut about 281 workers. Executives say AI automation will reduce operational complexity while still allowing net head count growth this fiscal year."
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/databases/2026/06/25/elastic_stretches_workforce_7_thinner_as_ai_does_more_of_the_heavy_lifting/5261993",
+          "type": "reputable_reporting",
+          "publishedDate": "2026-06-25",
+          "quote": "CEO says automation is enabling leaner teams as engineering is split into three core areas."
+        }
+      ],
+      "createdAt": "2026-06-25T10:11:00-07:00",
+      "updatedAt": "2026-06-25T10:11:00-07:00"
+    },
+    {
       "id": "snyk-2026-06-24",
       "company": "Snyk",
       "industry": "Cybersecurity",
