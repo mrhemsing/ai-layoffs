@@ -1039,7 +1039,7 @@
         "sourceQuality": "primary",
         "summary": "Oracle's FY2026 Form 10-K confirmed a drop from approximately 162,000 full-time employees at the end of FY2025 to approximately 141,000 at the end of FY2026, a 21,000-role reduction that BBC and CNBC reported in the context of Oracle's AI spending and restructuring.",
         "evidenceQuote": "As of May 31, 2026, we employed approximately 141,000 full-time employees.",
-        "notes": "Treat this as the June 2026 official confirmation rather than the March 5 rumor, which had no confirmed headcount. Oracle's FY2025 10-K reported approximately 162,000 full-time employees as of May 31, 2025; Oracle's FY2026 10-K reported approximately 141,000 full-time employees as of May 31, 2026, implying a 21,000-role reduction. Earlier Reuters/Bloomberg, CNBC, MarketWatch, and Fast Company reports remain useful context for the AI-spending link, but the count is now based on Oracle's filed headcount delta and supporting BBC/CNBC reporting.",
+        "notes": "Oracle's FY2025 10-K reported approximately 162,000 full-time employees as of May 31, 2025; Oracle's FY2026 10-K reported approximately 141,000 full-time employees as of May 31, 2026, implying a 21,000-role reduction. Earlier Reuters/Bloomberg, CNBC, MarketWatch, and Fast Company reports remain useful context for the AI-spending link, but the count is now based on Oracle's filed headcount delta and supporting BBC/CNBC reporting.",
         "sources": [
             {
                 "name": "Oracle FY2026 Form 10-K",
