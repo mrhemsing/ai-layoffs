@@ -964,26 +964,19 @@
         "updatedAt": "2026-03-17T19:40:00-07:00"
     },
     {
-        "id": "general-motors-2026-03-16",
+        "id": "general-motors-2026-06-22",
         "company": "General Motors",
         "industry": "Other",
         "geography": "United States",
-        "eventDate": "2026-03-16",
+        "eventDate": "2026-06-22",
         "layoffsCount": 1300,
         "status": "verified",
         "aiRelevance": "automation_efficiency_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "General Motors temporarily laid off around 1,300 workers at Factory Zero after idling EV production, then installed about 50 collaborative robot arms at the plant as part of a broader push to bring advanced automation into manufacturing operations.",
-        "evidenceQuote": "General Motors has temporarily laid off around 1,300 workers at its Factory Zero electric vehicle plant in Michigan for a 30-day period as the automaker adjusts production to meet market demand for EVs.",
-        "notes": "WardsAuto reported that GM spokesperson Kevin Kelly confirmed the approximately 1,300-worker temporary layoff, effective March 16 through April 13, citing Reuters. Ars Technica later reported that 1,300 workers remained out of work while GM installed approximately 50 FANUC robot arms at Factory Zero. The New York Post rounded the affected workforce as more than 1,000. This is separate from GM's May 2026 IT department layoffs and from a prior Factory Zero permanent layoff of about 1,200 workers in late 2025.",
+        "summary": "Ars Technica reported that General Motors installed about 50 collaborative robot arms at Factory Zero while 1,300 workers remained out of work following a temporary layoff tied to idled EV production.",
+        "evidenceQuote": "Dozens of new robot arms have been installed at General Motors' flagship electric vehicle factory in Detroit, even as 1,300 workers remain out of work following what was supposed to be a temporary layoff.",
+        "notes": "Treat this as the June 2026 robot-installation story, not just the earlier March temporary layoff notice. WardsAuto reported that GM spokesperson Kevin Kelly confirmed the approximately 1,300-worker temporary layoff, effective March 16 through April 13, citing Reuters. Ars Technica later reported that 1,300 workers remained out of work while GM installed approximately 50 FANUC robot arms at Factory Zero. The New York Post rounded the affected workforce as more than 1,000. This is separate from GM's May 2026 IT department layoffs and from a prior Factory Zero permanent layoff of about 1,200 workers in late 2025.",
         "sources": [
-            {
-                "name": "WardsAuto",
-                "url": "https://www.wardsauto.com/news/GM-temporarily-lays-off-1300-workers-factory-zero-uaw-evs/816227/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-03-31",
-                "quote": "General Motors has temporarily laid off around 1,300 workers at its Factory Zero electric vehicle plant in Michigan for a 30-day period as the automaker adjusts production to meet market demand for EVs."
-            },
             {
                 "name": "Ars Technica",
                 "url": "https://arstechnica.com/ai/2026/06/gm-installs-robots-at-flagship-ev-factory-after-laying-off-1300-workers/",
@@ -997,6 +990,13 @@
                 "type": "reputable_reporting",
                 "publishedDate": "2026-06-21",
                 "quote": "General Motors has gutted its electric-vehicle ambitions and sidelined more than 1,000 jobs at its flagship Detroit assembly plant - while adding 50 robots, sparking outrage from labor unions."
+            },
+            {
+                "name": "WardsAuto",
+                "url": "https://www.wardsauto.com/news/GM-temporarily-lays-off-1300-workers-factory-zero-uaw-evs/816227/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-03-31",
+                "quote": "General Motors has temporarily laid off around 1,300 workers at its Factory Zero electric vehicle plant in Michigan for a 30-day period as the automaker adjusts production to meet market demand for EVs."
             }
         ],
         "createdAt": "2026-06-25T08:58:00-07:00",
@@ -1028,50 +1028,50 @@
         "updatedAt": "2026-03-12T11:45:00-07:00"
     },
     {
-        "id": "oracle-2026-03-05",
+        "id": "oracle-2026-06-22",
         "company": "Oracle",
         "industry": "Technology",
         "geography": "United States",
-        "eventDate": "2026-03-05",
-        "layoffsCount": null,
+        "eventDate": "2026-06-22",
+        "layoffsCount": 21000,
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Reuters first reported Oracle was planning thousands of job cuts as AI data center costs surged, CNBC later confirmed Oracle had started telling employees about a latest layoff round, and MarketWatch reported the total cuts were estimated to be as many as 30,000 people.",
-        "evidenceQuote": "The layoffs will impact divisions across Oracle and may be implemented as soon as this month... Some cuts will be aimed at job categories that the company expects will shrink due to AI.",
-        "notes": "Reuters attributed the initial report to Bloomberg and said Oracle declined comment; CNBC later confirmed with people familiar with the matter that Oracle had started telling employees about the cuts. MarketWatch reported the layoffs were estimated to be as many as 30,000 people, but also noted it was not clear whether all of those layoffs had already occurred or whether more were still coming later in the year, so layoffsCount remains null. Strong fit because the reported reductions were tied both to AI infrastructure spending and direct AI-related role shrinkage.",
+        "sourceQuality": "primary",
+        "summary": "Oracle's FY2026 Form 10-K confirmed a drop from approximately 162,000 full-time employees at the end of FY2025 to approximately 141,000 at the end of FY2026, a 21,000-role reduction that BBC and CNBC reported in the context of Oracle's AI spending and restructuring.",
+        "evidenceQuote": "As of May 31, 2026, we employed approximately 141,000 full-time employees.",
+        "notes": "Treat this as the June 2026 official confirmation rather than the March 5 rumor, which had no confirmed headcount. Oracle's FY2025 10-K reported approximately 162,000 full-time employees as of May 31, 2025; Oracle's FY2026 10-K reported approximately 141,000 full-time employees as of May 31, 2026, implying a 21,000-role reduction. Earlier Reuters/Bloomberg, CNBC, MarketWatch, and Fast Company reports remain useful context for the AI-spending link, but the count is now based on Oracle's filed headcount delta and supporting BBC/CNBC reporting.",
         "sources": [
             {
-                "name": "Reuters",
-                "url": "https://www.reuters.com/business/oracle-plans-thousands-job-cuts-data-center-costs-rise-bloomberg-news-reports-2026-03-05/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-03-05",
-                "quote": "The layoffs will impact divisions across Oracle and may be implemented as soon as this month... Some cuts will be aimed at job categories that the company expects will shrink due to AI."
+                "name": "Oracle FY2026 Form 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+                "type": "primary",
+                "publishedDate": "2026-06-22",
+                "quote": "As of May 31, 2026, we employed approximately 141,000 full-time employees."
+            },
+            {
+                "name": "Oracle FY2025 Form 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm",
+                "type": "primary",
+                "publishedDate": "2025-06-18",
+                "quote": "As of May 31, 2025, we employed approximately 162,000 full-time employees."
             },
             {
                 "name": "CNBC",
-                "url": "https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html",
+                "url": "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html",
                 "type": "reputable_reporting",
-                "publishedDate": "2026-03-31",
-                "quote": "Oracle has started telling employees that it's cutting thousands of jobs, CNBC has confirmed, as the software maker deals with a plummeting stock price tied to hefty capital commitments for building out AI infrastructure."
+                "publishedDate": "2026-06-23",
+                "quote": "Oracle shed 21,000 jobs over the past year, the company's annual report shows, as the software maker pours money into artificial intelligence."
             },
             {
-                "name": "MarketWatch",
-                "url": "https://www.marketwatch.com/story/fired-via-email-some-of-the-30-000-workers-cut-by-oracle-woke-up-to-a-morning-message-saying-they-were-laid-off-89a7af94",
+                "name": "BBC",
+                "url": "https://www.bbc.com/news/articles/c4gy0x0j5deo",
                 "type": "reputable_reporting",
-                "publishedDate": "2026-04-01",
-                "quote": "The mass layoffs \u2014 which were estimated to be as many as 30,000 people \u2014 were part of the company's cost-cutting measures as it continues to build out expensive data centers for powering artificial intelligence."
-            },
-            {
-                "name": "Fast Company",
-                "url": "https://www.fastcompany.com/91504231/tech-finance-banking-layoffs-list-2026-oracle-morgan-stanley-block",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-03-06",
-                "quote": "Oracle is reportedly planning job cuts to free up cash for its AI data center expansion... some of the jobs lost will be jobs that the company expects it will need less of due to AI."
+                "publishedDate": "2026-06-23",
+                "quote": "Oracle shed about 21,000 roles globally over the past year as the company ramped up spending on artificial intelligence."
             }
         ],
         "createdAt": "2026-03-13T02:35:00-07:00",
-        "updatedAt": "2026-06-03T10:00:00-07:00"
+        "updatedAt": "2026-06-25T09:18:00-07:00"
     },
     {
         "id": "proximus-2026-02-27",
