@@ -1,269 +1,447 @@
 [
     {
-      "id": "elastic-2026-06-24",
-      "company": "Elastic",
-      "industry": "Technology",
-      "geography": "Global",
-      "eventDate": "2026-06-24",
-      "layoffsCount": 281,
-      "status": "verified",
-      "aiRelevance": "explicit_ai_cited",
-      "sourceQuality": "primary",
-      "summary": "Elastic announced an organizational change including an approximately 7% workforce reduction, about 281 workers, while CEO Ash Kulkarni said advances in AI and automation are letting the company operate with leaner teams.",
-      "evidenceQuote": "In others, advances in AI and automation are letting us operate with leaner teams.",
-      "notes": "Elastic's CEO announcement said the company was reducing approximately 7% of its workforce while continuing to hire in customer-facing sales and key strategic areas. San Francisco Business Times reported the cut as about 281 workers. The Register reported Elastic had 4,019 employees in its latest 10-K, so 7% implies slightly less than 300 roles. Because Elastic's own announcement explicitly ties the reorganization to AI and automation changing how work gets done and enabling leaner teams, this is classified as explicit AI cited.",
-      "sources": [
-        {
-          "name": "Elastic",
-          "url": "https://www.elastic.co/blog/ceo-ash-kulkarni-announcement-to-elastic-employees",
-          "type": "primary",
-          "publishedDate": "2026-06-24",
-          "quote": "Today, we announced an organizational change at Elastic, including a reduction of approximately 7% of our workforce."
-        },
-        {
-          "name": "San Francisco Business Times",
-          "url": "https://www.bizjournals.com/sanfrancisco/news/2026/06/24/elastic-layoffs-ai-search.html",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-24",
-          "quote": "The data-search company expects to cut about 281 workers. Executives say AI automation will reduce operational complexity while still allowing net head count growth this fiscal year."
-        },
-        {
-          "name": "The Register",
-          "url": "https://www.theregister.com/databases/2026/06/25/elastic_stretches_workforce_7_thinner_as_ai_does_more_of_the_heavy_lifting/5261993",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-25",
-          "quote": "CEO says automation is enabling leaner teams as engineering is split into three core areas."
-        }
-      ],
-      "createdAt": "2026-06-25T10:11:00-07:00",
-      "updatedAt": "2026-06-25T10:11:00-07:00"
-    },
-    {
-      "id": "snyk-2026-06-24",
-      "company": "Snyk",
-      "industry": "Cybersecurity",
-      "geography": "Global",
-      "eventDate": "2026-06-24",
-      "layoffsCount": 90,
-      "status": "verified",
-      "aiRelevance": "explicit_ai_cited",
-      "sourceQuality": "reputable_reporting",
-      "summary": "Globes reported that cybersecurity company Snyk is laying off about 90 employees in Israel and worldwide, while Cybernews reported that the company is reorganizing to prioritize its AI Security Platform development.",
-      "evidenceQuote": "The company is reorganizing to prioritize its AI Security Platform development.",
-      "notes": "Globes reported that Snyk sent an email to about 90 employees in Israel and the rest of the world and that the cuts represent the company's fourth round of layoffs. Cybernews reported that Snyk is flattening leadership, consolidating R&D under one leader, and centering the organization on AI security areas including AI-written code, autonomous agents in production, chained vulnerabilities, and adversaries that never sleep. Because the reporting directly ties the restructuring to AI security strategy and AI-era software development, this is classified as explicit AI cited.",
-      "sources": [
-        {
-          "name": "Cybernews",
-          "url": "https://cybernews.com/security/snyk-cuts-jobs-focus-on-ai-security/",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-25",
-          "quote": "The company is reorganizing to prioritize its AI Security Platform development."
-        },
-        {
-          "name": "Globes",
-          "url": "https://en.globes.co.il/en/article-snyk-to-lay-off-90-employees-1001546903",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-24",
-          "quote": "Israeli veteran cybersecurity company Snyk is embarking on a fourth round of layoffs. An email was sent out this morning to about 90 of the company's employees in Israel and the rest of the world."
-        }
-      ],
-      "createdAt": "2026-06-25T09:36:00-07:00",
-      "updatedAt": "2026-06-25T09:36:00-07:00"
-    },
-    {
-      "id": "robinhood-2026-06-16",
-      "company": "Robinhood",
-      "industry": "Finance",
-      "geography": "United States",
-      "eventDate": "2026-06-16",
-      "layoffsCount": 290,
-      "status": "needs_review",
-      "aiRelevance": "speculative_or_unclear",
-      "sourceQuality": "primary",
-      "summary": "Robinhood announced a reduction in force affecting approximately 10% of full-time employees, with reporting putting the cut at about 290 roles, as part of a push to stay lean, flatten layers, and accelerate product velocity.",
-      "evidenceQuote": "This reduction in force involves approximately 10% of the Company's full-time employees, and additionally involves the closure of a small number of open roles across the Company.",
-      "notes": "Added as a needs-review narrative case rather than a verified AI-adjacent restructuring. The company filing cites lean operations, high performance, and product velocity, while TechCrunch specifically noted that Vlad Tenev's layoff note made no mention of AI. If a stronger primary or reputable source later ties this restructuring to AI strategy, reclassify to AI-adjacent restructuring.",
-      "sources": [
-        {
-          "name": "Robinhood SEC Form 8-K",
-          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000071/hood-20260616.htm",
-          "type": "primary",
-          "publishedDate": "2026-06-16",
-          "quote": "This reduction in force involves approximately 10% of the Company's full-time employees, and additionally involves the closure of a small number of open roles across the Company."
-        },
-        {
-          "name": "The Business Times / Reuters",
-          "url": "https://www.businesstimes.com.sg/international/trading-platform-robinhood-cut-10-workforce-restructuring",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-16",
-          "quote": "Robinhood said on Tuesday (Jun 16) it would cut 10 per cent of its full-time workforce, or about 290 roles, as the trading platform seeks to operate more efficiently by flattening organisational layers."
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/06/16/robinhoods-note-on-10-layoffs-shows-blaming-ai-isnt-cutting-it/",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-16",
-          "quote": "Robinhood's CEO Vlad Tenev conspicuously made no mention of AI in his note about layoffs."
-        }
-      ],
-      "createdAt": "2026-06-16T10:45:00-07:00",
-      "updatedAt": "2026-06-16T10:45:00-07:00"
-    },
-    {
-      "id": "rackspace-technology-2026-06-10",
-      "company": "Rackspace Technology",
-      "industry": "Technology",
-      "geography": "Global",
-      "eventDate": "2026-06-10",
-      "layoffsCount": 750,
-      "status": "verified",
-      "aiRelevance": "explicit_ai_cited",
-      "sourceQuality": "primary",
-      "summary": "Rackspace Technology approved a workforce realignment expected to terminate approximately 15% of its global workforce, roughly 750 roles based on its latest reported 5,000-person employee base, as it deemphasizes legacy public-cloud service delivery and redeploys resources toward governed enterprise AI.",
-      "evidenceQuote": "This realignment is predominantly driven by the Company's strategic decision to deemphasize certain legacy service delivery functions (primarily within its Public Cloud business unit) and geographic rationalizations in favor of redeploying resources toward its enterprise AI buildout.",
-      "notes": "Rackspace's Form 8-K directly ties the workforce reduction to its governed enterprise AI strategy, production AI deployment, AI solutions delivery, and enterprise AI infrastructure buildout. The 750 count is an estimate calculated as 15% of the latest reported employee base in Rackspace's 2025 Form 10-K, which describes a team of 5,000 Rackers.",
-      "sources": [
-        {
-          "name": "Rackspace Technology SEC Form 8-K",
-          "url": "https://www.sec.gov/Archives/edgar/data/1810019/000181001926000058/rxt-20260610.htm",
-          "type": "primary",
-          "publishedDate": "2026-06-16",
-          "quote": "This workforce realignment is expected to result in the termination of approximately 15% of the Company's global workforce."
-        },
-        {
-          "name": "Rackspace Technology 2025 Form 10-K",
-          "url": "https://www.sec.gov/Archives/edgar/data/1810019/000181001926000015/rxt-20251231.htm",
-          "type": "primary",
-          "publishedDate": "2026-03-06",
-          "quote": "Our team of 5,000 highly skilled Rackers, including consultants and engineers, partners with companies at every stage of their cloud transformation journey."
-        },
-        {
-          "name": "MarketScreener / S&P Capital IQ",
-          "url": "https://www.marketscreener.com/news/rackspace-technology-inc-terminates-approximately-15-of-workforce-ce7f5cdfdd81ff21",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-16",
-          "quote": "Rackspace Technology, Inc. announced on June 10, 2026, the Executive Committee of the Board of Directors of the Company approved a workforce realignment plan intended to accelerate the Company's strategic transformation as the operator for governed enterprise AI."
-        },
-        {
-          "name": "San Antonio Business Journal",
-          "url": "https://www.bizjournals.com/sanantonio/news/2026/06/16/rackspace-slashes-local-workforce.html",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-16",
-          "quote": "Rackspace slashes local workforce."
-        }
-      ],
-      "createdAt": "2026-06-16T11:05:00-07:00",
-      "updatedAt": "2026-06-16T11:05:00-07:00"
-    },
-    {
-      "id": "salesforce-2026-06-08",
-      "company": "Salesforce",
-      "industry": "Technology",
-      "geography": "United States",
-      "eventDate": "2026-06-08",
-      "layoffsCount": 86,
-      "status": "verified",
-      "aiRelevance": "ai_reorg_or_spend_linked",
-      "sourceQuality": "reputable_reporting",
-      "summary": "Salesforce began another round of layoffs, with a California WARN notice listing 86 cuts and reporting saying affected teams included Agentforce, MuleSoft, and Marketing Cloud as the company reshapes around AI offerings.",
-      "evidenceQuote": "The cuts affected employees working on the company's Agentforce AI product, its Mulesoft IT integration tool, and its Marketing Cloud software.",
-      "notes": "The 86 count reflects the California WARN notice reported by Business Insider and mirrored in WARN-data coverage; Business Insider also reported roles in Washington state and outside the U.S. were affected, but no broader confirmed total was available. This is classified as AI reorg or spending linked because the affected areas include Agentforce and related AI-business-model reporting, while Salesforce did not publicly state that AI replacement caused this specific round.",
-      "sources": [
-        {
-          "name": "Business Insider",
-          "url": "https://www.businessinsider.com/salesforce-cuts-jobs-agentforce-2026-6",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-09",
-          "quote": "The cuts affected employees working on the company's Agentforce AI product, its Mulesoft IT integration tool, and its Marketing Cloud software."
-        },
-        {
-          "name": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-layoffs-highlight-ai-pivot-061328988.html",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-12",
-          "quote": "Salesforce (NYSE:CRM) has begun a new round of layoffs affecting at least 86 employees in California and abroad."
-        }
-      ],
-      "createdAt": "2026-06-12T13:20:00-07:00",
-      "updatedAt": "2026-06-12T13:20:00-07:00"
-    },
-    {
-      "id": "gitlab-2026-06-01",
-      "company": "GitLab",
-      "industry": "Technology",
-      "geography": "Global",
-      "eventDate": "2026-06-01",
-      "layoffsCount": 350,
-      "status": "verified",
-      "aiRelevance": "explicit_ai_cited",
-      "sourceQuality": "primary",
-      "summary": "GitLab approved a restructuring plan expected to impact about 14% of its global workforce, with reporting putting the cut at roughly 350 employees, while CEO Bill Staples framed the move around GitLab's Act 2 strategy for the agentic era and AI-powered ways of working.",
-      "evidenceQuote": "As we shift to a new strategy and way of working, powered by AI, we must revisit the size of staffing for each role to ensure we are optimizing for speed and customer outcomes.",
-      "notes": "GitLab's June 2 Form 8-K says the board approved the plan on June 1, 2026, and that approximately 14% of the global workforce as of January 31, 2026 may be impacted. The same filing says GitLab expects to exit 22 countries and incur $30 million to $35 million in pre-tax restructuring charges. The layoff count is recorded as 350 based on Reuters-syndicated reporting and The Next Web's coverage of the WSJ-reported AI pivot. Because GitLab's CEO letter explicitly ties the restructuring to the agentic era, AI agents, and staffing right-sizing for AI-powered work, this is classified as explicit AI cited.",
-      "sources": [
-        {
-          "name": "GitLab Form 8-K",
-          "url": "https://www.sec.gov/Archives/edgar/data/1653482/000162828026039805/gtlb-20260601.htm",
-          "type": "primary",
-          "publishedDate": "2026-06-02",
-          "quote": "The Company anticipates approximately 14% of its global workforce as of January 31, 2026 may be impacted by the Plan."
-        },
-        {
-          "name": "GitLab CEO letter / Form 8-K exhibit",
-          "url": "https://www.sec.gov/Archives/edgar/data/1653482/000165348226000095/exhibit991-letterfromwilla.htm",
-          "type": "primary",
-          "publishedDate": "2026-05-11",
-          "quote": "As we shift to a new strategy and way of working, powered by AI, we must revisit the size of staffing for each role to ensure we are optimizing for speed and customer outcomes."
-        },
-        {
-          "name": "Investing.com / Reuters",
-          "url": "https://ca.investing.com/news/earnings/gitlab-surges-after-hours-on-quarterly-revenue-jump-raised-profit-guidance-4672328",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-02",
-          "quote": "GTLB on Tuesday said it would reduce its full-time workforce by 350 employees, or about 14%."
-        },
-        {
-          "name": "The Next Web",
-          "url": "https://thenextweb.com/news/gitlab-cuts-14-percent-workforce-exits-22-countries",
-          "type": "reputable_reporting",
-          "publishedDate": "2026-06-03",
-          "quote": "GitLab is cutting about 14% of its full-time workforce, roughly 350 people, and pulling out of 22 countries."
-        }
-      ],
-      "createdAt": "2026-06-03T09:50:00-07:00",
-      "updatedAt": "2026-06-03T09:50:00-07:00"
-    },
-    {
-        "id": "wix-2026-05-28",
-        "company": "Wix",
+        "id": "amperity-2026-06-25",
+        "company": "Amperity",
         "industry": "Technology",
-        "geography": "Israel",
-        "eventDate": "2026-05-28",
-        "layoffsCount": 1000,
+        "geography": "United States",
+        "eventDate": "2026-06-25",
+        "layoffsCount": null,
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "CNBC reported Wix is laying off about 20% of its workforce after CEO Avishai Abrahami cited the fast evolution of AI capabilities and pressure from shekel-dollar exchange rates.",
-        "evidenceQuote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates.",
-        "notes": "CNBC reported the reduction as about 20% of Wix's workforce. Reuters-syndicated reporting put the impact at about 1,000 jobs and said Abrahami cited both a strong shekel versus the dollar and the rapid evolution of AI. Because AI was explicitly cited by the CEO as one of the drivers, this is classified as explicit AI cited, while the notes preserve that currency pressure was also a major stated reason.",
+        "summary": "GeekWire reported that Amperity conducted layoffs after saying it was transforming how it operates by building AI into work across the organization, changing where it invests and the shape of the team it needs.",
+        "evidenceQuote": "Amperity is transforming how it operates as a company, building AI into how we work across the organization. That shift changes where we're investing and the shape of the team we need going forward.",
+        "notes": "GeekWire's page was Cloudflare-blocked in direct fetch, but search-accessible article text included the company-confirmed layoff language and the full spokesperson statement. The company did not disclose the number of affected employees, so layoffsCount remains null.",
         "sources": [
             {
-                "name": "CNBC",
-                "url": "https://www.cnbc.com/2026/05/28/wix-layoffs-ai-exchange-rates.html",
+                "name": "GeekWire",
+                "url": "https://www.geekwire.com/2026/amperity-hit-with-layoffs-as-ai-changes-the-shape-of-the-customer-data-startup-and-how-it-operates/",
                 "type": "reputable_reporting",
-                "publishedDate": "2026-05-28",
-                "quote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates."
-            },
-            {
-                "name": "Reuters via StreetInsider",
-                "url": "https://www.streetinsider.com/Reuters/Israeli%2Bwebsite%2Bcreator%2BWix.com%2Bcuts%2B1000%2Bjobs%2Bdue%2Bto%2Bstrong%2Bshekel%2C%2Bgrowth%2Bof%2BAI/26560763.html",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-28",
-                "quote": "Wix.com, which helps small businesses build and operate websites, is laying off 20% of its workforce, CEO Avishai Abrahami said on Thursday, citing a strong shekel versus the dollar and the rapid evolution of AI."
+                "publishedDate": "2026-06-25",
+                "quote": "Seattle-based customer data startup Amperity conducted layoffs this week, the company confirmed to GeekWire, citing a transformation related to its use of more artificial intelligence."
             }
         ],
-        "createdAt": "2026-05-29T06:15:00-07:00",
-        "updatedAt": "2026-05-29T06:15:00-07:00"
+        "createdAt": "2026-07-04T11:35:00-07:00",
+        "updatedAt": "2026-07-04T11:35:00-07:00"
+    },
+    {
+        "id": "elastic-2026-06-24",
+        "company": "Elastic",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-06-24",
+        "layoffsCount": 281,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "Elastic announced an organizational change including an approximately 7% workforce reduction, about 281 workers, while CEO Ash Kulkarni said advances in AI and automation are letting the company operate with leaner teams.",
+        "evidenceQuote": "In others, advances in AI and automation are letting us operate with leaner teams.",
+        "notes": "Elastic's CEO announcement said the company was reducing approximately 7% of its workforce while continuing to hire in customer-facing sales and key strategic areas. San Francisco Business Times reported the cut as about 281 workers. The Register reported Elastic had 4,019 employees in its latest 10-K, so 7% implies slightly less than 300 roles. Because Elastic's own announcement explicitly ties the reorganization to AI and automation changing how work gets done and enabling leaner teams, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Elastic",
+                "url": "https://www.elastic.co/blog/ceo-ash-kulkarni-announcement-to-elastic-employees",
+                "type": "primary",
+                "publishedDate": "2026-06-24",
+                "quote": "Today, we announced an organizational change at Elastic, including a reduction of approximately 7% of our workforce."
+            },
+            {
+                "name": "San Francisco Business Times",
+                "url": "https://www.bizjournals.com/sanfrancisco/news/2026/06/24/elastic-layoffs-ai-search.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-24",
+                "quote": "The data-search company expects to cut about 281 workers. Executives say AI automation will reduce operational complexity while still allowing net head count growth this fiscal year."
+            },
+            {
+                "name": "The Register",
+                "url": "https://www.theregister.com/databases/2026/06/25/elastic_stretches_workforce_7_thinner_as_ai_does_more_of_the_heavy_lifting/5261993",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-25",
+                "quote": "CEO says automation is enabling leaner teams as engineering is split into three core areas."
+            }
+        ],
+        "createdAt": "2026-06-25T10:11:00-07:00",
+        "updatedAt": "2026-06-25T10:11:00-07:00"
+    },
+    {
+        "id": "snyk-2026-06-24",
+        "company": "Snyk",
+        "industry": "Cybersecurity",
+        "geography": "Global",
+        "eventDate": "2026-06-24",
+        "layoffsCount": 90,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Globes reported that cybersecurity company Snyk is laying off about 90 employees in Israel and worldwide, while Cybernews reported that the company is reorganizing to prioritize its AI Security Platform development.",
+        "evidenceQuote": "The company is reorganizing to prioritize its AI Security Platform development.",
+        "notes": "Globes reported that Snyk sent an email to about 90 employees in Israel and the rest of the world and that the cuts represent the company's fourth round of layoffs. Cybernews reported that Snyk is flattening leadership, consolidating R&D under one leader, and centering the organization on AI security areas including AI-written code, autonomous agents in production, chained vulnerabilities, and adversaries that never sleep. Because the reporting directly ties the restructuring to AI security strategy and AI-era software development, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Cybernews",
+                "url": "https://cybernews.com/security/snyk-cuts-jobs-focus-on-ai-security/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-25",
+                "quote": "The company is reorganizing to prioritize its AI Security Platform development."
+            },
+            {
+                "name": "Globes",
+                "url": "https://en.globes.co.il/en/article-snyk-to-lay-off-90-employees-1001546903",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-24",
+                "quote": "Israeli veteran cybersecurity company Snyk is embarking on a fourth round of layoffs. An email was sent out this morning to about 90 of the company's employees in Israel and the rest of the world."
+            }
+        ],
+        "createdAt": "2026-06-25T09:36:00-07:00",
+        "updatedAt": "2026-06-25T09:36:00-07:00"
+    },
+    {
+        "id": "general-motors-2026-06-22",
+        "company": "General Motors",
+        "industry": "Other",
+        "geography": "United States",
+        "eventDate": "2026-06-22",
+        "layoffsCount": 1300,
+        "status": "verified",
+        "aiRelevance": "automation_efficiency_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Ars Technica reported that General Motors installed about 50 collaborative robot arms at Factory Zero while 1,300 workers remained out of work following a temporary layoff tied to idled EV production.",
+        "evidenceQuote": "Dozens of new robot arms have been installed at General Motors' flagship electric vehicle factory in Detroit, even as 1,300 workers remain out of work following what was supposed to be a temporary layoff.",
+        "notes": "WardsAuto reported that GM spokesperson Kevin Kelly confirmed the approximately 1,300-worker temporary layoff, effective March 16 through April 13, citing Reuters. Ars Technica later reported that 1,300 workers remained out of work while GM installed approximately 50 FANUC robot arms at Factory Zero. The New York Post rounded the affected workforce as more than 1,000. This is separate from GM's May 2026 IT department layoffs and from a prior Factory Zero permanent layoff of about 1,200 workers in late 2025.",
+        "sources": [
+            {
+                "name": "Ars Technica",
+                "url": "https://arstechnica.com/ai/2026/06/gm-installs-robots-at-flagship-ev-factory-after-laying-off-1300-workers/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-22",
+                "quote": "Dozens of new robot arms have been installed at General Motors' flagship electric vehicle factory in Detroit, even as 1,300 workers remain out of work following what was supposed to be a temporary layoff."
+            },
+            {
+                "name": "New York Post",
+                "url": "https://nypost.com/2026/06/21/us-news/gm-replaces-more-than-1000-workers-with-50-robots-at-flagship-detroit-plant/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-21",
+                "quote": "General Motors has gutted its electric-vehicle ambitions and sidelined more than 1,000 jobs at its flagship Detroit assembly plant - while adding 50 robots, sparking outrage from labor unions."
+            },
+            {
+                "name": "WardsAuto",
+                "url": "https://www.wardsauto.com/news/GM-temporarily-lays-off-1300-workers-factory-zero-uaw-evs/816227/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-03-31",
+                "quote": "General Motors has temporarily laid off around 1,300 workers at its Factory Zero electric vehicle plant in Michigan for a 30-day period as the automaker adjusts production to meet market demand for EVs."
+            }
+        ],
+        "createdAt": "2026-06-25T08:58:00-07:00",
+        "updatedAt": "2026-06-25T08:58:00-07:00"
+    },
+    {
+        "id": "oracle-2026-06-22",
+        "company": "Oracle",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-06-22",
+        "layoffsCount": 21000,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "Oracle's FY2026 Form 10-K confirmed a drop from approximately 162,000 full-time employees at the end of FY2025 to approximately 141,000 at the end of FY2026, a 21,000-role reduction that BBC and CNBC reported in the context of Oracle's AI spending and restructuring.",
+        "evidenceQuote": "As of May 31, 2026, we employed approximately 141,000 full-time employees.",
+        "notes": "Oracle's FY2025 10-K reported approximately 162,000 full-time employees as of May 31, 2025; Oracle's FY2026 10-K reported approximately 141,000 full-time employees as of May 31, 2026, implying a 21,000-role reduction. Earlier Reuters/Bloomberg, CNBC, MarketWatch, and Fast Company reports remain useful context for the AI-spending link, but the count is now based on Oracle's filed headcount delta and supporting BBC/CNBC reporting.",
+        "sources": [
+            {
+                "name": "Oracle FY2026 Form 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+                "type": "primary",
+                "publishedDate": "2026-06-22",
+                "quote": "As of May 31, 2026, we employed approximately 141,000 full-time employees."
+            },
+            {
+                "name": "Oracle FY2025 Form 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm",
+                "type": "primary",
+                "publishedDate": "2025-06-18",
+                "quote": "As of May 31, 2025, we employed approximately 162,000 full-time employees."
+            },
+            {
+                "name": "CNBC",
+                "url": "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-23",
+                "quote": "Oracle shed 21,000 jobs over the past year, the company's annual report shows, as the software maker pours money into artificial intelligence."
+            },
+            {
+                "name": "BBC",
+                "url": "https://www.bbc.com/news/articles/c4gy0x0j5deo",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-23",
+                "quote": "Oracle shed about 21,000 roles globally over the past year as the company ramped up spending on artificial intelligence."
+            }
+        ],
+        "createdAt": "2026-03-13T02:35:00-07:00",
+        "updatedAt": "2026-06-25T09:18:00-07:00"
+    },
+    {
+        "id": "optimove-2026-06-17",
+        "company": "Optimove",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-06-17",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "InterGame reported that Optimove CEO Pini Yakuel said the marketing services provider would cut 10% of staff in a push toward AI and train remaining employees to shape the next version of the company.",
+        "evidenceQuote": "The CEO of igaming marketing services provider Optimove, Pini Yakuel, has revealed the \"painful\" decision to cut 10 per cent of his staff in a push towards AI.",
+        "notes": "The source gives a percentage reduction rather than an exact headcount, so layoffsCount remains null. Because the CEO directly framed the cuts as part of a push toward AI and said the company would lead with AI in product and operations, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "InterGame",
+                "url": "https://www.intergameonline.com/igaming/news/optimove-cut-jobs-artificial-intelligence-ai",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-17",
+                "quote": "The CEO of igaming marketing services provider Optimove, Pini Yakuel, has revealed the \"painful\" decision to cut 10 per cent of his staff in a push towards AI."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
+    },
+    {
+        "id": "robinhood-2026-06-16",
+        "company": "Robinhood",
+        "industry": "Finance",
+        "geography": "United States",
+        "eventDate": "2026-06-16",
+        "layoffsCount": 290,
+        "status": "needs_review",
+        "aiRelevance": "speculative_or_unclear",
+        "sourceQuality": "primary",
+        "summary": "Robinhood announced a reduction in force affecting approximately 10% of full-time employees, with reporting putting the cut at about 290 roles, as part of a push to stay lean, flatten layers, and accelerate product velocity.",
+        "evidenceQuote": "This reduction in force involves approximately 10% of the Company's full-time employees, and additionally involves the closure of a small number of open roles across the Company.",
+        "notes": "Added as a needs-review narrative case rather than a verified AI-adjacent restructuring. The company filing cites lean operations, high performance, and product velocity, while TechCrunch specifically noted that Vlad Tenev's layoff note made no mention of AI. If a stronger primary or reputable source later ties this restructuring to AI strategy, reclassify to AI-adjacent restructuring.",
+        "sources": [
+            {
+                "name": "Robinhood SEC Form 8-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000071/hood-20260616.htm",
+                "type": "primary",
+                "publishedDate": "2026-06-16",
+                "quote": "This reduction in force involves approximately 10% of the Company's full-time employees, and additionally involves the closure of a small number of open roles across the Company."
+            },
+            {
+                "name": "The Business Times / Reuters",
+                "url": "https://www.businesstimes.com.sg/international/trading-platform-robinhood-cut-10-workforce-restructuring",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-16",
+                "quote": "Robinhood said on Tuesday (Jun 16) it would cut 10 per cent of its full-time workforce, or about 290 roles, as the trading platform seeks to operate more efficiently by flattening organisational layers."
+            },
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2026/06/16/robinhoods-note-on-10-layoffs-shows-blaming-ai-isnt-cutting-it/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-16",
+                "quote": "Robinhood's CEO Vlad Tenev conspicuously made no mention of AI in his note about layoffs."
+            }
+        ],
+        "createdAt": "2026-06-16T10:45:00-07:00",
+        "updatedAt": "2026-06-16T10:45:00-07:00"
+    },
+    {
+        "id": "rackspace-technology-2026-06-10",
+        "company": "Rackspace Technology",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-06-10",
+        "layoffsCount": 750,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "Rackspace Technology approved a workforce realignment expected to terminate approximately 15% of its global workforce, roughly 750 roles based on its latest reported 5,000-person employee base, as it deemphasizes legacy public-cloud service delivery and redeploys resources toward governed enterprise AI.",
+        "evidenceQuote": "This realignment is predominantly driven by the Company's strategic decision to deemphasize certain legacy service delivery functions (primarily within its Public Cloud business unit) and geographic rationalizations in favor of redeploying resources toward its enterprise AI buildout.",
+        "notes": "Rackspace's Form 8-K directly ties the workforce reduction to its governed enterprise AI strategy, production AI deployment, AI solutions delivery, and enterprise AI infrastructure buildout. The 750 count is an estimate calculated as 15% of the latest reported employee base in Rackspace's 2025 Form 10-K, which describes a team of 5,000 Rackers.",
+        "sources": [
+            {
+                "name": "Rackspace Technology SEC Form 8-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1810019/000181001926000058/rxt-20260610.htm",
+                "type": "primary",
+                "publishedDate": "2026-06-16",
+                "quote": "This workforce realignment is expected to result in the termination of approximately 15% of the Company's global workforce."
+            },
+            {
+                "name": "Rackspace Technology 2025 Form 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1810019/000181001926000015/rxt-20251231.htm",
+                "type": "primary",
+                "publishedDate": "2026-03-06",
+                "quote": "Our team of 5,000 highly skilled Rackers, including consultants and engineers, partners with companies at every stage of their cloud transformation journey."
+            },
+            {
+                "name": "MarketScreener / S&P Capital IQ",
+                "url": "https://www.marketscreener.com/news/rackspace-technology-inc-terminates-approximately-15-of-workforce-ce7f5cdfdd81ff21",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-16",
+                "quote": "Rackspace Technology, Inc. announced on June 10, 2026, the Executive Committee of the Board of Directors of the Company approved a workforce realignment plan intended to accelerate the Company's strategic transformation as the operator for governed enterprise AI."
+            },
+            {
+                "name": "San Antonio Business Journal",
+                "url": "https://www.bizjournals.com/sanantonio/news/2026/06/16/rackspace-slashes-local-workforce.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-16",
+                "quote": "Rackspace slashes local workforce."
+            }
+        ],
+        "createdAt": "2026-06-16T11:05:00-07:00",
+        "updatedAt": "2026-06-16T11:05:00-07:00"
+    },
+    {
+        "id": "shopee-2026-06-10",
+        "company": "Shopee",
+        "industry": "Technology",
+        "geography": "Singapore",
+        "eventDate": "2026-06-10",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "The Straits Times, citing Bloomberg, reported that Sea's Shopee cut hundreds of developer jobs globally during a pivot toward AI, affecting about 8% of Shopee's developer workforce.",
+        "evidenceQuote": "Sea's Shopee is cutting hundreds of developer jobs globally, joining rivals across the world in slashing staff while they adopt AI in the workplace and develop new services based on the technology.",
+        "notes": "The article says the move coincided with Sea's AI push but also states it was unclear if the cuts were directly tied to Sea's AI forays, so this is classified as AI-adjacent restructuring rather than explicit AI replacement. The count is reported as hundreds and about 8% of Shopee's developer workforce, so layoffsCount remains null.",
+        "sources": [
+            {
+                "name": "The Straits Times / Bloomberg",
+                "url": "https://www.straitstimes.com/business/seas-shopee-cuts-hundreds-of-developer-jobs-during-pivot-to-ai",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-10",
+                "quote": "The reductions, which started this week, amount to about 8 per cent of Shopee's developer workforce, according to people familiar with the matter."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
+    },
+    {
+        "id": "paytm-2026-06-09",
+        "company": "Paytm",
+        "industry": "Finance",
+        "geography": "India",
+        "eventDate": "2026-06-09",
+        "layoffsCount": 400,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Moneycontrol, carrying Bloomberg, reported that Paytm would lay off about 400 employees after its appraisal cycle while hiring about 4,000 people as part of a pivot toward merchant expansion and AI-driven product offerings.",
+        "evidenceQuote": "Indian fintech pioneer Paytm is set to hire about 4,000 people over the next nine months, part of a pivot aimed at expanding its merchant network and artificial intelligence-driven product offerings.",
+        "notes": "The same article says Paytm is laying off 1% of staff, or about 400 people, after the current performance appraisal cycle. Classified as AI-adjacent restructuring because the cuts occur alongside an AI/product hiring pivot, but the article does not say the 400 roles are directly replaced by AI.",
+        "sources": [
+            {
+                "name": "Moneycontrol / Bloomberg",
+                "url": "https://www.moneycontrol.com/news/business/paytm-plans-10-staff-increase-in-ai-pivot-with-some-roles-cut-13944509.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-09",
+                "quote": "Paytm is also laying off 1% of its staff, or about 400 people, after the current performance appraisal cycle, a company spokesperson said."
+            }
+        ],
+        "createdAt": "2026-07-04T11:35:00-07:00",
+        "updatedAt": "2026-07-04T11:35:00-07:00"
+    },
+    {
+        "id": "salesforce-2026-06-08",
+        "company": "Salesforce",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-06-08",
+        "layoffsCount": 86,
+        "status": "verified",
+        "aiRelevance": "ai_reorg_or_spend_linked",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Salesforce began another round of layoffs, with a California WARN notice listing 86 cuts and reporting saying affected teams included Agentforce, MuleSoft, and Marketing Cloud as the company reshapes around AI offerings.",
+        "evidenceQuote": "The cuts affected employees working on the company's Agentforce AI product, its Mulesoft IT integration tool, and its Marketing Cloud software.",
+        "notes": "The 86 count reflects the California WARN notice reported by Business Insider and mirrored in WARN-data coverage; Business Insider also reported roles in Washington state and outside the U.S. were affected, but no broader confirmed total was available. This is classified as AI reorg or spending linked because the affected areas include Agentforce and related AI-business-model reporting, while Salesforce did not publicly state that AI replacement caused this specific round.",
+        "sources": [
+            {
+                "name": "Business Insider",
+                "url": "https://www.businessinsider.com/salesforce-cuts-jobs-agentforce-2026-6",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-09",
+                "quote": "The cuts affected employees working on the company's Agentforce AI product, its Mulesoft IT integration tool, and its Marketing Cloud software."
+            },
+            {
+                "name": "Yahoo Finance",
+                "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-layoffs-highlight-ai-pivot-061328988.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-12",
+                "quote": "Salesforce (NYSE:CRM) has begun a new round of layoffs affecting at least 86 employees in California and abroad."
+            }
+        ],
+        "createdAt": "2026-06-12T13:20:00-07:00",
+        "updatedAt": "2026-06-12T13:20:00-07:00"
+    },
+    {
+        "id": "gitlab-2026-06-01",
+        "company": "GitLab",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-06-01",
+        "layoffsCount": 350,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "GitLab approved a restructuring plan expected to impact about 14% of its global workforce, with reporting putting the cut at roughly 350 employees, while CEO Bill Staples framed the move around GitLab's Act 2 strategy for the agentic era and AI-powered ways of working.",
+        "evidenceQuote": "As we shift to a new strategy and way of working, powered by AI, we must revisit the size of staffing for each role to ensure we are optimizing for speed and customer outcomes.",
+        "notes": "GitLab's June 2 Form 8-K says the board approved the plan on June 1, 2026, and that approximately 14% of the global workforce as of January 31, 2026 may be impacted. The same filing says GitLab expects to exit 22 countries and incur $30 million to $35 million in pre-tax restructuring charges. The layoff count is recorded as 350 based on Reuters-syndicated reporting and The Next Web's coverage of the WSJ-reported AI pivot. Because GitLab's CEO letter explicitly ties the restructuring to the agentic era, AI agents, and staffing right-sizing for AI-powered work, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "GitLab Form 8-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1653482/000162828026039805/gtlb-20260601.htm",
+                "type": "primary",
+                "publishedDate": "2026-06-02",
+                "quote": "The Company anticipates approximately 14% of its global workforce as of January 31, 2026 may be impacted by the Plan."
+            },
+            {
+                "name": "GitLab CEO letter / Form 8-K exhibit",
+                "url": "https://www.sec.gov/Archives/edgar/data/1653482/000165348226000095/exhibit991-letterfromwilla.htm",
+                "type": "primary",
+                "publishedDate": "2026-05-11",
+                "quote": "As we shift to a new strategy and way of working, powered by AI, we must revisit the size of staffing for each role to ensure we are optimizing for speed and customer outcomes."
+            },
+            {
+                "name": "Investing.com / Reuters",
+                "url": "https://ca.investing.com/news/earnings/gitlab-surges-after-hours-on-quarterly-revenue-jump-raised-profit-guidance-4672328",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-02",
+                "quote": "GTLB on Tuesday said it would reduce its full-time workforce by 350 employees, or about 14%."
+            },
+            {
+                "name": "The Next Web",
+                "url": "https://thenextweb.com/news/gitlab-cuts-14-percent-workforce-exits-22-countries",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-03",
+                "quote": "GitLab is cutting about 14% of its full-time workforce, roughly 350 people, and pulling out of 22 countries."
+            }
+        ],
+        "createdAt": "2026-06-03T09:50:00-07:00",
+        "updatedAt": "2026-06-03T09:50:00-07:00"
+    },
+    {
+        "id": "interview-kickstart-2026-05-29",
+        "company": "Interview Kickstart",
+        "industry": "Education",
+        "geography": "United States",
+        "eventDate": "2026-05-29",
+        "layoffsCount": 50,
+        "status": "verified",
+        "aiRelevance": "automation_efficiency_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Inc42 reported that Interview Kickstart undertook a restructuring amid rising AI automation, with sources estimating 80 to 100 roles affected and the cofounder saying fewer than 50 employees were impacted.",
+        "evidenceQuote": "Blume Ventures-backed upskilling startup Interview Kickstart undertook a restructuring exercise last week amid rising automation due to AI.",
+        "notes": "The public count is recorded as 50 as an upper-bound rounded from the cofounder's statement that fewer than 50 employees were impacted. Inc42's sources tied the restructuring to increased AI automation, while the company emphasized growth in AI learning and B2B AI acceleration offerings.",
+        "sources": [
+            {
+                "name": "Inc42",
+                "url": "https://inc42.com/buzz/blume-backed-interview-kickstart-lays-off-nearly-50-employees-amid-ai-automation-push/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-06-02",
+                "quote": "While sources told Inc42 that around 80-100 employees were impacted due to the restructuring, Interview Kickstart cofounder Soham Mehta said in a written response that less than 50 employees were impacted."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
     },
     {
         "id": "sentinelone-2026-05-28",
@@ -305,6 +483,63 @@
         "updatedAt": "2026-05-29T06:20:00-07:00"
     },
     {
+        "id": "wix-2026-05-28",
+        "company": "Wix",
+        "industry": "Technology",
+        "geography": "Israel",
+        "eventDate": "2026-05-28",
+        "layoffsCount": 1000,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "CNBC reported Wix is laying off about 20% of its workforce after CEO Avishai Abrahami cited the fast evolution of AI capabilities and pressure from shekel-dollar exchange rates.",
+        "evidenceQuote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates.",
+        "notes": "CNBC reported the reduction as about 20% of Wix's workforce. Reuters-syndicated reporting put the impact at about 1,000 jobs and said Abrahami cited both a strong shekel versus the dollar and the rapid evolution of AI. Because AI was explicitly cited by the CEO as one of the drivers, this is classified as explicit AI cited, while the notes preserve that currency pressure was also a major stated reason.",
+        "sources": [
+            {
+                "name": "CNBC",
+                "url": "https://www.cnbc.com/2026/05/28/wix-layoffs-ai-exchange-rates.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "CEO Avishai Abrahami announced in a post on X early Thursday morning, citing the \"fast evolution of AI capabilities\" and difficulties around currency exchange rates."
+            },
+            {
+                "name": "Reuters via StreetInsider",
+                "url": "https://www.streetinsider.com/Reuters/Israeli%2Bwebsite%2Bcreator%2BWix.com%2Bcuts%2B1000%2Bjobs%2Bdue%2Bto%2Bstrong%2Bshekel%2C%2Bgrowth%2Bof%2BAI/26560763.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-28",
+                "quote": "Wix.com, which helps small businesses build and operate websites, is laying off 20% of its workforce, CEO Avishai Abrahami said on Thursday, citing a strong shekel versus the dollar and the rapid evolution of AI."
+            }
+        ],
+        "createdAt": "2026-05-29T06:15:00-07:00",
+        "updatedAt": "2026-05-29T06:15:00-07:00"
+    },
+    {
+        "id": "clickup-2026-05-21",
+        "company": "ClickUp",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-05-21",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "TechCrunch reported ClickUp laid off 22% of its workforce after CEO Zeb Evans announced a 100x organization push built around internal AI agents and AI-enabled productivity gains.",
+        "evidenceQuote": "had laid off 22% of its workforce ... a radical embrace of AI",
+        "notes": "TechCrunch reported Evans characterized the 22% workforce reduction as an AI-driven operating shift rather than a cost-cutting move. The article also says ClickUp recently introduced roughly 3,000 internal AI agents and expects employees to direct and review those agents' work. Because AI agents and AI-enabled productivity are explicitly cited as the restructuring rationale, this is classified as explicit AI cited. No absolute layoff count is used because the source gives only a percentage.",
+        "sources": [
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-25",
+                "quote": "had laid off 22% of its workforce ... a radical embrace of AI"
+            }
+        ],
+        "createdAt": "2026-05-26T13:25:00-07:00",
+        "updatedAt": "2026-05-26T13:25:00-07:00"
+    },
+    {
         "id": "groupon-2026-05-21",
         "company": "Groupon",
         "industry": "Technology",
@@ -342,31 +577,6 @@
         ],
         "createdAt": "2026-05-29T14:05:00-07:00",
         "updatedAt": "2026-05-29T14:05:00-07:00"
-    },
-    {
-        "id": "clickup-2026-05-21",
-        "company": "ClickUp",
-        "industry": "Technology",
-        "geography": "Global",
-        "eventDate": "2026-05-21",
-        "layoffsCount": null,
-        "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "TechCrunch reported ClickUp laid off 22% of its workforce after CEO Zeb Evans announced a 100x organization push built around internal AI agents and AI-enabled productivity gains.",
-        "evidenceQuote": "had laid off 22% of its workforce ... a radical embrace of AI",
-        "notes": "TechCrunch reported Evans characterized the 22% workforce reduction as an AI-driven operating shift rather than a cost-cutting move. The article also says ClickUp recently introduced roughly 3,000 internal AI agents and expects employees to direct and review those agents' work. Because AI agents and AI-enabled productivity are explicitly cited as the restructuring rationale, this is classified as explicit AI cited. No absolute layoff count is used because the source gives only a percentage.",
-        "sources": [
-            {
-                "name": "TechCrunch",
-                "url": "https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-25",
-                "quote": "had laid off 22% of its workforce ... a radical embrace of AI"
-            }
-        ],
-        "createdAt": "2026-05-26T13:25:00-07:00",
-        "updatedAt": "2026-05-26T13:25:00-07:00"
     },
     {
         "id": "intuit-2026-05-20",
@@ -458,6 +668,31 @@
         "updatedAt": "2026-05-23T22:15:00-07:00"
     },
     {
+        "id": "kraken-2026-05-15",
+        "company": "Kraken",
+        "industry": "Finance",
+        "geography": "United States",
+        "eventDate": "2026-05-15",
+        "layoffsCount": 150,
+        "status": "verified",
+        "aiRelevance": "automation_efficiency_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "FinanceFeeds, citing Bloomberg, reported that Kraken laid off approximately 150 employees after deploying artificial intelligence tools across its operations that improved efficiency.",
+        "evidenceQuote": "Kraken has laid off approximately 150 employees following the deployment of artificial intelligence tools across its operations, Bloomberg reported on May 15, citing a person familiar with the matter.",
+        "notes": "The accessible FinanceFeeds syndication attributes the report to Bloomberg and says the cuts represented roughly 5% of Payward, Kraken parent company, while Kraken was expanding AI use more broadly across the business. Classified as automation-efficiency cited because the reported driver was efficiency gains after AI deployment, not a company statement that AI directly replaced specific roles.",
+        "sources": [
+            {
+                "name": "FinanceFeeds / Bloomberg",
+                "url": "https://financefeeds.com/kraken-cuts-150-staff-due-to-ai-delay-ipo-2027/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-18",
+                "quote": "Kraken has laid off approximately 150 employees following the deployment of artificial intelligence tools across its operations, Bloomberg reported on May 15, citing a person familiar with the matter."
+            }
+        ],
+        "createdAt": "2026-07-04T10:08:00-07:00",
+        "updatedAt": "2026-07-04T10:08:00-07:00"
+    },
+    {
         "id": "jumia-2026-05-14",
         "company": "Jumia",
         "industry": "Other",
@@ -531,6 +766,31 @@
         ],
         "createdAt": "2026-05-13T11:40:00-07:00",
         "updatedAt": "2026-05-13T11:40:00-07:00"
+    },
+    {
+        "id": "mri-software-2026-05-11",
+        "company": "MRI Software",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-05-11",
+        "layoffsCount": 200,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Propmodo reported that MRI Software eliminated approximately 200 positions in a global workforce reorganization and attributed the cuts to advancing AI adoption across products and operations.",
+        "evidenceQuote": "MRI attributed the cuts to advancing AI adoption across products and operations, stating the changes would improve scalability and responsiveness without a meaningful impact to overall headcount or client resources.",
+        "notes": "Propmodo reported the company confirmed a restructuring to Crain's Cleveland Business but did not specify the impacted number; the approximately 200 count comes from current and former employee posts cited in the article. Because the company attributed the restructuring to AI adoption, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Propmodo",
+                "url": "https://propmodo.com/private-equity-backed-proptech-firm-cuts-200-jobs-cites-ai-adoption/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-11",
+                "quote": "MRI Software, an Ohio-based real estate management software provider, has eliminated approximately 200 positions as part of what the company calls a global workforce reorganization."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
     },
     {
         "id": "gm-2026-05-11",
@@ -654,6 +914,31 @@
         "updatedAt": "2026-05-07T16:29:00-07:00"
     },
     {
+        "id": "realpha-2026-05-06",
+        "company": "reAlpha",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-05-06",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "reAlpha announced a strategic restructuring that reduced its workforce by approximately 25% and said rapid advancement of agentic AI tooling enables smaller, focused teams to maximize output more effectively than a larger headcount-dependent structure.",
+        "evidenceQuote": "The strategic restructuring is part of reAlpha return-driven spending initiative which prioritizes capital deployment in areas where there is a clear and measurable return, as well as the rapid advancement of agentic AI tooling, which the Company believes enables smaller, focused teams to maximize output across corporate functions more effectively than a larger, headcount-dependent structure.",
+        "notes": "The company press release gives a percentage reduction rather than an exact headcount, so layoffsCount remains null. The reduction includes full-time employees, consultants, temporary workers, and independent contractors. Classified as explicit AI cited because the company directly tied the restructuring to agentic AI tooling and smaller teams.",
+        "sources": [
+            {
+                "name": "reAlpha / GlobeNewswire via Markets Insider",
+                "url": "https://markets.businessinsider.com/news/stocks/realpha-reduces-workforce-by-approximately-25-and-consolidates-vendor-spend-targeting-2-million-in-annualized-savings-as-ai-advancements-drive-organizational-efficiency-1036115751",
+                "type": "primary",
+                "publishedDate": "2026-05-06",
+                "quote": "reAlpha Tech Corp. ... today announced a strategic restructuring that includes a reduction in workforce of approximately 25%, which includes full-time employees, consultants, temporary workers and independent contractors."
+            }
+        ],
+        "createdAt": "2026-07-04T10:08:00-07:00",
+        "updatedAt": "2026-07-04T10:08:00-07:00"
+    },
+    {
         "id": "ticketmaster-2026-05-06",
         "company": "Ticketmaster",
         "industry": "Technology",
@@ -677,66 +962,6 @@
         ],
         "createdAt": "2026-05-23T22:15:00-07:00",
         "updatedAt": "2026-05-23T22:15:00-07:00"
-    },
-    {
-        "id": "paypal-2026-05-05",
-        "company": "PayPal",
-        "industry": "Finance",
-        "geography": "Global",
-        "eventDate": "2026-05-05",
-        "layoffsCount": 4760,
-        "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "The Wall Street Journal reported PayPal plans to cut 20% of its staff over two to three years, amounting to 4,760 positions, as part of plans to accelerate AI adoption and cut costs. Additional reporting from Bloomberg and TechCrunch described the move as part of CEO Enrique Lores' AI-driven turnaround and simplification push.",
-        "evidenceQuote": "The job eliminations are part of PayPal\u2019s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025.",
-        "notes": "Layoffs count is estimated as 20% of PayPal's reported 23,800-person workforce, or about 4,760 roles; Bloomberg/MarketScreener described the cut as around 20% / more than 4,500 jobs over two to three years. AI is not the only rationale: management also cited simplification, cost structure, competition, and technology modernization. Still, Lores explicitly tied the restructuring and savings plan to aggressive AI adoption, AI-enabled processes, and an AI transformation team, so this is classified as explicit AI cited.",
-        "sources": [
-            {
-                "name": "Wall Street Journal",
-                "url": "https://www.wsj.com/business/earnings/paypal-to-cut-costs-after-profit-falls-dc42baf9",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-05",
-                "quote": "The job eliminations are part of PayPal\u2019s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025."
-            },
-            {
-                "name": "Bloomberg",
-                "url": "https://www.bloomberg.com/news/videos/2026-05-05/paypal-coinbase-announce-layoffs-as-ai-impact-bites-video",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-05",
-                "quote": "PayPal, Coinbase Announce Layoffs as AI Impact Bites."
-            },
-            {
-                "name": "TechCrunch",
-                "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-05",
-                "quote": "PayPal was pitching an AI-powered turnaround... Bloomberg reported on Tuesday that PayPal plans to cut around 20% of its workforce over the next two to three years as part of its cost-savings plan, equating to north of 4,500 jobs."
-            },
-            {
-                "name": "The Business Times / Bloomberg",
-                "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/paypal-plans-job-cuts-its-new-ceo-pursues-turnaround-strategy",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-05",
-                "quote": "PayPal plans to cut costs and jobs as new chief executive officer Enrique Lores seeks to turn around the payments company."
-            },
-            {
-                "name": "Quartz",
-                "url": "https://qz.com/paypal-layoffs-ceo-turnaround-cost-cutting-050626",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-06",
-                "quote": "PayPal layoffs CEO turnaround cost cutting."
-            },
-            {
-                "name": "MSN",
-                "url": "https://www.msn.com/en-us/news/insight/paypal-bets-on-ai-overhaul-amid-layoffs-and-stock-slump/gm-GMD1D7BB8A",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-08",
-                "quote": "PayPal bets on AI overhaul amid layoffs and stock slump."
-            }
-        ],
-        "createdAt": "2026-05-08T20:25:00-07:00",
-        "updatedAt": "2026-05-08T20:38:00-07:00"
     },
     {
         "id": "coinbase-2026-05-05",
@@ -803,6 +1028,91 @@
         "updatedAt": "2026-05-20T06:55:00-07:00"
     },
     {
+        "id": "paypal-2026-05-05",
+        "company": "PayPal",
+        "industry": "Finance",
+        "geography": "Global",
+        "eventDate": "2026-05-05",
+        "layoffsCount": 4760,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "The Wall Street Journal reported PayPal plans to cut 20% of its staff over two to three years, amounting to 4,760 positions, as part of plans to accelerate AI adoption and cut costs. Additional reporting from Bloomberg and TechCrunch described the move as part of CEO Enrique Lores' AI-driven turnaround and simplification push.",
+        "evidenceQuote": "The job eliminations are part of PayPal’s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025.",
+        "notes": "Layoffs count is estimated as 20% of PayPal's reported 23,800-person workforce, or about 4,760 roles; Bloomberg/MarketScreener described the cut as around 20% / more than 4,500 jobs over two to three years. AI is not the only rationale: management also cited simplification, cost structure, competition, and technology modernization. Still, Lores explicitly tied the restructuring and savings plan to aggressive AI adoption, AI-enabled processes, and an AI transformation team, so this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Wall Street Journal",
+                "url": "https://www.wsj.com/business/earnings/paypal-to-cut-costs-after-profit-falls-dc42baf9",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "The job eliminations are part of PayPal’s new plans to accelerate its adoption of artificial intelligence and cut costs. The planned reduction would amount to 4,760 positions based on the 23,800 employees PayPal reported having at the end of 2025."
+            },
+            {
+                "name": "Bloomberg",
+                "url": "https://www.bloomberg.com/news/videos/2026-05-05/paypal-coinbase-announce-layoffs-as-ai-impact-bites-video",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "PayPal, Coinbase Announce Layoffs as AI Impact Bites."
+            },
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "PayPal was pitching an AI-powered turnaround... Bloomberg reported on Tuesday that PayPal plans to cut around 20% of its workforce over the next two to three years as part of its cost-savings plan, equating to north of 4,500 jobs."
+            },
+            {
+                "name": "The Business Times / Bloomberg",
+                "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/paypal-plans-job-cuts-its-new-ceo-pursues-turnaround-strategy",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-05",
+                "quote": "PayPal plans to cut costs and jobs as new chief executive officer Enrique Lores seeks to turn around the payments company."
+            },
+            {
+                "name": "Quartz",
+                "url": "https://qz.com/paypal-layoffs-ceo-turnaround-cost-cutting-050626",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-06",
+                "quote": "PayPal layoffs CEO turnaround cost cutting."
+            },
+            {
+                "name": "MSN",
+                "url": "https://www.msn.com/en-us/news/insight/paypal-bets-on-ai-overhaul-amid-layoffs-and-stock-slump/gm-GMD1D7BB8A",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-08",
+                "quote": "PayPal bets on AI overhaul amid layoffs and stock slump."
+            }
+        ],
+        "createdAt": "2026-05-08T20:25:00-07:00",
+        "updatedAt": "2026-05-08T20:38:00-07:00"
+    },
+    {
+        "id": "superops-2026-04-24",
+        "company": "SuperOps",
+        "industry": "Technology",
+        "geography": "India",
+        "eventDate": "2026-04-24",
+        "layoffsCount": 60,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Inc42 reported that SuperOps laid off around 60 employees, nearly 30% of its workforce, in a restructuring aimed at improving efficiency and accelerating its transition into an AI-first organization.",
+        "evidenceQuote": "Enterprise tech startup SuperOps has laid off around 60 employees as part of a restructuring exercise aimed at improving efficiency and accelerating its transition into an AI-first organisation.",
+        "notes": "Inc42 said SuperOps confirmed the development and attributed the report to Moneycontrol. The layoffs largely affected the engineering team and were framed around operational efficiency, a long-term AI-focused roadmap, automation, and AI-led product development.",
+        "sources": [
+            {
+                "name": "Inc42",
+                "url": "https://inc42.com/buzz/superops-lays-off-30-staff-in-ai-led-restructuring-push/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-04-24",
+                "quote": "The restructuring decision was driven by the need to improve operational efficiency and align the startup's structure with its long-term AI-focused roadmap, the report added."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
+    },
+    {
         "id": "meta-2026-04-23",
         "company": "Meta",
         "industry": "Technology",
@@ -853,6 +1163,31 @@
         "updatedAt": "2026-04-24T12:34:29-07:00"
     },
     {
+        "id": "epidemic-sound-2026-04-21",
+        "company": "Epidemic Sound",
+        "industry": "Media",
+        "geography": "Sweden",
+        "eventDate": "2026-04-21",
+        "layoffsCount": 150,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "MarketScreener, translating Finwire/Dagens Industri, reported that Epidemic Sound planned to cut 150 positions, about one-third of staff, to align the company with AI developments and fully AI-generated music.",
+        "evidenceQuote": "The move is not financially driven but is intended to align the company with developments in AI, according to acting CEO Sara Börsvik.",
+        "notes": "The article says the company is broadening its offering with AI support and, moving forward, fully AI-generated music. Because leadership framed the reduction as necessary for AI alignment rather than financial distress, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "MarketScreener / Finwire / Dagens Industri",
+                "url": "https://www.marketscreener.com/news/eqt-backed-epidemic-sound-to-cut-150-jobs-in-ai-pivot-di-ce7f59dad18efe20",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-04-21",
+                "quote": "Epidemic Sound, whose largest shareholder is the private equity firm EQT, plans to reduce its workforce by 150 positions, equivalent to one-third of its staff, according to Dagens Industri (Di)."
+            }
+        ],
+        "createdAt": "2026-07-04T11:35:00-07:00",
+        "updatedAt": "2026-07-04T11:35:00-07:00"
+    },
+    {
         "id": "snap-2026-04-15",
         "company": "Snap",
         "industry": "Technology",
@@ -883,6 +1218,31 @@
         ],
         "createdAt": "2026-04-16T05:53:00-07:00",
         "updatedAt": "2026-04-16T05:53:00-07:00"
+    },
+    {
+        "id": "cars-com-2026-04-09",
+        "company": "Cars.com",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-04-09",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "MarketWatch reported that Cars.com would reduce its full-time workforce by about 11% as part of a cost-cutting push while focusing more on AI-powered products.",
+        "evidenceQuote": "Cars.com is reducing its full-time workforce by about 11% as part of a push to cut costs as it focuses more on artificial intelligence.",
+        "notes": "Cars.com had about 1,700 full-time, part-time, seasonal, and temporary employees at the end of 2025, but the 11% cut applies to full-time workforce only, so layoffsCount remains null rather than estimating from a mixed headcount base. The company cited AI, data, and analytics as key products, but the article also frames the plan around broader cost cutting and vendor optimization.",
+        "sources": [
+            {
+                "name": "MarketWatch / Dow Jones Newswires",
+                "url": "https://www.marketwatch.com/story/cars-com-to-lay-off-11-of-full-time-workforce-amid-ai-push-update-bb0c9f35",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-04-09",
+                "quote": "\"Simplifying our business also provides more bandwidth to dedicate to key products, like AI, data and analytics, that we believe are critical to the future of automotive retail,\" Chief Executive Tobi Hartmann said."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
     },
     {
         "id": "meta-2026-03-25",
@@ -935,29 +1295,29 @@
         "updatedAt": "2026-03-20T08:53:00-07:00"
     },
     {
-        "id": "hsbc-2026-03-19",
-        "company": "HSBC",
-        "industry": "Finance",
-        "geography": "United Kingdom",
+        "id": "crypto-com-2026-03-19",
+        "company": "Crypto.com",
+        "industry": "Crypto",
+        "geography": "Singapore",
         "eventDate": "2026-03-19",
-        "layoffsCount": 20000,
+        "layoffsCount": 180,
         "status": "verified",
-        "aiRelevance": "ai_adjacent_restructuring",
+        "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "Bloomberg reported HSBC was weighing cutting nearly 20,000 jobs over the next three to five years as AI took center stage in plans to streamline operations and reduce costs.",
-        "evidenceQuote": "HSBC weighs cutting 20,000 jobs as AI takes centre stage.",
-        "notes": "Added with restrained framing: Bloomberg tied the potential cuts to an AI-centered streamlining effort, but the reported reduction is framed as a multi-year plan rather than a single immediate layoff event.",
+        "summary": "CNBC reported Crypto.com cut about 12% of its workforce as the company integrated AI across the business, with the CEO saying roles that did not adapt were part of the reduction.",
+        "evidenceQuote": "We are joining the list of companies integrating enterprise-wide AI... As part of this step, we have also made a targeted ~12% workforce reduction of roles that do not adapt in our new world.",
+        "notes": "Strong fit because the CEO explicitly tied the cuts to enterprise-wide AI integration. Layoffs count estimated at about 180 based on widely reported prior headcount of roughly 1,500.",
         "sources": [
             {
-                "name": "Bloomberg",
-                "url": "https://www.bloomberg.com/news/newsletters/2026-03-19/hsbc-weighs-cutting-20k-jobs-as-ai-takes-centre-stage",
+                "name": "CNBC",
+                "url": "https://www.cnbc.com/2026/03/19/crypto-com-layoffs-12percent-ai-job-loss.html",
                 "type": "reputable_reporting",
                 "publishedDate": "2026-03-19",
-                "quote": "HSBC weighs cutting 20,000 jobs as AI takes centre stage."
+                "quote": "We are joining the list of companies integrating enterprise-wide AI... As part of this step, we have also made a targeted ~12% workforce reduction of roles that do not adapt in our new world."
             }
         ],
-        "createdAt": "2026-03-19T16:05:00-07:00",
-        "updatedAt": "2026-03-19T16:05:00-07:00"
+        "createdAt": "2026-03-19T14:33:00-07:00",
+        "updatedAt": "2026-03-19T14:33:00-07:00"
     },
     {
         "id": "fiscalnote-2026-03-19",
@@ -985,29 +1345,29 @@
         "updatedAt": "2026-03-19T14:32:00-07:00"
     },
     {
-        "id": "crypto-com-2026-03-19",
-        "company": "Crypto.com",
-        "industry": "Crypto",
-        "geography": "Singapore",
+        "id": "hsbc-2026-03-19",
+        "company": "HSBC",
+        "industry": "Finance",
+        "geography": "United Kingdom",
         "eventDate": "2026-03-19",
-        "layoffsCount": 180,
+        "layoffsCount": 20000,
         "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
+        "aiRelevance": "ai_adjacent_restructuring",
         "sourceQuality": "reputable_reporting",
-        "summary": "CNBC reported Crypto.com cut about 12% of its workforce as the company integrated AI across the business, with the CEO saying roles that did not adapt were part of the reduction.",
-        "evidenceQuote": "We are joining the list of companies integrating enterprise-wide AI... As part of this step, we have also made a targeted ~12% workforce reduction of roles that do not adapt in our new world.",
-        "notes": "Strong fit because the CEO explicitly tied the cuts to enterprise-wide AI integration. Layoffs count estimated at about 180 based on widely reported prior headcount of roughly 1,500.",
+        "summary": "Bloomberg reported HSBC was weighing cutting nearly 20,000 jobs over the next three to five years as AI took center stage in plans to streamline operations and reduce costs.",
+        "evidenceQuote": "HSBC weighs cutting 20,000 jobs as AI takes centre stage.",
+        "notes": "Added with restrained framing: Bloomberg tied the potential cuts to an AI-centered streamlining effort, but the reported reduction is framed as a multi-year plan rather than a single immediate layoff event.",
         "sources": [
             {
-                "name": "CNBC",
-                "url": "https://www.cnbc.com/2026/03/19/crypto-com-layoffs-12percent-ai-job-loss.html",
+                "name": "Bloomberg",
+                "url": "https://www.bloomberg.com/news/newsletters/2026-03-19/hsbc-weighs-cutting-20k-jobs-as-ai-takes-centre-stage",
                 "type": "reputable_reporting",
                 "publishedDate": "2026-03-19",
-                "quote": "We are joining the list of companies integrating enterprise-wide AI... As part of this step, we have also made a targeted ~12% workforce reduction of roles that do not adapt in our new world."
+                "quote": "HSBC weighs cutting 20,000 jobs as AI takes centre stage."
             }
         ],
-        "createdAt": "2026-03-19T14:33:00-07:00",
-        "updatedAt": "2026-03-19T14:33:00-07:00"
+        "createdAt": "2026-03-19T16:05:00-07:00",
+        "updatedAt": "2026-03-19T16:05:00-07:00"
     },
     {
         "id": "dell-2026-03-16",
@@ -1035,45 +1395,6 @@
         "updatedAt": "2026-03-17T19:40:00-07:00"
     },
     {
-        "id": "general-motors-2026-06-22",
-        "company": "General Motors",
-        "industry": "Other",
-        "geography": "United States",
-        "eventDate": "2026-06-22",
-        "layoffsCount": 1300,
-        "status": "verified",
-        "aiRelevance": "automation_efficiency_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Ars Technica reported that General Motors installed about 50 collaborative robot arms at Factory Zero while 1,300 workers remained out of work following a temporary layoff tied to idled EV production.",
-        "evidenceQuote": "Dozens of new robot arms have been installed at General Motors' flagship electric vehicle factory in Detroit, even as 1,300 workers remain out of work following what was supposed to be a temporary layoff.",
-        "notes": "WardsAuto reported that GM spokesperson Kevin Kelly confirmed the approximately 1,300-worker temporary layoff, effective March 16 through April 13, citing Reuters. Ars Technica later reported that 1,300 workers remained out of work while GM installed approximately 50 FANUC robot arms at Factory Zero. The New York Post rounded the affected workforce as more than 1,000. This is separate from GM's May 2026 IT department layoffs and from a prior Factory Zero permanent layoff of about 1,200 workers in late 2025.",
-        "sources": [
-            {
-                "name": "Ars Technica",
-                "url": "https://arstechnica.com/ai/2026/06/gm-installs-robots-at-flagship-ev-factory-after-laying-off-1300-workers/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-06-22",
-                "quote": "Dozens of new robot arms have been installed at General Motors' flagship electric vehicle factory in Detroit, even as 1,300 workers remain out of work following what was supposed to be a temporary layoff."
-            },
-            {
-                "name": "New York Post",
-                "url": "https://nypost.com/2026/06/21/us-news/gm-replaces-more-than-1000-workers-with-50-robots-at-flagship-detroit-plant/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-06-21",
-                "quote": "General Motors has gutted its electric-vehicle ambitions and sidelined more than 1,000 jobs at its flagship Detroit assembly plant - while adding 50 robots, sparking outrage from labor unions."
-            },
-            {
-                "name": "WardsAuto",
-                "url": "https://www.wardsauto.com/news/GM-temporarily-lays-off-1300-workers-factory-zero-uaw-evs/816227/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-03-31",
-                "quote": "General Motors has temporarily laid off around 1,300 workers at its Factory Zero electric vehicle plant in Michigan for a 30-day period as the automaker adjusts production to meet market demand for EVs."
-            }
-        ],
-        "createdAt": "2026-06-25T08:58:00-07:00",
-        "updatedAt": "2026-06-25T08:58:00-07:00"
-    },
-    {
         "id": "atlassian-2026-03-12",
         "company": "Atlassian",
         "industry": "Technology",
@@ -1099,52 +1420,6 @@
         "updatedAt": "2026-03-12T11:45:00-07:00"
     },
     {
-        "id": "oracle-2026-06-22",
-        "company": "Oracle",
-        "industry": "Technology",
-        "geography": "United States",
-        "eventDate": "2026-06-22",
-        "layoffsCount": 21000,
-        "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "primary",
-        "summary": "Oracle's FY2026 Form 10-K confirmed a drop from approximately 162,000 full-time employees at the end of FY2025 to approximately 141,000 at the end of FY2026, a 21,000-role reduction that BBC and CNBC reported in the context of Oracle's AI spending and restructuring.",
-        "evidenceQuote": "As of May 31, 2026, we employed approximately 141,000 full-time employees.",
-        "notes": "Oracle's FY2025 10-K reported approximately 162,000 full-time employees as of May 31, 2025; Oracle's FY2026 10-K reported approximately 141,000 full-time employees as of May 31, 2026, implying a 21,000-role reduction. Earlier Reuters/Bloomberg, CNBC, MarketWatch, and Fast Company reports remain useful context for the AI-spending link, but the count is now based on Oracle's filed headcount delta and supporting BBC/CNBC reporting.",
-        "sources": [
-            {
-                "name": "Oracle FY2026 Form 10-K",
-                "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
-                "type": "primary",
-                "publishedDate": "2026-06-22",
-                "quote": "As of May 31, 2026, we employed approximately 141,000 full-time employees."
-            },
-            {
-                "name": "Oracle FY2025 Form 10-K",
-                "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm",
-                "type": "primary",
-                "publishedDate": "2025-06-18",
-                "quote": "As of May 31, 2025, we employed approximately 162,000 full-time employees."
-            },
-            {
-                "name": "CNBC",
-                "url": "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-06-23",
-                "quote": "Oracle shed 21,000 jobs over the past year, the company's annual report shows, as the software maker pours money into artificial intelligence."
-            },
-            {
-                "name": "BBC",
-                "url": "https://www.bbc.com/news/articles/c4gy0x0j5deo",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-06-23",
-                "quote": "Oracle shed about 21,000 roles globally over the past year as the company ramped up spending on artificial intelligence."
-            }
-        ],
-        "createdAt": "2026-03-13T02:35:00-07:00",
-        "updatedAt": "2026-06-25T09:18:00-07:00"
-    },
-    {
         "id": "proximus-2026-02-27",
         "company": "Proximus",
         "industry": "Telecom",
@@ -1168,38 +1443,6 @@
         ],
         "createdAt": "2026-03-13T02:35:00-07:00",
         "updatedAt": "2026-03-13T02:35:00-07:00"
-    },
-    {
-        "id": "ebay-2026-02-26",
-        "company": "eBay",
-        "industry": "Technology",
-        "geography": "United States",
-        "eventDate": "2026-02-26",
-        "layoffsCount": 800,
-        "status": "verified",
-        "aiRelevance": "ai_adjacent_restructuring",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Reuters reported eBay was cutting about 6% of its workforce, roughly 800 jobs, as the company realigned operations amid broader tech-sector restructuring around AI.",
-        "evidenceQuote": "EBay plans to cut around 800 jobs globally, or 6% of its workforce, amid a bigger push by the e-commerce and auction platform into artificial intelligence.",
-        "notes": "Added with restrained framing: Reuters-grade reporting tied the cuts to a broader AI-shaped workforce context, but the company statement itself emphasized strategic priorities and realignment rather than direct AI replacement.",
-        "sources": [
-            {
-                "name": "Reuters / MarketWatch syndication of Reuters-linked reporting",
-                "url": "https://www.morningstar.com/news/marketwatch/20260226238/ebay-to-cut-800-jobs-joining-other-tech-names-in-announcing-layoffs-as-ai-reshapes-workforces",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-02-26",
-                "quote": "EBay plans to cut around 800 jobs globally, or 6% of its workforce, amid a bigger push by the e-commerce and auction platform into artificial intelligence."
-            },
-            {
-                "name": "Fast Company",
-                "url": "https://www.fastcompany.com/91504231/tech-finance-banking-layoffs-list-2026-oracle-morgan-stanley-block",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-03-06",
-                "quote": "eBay announced it was cutting about 6% of its workforce, or around 800 jobs."
-            }
-        ],
-        "createdAt": "2026-03-13T11:12:00-07:00",
-        "updatedAt": "2026-06-03T10:00:00-07:00"
     },
     {
         "id": "block-2026-02-26",
@@ -1234,54 +1477,36 @@
         "updatedAt": "2026-06-03T10:00:00-07:00"
     },
     {
-        "id": "wisetech-2026-02-25",
-        "company": "WiseTech",
+        "id": "ebay-2026-02-26",
+        "company": "eBay",
         "industry": "Technology",
-        "geography": "Australia",
-        "eventDate": "2026-02-25",
-        "layoffsCount": 2000,
-        "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Reuters reported WiseTech would axe about 2,000 jobs as it integrated AI into customer software and internal operations.",
-        "evidenceQuote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations.",
-        "notes": "One of the clearest Reuters examples of AI-driven workforce reduction.",
-        "sources": [
-            {
-                "name": "Reuters",
-                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-02-27",
-                "quote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations."
-            }
-        ],
-        "createdAt": "2026-03-09T16:00:00Z",
-        "updatedAt": "2026-03-09T16:00:00Z"
-    },
-    {
-        "id": "seb-2026-02-25",
-        "company": "SEB",
-        "industry": "Other",
-        "geography": "France",
-        "eventDate": "2026-02-25",
-        "layoffsCount": 2100,
+        "geography": "United States",
+        "eventDate": "2026-02-26",
+        "layoffsCount": 800,
         "status": "verified",
         "aiRelevance": "ai_adjacent_restructuring",
         "sourceQuality": "reputable_reporting",
-        "summary": "Reuters reported French appliance maker SEB launched a restructuring that could affect up to 2,100 jobs while taking full advantage of AI.",
-        "evidenceQuote": "The French small appliance and cookware maker said on February 25 it would launch a restructuring plan that also takes \"full advantage\" of the possibilities offered by AI that may impact up to 2,100 jobs worldwide by 2027.",
-        "notes": "Reuters tied the restructuring directly to leveraging AI.",
+        "summary": "Reuters reported eBay was cutting about 6% of its workforce, roughly 800 jobs, as the company realigned operations amid broader tech-sector restructuring around AI.",
+        "evidenceQuote": "EBay plans to cut around 800 jobs globally, or 6% of its workforce, amid a bigger push by the e-commerce and auction platform into artificial intelligence.",
+        "notes": "Added with restrained framing: Reuters-grade reporting tied the cuts to a broader AI-shaped workforce context, but the company statement itself emphasized strategic priorities and realignment rather than direct AI replacement.",
         "sources": [
             {
-                "name": "Reuters",
-                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+                "name": "Reuters / MarketWatch syndication of Reuters-linked reporting",
+                "url": "https://www.morningstar.com/news/marketwatch/20260226238/ebay-to-cut-800-jobs-joining-other-tech-names-in-announcing-layoffs-as-ai-reshapes-workforces",
                 "type": "reputable_reporting",
-                "publishedDate": "2026-02-27",
-                "quote": "The French small appliance and cookware maker said on February 25 it would launch a restructuring plan that also takes \"full advantage\" of the possibilities offered by AI that may impact up to 2,100 jobs worldwide by 2027."
+                "publishedDate": "2026-02-26",
+                "quote": "EBay plans to cut around 800 jobs globally, or 6% of its workforce, amid a bigger push by the e-commerce and auction platform into artificial intelligence."
+            },
+            {
+                "name": "Fast Company",
+                "url": "https://www.fastcompany.com/91504231/tech-finance-banking-layoffs-list-2026-oracle-morgan-stanley-block",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-03-06",
+                "quote": "eBay announced it was cutting about 6% of its workforce, or around 800 jobs."
             }
         ],
-        "createdAt": "2026-03-09T16:00:00Z",
-        "updatedAt": "2026-03-09T16:00:00Z"
+        "createdAt": "2026-03-13T11:12:00-07:00",
+        "updatedAt": "2026-06-03T10:00:00-07:00"
     },
     {
         "id": "c3-ai-2026-02-25",
@@ -1309,11 +1534,61 @@
                 "url": "https://news.bloomberglaw.com/employment/c3-ai-to-cut-26-of-workforce-following-ceo-transition",
                 "type": "report",
                 "publishedDate": "2026-02-25",
-                "quote": "About 26% of the company\u00e2\u20ac\u2122s global workforce will be eliminated to materially improve operating efficiency and position the company for success. C3.ai had nearly 1,200 workers as of April 2025."
+                "quote": "About 26% of the companyâ€™s global workforce will be eliminated to materially improve operating efficiency and position the company for success. C3.ai had nearly 1,200 workers as of April 2025."
             }
         ],
         "createdAt": "2026-03-13T02:20:00-07:00",
         "updatedAt": "2026-03-13T02:20:00-07:00"
+    },
+    {
+        "id": "seb-2026-02-25",
+        "company": "SEB",
+        "industry": "Other",
+        "geography": "France",
+        "eventDate": "2026-02-25",
+        "layoffsCount": 2100,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Reuters reported French appliance maker SEB launched a restructuring that could affect up to 2,100 jobs while taking full advantage of AI.",
+        "evidenceQuote": "The French small appliance and cookware maker said on February 25 it would launch a restructuring plan that also takes \"full advantage\" of the possibilities offered by AI that may impact up to 2,100 jobs worldwide by 2027.",
+        "notes": "Reuters tied the restructuring directly to leveraging AI.",
+        "sources": [
+            {
+                "name": "Reuters",
+                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-02-27",
+                "quote": "The French small appliance and cookware maker said on February 25 it would launch a restructuring plan that also takes \"full advantage\" of the possibilities offered by AI that may impact up to 2,100 jobs worldwide by 2027."
+            }
+        ],
+        "createdAt": "2026-03-09T16:00:00Z",
+        "updatedAt": "2026-03-09T16:00:00Z"
+    },
+    {
+        "id": "wisetech-2026-02-25",
+        "company": "WiseTech",
+        "industry": "Technology",
+        "geography": "Australia",
+        "eventDate": "2026-02-25",
+        "layoffsCount": 2000,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Reuters reported WiseTech would axe about 2,000 jobs as it integrated AI into customer software and internal operations.",
+        "evidenceQuote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations.",
+        "notes": "One of the clearest Reuters examples of AI-driven workforce reduction.",
+        "sources": [
+            {
+                "name": "Reuters",
+                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-02-27",
+                "quote": "The Australian software company said on Feb. 25 it will axe about 2,000 jobs, nearly one-third of its global workforce, as it integrates AI into customer software and internal operations."
+            }
+        ],
+        "createdAt": "2026-03-09T16:00:00Z",
+        "updatedAt": "2026-03-09T16:00:00Z"
     },
     {
         "id": "livspace-2026-02-20",
@@ -1541,31 +1816,6 @@
         "updatedAt": "2026-03-12T11:45:00-07:00"
     },
     {
-        "id": "meta-reality-labs-2026-01-13",
-        "company": "Meta",
-        "industry": "Technology",
-        "geography": "United States",
-        "eventDate": "2026-01-13",
-        "layoffsCount": 1000,
-        "status": "verified",
-        "aiRelevance": "ai_adjacent_restructuring",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Reuters reported Meta was cutting more than 1,000 Reality Labs jobs as it pivoted from the metaverse toward AI devices.",
-        "evidenceQuote": "The owner of Facebook and Instagram is cutting over 1,000 jobs at its Reality Labs unit in a pivot from the Metaverse to AI devices, Bloomberg reported on Jan. 13.",
-        "notes": "AI linkage is the product-strategy pivot rather than direct automation replacement.",
-        "sources": [
-            {
-                "name": "Reuters",
-                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-02-27",
-                "quote": "The owner of Facebook and Instagram is cutting over 1,000 jobs at its Reality Labs unit in a pivot from the Metaverse to AI devices, Bloomberg reported on Jan. 13."
-            }
-        ],
-        "createdAt": "2026-03-09T16:00:00Z",
-        "updatedAt": "2026-03-09T16:00:00Z"
-    },
-    {
         "id": "angi-2026-01-13",
         "company": "Angi",
         "industry": "Technology",
@@ -1589,6 +1839,31 @@
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
         "updatedAt": "2026-03-12T11:45:00-07:00"
+    },
+    {
+        "id": "meta-reality-labs-2026-01-13",
+        "company": "Meta",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-01-13",
+        "layoffsCount": 1000,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Reuters reported Meta was cutting more than 1,000 Reality Labs jobs as it pivoted from the metaverse toward AI devices.",
+        "evidenceQuote": "The owner of Facebook and Instagram is cutting over 1,000 jobs at its Reality Labs unit in a pivot from the Metaverse to AI devices, Bloomberg reported on Jan. 13.",
+        "notes": "AI linkage is the product-strategy pivot rather than direct automation replacement.",
+        "sources": [
+            {
+                "name": "Reuters",
+                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-02-27",
+                "quote": "The owner of Facebook and Instagram is cutting over 1,000 jobs at its Reality Labs unit in a pivot from the Metaverse to AI devices, Bloomberg reported on Jan. 13."
+            }
+        ],
+        "createdAt": "2026-03-09T16:00:00Z",
+        "updatedAt": "2026-03-09T16:00:00Z"
     },
     {
         "id": "mercadolibre-2026-01-12",
@@ -1641,6 +1916,31 @@
         "updatedAt": "2026-03-09T16:00:00Z"
     },
     {
+        "id": "yellow-ai-2025-12-23",
+        "company": "Yellow.ai",
+        "industry": "Technology",
+        "geography": "India",
+        "eventDate": "2025-12-23",
+        "layoffsCount": 100,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Inc42 reported that conversational AI startup Yellow.ai laid off more than 100 employees, about 30% of its workforce, as agentic AI changed how the company builds, implements, and supports its product.",
+        "evidenceQuote": "The enterprise AI landscape has fundamentally transformed with the emergence of agentic AI technologies. Like many technology companies, we've made difficult but necessary workforce adjustments as part of our transition to an agentic AI platform.",
+        "notes": "Yellow.ai did not confirm the exact number of affected employees, but Inc42's sources said more than 100 workers were laid off and about 30% of the workforce was affected. The company statement said agentic AI required fewer people to build, implement, and support the product, so this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Inc42",
+                "url": "https://inc42.com/buzz/exclusive-yellow-ai-lays-off-over-100-employees-amid-automation-push/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-12-23",
+                "quote": "Without giving the exact number of employees impacted by the layoffs, the statement said that the technology shift from conversational AI to autonomous agents has changed both how its customers use the product and how the startup builds and supports it, \"requiring fewer people to build, implement and support it\"."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
+    },
+    {
         "id": "agora-2025-12-01",
         "company": "Agora",
         "industry": "Media",
@@ -1676,7 +1976,7 @@
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
         "summary": "Bloomberg-reported McKinsey tech cuts hit about 200 roles as the firm said AI would make support functions leaner and reduce non-client-facing headcount over time.",
-        "evidenceQuote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... \u00e2\u20ac\u0153We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,\u00e2\u20ac\u009d Sternfels said.",
+        "evidenceQuote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... â€œWe will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,â€ Sternfels said.",
         "notes": "Good AI linkage and clear count from Bloomberg-based reporting; broader multi-year reductions were left out and only the clean 200-role event is captured.",
         "sources": [
             {
@@ -1684,11 +1984,61 @@
                 "url": "https://www.storyboard18.com/how-it-works/mckinsey-cuts-200-tech-roles-as-ai-replaces-support-jobs-84828.htm",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-11-26",
-                "quote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... \u00e2\u20ac\u0153We will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,\u00e2\u20ac\u009d Sternfels said."
+                "quote": "McKinsey & Company has reportedly laid off around 200 tech employees worldwide... â€œWe will probably have fewer folks in the non-client deployed areas, but they will be leveraged by today's technology and AI,â€ Sternfels said."
             }
         ],
         "createdAt": "2026-03-13T07:58:00-07:00",
         "updatedAt": "2026-03-13T07:58:00-07:00"
+    },
+    {
+        "id": "culture-amp-2025-11-18",
+        "company": "Culture Amp",
+        "industry": "Technology",
+        "geography": "Australia",
+        "eventDate": "2025-11-18",
+        "layoffsCount": 60,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Capital Brief reported that Culture Amp laid off about 6% of its workforce, approximately 60 employees globally, in a strategic realignment focused on AI-powered products including AI Coach.",
+        "evidenceQuote": "Employee engagement software platform Culture Amp has laid off approximately 6% of its workforce in a strategic realignment focused on AI-powered products, the company told Capital Brief.",
+        "notes": "A company spokesperson told Capital Brief the changes were driven by strategic priorities and operating-plan adjustments to accelerate product innovations like AI Coach. This supports AI-adjacent restructuring rather than direct AI replacement.",
+        "sources": [
+            {
+                "name": "Capital Brief",
+                "url": "https://www.capitalbrief.com/article/culture-amp-lays-off-6-of-its-staff-globally-as-it-focuses-on-new-ai-products-3d5073ac-879a-4e01-9a08-a513ead8834b/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-11-18",
+                "quote": "\"These changes are primarily driven by our strategic priorities and adjustments to our operating plans, allowing us to accelerate the delivery of our product innovations like AI Coach,\" a Culture Amp spokesperson told Capital Brief."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
+    },
+    {
+        "id": "deepwatch-2025-11-12",
+        "company": "Deepwatch",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2025-11-12",
+        "layoffsCount": 80,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Cybersecurity firm Deepwatch laid off dozens of employees while saying it was accelerating investments in AI and automation.",
+        "evidenceQuote": "John DiLullo, CEO at Deepwatch, told TechCrunch in an email that the company \"is aligning our organization to accelerate our significant investments in AI and automation.\"",
+        "notes": "TechCrunch reported current and former employees indicated roughly 60 to 80 staffers were affected.",
+        "sources": [
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2025/11/12/cybersecurity-firm-deepwatch-lays-off-dozens-citing-move-to-accelerate-ai-investment/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-11-12",
+                "quote": "John DiLullo, CEO at Deepwatch, told TechCrunch in an email that the company \"is aligning our organization to accelerate our significant investments in AI and automation.\""
+            }
+        ],
+        "createdAt": "2026-03-09T15:40:00Z",
+        "updatedAt": "2026-03-09T15:40:00Z"
     },
     {
         "id": "synopsys-2025-11-12",
@@ -1723,29 +2073,29 @@
         "updatedAt": "2026-03-13T07:58:00-07:00"
     },
     {
-        "id": "deepwatch-2025-11-12",
-        "company": "Deepwatch",
-        "industry": "Technology",
-        "geography": "United States",
-        "eventDate": "2025-11-12",
-        "layoffsCount": 80,
+        "id": "allianz-2025-11-01",
+        "company": "Allianz",
+        "industry": "Finance",
+        "geography": "Germany",
+        "eventDate": "2025-11-01",
+        "layoffsCount": 1800,
         "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
+        "aiRelevance": "automation_efficiency_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "Cybersecurity firm Deepwatch laid off dozens of employees while saying it was accelerating investments in AI and automation.",
-        "evidenceQuote": "John DiLullo, CEO at Deepwatch, told TechCrunch in an email that the company \"is aligning our organization to accelerate our significant investments in AI and automation.\"",
-        "notes": "TechCrunch reported current and former employees indicated roughly 60 to 80 staffers were affected.",
+        "summary": "Reuters reported Allianz planned up to 1,800 cuts in travel insurance as AI replaced manual processes.",
+        "evidenceQuote": "The German insurance group plans to cut up to 1,800 jobs in its travel insurance division as AI increasingly replaces manual processes, a source familiar with the plans told Reuters last November.",
+        "notes": "Included in Reuters' February 2026 roundup of AI-linked layoffs.",
         "sources": [
             {
-                "name": "TechCrunch",
-                "url": "https://techcrunch.com/2025/11/12/cybersecurity-firm-deepwatch-lays-off-dozens-citing-move-to-accelerate-ai-investment/",
+                "name": "Reuters",
+                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
                 "type": "reputable_reporting",
-                "publishedDate": "2025-11-12",
-                "quote": "John DiLullo, CEO at Deepwatch, told TechCrunch in an email that the company \"is aligning our organization to accelerate our significant investments in AI and automation.\""
+                "publishedDate": "2026-02-27",
+                "quote": "The German insurance group plans to cut up to 1,800 jobs in its travel insurance division as AI increasingly replaces manual processes, a source familiar with the plans told Reuters last November."
             }
         ],
-        "createdAt": "2026-03-09T15:40:00Z",
-        "updatedAt": "2026-03-09T15:40:00Z"
+        "createdAt": "2026-03-09T16:00:00Z",
+        "updatedAt": "2026-03-09T16:00:00Z"
     },
     {
         "id": "hp-2025-11-01",
@@ -1767,31 +2117,6 @@
                 "type": "reputable_reporting",
                 "publishedDate": "2026-02-27",
                 "quote": "The U.S. computer and printer manufacturer said last November it expects to cut 4,000 to 6,000 jobs globally by fiscal 2028 as it streamlines operations and adopts AI."
-            }
-        ],
-        "createdAt": "2026-03-09T16:00:00Z",
-        "updatedAt": "2026-03-09T16:00:00Z"
-    },
-    {
-        "id": "allianz-2025-11-01",
-        "company": "Allianz",
-        "industry": "Finance",
-        "geography": "Germany",
-        "eventDate": "2025-11-01",
-        "layoffsCount": 1800,
-        "status": "verified",
-        "aiRelevance": "automation_efficiency_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Reuters reported Allianz planned up to 1,800 cuts in travel insurance as AI replaced manual processes.",
-        "evidenceQuote": "The German insurance group plans to cut up to 1,800 jobs in its travel insurance division as AI increasingly replaces manual processes, a source familiar with the plans told Reuters last November.",
-        "notes": "Included in Reuters' February 2026 roundup of AI-linked layoffs.",
-        "sources": [
-            {
-                "name": "Reuters",
-                "url": "https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-02-27",
-                "quote": "The German insurance group plans to cut up to 1,800 jobs in its travel insurance division as AI increasingly replaces manual processes, a source familiar with the plans told Reuters last November."
             }
         ],
         "createdAt": "2026-03-09T16:00:00Z",
@@ -1830,6 +2155,38 @@
         "updatedAt": "2026-03-13T07:58:00-07:00"
     },
     {
+        "id": "amazon-2025-10-28",
+        "company": "Amazon",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2025-10-28",
+        "layoffsCount": 14000,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary_source",
+        "summary": "Amazon cut about 14,000 corporate jobs after explicitly saying generative AI and agents would shrink parts of its white-collar workforce.",
+        "evidenceQuote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles... This generation of AI is the most transformative technology weâ€™ve seen since the Internet.",
+        "notes": "Distinct from the later January 2026 Amazon reduction already in the dataset.",
+        "sources": [
+            {
+                "name": "Amazon",
+                "url": "https://www.aboutamazon.com/news/company-news/amazon-workforce-reduction",
+                "type": "primary",
+                "publishedDate": "2025-10-28",
+                "quote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles."
+            },
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2025/10/28/amazon-to-cut-14000-corporate-jobs/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-10-28",
+                "quote": "â€œThis generation of AI is the most transformative technology weâ€™ve seen since the Internet... Weâ€™re convicted that we need to be organized more leanly...,â€ Beth Galetti wrote."
+            }
+        ],
+        "createdAt": "2026-03-12T11:45:00-07:00",
+        "updatedAt": "2026-03-12T11:45:00-07:00"
+    },
+    {
         "id": "chegg-2025-10-28",
         "company": "Chegg",
         "industry": "Education Technology",
@@ -1853,38 +2210,6 @@
         ],
         "createdAt": "2026-03-11T05:30:00Z",
         "updatedAt": "2026-03-11T05:30:00Z"
-    },
-    {
-        "id": "amazon-2025-10-28",
-        "company": "Amazon",
-        "industry": "Technology",
-        "geography": "United States",
-        "eventDate": "2025-10-28",
-        "layoffsCount": 14000,
-        "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "primary_source",
-        "summary": "Amazon cut about 14,000 corporate jobs after explicitly saying generative AI and agents would shrink parts of its white-collar workforce.",
-        "evidenceQuote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles... This generation of AI is the most transformative technology we\u00e2\u20ac\u2122ve seen since the Internet.",
-        "notes": "Distinct from the later January 2026 Amazon reduction already in the dataset.",
-        "sources": [
-            {
-                "name": "Amazon",
-                "url": "https://www.aboutamazon.com/news/company-news/amazon-workforce-reduction",
-                "type": "primary",
-                "publishedDate": "2025-10-28",
-                "quote": "While this will include reducing in some areas and hiring in others, it will mean an overall reduction in our corporate workforce of approximately 14,000 roles."
-            },
-            {
-                "name": "TechCrunch",
-                "url": "https://techcrunch.com/2025/10/28/amazon-to-cut-14000-corporate-jobs/",
-                "type": "reputable_reporting",
-                "publishedDate": "2025-10-28",
-                "quote": "\u00e2\u20ac\u0153This generation of AI is the most transformative technology we\u00e2\u20ac\u2122ve seen since the Internet... We\u00e2\u20ac\u2122re convicted that we need to be organized more leanly...,\u00e2\u20ac\u009d Beth Galetti wrote."
-            }
-        ],
-        "createdAt": "2026-03-12T11:45:00-07:00",
-        "updatedAt": "2026-03-12T11:45:00-07:00"
     },
     {
         "id": "meta-2025-10-22",
@@ -1920,7 +2245,7 @@
     },
     {
         "id": "nestle-2025-10-16",
-        "company": "Nestl\u00c3\u00a9",
+        "company": "NestlÃ©",
         "industry": "Food & Beverage",
         "geography": "Switzerland",
         "eventDate": "2025-10-16",
@@ -1928,8 +2253,8 @@
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "Nestl\u00c3\u00a9 said it would cut about 16,000 jobs over two years, including white-collar roles as it simplified the organization and automated processes.",
-        "evidenceQuote": "Nestl\u00c3\u00a9 will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency.",
+        "summary": "NestlÃ© said it would cut about 16,000 jobs over two years, including white-collar roles as it simplified the organization and automated processes.",
+        "evidenceQuote": "NestlÃ© will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency.",
         "notes": "Reported by Fortune and CNN from company disclosure; automation/process simplification was part of the stated rationale.",
         "sources": [
             {
@@ -1937,43 +2262,18 @@
                 "url": "https://fortune.com/2025/10/16/nestle-layoffs-job-cuts-philipp-navratil-turnaround-automation/",
                 "type": "report",
                 "publishedDate": "2025-10-16",
-                "quote": "Nestl\u00c3\u00a9 will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency."
+                "quote": "NestlÃ© will slash 12,000 white-collar jobs... Some white-collar roles will be automated as the firm targets operational efficiency."
             },
             {
                 "name": "ABC7/CNN",
                 "url": "https://abc7.com/post/nestl-worlds-largest-food-company-cut-16000-jobs-worldwide-due-partly-automation/18018385/",
                 "type": "report",
                 "publishedDate": "2025-10-16",
-                "quote": "Nestl\u00c3\u00a9 will cut around 16,000 jobs worldwide over the next two years as it works to slash costs, including through automation."
+                "quote": "NestlÃ© will cut around 16,000 jobs worldwide over the next two years as it works to slash costs, including through automation."
             }
         ],
         "createdAt": "2026-03-13T02:20:00-07:00",
         "updatedAt": "2026-03-13T02:20:00-07:00"
-    },
-    {
-        "id": "paycom-2025-10-01",
-        "company": "Paycom",
-        "industry": "Technology",
-        "geography": "United States",
-        "eventDate": "2025-10-01",
-        "layoffsCount": 500,
-        "status": "verified",
-        "aiRelevance": "ai_replacement_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Paycom cut about 500 jobs and said non-client-facing roles had been automated by AI.",
-        "evidenceQuote": "Reductions will affect \"only non-client-facing roles,\" which have been automated by AI, the company said in a statement.",
-        "notes": "KOSU/KGOU reported the layoffs as taking effect immediately and attributed the AI explanation directly to the company statement.",
-        "sources": [
-            {
-                "name": "KGOU",
-                "url": "https://www.kgou.org/business-and-economy/2025-10-01/paycom-lays-off-500-employees-will-replace-jobs-with-ai",
-                "type": "reputable_reporting",
-                "publishedDate": "2025-10-01",
-                "quote": "Reductions will affect \"only non-client-facing roles,\" which have been automated by AI, the company said in a statement."
-            }
-        ],
-        "createdAt": "2026-03-12T15:10:00Z",
-        "updatedAt": "2026-03-12T15:10:00Z"
     },
     {
         "id": "meta-superintelligence-labs-2025-10-01",
@@ -1999,6 +2299,31 @@
         ],
         "createdAt": "2026-03-09T16:00:00Z",
         "updatedAt": "2026-03-09T16:00:00Z"
+    },
+    {
+        "id": "paycom-2025-10-01",
+        "company": "Paycom",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2025-10-01",
+        "layoffsCount": 500,
+        "status": "verified",
+        "aiRelevance": "ai_replacement_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Paycom cut about 500 jobs and said non-client-facing roles had been automated by AI.",
+        "evidenceQuote": "Reductions will affect \"only non-client-facing roles,\" which have been automated by AI, the company said in a statement.",
+        "notes": "KOSU/KGOU reported the layoffs as taking effect immediately and attributed the AI explanation directly to the company statement.",
+        "sources": [
+            {
+                "name": "KGOU",
+                "url": "https://www.kgou.org/business-and-economy/2025-10-01/paycom-lays-off-500-employees-will-replace-jobs-with-ai",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-10-01",
+                "quote": "Reductions will affect \"only non-client-facing roles,\" which have been automated by AI, the company said in a statement."
+            }
+        ],
+        "createdAt": "2026-03-12T15:10:00Z",
+        "updatedAt": "2026-03-12T15:10:00Z"
     },
     {
         "id": "just-eat-takeaway-2025-09-25",
@@ -2068,7 +2393,7 @@
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
         "summary": "Fiverr laid off about 250 employees as CEO Micha Kaufman reset the company around an AI-first structure with a smaller, flatter team.",
-        "evidenceQuote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company that\u00e2\u20ac\u2122s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members.",
+        "evidenceQuote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company thatâ€™s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members.",
         "notes": "Widely reported from Kaufman's memo/X post; clean AI-first linkage and specific layoff count.",
         "sources": [
             {
@@ -2076,11 +2401,36 @@
                 "url": "https://globalbusinessoutlook.com/technology/fiverr-layoffs-all-you-need-know/",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-10-03",
-                "quote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company that\u00e2\u20ac\u2122s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members."
+                "quote": "Today, we are launching such a transformation for Fiverr, turning it into an AI-first company thatâ€™s leaner, faster, with a modern AI-focused tech infrastructure, a smaller team... This transformation requires a painful reset... we will be parting ways with approximately 250 team members."
             }
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
         "updatedAt": "2026-03-12T11:45:00-07:00"
+    },
+    {
+        "id": "scope3-2025-09-05",
+        "company": "Scope3",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2025-09-05",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "ADWEEK reported that Scope3 laid off part of its staff as part of a strategic shift toward agentic advertising offerings, with commercial-team cuts while the company hired for product and engineering roles to scale AI offerings.",
+        "evidenceQuote": "Scope3 laid off a portion of its staff last week as part of a shift into so-called agentic advertising offerings, ADWEEK has learned.",
+        "notes": "Yahoo's direct page was script-heavy in CLI fetch, but search-accessible ADWEEK/Yahoo text provided the company-confirmed layoff details. ADWEEK said Scope3 declined to disclose the affected count, so layoffsCount remains null. Classified as AI-adjacent restructuring because the reporting ties the cuts to a strategic shift into agentic advertising, but not direct role replacement by AI.",
+        "sources": [
+            {
+                "name": "ADWEEK / Yahoo Finance",
+                "url": "https://finance.yahoo.com/news/exclusive-scope3-lays-off-staff-152235483.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-09-05",
+                "quote": "The company spokesperson said the shakeup is part of this strategic shift to establish a deeper focus on agentic advertising."
+            }
+        ],
+        "createdAt": "2026-07-04T11:35:00-07:00",
+        "updatedAt": "2026-07-04T11:35:00-07:00"
     },
     {
         "id": "salesforce-2025-09-02",
@@ -2108,6 +2458,31 @@
         "updatedAt": "2026-03-09T03:30:00Z"
     },
     {
+        "id": "benchsci-2025-08-12",
+        "company": "BenchSci",
+        "industry": "Technology",
+        "geography": "Canada",
+        "eventDate": "2025-08-12",
+        "layoffsCount": 83,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "T-Net/BC Technology republished Globe and Mail-described metadata saying BenchSci cut 23% of staff, about 83 jobs, as it went all-in on adopting generative AI to do work formerly done by humans.",
+        "evidenceQuote": "Since May, BenchSci has cut 23 per cent of staff - about 83 jobs - as it goes all-in on adopting generative AI to do work formerly done by humans, the company said in an e-mail.",
+        "notes": "The original Globe and Mail article was not fully accessible in CLI, but the T-Net/BC Technology page exposes full article metadata with the key Globe-described count and company-email causality language. Because the source text says generative AI would do work formerly done by humans, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "T-Net / BC Technology",
+                "url": "https://www.bctechnology.com/news/2025/8/15/BenchSci-Cuts-23-of-Jobs-Becoming-Latest-Company-to-Replace-Humans-With-AI.cfm",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-08-15",
+                "quote": "Since May, BenchSci has cut 23 per cent of staff - about 83 jobs - as it goes all-in on adopting generative AI to do work formerly done by humans, the company said in an e-mail."
+            }
+        ],
+        "createdAt": "2026-07-04T11:35:00-07:00",
+        "updatedAt": "2026-07-04T11:35:00-07:00"
+    },
+    {
         "id": "lufthansa-2025-08-01",
         "company": "Lufthansa",
         "industry": "Other",
@@ -2131,6 +2506,31 @@
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
         "updatedAt": "2026-03-12T11:45:00-07:00"
+    },
+    {
+        "id": "king-2025-07-14",
+        "company": "King",
+        "industry": "Gaming",
+        "geography": "Global",
+        "eventDate": "2025-07-14",
+        "layoffsCount": 200,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Mobilegamer.biz reported that Candy Crush maker King was preparing to cut about 200 staff and that many affected level design, user research, UX, and narrative roles were being replaced by AI tools they had helped build.",
+        "evidenceQuote": "Many level designers, user research staff plus UX and narrative writers have also been told they're at risk. In particular, these staff have spent the last few years building and training AI tools to do their jobs. They're now effectively being replaced, say sources.",
+        "notes": "The article says Bloomberg first reported around 200 King cuts and that Mobilegamer.biz sources later confirmed the number. Because the reporting directly says many affected workers were being replaced by AI tools they had built or trained, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Mobilegamer.biz",
+                "url": "https://mobilegamer.biz/laid-off-king-staff-set-to-be-replaced-by-the-ai-tools-they-helped-build-say-sources/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-07-14",
+                "quote": "\"Most of level design has been wiped, which is crazy since they've spent months building tools to craft levels quicker,\" said one staffer. \"Now those AI tools are basically replacing the teams.\""
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
     },
     {
         "id": "recruit-holdings-2025-07-10",
@@ -2188,6 +2588,31 @@
         ],
         "createdAt": "2026-03-10T17:10:00Z",
         "updatedAt": "2026-03-10T17:10:00Z"
+    },
+    {
+        "id": "klue-2025-06-27",
+        "company": "Klue",
+        "industry": "Technology",
+        "geography": "Canada",
+        "eventDate": "2025-06-27",
+        "layoffsCount": 85,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "BetaKit reported that Vancouver-based Klue cut just over 40% of its workforce while restructuring to become AI-first and responding to customers experimenting with internal AI tools.",
+        "evidenceQuote": "Vancouver-based Klue has slashed just over 40 percent of its workforce as it contends with growing competition from businesses experimenting with artificial intelligence (AI) internally, BetaKit has learned.",
+        "notes": "Layoffs.fyi listed the impact at 85 workers; BetaKit gives the percentage as just over 40%. The company sells AI-powered business intelligence software and the reporting frames the cuts around AI competition, efficiency, profitability, and becoming AI-first rather than direct replacement of specific roles.",
+        "sources": [
+            {
+                "name": "BetaKit",
+                "url": "https://betakit.com/klue-lays-off-40-percent-of-staff-as-startup-faces-internal-and-external-ai-pressure/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-06-27",
+                "quote": "Vancouver-based Klue has slashed just over 40 percent of its workforce as it contends with growing competition from businesses experimenting with artificial intelligence (AI) internally, BetaKit has learned."
+            }
+        ],
+        "createdAt": "2026-07-04T10:08:00-07:00",
+        "updatedAt": "2026-07-04T10:08:00-07:00"
     },
     {
         "id": "intel-2025-06-20",
@@ -2272,6 +2697,31 @@
         "updatedAt": "2026-03-11T05:30:00Z"
     },
     {
+        "id": "opentext-2025-05-06",
+        "company": "OpenText",
+        "industry": "Technology",
+        "geography": "Canada",
+        "eventDate": "2025-05-06",
+        "layoffsCount": 1600,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "BetaKit reported that OpenText was cutting an additional 1,600 jobs while CEO Mark Barrenechea made AI the company number-one priority and a baseline expectation for employees.",
+        "evidenceQuote": "OpenText is cutting an additional 1,600 jobs as it becomes the latest Canadian tech firm to make AI use a baseline expectation for employees.",
+        "notes": "BetaKit obtained internal emails saying OpenText would reduce headcount by about 1,600 and strategically add back 1,000 employees in key locations and high-impact functions. Because the reporting directly pairs the reduction with an internal AI mandate and baseline employee expectation, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "BetaKit",
+                "url": "https://betakit.com/opentext-makes-ai-number-one-priority-as-company-slashes-1600-jobs/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-05-06",
+                "quote": "OpenText is cutting an additional 1,600 jobs as it becomes the latest Canadian tech firm to make AI use a baseline expectation for employees."
+            }
+        ],
+        "createdAt": "2026-07-04T10:08:00-07:00",
+        "updatedAt": "2026-07-04T10:08:00-07:00"
+    },
+    {
         "id": "ups-2025-04-29",
         "company": "UPS",
         "industry": "Other",
@@ -2282,7 +2732,7 @@
         "aiRelevance": "automation_efficiency_cited",
         "sourceQuality": "reputable_reporting",
         "summary": "UPS said it would cut 20,000 jobs in 2025 as part of a network reconfiguration that also leaned further into automation to reduce labor needs.",
-        "evidenceQuote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. \u00e2\u20ac\u0153With this reconfiguration, we will also lessen our dependency on labor,\u00e2\u20ac\u009d Tom\u00c3\u00a9 said.",
+        "evidenceQuote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. â€œWith this reconfiguration, we will also lessen our dependency on labor,â€ TomÃ© said.",
         "notes": "Broader business context included the Amazon unwind, but the company also explicitly tied the restructuring to automation and lower labor dependence.",
         "sources": [
             {
@@ -2290,7 +2740,7 @@
                 "url": "https://themusicessentials.com/news/ups-to-cut-20000-jobs-as-it-pulls-back-from-amazon-and-embraces-automation/",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-04-30",
-                "quote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. \u00e2\u20ac\u0153With this reconfiguration, we will also lessen our dependency on labor,\u00e2\u20ac\u009d Tom\u00c3\u00a9 said."
+                "quote": "UPS is slashing 20,000 jobs... The move includes plans to close 73 U.S. buildings by June and automate hundreds of facilities to reduce dependence on labor. â€œWith this reconfiguration, we will also lessen our dependency on labor,â€ TomÃ© said."
             }
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",
@@ -2320,6 +2770,31 @@
         ],
         "createdAt": "2026-03-13T07:58:00-07:00",
         "updatedAt": "2026-03-13T07:58:00-07:00"
+    },
+    {
+        "id": "zomato-2025-04-01",
+        "company": "Zomato",
+        "industry": "Technology",
+        "geography": "India",
+        "eventDate": "2025-04-01",
+        "layoffsCount": 600,
+        "status": "verified",
+        "aiRelevance": "automation_efficiency_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Inc42 reported that Zomato laid off nearly 600 customer support employees amid slowing food-delivery growth, quick-commerce competition, restructuring, and increasing use of AI to automate customer support functions.",
+        "evidenceQuote": "Zomato has reportedly laid off nearly 600 employees from its customer support team... Besides, Zomato has been increasingly leveraging AI to automate its customer support functions to trim costs.",
+        "notes": "Inc42 attributed the layoffs to Outlook Business reporting and said employees were affected due to performance issues, tardiness, and an overall restructuring effort, while also noting increased AI automation of customer support to reduce costs. Classified as automation-efficiency cited because automation is a reported cost-cutting context rather than the only stated cause.",
+        "sources": [
+            {
+                "name": "Inc42",
+                "url": "https://inc42.com/buzz/zomato-trims-600-jobs-amid-increasing-automation-quick-commerce-wars/",
+                "type": "reputable_reporting",
+                "publishedDate": "2025-04-01",
+                "quote": "Zomato has reportedly laid off nearly 600 employees from its customer support team... Besides, Zomato has been increasingly leveraging AI to automate its customer support functions to trim costs."
+            }
+        ],
+        "createdAt": "2026-07-04T10:08:00-07:00",
+        "updatedAt": "2026-07-04T10:08:00-07:00"
     },
     {
         "id": "morgan-stanley-2025-03-19",
@@ -2440,7 +2915,7 @@
                 "url": "https://www.fintechfutures.com/job-cuts-new-hires/uk-fintech-zepz-reportedly-set-to-lay-off-around-200-employees",
                 "type": "reputable_reporting",
                 "publishedDate": "2025-03-28",
-                "quote": "The Zepz spokesperson explained that the \u00e2\u20ac\u0153successful completion of its replatforming efforts\u00e2\u20ac\u009d, enhanced by \u00e2\u20ac\u0153advanced automation and AI\u00e2\u20ac\u009d, has \u00e2\u20ac\u0153reinforced the technology foundation and reduced the need for certain operational and technical capacities\u00e2\u20ac\u009d."
+                "quote": "The Zepz spokesperson explained that the â€œsuccessful completion of its replatforming effortsâ€, enhanced by â€œadvanced automation and AIâ€, has â€œreinforced the technology foundation and reduced the need for certain operational and technical capacitiesâ€."
             }
         ],
         "createdAt": "2026-03-12T11:45:00-07:00",

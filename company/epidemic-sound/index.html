@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Epidemic Sound AI layoffs - AI Layoff Tracker with Receipts</title>
+    <meta name="description" content="Epidemic Sound AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact." />
+    <link rel="canonical" href="https://www.replacedbyai.com/company/epidemic-sound/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="Epidemic Sound AI layoffs - AI Layoff Tracker with Receipts" />
+    <meta property="og:description" content="Epidemic Sound AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.replacedbyai.com/company/epidemic-sound/" />
+    <meta name="twitter:card" content="summary" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1100px;
+        margin: 20px auto 40px;
+        padding: 0 16px;
+        color: #111;
+        background:
+          radial-gradient(circle at top, rgba(255,255,255,0.72), rgba(255,255,255,0.36) 30%, rgba(229,233,239,0.68) 58%, rgba(214,220,228,0.92) 100%),
+          #e1e6ed;
+        line-height: 1.55;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+      .ambient-bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        opacity: 1;
+      }
+      .ambient-shape {
+        position: absolute;
+        border-radius: 28px;
+        border: 2px solid rgba(53, 70, 92, 0.28);
+        background: rgba(255,255,255,0.14);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 30px rgba(34,44,60,0.08);
+        will-change: transform, opacity;
+      }
+      .ambient-shape.one {
+        width: 420px;
+        height: 420px;
+        top: 5%;
+        left: -40px;
+        transform: rotate(18deg);
+        animation: geoOne 20s ease-in-out infinite alternate;
+      }
+      .ambient-shape.two {
+        width: 300px;
+        height: 300px;
+        top: 22%;
+        right: 10px;
+        transform: rotate(34deg);
+        animation: geoTwo 24s ease-in-out infinite alternate;
+      }
+      .ambient-shape.three {
+        width: 240px;
+        height: 240px;
+        bottom: 10%;
+        left: 40px;
+        transform: rotate(12deg);
+        animation: geoThree 18s ease-in-out infinite alternate;
+      }
+      .ambient-shape.four {
+        width: 200px;
+        height: 200px;
+        bottom: 16%;
+        right: 80px;
+        transform: rotate(46deg);
+        animation: geoFour 26s ease-in-out infinite alternate;
+      }
+      @keyframes geoOne {
+        0% { transform: translate3d(0, 0, 0) rotate(18deg); opacity: 0.34; }
+        100% { transform: translate3d(46px, 24px, 0) rotate(26deg); opacity: 0.2; }
+      }
+      @keyframes geoTwo {
+        0% { transform: translate3d(0, 0, 0) rotate(34deg); opacity: 0.26; }
+        100% { transform: translate3d(-38px, 34px, 0) rotate(22deg); opacity: 0.16; }
+      }
+      @keyframes geoThree {
+        0% { transform: translate3d(0, 0, 0) rotate(12deg); opacity: 0.2; }
+        100% { transform: translate3d(24px, -16px, 0) rotate(20deg); opacity: 0.12; }
+      }
+      @keyframes geoFour {
+        0% { transform: translate3d(0, 0, 0) rotate(46deg); opacity: 0.18; }
+        100% { transform: translate3d(-18px, -26px, 0) rotate(56deg); opacity: 0.1; }
+      }
+      a { color: #0a58ca; }
+      .top-nav { display: flex; gap: 12px; align-items: center; justify-content: flex-end; margin-bottom: 0; font-size: 14px; }
+      .top-nav a { color: #111; text-decoration: none; }
+      .top-nav a:hover { text-decoration: underline; }
+      .hero { margin-bottom: 8px; }
+      .logo-link { display: inline-flex; color: inherit; text-decoration: none; }
+      .prompt-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        background: #111;
+        color: #f5f5f5;
+        border-radius: 12px;
+        font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace;
+        font-size: clamp(28px, 5vw, 42px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      }
+      .prompt-symbol { color: #7CFF6B; }
+      .prompt-text { white-space: nowrap; }
+      .prompt-cursor {
+        display: inline-block;
+        width: 0.65ch;
+        height: 1.05em;
+        background: #7CFF6B;
+        vertical-align: -0.12em;
+        animation: blink 1s steps(1, end) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+      h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: 0; }
+      h2 { margin-top: 34px; }
+      .muted { color: #555; }
+      .card { background: #fff; border: 1px solid #dde2e8; border-radius: 8px; padding: 18px; margin: 18px 0; }
+      .pill { display: inline-block; padding: 5px 9px; border-radius: 999px; background: #f2f4f7; font-size: 13px; margin-right: 6px; }
+      .quote { padding: 12px 14px; border-left: 4px solid #ccd3dc; background: #fafafa; }
+      .source-list { padding-left: 20px; }
+      .footer { margin-top: 34px; font-size: 13px; color: #666; }
+      @media (max-width: 800px) {
+        .top-nav { justify-content: flex-start; flex-wrap: wrap; margin-bottom: 18px; }
+        .prompt-title { font-size: clamp(29.5px, 5.2vw, 43.7px); }
+        body {
+          background:
+            radial-gradient(circle at top, rgba(255,255,255,0.94), rgba(255,255,255,0.84) 36%, rgba(255,255,255,0.96) 66%),
+            linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
+        }
+        .ambient-shape.one { width: 220px; height: 220px; top: 10%; left: -70px; }
+        .ambient-shape.two { width: 180px; height: 180px; top: 34%; right: -60px; }
+        .ambient-shape.three { width: 150px; height: 150px; bottom: 10%; left: 6%; }
+        .ambient-shape.four { width: 120px; height: 120px; bottom: 22%; right: 4%; }
+      }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Epidemic Sound AI layoffs - AI Layoff Tracker with Receipts","description":"Epidemic Sound AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact.","url":"https://www.replacedbyai.com/company/epidemic-sound/","isPartOf":{"@type":"WebSite","name":"Replaced by AI","url":"https://www.replacedbyai.com"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Epidemic Sound AI layoffs","description":"MarketScreener, translating Finwire/Dagens Industri, reported that Epidemic Sound planned to cut 150 positions, about one-third of staff, to align the company with AI developments and fully AI-generated music.","datePublished":"2026-04-21","dateModified":"2026-07-04T11:35:00-07:00","mainEntityOfPage":"https://www.replacedbyai.com/company/epidemic-sound/","author":{"@type":"Organization","name":"Replaced by AI"},"publisher":{"@type":"Organization","name":"Replaced by AI"},"citation":"https://www.marketscreener.com/news/eqt-backed-epidemic-sound-to-cut-150-jobs-in-ai-pivot-di-ce7f59dad18efe20","keywords":["ai layoffs","ai layoff tracker","Epidemic Sound ai layoffs"]}</script>
+  </head>
+  <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-shape one"></div>
+      <div class="ambient-shape two"></div>
+      <div class="ambient-shape three"></div>
+      <div class="ambient-shape four"></div>
+    </div>
+    <nav class="top-nav" aria-label="Site navigation">
+      <a href="/about/">Methodology</a>
+      <a href="/company/">Companies</a>
+      <a href="/industries/tech/">Industries</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </nav>
+    <div class="hero">
+      <a class="logo-link" href="/" aria-label="Replaced by AI">
+        <span class="prompt-title"><span class="prompt-symbol">&gt;</span><span class="prompt-text">/replaced -ai</span><span class="prompt-cursor" aria-hidden="true"></span></span>
+      </a>
+    </div>
+    <main>
+      <p class="muted">AI layoff tracker company page</p>
+      <h1>Epidemic Sound AI layoffs</h1>
+      <p class="muted">1 sourced AI layoff event · 150 reported jobs impacted</p>
+      <article class="card">
+      <p class="muted"><time datetime="2026-04-21">April 21, 2026</time></p>
+      <h2>Epidemic Sound AI layoff details</h2>
+      <p><span class="pill">Explicit AI cited</span><span class="pill">reputable_reporting</span></p>
+      <p><strong>Reported layoffs:</strong> 150</p>
+      <p><strong>Industry:</strong> Media &middot; <strong>Geography:</strong> Sweden</p>
+      <p>MarketScreener, translating Finwire/Dagens Industri, reported that Epidemic Sound planned to cut 150 positions, about one-third of staff, to align the company with AI developments and fully AI-generated music.</p>
+      <div class="quote">The move is not financially driven but is intended to align the company with developments in AI, according to acting CEO Sara Börsvik.</div>
+      <p>The article says the company is broadening its offering with AI support and, moving forward, fully AI-generated music. Because leadership framed the reduction as necessary for AI alignment rather than financial distress, this is classified as explicit AI cited.</p>
+      <h3>Sources</h3>
+      <ul class="source-list"><li><a href="https://www.marketscreener.com/news/eqt-backed-epidemic-sound-to-cut-150-jobs-in-ai-pivot-di-ce7f59dad18efe20" rel="noreferrer">MarketScreener / Finwire / Dagens Industri</a>, 2026-04-21</li></ul>
+    </article>
+      <section class="card">
+        <h2>Related AI layoffs</h2>
+        <h3>Other Media AI layoffs</h3><ul class="source-list">
+          <li><a href="/company/agora/">Agora AI layoffs</a> - <time datetime="2025-12-01">December 1, 2025</time>, 166 reported jobs impacted</li>
+        </ul>
+        <h3>Other AI layoffs from 2026</h3><ul class="source-list">
+          <li><a href="/company/amperity/">Amperity AI layoffs</a> - <time datetime="2026-06-25">June 25, 2026</time></li>
+          <li><a href="/company/elastic/">Elastic AI layoffs</a> - <time datetime="2026-06-24">June 24, 2026</time>, 281 reported jobs impacted</li>
+          <li><a href="/company/snyk/">Snyk AI layoffs</a> - <time datetime="2026-06-24">June 24, 2026</time>, 90 reported jobs impacted</li>
+          <li><a href="/company/general-motors/">General Motors AI layoffs</a> - <time datetime="2026-06-22">June 22, 2026</time>, 1,300 reported jobs impacted</li>
+          <li><a href="/company/oracle/">Oracle AI layoffs</a> - <time datetime="2026-06-22">June 22, 2026</time>, 21,000 reported jobs impacted</li>
+          <li><a href="/company/optimove/">Optimove AI layoffs</a> - <time datetime="2026-06-17">June 17, 2026</time></li>
+        </ul>
+      </section>
+    </main>
+    <p class="footer">&copy; <span id="copyrightYear"></span> B Average</p>
+    <script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+  </body>
+</html>
