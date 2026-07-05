@@ -1,11 +1,11 @@
-import { mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
 const entriesPath = path.join(root, "data", "entries", "index.json");
 const entries = JSON.parse(readFileSync(entriesPath, "utf8"));
-const siteUrl = "https://www.replacedbyai.com";
+const siteUrl = "https://www.replacedbyai.app";
 
 const aiLabels = {
   explicit_ai_cited: "Explicit AI cited",
@@ -76,6 +76,53 @@ function fmtDate(value) {
     day: "numeric",
     timeZone: "UTC",
   });
+}
+
+function fmtDateShort(value) {
+  if (!value) return "Unknown date";
+  return new Date(`${dateOnly(value)}T00:00:00Z`).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+function fmtDateCompact(value) {
+  if (!value) return "Unknown date";
+  const date = new Date(`${dateOnly(value)}T00:00:00Z`);
+  return `${String(date.getUTCMonth() + 1).padStart(2, "0")}/${String(date.getUTCDate()).padStart(2, "0")}/${String(date.getUTCFullYear()).slice(-2)}`;
+}
+
+function dateOnly(value) {
+  return String(value || "").slice(0, 10);
+}
+
+function entryFreshnessDate(entry) {
+  return entry?.updatedAt || entry?.createdAt || entry?.eventDate || "";
+}
+
+function maxUpdatedAt(items) {
+  const newest = items
+    .map(entryFreshnessDate)
+    .map(dateOnly)
+    .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value))
+    .sort()
+    .at(-1);
+  return newest || dateOnly(new Date().toISOString());
+}
+
+function fmtAiRelevanceShort(value) {
+  if (value === "explicit_ai_cited") return "explicit AI";
+  if (value === "automation_efficiency_cited") return "automation";
+  if (value === "ai_adjacent_restructuring") return "AI restructure";
+  if (value === "speculative_or_unclear") return "unclear";
+  if (value === "ai_reorg_or_spend_linked") return "AI reorg";
+  if (value === "ai_replacement_cited") return "AI replacement";
+  return String(value || "").replaceAll("_", " ");
+}
+
+function fmtGeography(value) {
+  return value === "United Kingdom" ? "UK" : (value || "-");
 }
 
 function pageShell({ title, description, canonicalPath, body, schema }) {
@@ -322,6 +369,184 @@ function entryList(items) {
         </ul>`;
 }
 
+function itemListSchema(items, canonicalPath) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "AI layoff companies",
+    url: `${siteUrl}${canonicalPath}`,
+    itemListElement: items.map((entry, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: `${entry.company} AI layoffs`,
+      url: `${siteUrl}/company/${slugify(entry.company)}/`,
+    })),
+  };
+}
+
+function homepageEntryRows(items) {
+  return items.map((entry, index) => {
+    const source = (entry.sources && entry.sources[0]) || null;
+    const selected = index === 0;
+    const row = `          <tr data-entry-id="${escapeHtml(entry.id || "")}"${selected ? ` class="selected" aria-expanded="true"` : ` aria-expanded="false"`}>
+            <td><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted"><span class="desktop-date">${escapeHtml(entry.geography || "-")}</span><span class="mobile-date">${escapeHtml(fmtGeography(entry.geography))}</span></span></td>
+            <td>${source ? `<a class="date-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer"><span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span></a>` : `<span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span>`}</td>
+            <td>${entry.layoffsCount == null ? "-" : escapeHtml(fmtNumber(entry.layoffsCount))}</td>
+            <td>${escapeHtml(entry.industry || "-")}</td>
+            <td><span class="pill ${escapeHtml(entry.aiRelevance || "")}">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span></td>
+          </tr>`;
+    if (!selected) return row;
+    const whyIncluded = entry.aiRelevance === "explicit_ai_cited"
+      ? "Included because the source explicitly ties the layoffs to AI."
+      : entry.aiRelevance === "automation_efficiency_cited"
+        ? "Included because the source ties the cuts to automation or AI-driven efficiency."
+        : entry.aiRelevance === "ai_adjacent_restructuring"
+          ? "Included because the layoffs are tied to an AI-focused restructuring or reallocation."
+          : "Included as a more tentative AI-related lead.";
+    return `${row}
+          <tr class="detail-row"><td class="detail-cell" colspan="5">
+          <div class="detail-panel">
+            <div class="details">
+              <div class="quote-meta">
+                <span class="source-chip">${source ? `Source: <a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.name)}</a>` : "Source unavailable"}</span>
+                <span class="pill ${escapeHtml(entry.aiRelevance || "")} mobile-only">${escapeHtml(fmtAiRelevanceShort(entry.aiRelevance))}</span>
+              </div>
+              <div class="quote">${escapeHtml(entry.evidenceQuote || "No evidence quote recorded.")}</div>
+              <div class="why-included">${escapeHtml(whyIncluded)}</div>
+              <div class="detail-notes">${escapeHtml(entry.notes || "")}</div>
+            </div>
+          </div>
+        </td></tr>`;
+  }).join("\n");
+}
+
+function replaceRegion(html, name, content, fallbackPattern) {
+  const start = `<!-- seo:${name}:start -->`;
+  const end = `<!-- seo:${name}:end -->`;
+  const marked = new RegExp(`${start}[\\s\\S]*?${end}\\r?\\n*`);
+  const replacement = `${start}\n${content}\n${end}\n`;
+  if (marked.test(html)) return html.replace(marked, replacement);
+  return html.replace(fallbackPattern, replacement);
+}
+
+function replaceEntriesBody(html, content) {
+  const start = "<!-- seo:entries:start -->";
+  const end = "<!-- seo:entries:end -->";
+  const replacement = `<tbody id="entriesBody">\n        ${start}\n${content}\n        ${end}\n        </tbody>`;
+  const pattern = /<tbody id="entriesBody">[\s\S]*?<\/tbody>|<!-- seo:entries:start -->[\s\S]*?<!-- seo:entries:end -->/;
+  return html.replace(pattern, replacement);
+}
+
+function replaceJsonLd(html, type, value) {
+  const json = JSON.stringify(value, null, 8)
+    .split("\n")
+    .map((line, index) => index === 0 ? line : `      ${line}`)
+    .join("\n");
+  const block = `    <script type="application/ld+json">\n      ${json}\n    </script>`;
+  const pattern = new RegExp(`    <script type="application/ld\\+json">(?:(?!</script>)[\\s\\S])*?"@type"\\s*:\\s*"${type}"(?:(?!</script>)[\\s\\S])*?</script>`);
+  if (pattern.test(html)) return html.replace(pattern, block);
+  return html.replace(/    <script>\r?\n      let allEntries = \[\];/, `${block}\n    <script>\n      let allEntries = [];`);
+}
+
+async function prerenderHomepage() {
+  const indexPath = path.join(root, "index.html");
+  let html = await readFile(indexPath, "utf8");
+  const sortedEntries = entries.slice().sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")));
+  const maxUpdated = maxUpdatedAt(entries);
+  const totalJobs = entries.reduce((sum, entry) => sum + Number(entry.layoffsCount || 0), 0);
+  const explicitCount = entries.filter((entry) => entry.aiRelevance === "explicit_ai_cited").length;
+  const lastUpdatedLabel = fmtDateShort(maxUpdated);
+  const faqItems = [
+    {
+      question: "What counts as an AI layoff on this site?",
+      answer: "An entry is included when AI, automation, AI replacement, or AI-driven restructuring is part of the documented rationale for the layoff.",
+    },
+    {
+      question: "How are entries verified?",
+      answer: "Each verified entry needs a primary source or reputable reporting, plus a source quote that supports the AI connection.",
+    },
+    {
+      question: "How are AI-cited layoffs different from ordinary layoffs?",
+      answer: "The tracker separates layoffs explicitly tied to AI from ordinary cost cuts where AI is only background context or company strategy.",
+    },
+    {
+      question: "Does every entry prove workers were replaced by AI?",
+      answer: "No. The relevance labels show whether the evidence points to direct AI replacement, automation, AI-focused restructuring, or a weaker connection.",
+    },
+  ];
+
+  const legacySiteUrl = `https://www.replacedbyai.${"com"}`;
+  html = html.replaceAll(legacySiteUrl, siteUrl);
+  html = html.replace(/<html>/, `<html lang="en">`);
+  html = html.replace("AI Layoff Tracker — Verified Cases with Receipts | Replaced by AI", "AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI");
+  if (!/<link rel="canonical" href="https:\/\/www\.replacedbyai\.app\/" \/>/.test(html)) {
+    html = html.replace(/(    <meta name="description" content="[^"]+" \/>\r?\n)/, `$1    <link rel="canonical" href="${siteUrl}/" />\n`);
+  }
+  html = html.replace(/<div class="stat-value" id="statEntries">[\s\S]*?<\/div>/, `<div class="stat-value" id="statEntries">${entries.length}</div>`);
+  html = html.replace(/<div class="stat-value" id="statLayoffs">[\s\S]*?<\/div>/, `<div class="stat-value" id="statLayoffs">${fmtNumber(totalJobs)}</div>`);
+  html = html.replace(/<div class="stat-value" id="statExplicit">[\s\S]*?<\/div>/, `<div class="stat-value" id="statExplicit">${explicitCount}</div>`);
+  html = html.replace(/<div class="stat-value" id="statUpdated">[\s\S]*?<\/div>/, `<div class="stat-value" id="statUpdated"><span class="desktop-date">${escapeHtml(lastUpdatedLabel)}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(maxUpdated).slice(0, 5))}</span></div>`);
+  html = html.replace(/<div class="stat-label" id="statUpdatedLabel">[\s\S]*?<\/div>/, `<div class="stat-label" id="statUpdatedLabel">last updated on ${escapeHtml(fmtDateCompact(maxUpdated))}</div>`);
+  html = html.replace(/<time id="freshnessDate" datetime="[^"]*">[\s\S]*?<\/time>/, `<time id="freshnessDate" datetime="${escapeHtml(maxUpdated)}">${escapeHtml(lastUpdatedLabel)}</time>`);
+  html = html.replace(/<div class="muted" id="resultSummary">[\s\S]*?<\/div>/, `<div class="muted" id="resultSummary">${entries.length} matching entries out of ${entries.length} total</div>`);
+  html = html.replace(/<div class="muted" id="resultJobsImpacted">[\s\S]*?<\/div>/, `<div class="muted" id="resultJobsImpacted">(${escapeHtml(fmtNumber(totalJobs))} jobs impacted)</div>`);
+
+  html = replaceRegion(
+    html,
+    "intro",
+    `    <p class="muted intro-copy">Replaced by AI is a public AI layoff tracker. It documents layoffs tied to AI and automation, with every entry sourced to a primary statement or reputable reporting.</p>`,
+    /(?=    <p class="muted freshness">)/,
+  );
+  html = replaceEntriesBody(html, homepageEntryRows(sortedEntries));
+  html = replaceRegion(
+    html,
+    "faq",
+    `    <section class="card faq-section" style="margin-top:20px;">
+      <h2>AI Layoff Tracker FAQ</h2>
+      ${faqItems.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join("\n      ")}
+    </section>`,
+    /(?=    <div class="card" style="margin-top:20px;">\r?\n      <h2>Methodology<\/h2>)/,
+  );
+
+  html = replaceJsonLd(html, "WebSite", {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Replaced by AI",
+    url: `${siteUrl}/`,
+    description: "Track layoffs tied to AI and automation. Verified cases with sourced receipts from primary statements and reporting.",
+    keywords: ["ai layoffs", "ai layoff tracker", "companies replacing workers with ai", "automation layoffs"],
+  });
+  html = replaceJsonLd(html, "Dataset", {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "Replaced by AI Layoff Tracker",
+    description: "A sourced AI layoff tracker dataset covering layoffs tied to AI, automation, AI replacement, and AI-driven restructuring.",
+    url: `${siteUrl}/`,
+    dateModified: maxUpdated,
+    keywords: ["ai layoffs", "ai layoff tracker", "ai replacement layoffs", "automation layoffs"],
+    isAccessibleForFree: true,
+    distribution: {
+      "@type": "DataDownload",
+      encodingFormat: "application/json",
+      contentUrl: `${siteUrl}/data/entries/index.json`,
+    },
+  });
+  html = replaceJsonLd(html, "FAQPage", {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  });
+
+  await writeFile(indexPath, html);
+}
+
 const companyGroups = new Map();
 for (const entry of entries) {
   const slug = slugify(entry.company);
@@ -332,7 +557,12 @@ for (const entry of entries) {
 
 await rm(path.join(root, "company"), { recursive: true, force: true });
 
-const sitemapUrls = ["/", "/about/", "/company/"];
+const allEntriesLastmod = maxUpdatedAt(entries);
+const sitemapUrls = [
+  { url: "/", lastmod: allEntriesLastmod },
+  { url: "/about/", lastmod: allEntriesLastmod },
+  { url: "/company/", lastmod: allEntriesLastmod },
+];
 for (const [slug, companyEntries] of companyGroups.entries()) {
   companyEntries.sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")));
   const company = companyEntries[0].company;
@@ -352,6 +582,7 @@ for (const [slug, companyEntries] of companyGroups.entries()) {
   const body = `    <main>
       <p class="muted">AI layoff tracker company page</p>
       <h1>${escapeHtml(company)} AI layoffs</h1>
+      <p class="muted">Last updated <time datetime="${escapeHtml(maxUpdatedAt(companyEntries))}">${escapeHtml(fmtDate(maxUpdatedAt(companyEntries)))}</time></p>
       <p class="muted">${escapeHtml(companyEntries.length)} sourced AI layoff event${companyEntries.length === 1 ? "" : "s"}${total ? ` · ${escapeHtml(fmtNumber(total))} reported jobs impacted` : ""}</p>
       ${companyEntries.map(entryCard).join("\n")}
       <section class="card">
@@ -362,7 +593,7 @@ for (const [slug, companyEntries] of companyGroups.entries()) {
   const dir = path.join(root, "company", slug);
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, "index.html"), pageShell({ title, description, canonicalPath: `/company/${slug}/`, body, schema: companyEntries.map((entry) => articleSchema(entry, `/company/${slug}/`)) }));
-  sitemapUrls.push(`/company/${slug}/`);
+  sitemapUrls.push({ url: `/company/${slug}/`, lastmod: maxUpdatedAt(companyEntries) });
 }
 
 const companyListBody = `    <main>
@@ -428,8 +659,8 @@ for (const [industry, items] of industryGroups.entries()) {
     </main>`;
   const dir = path.join(root, "industries", slug);
   await mkdir(dir, { recursive: true });
-  await writeFile(path.join(dir, "index.html"), pageShell({ title, description, canonicalPath: `/industries/${slug}/`, body }));
-  sitemapUrls.push(`/industries/${slug}/`);
+  await writeFile(path.join(dir, "index.html"), pageShell({ title, description, canonicalPath: `/industries/${slug}/`, body, schema: itemListSchema(items, `/industries/${slug}/`) }));
+  sitemapUrls.push({ url: `/industries/${slug}/`, lastmod: maxUpdatedAt(items) });
 }
 
 const customerSupportEntries = entries.filter((entry) => /support|customer|service|moderation|contractor/i.test([entry.company, entry.summary, entry.notes, entry.industry].filter(Boolean).join(" ")));
@@ -450,9 +681,10 @@ await writeFile(
     description: "Track AI layoffs in customer support, service, moderation, and contractor work with sourced receipts.",
     canonicalPath: "/industries/customer-support/",
     body: customerSupportBody,
+    schema: itemListSchema(customerSupportEntries.length ? customerSupportEntries : entries.slice(0, 12), "/industries/customer-support/"),
   }),
 );
-sitemapUrls.push("/industries/customer-support/");
+sitemapUrls.push({ url: "/industries/customer-support/", lastmod: maxUpdatedAt(customerSupportEntries.length ? customerSupportEntries : entries.slice(0, 12)) });
 
 for (const [year, items] of yearGroups.entries()) {
   items.sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")));
@@ -470,7 +702,7 @@ for (const [year, items] of yearGroups.entries()) {
   const dir = path.join(root, year);
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, "index.html"), pageShell({ title, description, canonicalPath: `/${year}/`, body }));
-  sitemapUrls.push(`/${year}/`);
+  sitemapUrls.push({ url: `/${year}/`, lastmod: maxUpdatedAt(items) });
 }
 
 for (const [relevance, items] of relevanceGroups.entries()) {
@@ -492,7 +724,7 @@ for (const [relevance, items] of relevanceGroups.entries()) {
   const canonicalPath = slug === "explicitly-ai-cited" ? "/explicitly-ai-cited/" : `/relevance/${slug}/`;
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, "index.html"), pageShell({ title, description, canonicalPath, body }));
-  sitemapUrls.push(canonicalPath);
+  sitemapUrls.push({ url: canonicalPath, lastmod: maxUpdatedAt(items) });
 }
 
 const aboutBody = `    <main>
@@ -531,9 +763,11 @@ await writeFile(
   }),
 );
 
+await prerenderHomepage();
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map((url) => `  <url><loc>${siteUrl}${url}</loc></url>`).join("\n")}
+${sitemapUrls.map(({ url, lastmod }) => `  <url><loc>${siteUrl}${url}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}
 </urlset>
 `;
 await writeFile(path.join(root, "sitemap.xml"), sitemap);
