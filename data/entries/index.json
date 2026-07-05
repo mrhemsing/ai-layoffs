@@ -11,7 +11,7 @@
         "sourceQuality": "reputable_reporting",
         "summary": "GeekWire reported that Amperity conducted layoffs after saying it was transforming how it operates by building AI into work across the organization, changing where it invests and the shape of the team it needs.",
         "evidenceQuote": "Amperity is transforming how it operates as a company, building AI into how we work across the organization. That shift changes where we're investing and the shape of the team we need going forward.",
-        "notes": "GeekWire's page was Cloudflare-blocked in direct fetch, but search-accessible article text included the company-confirmed layoff language and the full spokesperson statement. The company did not disclose the number of affected employees, so layoffsCount remains null.",
+        "notes": "Amperity confirmed layoffs but did not disclose how many employees were affected.",
         "sources": [
             {
                 "name": "GeekWire",
