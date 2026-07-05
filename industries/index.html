@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI layoffs by industry - Replaced by AI tracker</title>
+    <meta name="description" content="Browse AI layoffs by industry with static, indexable pages and current counts from the Replaced by AI layoff tracker." />
+    <link rel="canonical" href="https://www.replacedbyai.app/industries/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="AI layoffs by industry - Replaced by AI tracker" />
+    <meta property="og:description" content="Browse AI layoffs by industry with static, indexable pages and current counts from the Replaced by AI layoff tracker." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.replacedbyai.app/industries/" />
+    <meta name="twitter:card" content="summary" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1100px;
+        margin: 20px auto 40px;
+        padding: 0 16px;
+        color: #111;
+        background:
+          radial-gradient(circle at top, rgba(255,255,255,0.72), rgba(255,255,255,0.36) 30%, rgba(229,233,239,0.68) 58%, rgba(214,220,228,0.92) 100%),
+          #e1e6ed;
+        line-height: 1.55;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+      .ambient-bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        opacity: 1;
+      }
+      .ambient-shape {
+        position: absolute;
+        border-radius: 28px;
+        border: 2px solid rgba(53, 70, 92, 0.28);
+        background: rgba(255,255,255,0.14);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 30px rgba(34,44,60,0.08);
+        will-change: transform, opacity;
+      }
+      .ambient-shape.one {
+        width: 420px;
+        height: 420px;
+        top: 5%;
+        left: -40px;
+        transform: rotate(18deg);
+        animation: geoOne 20s ease-in-out infinite alternate;
+      }
+      .ambient-shape.two {
+        width: 300px;
+        height: 300px;
+        top: 22%;
+        right: 10px;
+        transform: rotate(34deg);
+        animation: geoTwo 24s ease-in-out infinite alternate;
+      }
+      .ambient-shape.three {
+        width: 240px;
+        height: 240px;
+        bottom: 10%;
+        left: 40px;
+        transform: rotate(12deg);
+        animation: geoThree 18s ease-in-out infinite alternate;
+      }
+      .ambient-shape.four {
+        width: 200px;
+        height: 200px;
+        bottom: 16%;
+        right: 80px;
+        transform: rotate(46deg);
+        animation: geoFour 26s ease-in-out infinite alternate;
+      }
+      @keyframes geoOne {
+        0% { transform: translate3d(0, 0, 0) rotate(18deg); opacity: 0.34; }
+        100% { transform: translate3d(46px, 24px, 0) rotate(26deg); opacity: 0.2; }
+      }
+      @keyframes geoTwo {
+        0% { transform: translate3d(0, 0, 0) rotate(34deg); opacity: 0.26; }
+        100% { transform: translate3d(-38px, 34px, 0) rotate(22deg); opacity: 0.16; }
+      }
+      @keyframes geoThree {
+        0% { transform: translate3d(0, 0, 0) rotate(12deg); opacity: 0.2; }
+        100% { transform: translate3d(24px, -16px, 0) rotate(20deg); opacity: 0.12; }
+      }
+      @keyframes geoFour {
+        0% { transform: translate3d(0, 0, 0) rotate(46deg); opacity: 0.18; }
+        100% { transform: translate3d(-18px, -26px, 0) rotate(56deg); opacity: 0.1; }
+      }
+      a { color: #0a58ca; }
+      .top-nav { display: flex; gap: 12px; align-items: center; justify-content: flex-end; margin-bottom: 0; font-size: 14px; }
+      .top-nav a { color: #111; text-decoration: none; }
+      .top-nav a:hover { text-decoration: underline; }
+      .hero { margin-bottom: 8px; }
+      .logo-link { display: inline-flex; color: inherit; text-decoration: none; }
+      .prompt-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        background: #111;
+        color: #f5f5f5;
+        border-radius: 12px;
+        font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace;
+        font-size: clamp(28px, 5vw, 42px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      }
+      .prompt-symbol { color: #7CFF6B; }
+      .prompt-text { white-space: nowrap; }
+      .prompt-cursor {
+        display: inline-block;
+        width: 0.65ch;
+        height: 1.05em;
+        background: #7CFF6B;
+        vertical-align: -0.12em;
+        animation: blink 1s steps(1, end) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+      h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: 0; }
+      h2 { margin-top: 34px; }
+      .muted { color: #555; }
+      .card { background: #fff; border: 1px solid #dde2e8; border-radius: 8px; padding: 18px; margin: 18px 0; }
+      .pill { display: inline-block; padding: 5px 9px; border-radius: 999px; background: #f2f4f7; font-size: 13px; margin-right: 6px; }
+      .quote { padding: 12px 14px; border-left: 4px solid #ccd3dc; background: #fafafa; }
+      .source-list { padding-left: 20px; }
+      .footer { margin-top: 34px; font-size: 13px; color: #666; }
+      @media (max-width: 800px) {
+        .top-nav { justify-content: flex-start; flex-wrap: wrap; margin-bottom: 18px; }
+        .prompt-title { font-size: clamp(29.5px, 5.2vw, 43.7px); }
+        body {
+          background:
+            radial-gradient(circle at top, rgba(255,255,255,0.94), rgba(255,255,255,0.84) 36%, rgba(255,255,255,0.96) 66%),
+            linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
+        }
+        .ambient-shape.one { width: 220px; height: 220px; top: 10%; left: -70px; }
+        .ambient-shape.two { width: 180px; height: 180px; top: 34%; right: -60px; }
+        .ambient-shape.three { width: 150px; height: 150px; bottom: 10%; left: 6%; }
+        .ambient-shape.four { width: 120px; height: 120px; bottom: 22%; right: 4%; }
+      }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI layoffs by industry - Replaced by AI tracker","description":"Browse AI layoffs by industry with static, indexable pages and current counts from the Replaced by AI layoff tracker.","url":"https://www.replacedbyai.app/industries/","isPartOf":{"@type":"WebSite","name":"Replaced by AI","url":"https://www.replacedbyai.app"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"AI layoff companies","url":"https://www.replacedbyai.app/industries/","itemListElement":[{"@type":"ListItem","position":1,"name":"Amperity AI layoffs","url":"https://www.replacedbyai.app/company/amperity/"},{"@type":"ListItem","position":2,"name":"Elastic AI layoffs","url":"https://www.replacedbyai.app/company/elastic/"},{"@type":"ListItem","position":3,"name":"Snyk AI layoffs","url":"https://www.replacedbyai.app/company/snyk/"},{"@type":"ListItem","position":4,"name":"General Motors AI layoffs","url":"https://www.replacedbyai.app/company/general-motors/"},{"@type":"ListItem","position":5,"name":"Oracle AI layoffs","url":"https://www.replacedbyai.app/company/oracle/"},{"@type":"ListItem","position":6,"name":"Optimove AI layoffs","url":"https://www.replacedbyai.app/company/optimove/"},{"@type":"ListItem","position":7,"name":"Robinhood AI layoffs","url":"https://www.replacedbyai.app/company/robinhood/"},{"@type":"ListItem","position":8,"name":"Rackspace Technology AI layoffs","url":"https://www.replacedbyai.app/company/rackspace-technology/"},{"@type":"ListItem","position":9,"name":"Shopee AI layoffs","url":"https://www.replacedbyai.app/company/shopee/"},{"@type":"ListItem","position":10,"name":"Paytm AI layoffs","url":"https://www.replacedbyai.app/company/paytm/"},{"@type":"ListItem","position":11,"name":"Salesforce AI layoffs","url":"https://www.replacedbyai.app/company/salesforce/"},{"@type":"ListItem","position":12,"name":"GitLab AI layoffs","url":"https://www.replacedbyai.app/company/gitlab/"},{"@type":"ListItem","position":13,"name":"Interview Kickstart AI layoffs","url":"https://www.replacedbyai.app/company/interview-kickstart/"},{"@type":"ListItem","position":14,"name":"SentinelOne AI layoffs","url":"https://www.replacedbyai.app/company/sentinelone/"},{"@type":"ListItem","position":15,"name":"Wix AI layoffs","url":"https://www.replacedbyai.app/company/wix/"},{"@type":"ListItem","position":16,"name":"ClickUp AI layoffs","url":"https://www.replacedbyai.app/company/clickup/"},{"@type":"ListItem","position":17,"name":"Groupon AI layoffs","url":"https://www.replacedbyai.app/company/groupon/"},{"@type":"ListItem","position":18,"name":"Intuit AI layoffs","url":"https://www.replacedbyai.app/company/intuit/"},{"@type":"ListItem","position":19,"name":"Standard Chartered AI layoffs","url":"https://www.replacedbyai.app/company/standard-chartered/"},{"@type":"ListItem","position":20,"name":"Innovaccer AI layoffs","url":"https://www.replacedbyai.app/company/innovaccer/"},{"@type":"ListItem","position":21,"name":"Kraken AI layoffs","url":"https://www.replacedbyai.app/company/kraken/"},{"@type":"ListItem","position":22,"name":"Jumia AI layoffs","url":"https://www.replacedbyai.app/company/jumia/"},{"@type":"ListItem","position":23,"name":"Cisco AI layoffs","url":"https://www.replacedbyai.app/company/cisco/"},{"@type":"ListItem","position":24,"name":"Walmart AI layoffs","url":"https://www.replacedbyai.app/company/walmart/"},{"@type":"ListItem","position":25,"name":"MRI Software AI layoffs","url":"https://www.replacedbyai.app/company/mri-software/"},{"@type":"ListItem","position":26,"name":"General Motors AI layoffs","url":"https://www.replacedbyai.app/company/general-motors/"},{"@type":"ListItem","position":27,"name":"Cloudflare AI layoffs","url":"https://www.replacedbyai.app/company/cloudflare/"},{"@type":"ListItem","position":28,"name":"Upwork AI layoffs","url":"https://www.replacedbyai.app/company/upwork/"},{"@type":"ListItem","position":29,"name":"Arctic Wolf AI layoffs","url":"https://www.replacedbyai.app/company/arctic-wolf/"},{"@type":"ListItem","position":30,"name":"reAlpha AI layoffs","url":"https://www.replacedbyai.app/company/realpha/"},{"@type":"ListItem","position":31,"name":"Ticketmaster AI layoffs","url":"https://www.replacedbyai.app/company/ticketmaster/"},{"@type":"ListItem","position":32,"name":"Coinbase AI layoffs","url":"https://www.replacedbyai.app/company/coinbase/"},{"@type":"ListItem","position":33,"name":"Freshworks AI layoffs","url":"https://www.replacedbyai.app/company/freshworks/"},{"@type":"ListItem","position":34,"name":"PayPal AI layoffs","url":"https://www.replacedbyai.app/company/paypal/"},{"@type":"ListItem","position":35,"name":"SuperOps AI layoffs","url":"https://www.replacedbyai.app/company/superops/"},{"@type":"ListItem","position":36,"name":"Meta AI layoffs","url":"https://www.replacedbyai.app/company/meta/"},{"@type":"ListItem","position":37,"name":"Nike AI layoffs","url":"https://www.replacedbyai.app/company/nike/"},{"@type":"ListItem","position":38,"name":"Epidemic Sound AI layoffs","url":"https://www.replacedbyai.app/company/epidemic-sound/"},{"@type":"ListItem","position":39,"name":"Snap AI layoffs","url":"https://www.replacedbyai.app/company/snap/"},{"@type":"ListItem","position":40,"name":"Cars.com AI layoffs","url":"https://www.replacedbyai.app/company/cars-com/"},{"@type":"ListItem","position":41,"name":"Meta AI layoffs","url":"https://www.replacedbyai.app/company/meta/"},{"@type":"ListItem","position":42,"name":"Snowflake AI layoffs","url":"https://www.replacedbyai.app/company/snowflake/"},{"@type":"ListItem","position":43,"name":"Crypto.com AI layoffs","url":"https://www.replacedbyai.app/company/crypto-com/"},{"@type":"ListItem","position":44,"name":"FiscalNote AI layoffs","url":"https://www.replacedbyai.app/company/fiscalnote/"},{"@type":"ListItem","position":45,"name":"HSBC AI layoffs","url":"https://www.replacedbyai.app/company/hsbc/"},{"@type":"ListItem","position":46,"name":"Dell AI layoffs","url":"https://www.replacedbyai.app/company/dell/"},{"@type":"ListItem","position":47,"name":"Atlassian AI layoffs","url":"https://www.replacedbyai.app/company/atlassian/"},{"@type":"ListItem","position":48,"name":"Proximus AI layoffs","url":"https://www.replacedbyai.app/company/proximus/"},{"@type":"ListItem","position":49,"name":"Block AI layoffs","url":"https://www.replacedbyai.app/company/block/"},{"@type":"ListItem","position":50,"name":"eBay AI layoffs","url":"https://www.replacedbyai.app/company/ebay/"},{"@type":"ListItem","position":51,"name":"C3.ai AI layoffs","url":"https://www.replacedbyai.app/company/c3-ai/"},{"@type":"ListItem","position":52,"name":"SEB AI layoffs","url":"https://www.replacedbyai.app/company/seb/"},{"@type":"ListItem","position":53,"name":"WiseTech AI layoffs","url":"https://www.replacedbyai.app/company/wisetech/"},{"@type":"ListItem","position":54,"name":"Livspace AI layoffs","url":"https://www.replacedbyai.app/company/livspace/"},{"@type":"ListItem","position":55,"name":"British American Tobacco AI layoffs","url":"https://www.replacedbyai.app/company/british-american-tobacco/"},{"@type":"ListItem","position":56,"name":"Telstra AI layoffs","url":"https://www.replacedbyai.app/company/telstra/"},{"@type":"ListItem","position":57,"name":"Ola Electric AI layoffs","url":"https://www.replacedbyai.app/company/ola-electric/"},{"@type":"ListItem","position":58,"name":"Dow AI layoffs","url":"https://www.replacedbyai.app/company/dow/"},{"@type":"ListItem","position":59,"name":"Amazon AI layoffs","url":"https://www.replacedbyai.app/company/amazon/"},{"@type":"ListItem","position":60,"name":"Pinterest AI layoffs","url":"https://www.replacedbyai.app/company/pinterest/"},{"@type":"ListItem","position":61,"name":"Autodesk AI layoffs","url":"https://www.replacedbyai.app/company/autodesk/"},{"@type":"ListItem","position":62,"name":"Tailwind AI layoffs","url":"https://www.replacedbyai.app/company/tailwind/"},{"@type":"ListItem","position":63,"name":"Angi AI layoffs","url":"https://www.replacedbyai.app/company/angi/"},{"@type":"ListItem","position":64,"name":"Meta AI layoffs","url":"https://www.replacedbyai.app/company/meta/"},{"@type":"ListItem","position":65,"name":"MercadoLibre AI layoffs","url":"https://www.replacedbyai.app/company/mercadolibre/"},{"@type":"ListItem","position":66,"name":"Nike AI layoffs","url":"https://www.replacedbyai.app/company/nike/"},{"@type":"ListItem","position":67,"name":"Yellow.ai AI layoffs","url":"https://www.replacedbyai.app/company/yellow-ai/"},{"@type":"ListItem","position":68,"name":"Agora AI layoffs","url":"https://www.replacedbyai.app/company/agora/"},{"@type":"ListItem","position":69,"name":"McKinsey & Company AI layoffs","url":"https://www.replacedbyai.app/company/mckinsey-and-company/"},{"@type":"ListItem","position":70,"name":"Culture Amp AI layoffs","url":"https://www.replacedbyai.app/company/culture-amp/"},{"@type":"ListItem","position":71,"name":"Deepwatch AI layoffs","url":"https://www.replacedbyai.app/company/deepwatch/"},{"@type":"ListItem","position":72,"name":"Synopsys AI layoffs","url":"https://www.replacedbyai.app/company/synopsys/"},{"@type":"ListItem","position":73,"name":"Allianz AI layoffs","url":"https://www.replacedbyai.app/company/allianz/"},{"@type":"ListItem","position":74,"name":"HP Inc AI layoffs","url":"https://www.replacedbyai.app/company/hp-inc/"},{"@type":"ListItem","position":75,"name":"C.H. Robinson AI layoffs","url":"https://www.replacedbyai.app/company/c-h-robinson/"},{"@type":"ListItem","position":76,"name":"Amazon AI layoffs","url":"https://www.replacedbyai.app/company/amazon/"},{"@type":"ListItem","position":77,"name":"Chegg AI layoffs","url":"https://www.replacedbyai.app/company/chegg/"},{"@type":"ListItem","position":78,"name":"Meta AI layoffs","url":"https://www.replacedbyai.app/company/meta/"},{"@type":"ListItem","position":79,"name":"NestlÃ© AI layoffs","url":"https://www.replacedbyai.app/company/nestla/"},{"@type":"ListItem","position":80,"name":"Meta AI layoffs","url":"https://www.replacedbyai.app/company/meta/"},{"@type":"ListItem","position":81,"name":"Paycom AI layoffs","url":"https://www.replacedbyai.app/company/paycom/"},{"@type":"ListItem","position":82,"name":"Just Eat Takeaway AI layoffs","url":"https://www.replacedbyai.app/company/just-eat-takeaway/"},{"@type":"ListItem","position":83,"name":"Best Buy AI layoffs","url":"https://www.replacedbyai.app/company/best-buy/"},{"@type":"ListItem","position":84,"name":"Fiverr AI layoffs","url":"https://www.replacedbyai.app/company/fiverr/"},{"@type":"ListItem","position":85,"name":"Scope3 AI layoffs","url":"https://www.replacedbyai.app/company/scope3/"},{"@type":"ListItem","position":86,"name":"Salesforce AI layoffs","url":"https://www.replacedbyai.app/company/salesforce/"},{"@type":"ListItem","position":87,"name":"BenchSci AI layoffs","url":"https://www.replacedbyai.app/company/benchsci/"},{"@type":"ListItem","position":88,"name":"Lufthansa AI layoffs","url":"https://www.replacedbyai.app/company/lufthansa/"},{"@type":"ListItem","position":89,"name":"King AI layoffs","url":"https://www.replacedbyai.app/company/king/"},{"@type":"ListItem","position":90,"name":"Recruit Holdings AI layoffs","url":"https://www.replacedbyai.app/company/recruit-holdings/"},{"@type":"ListItem","position":91,"name":"TomTom AI layoffs","url":"https://www.replacedbyai.app/company/tomtom/"},{"@type":"ListItem","position":92,"name":"Klue AI layoffs","url":"https://www.replacedbyai.app/company/klue/"},{"@type":"ListItem","position":93,"name":"Intel AI layoffs","url":"https://www.replacedbyai.app/company/intel/"},{"@type":"ListItem","position":94,"name":"Chegg AI layoffs","url":"https://www.replacedbyai.app/company/chegg/"},{"@type":"ListItem","position":95,"name":"CrowdStrike AI layoffs","url":"https://www.replacedbyai.app/company/crowdstrike/"},{"@type":"ListItem","position":96,"name":"OpenText AI layoffs","url":"https://www.replacedbyai.app/company/opentext/"},{"@type":"ListItem","position":97,"name":"UPS AI layoffs","url":"https://www.replacedbyai.app/company/ups/"},{"@type":"ListItem","position":98,"name":"Canva AI layoffs","url":"https://www.replacedbyai.app/company/canva/"},{"@type":"ListItem","position":99,"name":"Zomato AI layoffs","url":"https://www.replacedbyai.app/company/zomato/"},{"@type":"ListItem","position":100,"name":"Morgan Stanley AI layoffs","url":"https://www.replacedbyai.app/company/morgan-stanley/"},{"@type":"ListItem","position":101,"name":"Wayfair AI layoffs","url":"https://www.replacedbyai.app/company/wayfair/"},{"@type":"ListItem","position":102,"name":"Google AI layoffs","url":"https://www.replacedbyai.app/company/google/"},{"@type":"ListItem","position":103,"name":"DBS Group AI layoffs","url":"https://www.replacedbyai.app/company/dbs-group/"},{"@type":"ListItem","position":104,"name":"Zepz AI layoffs","url":"https://www.replacedbyai.app/company/zepz/"},{"@type":"ListItem","position":105,"name":"Workday AI layoffs","url":"https://www.replacedbyai.app/company/workday/"},{"@type":"ListItem","position":106,"name":"AMD AI layoffs","url":"https://www.replacedbyai.app/company/amd/"},{"@type":"ListItem","position":107,"name":"TikTok AI layoffs","url":"https://www.replacedbyai.app/company/tiktok/"},{"@type":"ListItem","position":108,"name":"Cisco AI layoffs","url":"https://www.replacedbyai.app/company/cisco/"},{"@type":"ListItem","position":109,"name":"Dell Technologies AI layoffs","url":"https://www.replacedbyai.app/company/dell-technologies/"},{"@type":"ListItem","position":110,"name":"Intuit AI layoffs","url":"https://www.replacedbyai.app/company/intuit/"},{"@type":"ListItem","position":111,"name":"Grammarly AI layoffs","url":"https://www.replacedbyai.app/company/grammarly/"},{"@type":"ListItem","position":112,"name":"PayPal AI layoffs","url":"https://www.replacedbyai.app/company/paypal/"},{"@type":"ListItem","position":113,"name":"SAP AI layoffs","url":"https://www.replacedbyai.app/company/sap/"},{"@type":"ListItem","position":114,"name":"Duolingo AI layoffs","url":"https://www.replacedbyai.app/company/duolingo/"},{"@type":"ListItem","position":115,"name":"BT Group AI layoffs","url":"https://www.replacedbyai.app/company/bt-group/"},{"@type":"ListItem","position":116,"name":"Dropbox AI layoffs","url":"https://www.replacedbyai.app/company/dropbox/"}]}</script>
+  </head>
+  <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-shape one"></div>
+      <div class="ambient-shape two"></div>
+      <div class="ambient-shape three"></div>
+      <div class="ambient-shape four"></div>
+    </div>
+    <nav class="top-nav" aria-label="Site navigation">
+      <a href="/about/">Methodology</a>
+      <a href="/company/">Companies</a>
+      <a href="/industries/">Industries</a>
+    </nav>
+    <div class="hero">
+      <a class="logo-link" href="/" aria-label="Replaced by AI">
+        <span class="prompt-title"><span class="prompt-symbol">&gt;</span><span class="prompt-text">/replaced -ai</span><span class="prompt-cursor" aria-hidden="true"></span></span>
+      </a>
+    </div>
+    <main>
+      <p class="muted">Industry index</p>
+      <h1>AI layoffs by industry</h1>
+      <p>Browse every industry represented in the Replaced by AI layoff tracker, with counts generated from the current dataset.</p>
+      <section class="card">
+        <h2>Industry pages</h2>
+        <ul class="source-list">
+          <li><a href="/industries/consulting/">Consulting AI layoffs</a> (1)</li>
+          <li><a href="/industries/crypto/">Crypto AI layoffs</a> (1)</li>
+          <li><a href="/industries/cybersecurity/">Cybersecurity AI layoffs</a> (2)</li>
+          <li><a href="/industries/education/">Education AI layoffs</a> (1)</li>
+          <li><a href="/industries/education-technology/">Education Technology AI layoffs</a> (2)</li>
+          <li><a href="/industries/finance/">Finance AI layoffs</a> (15)</li>
+          <li><a href="/industries/food-and-beverage/">Food &amp; Beverage AI layoffs</a> (1)</li>
+          <li><a href="/industries/gaming/">Gaming AI layoffs</a> (1)</li>
+          <li><a href="/industries/logistics/">Logistics AI layoffs</a> (1)</li>
+          <li><a href="/industries/media/">Media AI layoffs</a> (2)</li>
+          <li><a href="/industries/retail/">Retail AI layoffs</a> (1)</li>
+          <li><a href="/industries/semiconductor-software/">Semiconductor Software AI layoffs</a> (1)</li>
+          <li><a href="/industries/tech/">Technology AI layoffs</a> (73)</li>
+          <li><a href="/industries/telecom/">Telecom AI layoffs</a> (1)</li>
+          <li><a href="/industries/other/">Other AI layoffs</a> (13)</li>
+        </ul>
+      </section>
+    </main>
+    <p class="footer">&copy; <span id="copyrightYear"></span> B Average · <a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS</a></p>
+    <script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+  </body>
+</html>

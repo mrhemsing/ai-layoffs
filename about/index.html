@@ -159,8 +159,7 @@
     <nav class="top-nav" aria-label="Site navigation">
       <a href="/about/">Methodology</a>
       <a href="/company/">Companies</a>
-      <a href="/industries/tech/">Industries</a>
-      <a href="/sitemap.xml">Sitemap</a>
+      <a href="/industries/">Industries</a>
     </nav>
     <div class="hero">
       <a class="logo-link" href="/" aria-label="Replaced by AI">
@@ -177,10 +176,12 @@
       </section>
       <section class="card">
         <h2>Classification rules</h2>
-        <p><strong>Explicit AI cited</strong> means the source directly ties layoffs to AI, AI investment, AI replacement, or AI-driven operating changes.</p>
-        <p><strong>Automation / efficiency cited</strong> means the source ties cuts to automation, efficiency, or reduced manual work.</p>
-        <p><strong>AI-adjacent restructuring</strong> means the layoff is tied to AI-focused strategy, technology investment, or team reallocation, but not direct replacement.</p>
-        <p><strong>Speculative / unclear</strong> means the event is included as a lead or weakly related case and should not be read as confirmed AI replacement.</p>
+        <p id="explicitly-ai-cited"><strong>Explicit AI cited</strong> means the source directly ties layoffs to AI, AI investment, AI replacement, or AI-driven operating changes.</p>
+        <p id="automation-efficiency-cited"><strong>Automation / efficiency cited</strong> means the source ties cuts to automation, efficiency, or reduced manual work.</p>
+        <p id="ai-adjacent-restructuring"><strong>AI-adjacent restructuring</strong> means the layoff is tied to AI-focused strategy, technology investment, or team reallocation, but not direct replacement.</p>
+        <p id="speculative-or-unclear"><strong>Speculative / unclear</strong> means the event is a weaker AI-related lead and should not be read as confirmed AI replacement.</p>
+        <p id="ai-reorg-or-spend-linked"><strong>AI reorg or spending linked</strong> means the source ties the layoff to AI reorganization, AI investment, or shifting spend toward AI.</p>
+        <p id="ai-replacement-cited"><strong>AI replacement cited</strong> means the source directly says work or roles were replaced by AI.</p>
       </section>
       <section class="card">
         <h2>Source quality</h2>
@@ -191,7 +192,7 @@
         <p>The AI layoff tracker separates facts from interpretation. Each entry includes a source quote, a summary, and notes explaining why the event was included and how strong the AI connection is.</p>
       </section>
     </main>
-    <p class="footer">&copy; <span id="copyrightYear"></span> B Average</p>
+    <p class="footer">&copy; <span id="copyrightYear"></span> B Average · <a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS</a></p>
     <script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   </body>

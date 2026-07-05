@@ -1,0 +1,117 @@
+company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+Amperity,2026-06-25,,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.geekwire.com/2026/amperity-hit-with-layoffs-as-ai-changes-the-shape-of-the-customer-data-startup-and-how-it-operates/
+Elastic,2026-06-24,281,Technology,Global,explicit_ai_cited,verified,primary,https://www.elastic.co/blog/ceo-ash-kulkarni-announcement-to-elastic-employees
+Snyk,2026-06-24,90,Cybersecurity,Global,explicit_ai_cited,verified,reputable_reporting,https://cybernews.com/security/snyk-cuts-jobs-focus-on-ai-security/
+General Motors,2026-06-22,1300,Other,United States,automation_efficiency_cited,verified,reputable_reporting,https://arstechnica.com/ai/2026/06/gm-installs-robots-at-flagship-ev-factory-after-laying-off-1300-workers/
+Oracle,2026-06-22,21000,Technology,United States,explicit_ai_cited,verified,primary,https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm
+Optimove,2026-06-17,,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.intergameonline.com/igaming/news/optimove-cut-jobs-artificial-intelligence-ai
+Robinhood,2026-06-16,290,Finance,United States,speculative_or_unclear,needs_review,primary,https://www.sec.gov/Archives/edgar/data/1783879/000178387926000071/hood-20260616.htm
+Rackspace Technology,2026-06-10,750,Technology,Global,explicit_ai_cited,verified,primary,https://www.sec.gov/Archives/edgar/data/1810019/000181001926000058/rxt-20260610.htm
+Shopee,2026-06-10,,Technology,Singapore,ai_adjacent_restructuring,verified,reputable_reporting,https://www.straitstimes.com/business/seas-shopee-cuts-hundreds-of-developer-jobs-during-pivot-to-ai
+Paytm,2026-06-09,400,Finance,India,ai_adjacent_restructuring,verified,reputable_reporting,https://www.moneycontrol.com/news/business/paytm-plans-10-staff-increase-in-ai-pivot-with-some-roles-cut-13944509.html
+Salesforce,2026-06-08,86,Technology,United States,ai_reorg_or_spend_linked,verified,reputable_reporting,https://www.businessinsider.com/salesforce-cuts-jobs-agentforce-2026-6
+GitLab,2026-06-01,350,Technology,Global,explicit_ai_cited,verified,primary,https://www.sec.gov/Archives/edgar/data/1653482/000162828026039805/gtlb-20260601.htm
+Interview Kickstart,2026-05-29,50,Education,United States,automation_efficiency_cited,verified,reputable_reporting,https://inc42.com/buzz/blume-backed-interview-kickstart-lays-off-nearly-50-employees-amid-ai-automation-push/
+SentinelOne,2026-05-28,,Technology,United States,ai_adjacent_restructuring,verified,primary,https://www.stocktitan.net/sec-filings/S/8-k-sentinel-one-inc-reports-material-event-295d61d04d63.html
+Wix,2026-05-28,1000,Technology,Israel,explicit_ai_cited,verified,reputable_reporting,https://www.cnbc.com/2026/05/28/wix-layoffs-ai-exchange-rates.html
+ClickUp,2026-05-21,,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/
+Groupon,2026-05-21,400,Technology,Global,explicit_ai_cited,verified,primary,https://www.sec.gov/Archives/edgar/data/1490281/000149028126000013/grpn-20260521.htm
+Intuit,2026-05-20,3000,Finance,Global,explicit_ai_cited,verified,reputable_reporting,https://finance.yahoo.com/sectors/technology/articles/exclusive-intuit-cut-17-global-130424207.html
+Standard Chartered,2026-05-19,7000,Finance,Global,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/stanchart-cut-more-than-7000-jobs-bank-steps-up-ai-adoption-2026-05-19/
+Innovaccer,2026-05-15,340,Technology,North America,speculative_or_unclear,needs_review,secondary_lead,https://www.interviewpal.com/layoffs/innovaccer
+Kraken,2026-05-15,150,Finance,United States,automation_efficiency_cited,verified,reputable_reporting,https://financefeeds.com/kraken-cuts-150-staff-due-to-ai-delay-ipo-2027/
+Jumia,2026-05-14,200,Other,Africa,explicit_ai_cited,verified,reputable_reporting,https://www.bloomberg.com/news/articles/2026-05-14/africa-e-commerce-giant-jumia-to-cut-workforce-due-to-ai
+Cisco,2026-05-13,4000,Technology,Global,ai_adjacent_restructuring,verified,reputable_reporting,https://au.finance.yahoo.com/news/cisco-to-cut-about-4000-jobs-in-ai-focused-restructuring-as-orders-surge-200934836.html
+Walmart,2026-05-12,1000,Other,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.wsj.com/business/retail/walmart-layoffs-relocates-technology-jobs-23bbf322
+MRI Software,2026-05-11,200,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://propmodo.com/private-equity-backed-proptech-firm-cuts-200-jobs-cites-ai-adoption/
+General Motors,2026-05-11,600,Other,United States,explicit_ai_cited,verified,reputable_reporting,https://techcrunch.com/2026/05/11/gm-just-laid-off-hundreds-of-it-workers-to-hire-those-with-stronger-ai-skills/
+Cloudflare,2026-05-07,1100,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/cloudflare-cut-over-1100-jobs-2026-05-07/
+Upwork,2026-05-07,145,Technology,Global,explicit_ai_cited,verified,primary,https://investors.upwork.com/static-files/0574d044-06d1-433c-918b-854f710ad10a
+Arctic Wolf,2026-05-06,250,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.theregister.com/ai-and-ml/2026/05/06/arctic-wolf-cuts-250-jobs-in-ai-push/5231213
+reAlpha,2026-05-06,,Technology,United States,explicit_ai_cited,verified,primary,https://markets.businessinsider.com/news/stocks/realpha-reduces-workforce-by-approximately-25-and-consolidates-vendor-spend-targeting-2-million-in-annualized-savings-as-ai-advancements-drive-organizational-efficiency-1036115751
+Ticketmaster,2026-05-06,350,Technology,Global,ai_adjacent_restructuring,verified,reputable_reporting,https://news.pollstar.com/2026/05/06/ticketmaster-cuts-8-of-staff-350-employees-primarily-in-engineering-product-design/
+Coinbase,2026-05-05,700,Finance,Global,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/coinbase-cut-about-14-workforce-2026-05-05/
+Freshworks,2026-05-05,500,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/freshworks-cut-11-jobs-ai-reshapes-software-sector-2026-05-05/
+PayPal,2026-05-05,4760,Finance,Global,explicit_ai_cited,verified,reputable_reporting,https://www.wsj.com/business/earnings/paypal-to-cut-costs-after-profit-falls-dc42baf9
+SuperOps,2026-04-24,60,Technology,India,explicit_ai_cited,verified,reputable_reporting,https://inc42.com/buzz/superops-lays-off-30-staff-in-ai-led-restructuring-push/
+Meta,2026-04-23,8000,Technology,Global,ai_adjacent_restructuring,verified,reputable_reporting,https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html
+Nike,2026-04-23,1400,Other,Global,ai_adjacent_restructuring,verified,reputable_reporting,https://www.cnbc.com/2026/04/23/nike-job-cuts-layoffs.html
+Epidemic Sound,2026-04-21,150,Media,Sweden,explicit_ai_cited,verified,reputable_reporting,https://www.marketscreener.com/news/eqt-backed-epidemic-sound-to-cut-150-jobs-in-ai-pivot-di-ce7f59dad18efe20
+Snap,2026-04-15,1000,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/snap-lay-off-about-16-staff-2026-04-15/
+Cars.com,2026-04-09,,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.marketwatch.com/story/cars-com-to-lay-off-11-of-full-time-workforce-amid-ai-push-update-bb0c9f35
+Meta,2026-03-25,700,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.nytimes.com/2026/03/25/technology/meta-layoffs-ai-executives.html
+Snowflake,2026-03-20,,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.businessinsider.com/snowflake-layoffs-strategy-ai-growth-2026-3
+Crypto.com,2026-03-19,180,Crypto,Singapore,explicit_ai_cited,verified,reputable_reporting,https://www.cnbc.com/2026/03/19/crypto-com-layoffs-12percent-ai-job-loss.html
+FiscalNote,2026-03-19,110,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.bizjournals.com/washington/news/2026/03/19/fiscalnote-layoffs-ai-offshoring-dc.html
+HSBC,2026-03-19,20000,Finance,United Kingdom,ai_adjacent_restructuring,verified,reputable_reporting,https://www.bloomberg.com/news/newsletters/2026-03-19/hsbc-weighs-cutting-20k-jobs-as-ai-takes-centre-stage
+Dell,2026-03-16,11000,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/dell-workforce-drops-10-fiscal-2026-filing-shows-2026-03-16/
+Atlassian,2026-03-12,1600,Technology,Australia,explicit_ai_cited,verified,primary_source,https://www.atlassian.com/blog/announcements/fy26q3-shareholder-letter
+Proximus,2026-02-27,1200,Telecom,Belgium,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/media-telecom/belgian-telco-proximus-annual-core-profit-exceeds-market-estimates-2026-02-27/
+Block,2026-02-26,4000,Finance,United States,explicit_ai_cited,verified,reputable_reporting,http://www.reuters.com/business/blocks-fourth-quarter-profit-rises-announces-over-4000-job-cuts-2026-02-26/
+eBay,2026-02-26,800,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.morningstar.com/news/marketwatch/20260226238/ebay-to-cut-800-jobs-joining-other-tech-names-in-announcing-layoffs-as-ai-reshapes-workforces
+C3.ai,2026-02-25,312,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.cio.com/article/4138095/c3-ai-slashes-26-of-its-workforce-ceo-attributes-the-move-in-part-to-ai-efficiency.html
+SEB,2026-02-25,2100,Other,France,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+WiseTech,2026-02-25,2000,Technology,Australia,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Livspace,2026-02-20,1000,Technology,India,explicit_ai_cited,verified,reputable_reporting,https://economictimes.com/tech/startups/livspace-lays-off-1000-employees-cofounder-saurabh-jain-exits-amid-ai-led-overhaul/articleshow/128618900.cms
+British American Tobacco,2026-02-12,,Other,United Kingdom,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Telstra,2026-02-11,650,Technology,Australia,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Ola Electric,2026-01-30,620,Technology,India,automation_efficiency_cited,verified,reputable_reporting,https://hr.economictimes.indiatimes.com/news/workplace-4-0/talent-management/indian-e-scooter-firm-ola-electric-to-lay-off-5-of-workforce-amid-profitability-push/127805612
+Dow,2026-01-29,4500,Other,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Amazon,2026-01-28,16000,Technology,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/legal/litigation/amazon-cuts-16000-jobs-globally-broader-restructuring-2026-01-28/
+Pinterest,2026-01-27,700,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html
+Autodesk,2026-01-22,1000,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Tailwind,2026-01-20,3,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2025
+Angi,2026-01-13,350,Technology,United States,explicit_ai_cited,verified,primary_source,https://www.angi.com/ir/news/sec-filings/sec-filings-details/default.aspx?FilingId=18112012
+Meta,2026-01-13,1000,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+MercadoLibre,2026-01-12,119,Technology,Brazil,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Nike,2026-01-01,775,Other,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Yellow.ai,2025-12-23,100,Technology,India,explicit_ai_cited,verified,reputable_reporting,https://inc42.com/buzz/exclusive-yellow-ai-lays-off-over-100-employees-amid-automation-push/
+Agora,2025-12-01,166,Media,Poland,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+McKinsey & Company,2025-11-26,200,Consulting,Global,explicit_ai_cited,verified,reputable_reporting,https://www.storyboard18.com/how-it-works/mckinsey-cuts-200-tech-roles-as-ai-replaces-support-jobs-84828.htm
+Culture Amp,2025-11-18,60,Technology,Australia,ai_adjacent_restructuring,verified,reputable_reporting,https://www.capitalbrief.com/article/culture-amp-lays-off-6-of-its-staff-globally-as-it-focuses-on-new-ai-products-3d5073ac-879a-4e01-9a08-a513ead8834b/
+Deepwatch,2025-11-12,80,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://techcrunch.com/2025/11/12/cybersecurity-firm-deepwatch-lays-off-dozens-citing-move-to-accelerate-ai-investment/
+Synopsys,2025-11-12,2000,Semiconductor Software,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.outlookbusiness.com/corporate/synopsys-to-slash-2000-jobs-after-35-bn-ansys-merger-and-china-slowdown
+Allianz,2025-11-01,1800,Finance,Germany,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+HP Inc,2025-11-01,6000,Technology,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+C.H. Robinson,2025-10-30,,Logistics,United States,explicit_ai_cited,verified,reputable_reporting,https://www.businesswire.com/news/home/20250416223613/en/At-C.H.-Robinson-Artificial-Intelligence-Has-Now-Performed-Over-3-Million-Shipping-Tasks
+Amazon,2025-10-28,14000,Technology,United States,explicit_ai_cited,verified,primary_source,https://www.aboutamazon.com/news/company-news/amazon-workforce-reduction
+Chegg,2025-10-28,388,Education Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/world/work/chegg-lay-off-45-workforce-ai-disruption-hits-business-2025-10-28/
+Meta,2025-10-22,600,Technology,United States,ai_reorg_or_spend_linked,verified,reputable_reporting,https://www.informationweek.com/it-leadership/tech-company-layoffs-the-covid-tech-bubble-bursts-sep-14
+NestlÃ©,2025-10-16,16000,Food & Beverage,Switzerland,explicit_ai_cited,verified,reputable_reporting,https://fortune.com/2025/10/16/nestle-layoffs-job-cuts-philipp-navratil-turnaround-automation/
+Meta,2025-10-01,600,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/companies-cutting-jobs-investments-shift-toward-ai-2026-02-25/
+Paycom,2025-10-01,500,Technology,United States,ai_replacement_cited,verified,reputable_reporting,https://www.kgou.org/business-and-economy/2025-10-01/paycom-lays-off-500-employees-will-replace-jobs-with-ai
+Just Eat Takeaway,2025-09-25,450,Technology,Netherlands,automation_efficiency_cited,verified,reputable_reporting,https://hr.economictimes.indiatimes.com/news/workplace-4-0/talent-management/indian-e-scooter-firm-ola-electric-to-lay-off-5-of-workforce-amid-profitability-push/127805612
+Best Buy,2025-09-24,,Retail,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.investing.com/news/stock-market-news/best-buy-cuts-jobs-in-geek-squad-and-customer-service-teams--bloomberg-93CH-4254361
+Fiverr,2025-09-15,250,Technology,Israel,explicit_ai_cited,verified,reputable_reporting,https://globalbusinessoutlook.com/technology/fiverr-layoffs-all-you-need-know/
+Scope3,2025-09-05,,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://finance.yahoo.com/news/exclusive-scope3-lays-off-staff-152235483.html
+Salesforce,2025-09-02,4000,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.cnbc.com/2025/09/02/salesforce-ceo-confirms-4000-layoffs-because-i-need-less-heads-with-ai.html
+BenchSci,2025-08-12,83,Technology,Canada,explicit_ai_cited,verified,reputable_reporting,https://www.bctechnology.com/news/2025/8/15/BenchSci-Cuts-23-of-Jobs-Becoming-Latest-Company-to-Replace-Humans-With-AI.cfm
+Lufthansa,2025-08-01,4000,Other,Germany,automation_efficiency_cited,verified,reputable_reporting,https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2025
+King,2025-07-14,200,Gaming,Global,explicit_ai_cited,verified,reputable_reporting,https://mobilegamer.biz/laid-off-king-staff-set-to-be-replaced-by-the-ai-tools-they-helped-build-say-sources/
+Recruit Holdings,2025-07-10,1300,Technology,Japan,explicit_ai_cited,verified,reputable_reporting,https://www.cbsnews.com/news/indeed-glassdoor-layoffs-ai-job-search/
+TomTom,2025-06-30,300,Technology,Netherlands,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/technology/tomtom-cut-300-jobs-amid-ai-shift-2025-06-30/
+Klue,2025-06-27,85,Technology,Canada,ai_adjacent_restructuring,verified,reputable_reporting,https://betakit.com/klue-lays-off-40-percent-of-staff-as-startup-faces-internal-and-external-ai-pressure/
+Intel,2025-06-20,,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.oregonlive.com/silicon-forest/2025/06/intel-will-outsource-marketing-to-accenture-and-ai-laying-off-many-of-its-own-workers.html
+Chegg,2025-05-12,248,Other,United States,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/world/work/chegg-lay-off-22-workforce-ai-tools-shake-up-edtech-industry-2025-05-12/
+CrowdStrike,2025-05-07,500,Cybersecurity,United States,explicit_ai_cited,verified,primary_source,https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1535527/000153552725000091/crwd-20250507.htm
+OpenText,2025-05-06,1600,Technology,Canada,explicit_ai_cited,verified,reputable_reporting,https://betakit.com/opentext-makes-ai-number-one-priority-as-company-slashes-1600-jobs/
+UPS,2025-04-29,20000,Other,United States,automation_efficiency_cited,verified,reputable_reporting,https://themusicessentials.com/news/ups-to-cut-20000-jobs-as-it-pulls-back-from-amazon-and-embraces-automation/
+Canva,2025-04-03,10,Technology,Australia,automation_efficiency_cited,verified,reputable_reporting,https://ia.acs.org.au/article/2025/canva-lays-off-technical-writers-amid-ai-push.html
+Zomato,2025-04-01,600,Technology,India,automation_efficiency_cited,verified,reputable_reporting,https://inc42.com/buzz/zomato-trims-600-jobs-amid-increasing-automation-quick-commerce-wars/
+Morgan Stanley,2025-03-19,2000,Finance,United States,explicit_ai_cited,verified,reputable_reporting,https://www.entrepreneur.com/business-news/morgan-stanley-plans-to-cut-2000-workers-partly-due-to-ai/488752
+Wayfair,2025-03-07,340,Technology,United States,explicit_ai_cited,verified,primary_source,http://pdf.secdatabase.com/1098/0001616707-25-000028.pdf
+Google,2025-02-27,,Technology,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.cnbc.com/2025/02/27/google-announces-layoffs-in-its-hr-cloud-units-as-part-of-ongoing-cost-cuts.html
+DBS Group,2025-02-24,4000,Finance,Singapore,explicit_ai_cited,verified,reputable_reporting,https://whtc.com/2025/02/24/dbs-group-set-to-cut-4000-jobs-in-next-3-years-ceo-says/
+Zepz,2025-02-13,200,Finance,United Kingdom,explicit_ai_cited,verified,reputable_reporting,https://www.fintechfutures.com/job-cuts-new-hires/uk-fintech-zepz-reportedly-set-to-lay-off-around-200-employees
+Workday,2025-02-05,1750,Technology,United States,ai_adjacent_restructuring,verified,primary,https://blog.workday.com/en-us/2025/employee-message-from-carl-eschenbach.html
+AMD,2024-11-13,1000,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/world/us/amd-cut-4-global-workforce-it-focuses-ai-chip-development-2024-11-13/
+TikTok,2024-10-11,,Technology,Singapore,ai_replacement_cited,verified,reputable_reporting,https://www.reuters.com/world/china/tiktok-lay-off-hundreds-global-staff-shift-towards-ai-content-moderation-source-2024-10-11/
+Cisco,2024-08-14,6300,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://abcnews.go.com/Business/wireStory/california-technology-company-cisco-cutting-7-workforce-shifts-112844330
+Dell Technologies,2024-08-05,,Technology,United States,ai_reorg_or_spend_linked,verified,reputable_reporting,https://www.sahmcapital.com/news/content/dell-cuts-workers-in-sales-team-reorganization-with-new-ai-focused-unit-we-are-getting-leaner-executives-write-in-memo-to-employees-new-team-will-put-more-emphasis-on-ai-sales-and-dell-servers-bloomberg-news-2024-08-05
+Intuit,2024-07-10,1800,Finance,United States,explicit_ai_cited,verified,primary,https://investors.intuit.com/sec-filings/all-sec-filings/content/0000896878-24-000030/ex9901-emltointuitemployee.htm
+Grammarly,2024-02-09,230,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://techcrunch.com/2024/02/09/grammarly-lays-off-230-employees-as-part-of-a-business-restructuring/
+PayPal,2024-01-30,2500,Finance,United States,automation_efficiency_cited,verified,primary_source,https://newsroom.paypal-corp.com/2024-01-30-Message-from-Alex-Chriss-President-and-CEO-of-PayPal
+SAP,2024-01-24,8000,Technology,Germany,explicit_ai_cited,verified,primary,https://news.sap.com/2024/01/sap-updates-its-ambition-2025-and-announces-transformation-program-for-2024/
+Duolingo,2024-01-09,,Education Technology,United States,ai_replacement_cited,verified,reputable_reporting,https://techcrunch.com/2024/01/09/duolingo-cut-10-of-its-contractor-workforce-as-the-company-embraces-ai/
+BT Group,2023-05-18,55000,Other,United Kingdom,automation_efficiency_cited,verified,reputable_reporting,https://www.reuters.com/world/uk/bt-cut-up-55000-jobs-by-2030-fibre-ai-arrive-2023-05-18/
+Dropbox,2023-04-27,500,Technology,United States,explicit_ai_cited,verified,primary,https://blog.dropbox.com/topics/company/a-message-from-drew

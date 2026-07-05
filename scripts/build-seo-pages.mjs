@@ -16,6 +16,15 @@ const aiLabels = {
   ai_replacement_cited: "AI replacement cited",
 };
 
+const aiDefinitions = {
+  explicit_ai_cited: "The source directly ties layoffs to AI, AI investment, AI replacement, or AI-driven operating changes.",
+  automation_efficiency_cited: "The source ties cuts to automation, efficiency, or reduced manual work.",
+  ai_adjacent_restructuring: "The layoff is tied to AI-focused strategy, technology investment, or team reallocation, but not direct replacement.",
+  speculative_or_unclear: "The event is a weaker AI-related lead and should not be read as confirmed AI replacement.",
+  ai_reorg_or_spend_linked: "The source ties the layoff to AI reorganization, AI investment, or shifting spend toward AI.",
+  ai_replacement_cited: "The source directly says work or roles were replaced by AI.",
+};
+
 const relevanceSlugs = {
   explicit_ai_cited: "explicitly-ai-cited",
   automation_efficiency_cited: "automation-efficiency-cited",
@@ -66,6 +75,51 @@ function slugify(value = "") {
 
 function fmtNumber(value) {
   return value == null ? "Unknown" : Number(value).toLocaleString("en-US");
+}
+
+function fmtLayoffs(value) {
+  return value == null ? "Not disclosed" : Number(value).toLocaleString("en-US");
+}
+
+function fmtPercent(value) {
+  return `${Math.round(value)}%`;
+}
+
+function fmtDateShortYear(value) {
+  if (!value) return "Unknown date";
+  return new Date(`${dateOnly(value)}T00:00:00Z`).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+function receiptLabel(entry) {
+  const count = Array.isArray(entry.sources) ? entry.sources.length : 0;
+  return `${count} receipt${count === 1 ? "" : "s"}`;
+}
+
+function industrySlug(industry) {
+  return industrySlugs[industry] || slugify(industry);
+}
+
+function industryTitle(industry) {
+  return industryTitles[industry] || `${industry} AI Layoffs`;
+}
+
+function xmlEscape(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+function csvEscape(value = "") {
+  const text = value == null ? "" : String(value);
+  return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 }
 
 function fmtDate(value) {
@@ -303,8 +357,7 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
     <nav class="top-nav" aria-label="Site navigation">
       <a href="/about/">Methodology</a>
       <a href="/company/">Companies</a>
-      <a href="/industries/tech/">Industries</a>
-      <a href="/sitemap.xml">Sitemap</a>
+      <a href="/industries/">Industries</a>
     </nav>
     <div class="hero">
       <a class="logo-link" href="/" aria-label="Replaced by AI">
@@ -312,7 +365,7 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
       </a>
     </div>
 ${body}
-    <p class="footer">&copy; <span id="copyrightYear"></span> B Average</p>
+    <p class="footer">&copy; <span id="copyrightYear"></span> B Average · <a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS</a></p>
     <script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   </body>
@@ -328,7 +381,7 @@ function entryCard(entry) {
       <p class="muted"><time datetime="${escapeHtml(entry.eventDate || "")}">${escapeHtml(fmtDate(entry.eventDate))}</time></p>
       <h2>${escapeHtml(entry.company)} AI layoff details</h2>
       <p><span class="pill">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span><span class="pill">${escapeHtml(entry.sourceQuality || "Unknown source quality")}</span></p>
-      <p><strong>Reported layoffs:</strong> ${escapeHtml(fmtNumber(entry.layoffsCount))}</p>
+      <p><strong>Reported layoffs:</strong> ${escapeHtml(fmtLayoffs(entry.layoffsCount))}</p>
       <p><strong>Industry:</strong> ${escapeHtml(entry.industry || "Unknown")} &middot; <strong>Geography:</strong> ${escapeHtml(entry.geography || "Unknown")}</p>
       <p>${escapeHtml(entry.summary || "")}</p>
       <div class="quote">${escapeHtml(entry.evidenceQuote || "No evidence quote recorded.")}</div>
@@ -385,39 +438,125 @@ function itemListSchema(items, canonicalPath) {
 }
 
 function homepageEntryRows(items) {
-  return items.map((entry, index) => {
+  return items.map((entry) => {
     const source = (entry.sources && entry.sources[0]) || null;
-    const selected = index === 0;
-    const row = `          <tr data-entry-id="${escapeHtml(entry.id || "")}"${selected ? ` class="selected" aria-expanded="true"` : ` aria-expanded="false"`}>
-            <td><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted"><span class="desktop-date">${escapeHtml(entry.geography || "-")}</span><span class="mobile-date">${escapeHtml(fmtGeography(entry.geography))}</span></span></td>
-            <td>${source ? `<a class="date-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer"><span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span></a>` : `<span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span>`}</td>
-            <td>${entry.layoffsCount == null ? "-" : escapeHtml(fmtNumber(entry.layoffsCount))}</td>
-            <td>${escapeHtml(entry.industry || "-")}</td>
-            <td><span class="pill ${escapeHtml(entry.aiRelevance || "")}">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span></td>
+    const receipts = receiptLabel(entry);
+    return `          <tr data-entry-id="${escapeHtml(entry.id || "")}" aria-expanded="false" aria-controls="details-${escapeHtml(entry.id || "")}" tabindex="0">
+            <td data-label="Company"><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted"><span class="desktop-date">${escapeHtml(entry.geography || "Unknown")}</span><span class="mobile-date">${escapeHtml(fmtGeography(entry.geography))}</span></span></td>
+            <td data-label="Date">${source ? `<a class="date-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer"><span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span></a>` : `<span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span>`}<br><span class="receipt-count">${escapeHtml(receipts)}</span></td>
+            <td data-label="Layoffs">${escapeHtml(fmtLayoffs(entry.layoffsCount))}</td>
+            <td data-label="Industry">${escapeHtml(entry.industry || "Unknown")}</td>
+            <td data-label="AI relevance"><span class="pill ${escapeHtml(entry.aiRelevance || "")}">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span></td>
           </tr>`;
-    if (!selected) return row;
-    const whyIncluded = entry.aiRelevance === "explicit_ai_cited"
-      ? "Included because the source explicitly ties the layoffs to AI."
-      : entry.aiRelevance === "automation_efficiency_cited"
-        ? "Included because the source ties the cuts to automation or AI-driven efficiency."
-        : entry.aiRelevance === "ai_adjacent_restructuring"
-          ? "Included because the layoffs are tied to an AI-focused restructuring or reallocation."
-          : "Included as a more tentative AI-related lead.";
-    return `${row}
-          <tr class="detail-row"><td class="detail-cell" colspan="5">
-          <div class="detail-panel">
-            <div class="details">
-              <div class="quote-meta">
-                <span class="source-chip">${source ? `Source: <a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.name)}</a>` : "Source unavailable"}</span>
-                <span class="pill ${escapeHtml(entry.aiRelevance || "")} mobile-only">${escapeHtml(fmtAiRelevanceShort(entry.aiRelevance))}</span>
-              </div>
-              <div class="quote">${escapeHtml(entry.evidenceQuote || "No evidence quote recorded.")}</div>
-              <div class="why-included">${escapeHtml(whyIncluded)}</div>
-              <div class="detail-notes">${escapeHtml(entry.notes || "")}</div>
-            </div>
-          </div>
-        </td></tr>`;
   }).join("\n");
+}
+
+function buildIndustryLinks() {
+  return [...industryGroups.entries()]
+    .sort((a, b) => {
+      if (a[0] === "Other") return 1;
+      if (b[0] === "Other") return -1;
+      return a[0].localeCompare(b[0]);
+    })
+    .map(([industry, items]) => `<a href="/industries/${industrySlug(industry)}/">${escapeHtml(industry)} (${items.length})</a>`)
+    .join("\n        ");
+}
+
+function buildYearLinks() {
+  return [...yearGroups.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([year, items]) => `<a href="/${escapeHtml(year)}/">${escapeHtml(year)} (${items.length})</a>`)
+    .join("\n        ");
+}
+
+function buildLegend() {
+  return Object.entries(aiLabels)
+    .filter(([key]) => relevanceGroups.has(key))
+    .map(([key, label]) => `<a class="legend-item" href="/about/#${escapeHtml(relevanceSlugs[key] || slugify(key))}"><span class="pill ${escapeHtml(key)}">${escapeHtml(label)}</span><span>${escapeHtml(aiDefinitions[key])}</span></a>`)
+    .join("\n          ");
+}
+
+function monthKey(value) {
+  return String(value || "").slice(0, 7);
+}
+
+function monthLabel(value) {
+  const [year, month] = value.split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, 1)).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+function monthRange(items) {
+  const months = items.map((entry) => monthKey(entry.eventDate)).filter((value) => /^\d{4}-\d{2}$/.test(value)).sort();
+  const start = months[0];
+  const end = months.at(-1);
+  if (!start || !end) return [];
+  const [startYear, startMonth] = start.split("-").map(Number);
+  const [endYear, endMonth] = end.split("-").map(Number);
+  const out = [];
+  for (let year = startYear, month = startMonth; year < endYear || (year === endYear && month <= endMonth); month += 1) {
+    if (month === 13) {
+      month = 1;
+      year += 1;
+    }
+    out.push(`${year}-${String(month).padStart(2, "0")}`);
+  }
+  return out;
+}
+
+function buildTrendChart(items) {
+  const months = monthRange(items);
+  const totals = new Map(months.map((month) => [month, 0]));
+  for (const entry of items) {
+    if (entry.layoffsCount == null) continue;
+    const key = monthKey(entry.eventDate);
+    if (totals.has(key)) totals.set(key, totals.get(key) + Number(entry.layoffsCount || 0));
+  }
+  const width = 920;
+  const height = 280;
+  const padLeft = 46;
+  const padBottom = 44;
+  const padTop = 24;
+  const chartWidth = width - padLeft - 16;
+  const chartHeight = height - padTop - padBottom;
+  const max = Math.max(1, ...[...totals.values()]);
+  const gap = 3;
+  const barWidth = Math.max(3, (chartWidth - gap * Math.max(0, months.length - 1)) / Math.max(1, months.length));
+  const bars = months.map((month, index) => {
+    const value = totals.get(month) || 0;
+    const barHeight = Math.max(value ? 3 : 0, Math.round((value / max) * chartHeight));
+    const x = padLeft + index * (barWidth + gap);
+    const y = padTop + chartHeight - barHeight;
+    return `<rect class="trend-bar" data-month="${month}" x="${x.toFixed(1)}" y="${y}" width="${barWidth.toFixed(1)}" height="${barHeight}" rx="2"><title>${escapeHtml(monthLabel(month))}: ${escapeHtml(fmtNumber(value))} jobs impacted</title></rect>`;
+  }).join("\n              ");
+  const labels = months
+    .filter((_, index) => index === 0 || index === months.length - 1 || index % 6 === 0)
+    .map((month) => {
+      const index = months.indexOf(month);
+      const x = padLeft + index * (barWidth + gap) + barWidth / 2;
+      return `<text x="${x.toFixed(1)}" y="${height - 14}" text-anchor="middle">${escapeHtml(monthLabel(month).replace(" ", " '"))}</text>`;
+    })
+    .join("\n              ");
+  const startLabel = months[0] ? monthLabel(months[0]) : "Unknown";
+  const endLabel = months.at(-1) ? monthLabel(months.at(-1)) : "Unknown";
+  return `<section class="card trend-section" aria-labelledby="trendTitle">
+        <h2 id="trendTitle">Monthly jobs impacted</h2>
+        <svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Monthly jobs impacted by tracked AI layoffs">
+          <line x1="${padLeft}" y1="${padTop + chartHeight}" x2="${width - 16}" y2="${padTop + chartHeight}" class="trend-axis"></line>
+          <line x1="${padLeft}" y1="${padTop}" x2="${padLeft}" y2="${padTop + chartHeight}" class="trend-axis"></line>
+          <text x="8" y="${padTop + 10}" class="trend-y-label">${escapeHtml(fmtNumber(max))}</text>
+          <g>
+              ${bars}
+          </g>
+          <g class="trend-labels">
+              ${labels}
+          </g>
+        </svg>
+        <p class="muted trend-caption">Jobs impacted per month, ${escapeHtml(startLabel)} to ${escapeHtml(endLabel)}. Excludes events with undisclosed counts.</p>
+      </section>`;
 }
 
 function replaceRegion(html, name, content, fallbackPattern) {
@@ -448,6 +587,361 @@ function replaceJsonLd(html, type, value) {
   return html.replace(/    <script>\r?\n      let allEntries = \[\];/, `${block}\n    <script>\n      let allEntries = [];`);
 }
 
+function replaceHomepageScript(html, scriptContent) {
+  return html.replace(/    <script>\r?\n      let allEntries = \[\];[\s\S]*?    <\/script>\r?\n    <script defer src="https:\/\/cdn\.vercel-insights\.com\/v1\/script\.js"><\/script>/, `    <script>\n${scriptContent}\n    </script>\n    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>`);
+}
+
+function buildClientScript() {
+  return `      let allEntries = [];
+      let selectedEntryId = null;
+      let pendingAnchorId = null;
+
+      function parseEntryDate(v) {
+        const m = String(v || '').match(/^(\\d{4})-(\\d{2})-(\\d{2})$/);
+        if (m) return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+        return v ? new Date(v) : null;
+      }
+
+      function fmtDate(v) {
+        if (!v) return 'Unknown date';
+        const d = parseEntryDate(v);
+        return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+      }
+
+      function fmtDateShort(v) {
+        if (!v) return 'Unknown date';
+        const d = parseEntryDate(v);
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        const yy = String(d.getFullYear()).slice(-2);
+        return \`\${mm}/\${dd}/\${yy}\`;
+      }
+
+      function fmtDateMobileCompact(v) {
+        if (!v) return 'n/a';
+        const d = parseEntryDate(v);
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        return \`\${mm}/\${dd}\`;
+      }
+
+      function fmtDateMedium(v) {
+        if (!v) return 'Unknown date';
+        const d = parseEntryDate(v);
+        return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+
+      function entryFreshnessDate(entry) {
+        return entry?.updatedAt || entry?.createdAt || entry?.eventDate || '';
+      }
+
+      function fmtNumber(v) {
+        return Number(v || 0).toLocaleString();
+      }
+
+      function fmtLayoffs(v) {
+        return v == null ? 'Not disclosed' : fmtNumber(v);
+      }
+
+      function receiptLabel(entry) {
+        const count = Array.isArray(entry.sources) ? entry.sources.length : 0;
+        return \`\${count} receipt\${count === 1 ? '' : 's'}\`;
+      }
+
+      function animateCount(el, target) {
+        if (!el) return;
+        el.textContent = fmtNumber(target);
+      }
+
+      function labelize(v) {
+        return String(v || '').replaceAll('_', ' ');
+      }
+
+      function fmtAiRelevance(v) {
+        if (v === 'explicit_ai_cited') return 'Explicit AI cited';
+        if (v === 'automation_efficiency_cited') return 'Automation / efficiency cited';
+        if (v === 'ai_adjacent_restructuring') return 'AI-adjacent restructuring';
+        if (v === 'speculative_or_unclear') return 'Speculative / unclear';
+        if (v === 'ai_reorg_or_spend_linked') return 'AI reorg or spending linked';
+        if (v === 'ai_replacement_cited') return 'AI replacement cited';
+        return labelize(v);
+      }
+
+      function fmtGeography(v) {
+        return v === 'United Kingdom' ? 'UK' : (v || 'Unknown');
+      }
+
+      function fmtAiRelevanceShort(v) {
+        if (v === 'explicit_ai_cited') return 'explicit AI';
+        if (v === 'automation_efficiency_cited') return 'automation';
+        if (v === 'ai_adjacent_restructuring') return 'AI restructure';
+        if (v === 'speculative_or_unclear') return 'unclear';
+        if (v === 'ai_reorg_or_spend_linked') return 'AI reorg';
+        if (v === 'ai_replacement_cited') return 'AI replacement';
+        return labelize(v);
+      }
+
+      function companySlug(value) {
+        return String(value || '')
+          .normalize('NFKD')
+          .replace(/[\\u0300-\\u036f]/g, '')
+          .toLowerCase()
+          .replace(/&/g, ' and ')
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '');
+      }
+
+      function updateStats(entries) {
+        const total = entries.length;
+        const layoffsTotal = entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0);
+        const explicit = entries.filter((e) => e.aiRelevance === 'explicit_ai_cited').length;
+        const share = total ? Math.round((explicit / total) * 100) : 0;
+        document.getElementById('statEntries').textContent = String(total);
+        const layoffsEl = document.getElementById('statLayoffs');
+        if (layoffsEl) animateCount(layoffsEl, layoffsTotal);
+        document.getElementById('statExplicit').textContent = String(explicit);
+        document.getElementById('statExplicitShare').textContent = \`\${share}%\`;
+        const freshest = entries.slice().sort((a, b) => String(entryFreshnessDate(b)).localeCompare(String(entryFreshnessDate(a))))[0];
+        const freshness = entryFreshnessDate(freshest);
+        const freshnessDate = document.getElementById('freshnessDate');
+        if (freshnessDate && freshness) {
+          freshnessDate.dateTime = freshness;
+          freshnessDate.textContent = fmtDateMedium(freshness);
+        }
+      }
+
+      function fillIndustryOptions(entries) {
+        const sel = document.getElementById('filterIndustry');
+        const industries = [...new Set(entries.map((e) => e.industry).filter(Boolean))]
+          .sort((a, b) => {
+            if (a === 'Other') return 1;
+            if (b === 'Other') return -1;
+            return String(a).localeCompare(String(b));
+          });
+        industries.forEach((industry) => {
+          const opt = document.createElement('option');
+          opt.value = industry;
+          opt.textContent = industry;
+          sel.appendChild(opt);
+        });
+      }
+
+      function fillYearOptions(entries) {
+        const sel = document.getElementById('filterYear');
+        const years = [...new Set(entries.map((e) => String(e.eventDate || '').slice(0, 4)).filter((v) => /^\\d{4}$/.test(v)))].sort().reverse();
+        years.forEach((year) => {
+          const opt = document.createElement('option');
+          opt.value = year;
+          opt.textContent = year;
+          sel.appendChild(opt);
+        });
+      }
+
+      function applyUrlState() {
+        const params = new URLSearchParams(window.location.search);
+        const map = {
+          q: 'filterSearch',
+          relevance: 'filterRelevance',
+          industry: 'filterIndustry',
+          year: 'filterYear',
+          sort: 'sortBy',
+        };
+        Object.entries(map).forEach(([key, id]) => {
+          const el = document.getElementById(id);
+          const value = params.get(key);
+          if (el && value != null) el.value = value;
+        });
+      }
+
+      function updateUrlState() {
+        const params = new URLSearchParams();
+        const values = {
+          q: document.getElementById('filterSearch').value.trim(),
+          relevance: document.getElementById('filterRelevance').value,
+          industry: document.getElementById('filterIndustry').value,
+          year: document.getElementById('filterYear').value,
+          sort: document.getElementById('sortBy').value === 'newest' ? '' : document.getElementById('sortBy').value,
+        };
+        Object.entries(values).forEach(([key, value]) => {
+          if (value) params.set(key, value);
+        });
+        const query = params.toString();
+        history.replaceState(null, '', query ? \`\${location.pathname}?\${query}\` : location.pathname);
+      }
+
+      function getFilteredEntries() {
+        const relevance = document.getElementById('filterRelevance').value;
+        const industry = document.getElementById('filterIndustry').value;
+        const year = document.getElementById('filterYear').value;
+        const sortBy = document.getElementById('sortBy').value;
+        const search = document.getElementById('filterSearch').value.trim().toLowerCase();
+
+        const filtered = allEntries.filter((entry) => {
+          if (relevance && entry.aiRelevance !== relevance) return false;
+          if (industry && entry.industry !== industry) return false;
+          if (year && String(entry.eventDate || '').slice(0, 4) !== year) return false;
+          if (search) {
+            const haystack = [entry.company, entry.geography, entry.summary, entry.notes, entry.industry]
+              .filter(Boolean)
+              .join(' ')
+              .toLowerCase();
+            if (!haystack.includes(search)) return false;
+          }
+          return true;
+        });
+
+        const sourceOrder = (entry) => {
+          const i = allEntries.indexOf(entry);
+          return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+        };
+        const newestFirst = (a, b) => String(b.eventDate).localeCompare(String(a.eventDate)) || sourceOrder(a) - sourceOrder(b);
+
+        if (sortBy === 'largest') {
+          return filtered.sort((a, b) => (Number(b.layoffsCount) || -1) - (Number(a.layoffsCount) || -1) || newestFirst(a, b));
+        }
+        if (sortBy === 'company') {
+          return filtered.sort((a, b) => String(a.company).localeCompare(String(b.company)) || String(b.eventDate).localeCompare(String(a.eventDate)));
+        }
+        return filtered.sort(newestFirst);
+      }
+
+      function renderDetailPanel(entry) {
+        const source = (entry.sources && entry.sources[0]) || null;
+        const whyIncluded = entry.aiRelevance === 'explicit_ai_cited'
+          ? 'Included because the source explicitly ties the layoffs to AI.'
+          : entry.aiRelevance === 'automation_efficiency_cited'
+            ? 'Included because the source ties the cuts to automation or AI-driven efficiency.'
+            : entry.aiRelevance === 'ai_adjacent_restructuring'
+              ? 'Included because the layoffs are tied to an AI-focused restructuring or reallocation.'
+              : 'Included as a more tentative AI-related lead.';
+        return \`
+          <div class="detail-panel" id="details-\${entry.id}" role="region" aria-label="\${entry.company} source details">
+            <div class="details">
+              <div class="quote-meta">
+                <span class="source-chip">\${source ? \`Source: <a href="\${source.url}" target="_blank" rel="noreferrer">\${source.name}</a>\` : 'Source unavailable'}</span>
+                <span class="source-chip">\${receiptLabel(entry)}</span>
+                <span class="pill \${entry.aiRelevance} mobile-only">\${fmtAiRelevanceShort(entry.aiRelevance)}</span>
+              </div>
+              <div class="quote">\${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
+              <div class="why-included">\${whyIncluded}</div>
+              <div class="detail-notes">\${entry.notes || ''}</div>
+            </div>
+          </div>
+        \`;
+      }
+
+      function render() {
+        const entries = getFilteredEntries();
+        const body = document.getElementById('entriesBody');
+        const empty = document.getElementById('emptyState');
+        const summary = document.getElementById('resultSummary');
+        const anchorBeforeTop = pendingAnchorId
+          ? document.querySelector(\`tr[data-entry-id="\${pendingAnchorId}"]\`)?.getBoundingClientRect().top
+          : null;
+        body.innerHTML = '';
+        empty.style.display = entries.length ? 'none' : 'block';
+        summary.textContent = \`\${entries.length} matching entries out of \${allEntries.length} total\`;
+        document.getElementById('resultJobsImpacted').textContent = \`(\${fmtNumber(entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0))} jobs impacted)\`;
+
+        if (!entries.some((entry) => entry.id === selectedEntryId)) {
+          selectedEntryId = null;
+        }
+
+        entries.forEach((entry) => {
+          const tr = document.createElement('tr');
+          tr.dataset.entryId = entry.id;
+          tr.tabIndex = 0;
+          tr.setAttribute('aria-controls', \`details-\${entry.id}\`);
+          const source = (entry.sources && entry.sources[0]) || null;
+          const isSelected = entry.id === selectedEntryId;
+          if (isSelected) tr.classList.add('selected');
+          tr.setAttribute('aria-expanded', isSelected ? 'true' : 'false');
+          tr.innerHTML = \`
+            <td data-label="Company"><span class="company-line"><b><a href="/company/\${companySlug(entry.company)}/">\${entry.company}</a></b></span><br><span class="muted"><span class="desktop-date">\${entry.geography || 'Unknown'}</span><span class="mobile-date">\${fmtGeography(entry.geography)}</span></span></td>
+            <td data-label="Date">\${source ? \`<a class="date-link" href="\${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span></a>\` : \`<span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span>\`}<br><span class="receipt-count">\${receiptLabel(entry)}</span></td>
+            <td data-label="Layoffs">\${fmtLayoffs(entry.layoffsCount)}</td>
+            <td data-label="Industry">\${entry.industry || 'Unknown'}</td>
+            <td data-label="AI relevance"><span class="pill \${entry.aiRelevance}">\${fmtAiRelevance(entry.aiRelevance)}</span></td>
+          \`;
+          const toggle = (event) => {
+            const clickedLink = event.target instanceof Element ? event.target.closest('a') : null;
+            if (clickedLink) {
+              event.stopPropagation();
+              return;
+            }
+            pendingAnchorId = entry.id;
+            selectedEntryId = isSelected ? null : entry.id;
+            render();
+          };
+          tr.addEventListener('click', toggle);
+          tr.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              toggle(event);
+            }
+          });
+          body.appendChild(tr);
+
+          if (isSelected) {
+            const detailRow = document.createElement('tr');
+            detailRow.className = 'detail-row';
+            detailRow.innerHTML = \`<td class="detail-cell" colspan="5">\${renderDetailPanel(entry)}</td>\`;
+            body.appendChild(detailRow);
+          }
+        });
+
+        updateUrlState();
+        [...document.querySelectorAll('th[aria-sort]')].forEach((th) => th.setAttribute('aria-sort', 'none'));
+        const activeSort = document.getElementById('sortBy').value;
+        const sortHeader = activeSort === 'largest' ? document.querySelector('th[data-sort-header="layoffs"]') : activeSort === 'company' ? document.querySelector('th[data-sort-header="company"]') : document.querySelector('th[data-sort-header="date"]');
+        if (sortHeader) sortHeader.setAttribute('aria-sort', activeSort === 'company' ? 'ascending' : 'descending');
+
+        if (pendingAnchorId) {
+          requestAnimationFrame(() => {
+            const anchorAfter = document.querySelector(\`tr[data-entry-id="\${pendingAnchorId}"]\`);
+            if (anchorAfter && anchorBeforeTop != null) {
+              const anchorAfterTop = anchorAfter.getBoundingClientRect().top;
+              window.scrollBy({ top: anchorAfterTop - anchorBeforeTop, left: 0, behavior: 'auto' });
+            }
+            pendingAnchorId = null;
+          });
+        }
+      }
+
+      async function init() {
+        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+        const resp = await fetch('./data/entries/index.json');
+        allEntries = await resp.json();
+        updateStats(allEntries);
+        fillIndustryOptions(allEntries);
+        fillYearOptions(allEntries);
+        applyUrlState();
+        ['filterSearch', 'filterRelevance', 'filterIndustry', 'filterYear', 'sortBy'].forEach((id) => {
+          document.getElementById(id).addEventListener(id === 'filterSearch' ? 'input' : 'change', render);
+        });
+        const listCard = document.querySelector('.list-card');
+        const filtersToggle = document.getElementById('filtersToggle');
+        const setFiltersOpen = (open) => {
+          if (!listCard || !filtersToggle) return;
+          listCard.setAttribute('data-filters-open', open ? 'true' : 'false');
+          filtersToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          filtersToggle.innerHTML = open ? 'Hide<br>filters' : 'Show<br>filters';
+        };
+        const mobile = window.matchMedia('(max-width: 800px)').matches;
+        setFiltersOpen(!mobile);
+        filtersToggle?.addEventListener('click', () => {
+          const isOpen = listCard?.getAttribute('data-filters-open') === 'true';
+          setFiltersOpen(!isOpen);
+        });
+        render();
+      }
+
+      init().catch((err) => {
+        console.error(err);
+        document.getElementById('entriesBody').innerHTML = '<tr><td colspan="5" class="muted">Failed to load entries.</td></tr>';
+      });`;
+}
+
 async function prerenderHomepage() {
   const indexPath = path.join(root, "index.html");
   let html = await readFile(indexPath, "utf8");
@@ -455,7 +949,8 @@ async function prerenderHomepage() {
   const maxUpdated = maxUpdatedAt(entries);
   const totalJobs = entries.reduce((sum, entry) => sum + Number(entry.layoffsCount || 0), 0);
   const explicitCount = entries.filter((entry) => entry.aiRelevance === "explicit_ai_cited").length;
-  const lastUpdatedLabel = fmtDateShort(maxUpdated);
+  const explicitShare = entries.length ? Math.round((explicitCount / entries.length) * 100) : 0;
+  const lastUpdatedLabel = fmtDateShortYear(maxUpdated);
   const faqItems = [
     {
       question: "What counts as an AI layoff on this site?",
@@ -478,18 +973,69 @@ async function prerenderHomepage() {
   const legacySiteUrl = `https://www.replacedbyai.${"com"}`;
   html = html.replaceAll(legacySiteUrl, siteUrl);
   html = html.replace(/<html>/, `<html lang="en">`);
-  html = html.replace("AI Layoff Tracker — Verified Cases with Receipts | Replaced by AI", "AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI");
+  html = html.replace(`AI Layoff Tracker ${"\u2014"} Verified Cases with Receipts | Replaced by AI`, "AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI");
+  html = html.replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI" />`);
+  html = html.replace(/<meta name="twitter:card" content="[^"]*" \/>/, `<meta name="twitter:card" content="summary_large_image" />`);
+  if (!/<meta property="og:image"/.test(html)) {
+    html = html.replace(/(    <meta property="og:url" content="[^"]+" \/>\r?\n)/, `$1    <meta property="og:image" content="${siteUrl}/og-image.svg" />\n    <meta name="twitter:image" content="${siteUrl}/og-image.svg" />\n`);
+  } else {
+    html = html.replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${siteUrl}/og-image.svg" />`);
+    html = html.replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${siteUrl}/og-image.svg" />`);
+  }
+  if (!/<link rel="alternate"[^>]+application\/rss\+xml/.test(html)) {
+    html = html.replace(/(    <link rel="canonical" href="https:\/\/www\.replacedbyai\.app\/" \/>\r?\n)/, `$1    <link rel="alternate" type="application/rss+xml" title="Replaced by AI feed" href="${siteUrl}/feed.xml" />\n`);
+  }
+  html = html.replace(/<a href="\/industries\/tech\/">Industries<\/a>\r?\n\s*<a href="\/sitemap\.xml">Sitemap<\/a>/, `<a href="/industries/">Industries</a>`);
+  html = html.replace(/<a href="\/industries\/tech\/">Industries<\/a>/, `<a href="/industries/">Industries</a>`);
   if (!/<link rel="canonical" href="https:\/\/www\.replacedbyai\.app\/" \/>/.test(html)) {
     html = html.replace(/(    <meta name="description" content="[^"]+" \/>\r?\n)/, `$1    <link rel="canonical" href="${siteUrl}/" />\n`);
   }
+  html = html.replace(new RegExp(`That skepticism is noted where relevant ${"\u2014"} the receipts are included so you can judge for yourself\\.`, "g"), "That skepticism is noted where relevant. The receipts are included so you can judge for yourself.");
+  html = html.replace(/      \/\* seo:homepage-improvements:start \*\/[\s\S]*?      \/\* seo:homepage-improvements:end \*\/\r?\n/, "");
+  html = html.replace(/    <\/style>/, `      /* seo:homepage-improvements:start */
+      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+      .quotable-stat { margin: -10px 0 22px; font-size: 17px; line-height: 1.55; color: #222; }
+      .relevance-legend { display: grid; gap: 8px; margin: 0 0 18px; }
+      .legend-item { display: grid; grid-template-columns: minmax(170px, max-content) 1fr; gap: 8px; align-items: baseline; color: inherit; text-decoration: none; font-size: 13px; }
+      .legend-item:hover span:last-child { text-decoration: underline; text-underline-offset: 2px; }
+      .receipt-count { display: inline-block; margin-top: 4px; font-size: 12px; color: #555; }
+      thead th { position: sticky; top: 0; z-index: 2; background: #fff; }
+      .trend-section { margin-bottom: 20px; }
+      .trend-chart { width: 100%; height: auto; display: block; }
+      .trend-bar { fill: #0c5c5d; }
+      .trend-axis { stroke: #c5cbd3; stroke-width: 1; }
+      .trend-labels text, .trend-y-label { font-size: 11px; fill: #555; }
+      .trend-caption { margin-bottom: 0; }
+      .link-section h3 { margin-bottom: 4px; }
+      .data-section p:last-child { margin-bottom: 0; }
+      @media (max-width: 640px) {
+        table, thead, tbody, tr, th, td { display: block; width: 100%; }
+        thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+        tbody tr { margin: 0 0 12px; padding: 12px; border: 1px solid #dde2e8; border-radius: 8px; background: #fff; }
+        tbody tr.detail-row { margin-top: -12px; padding: 0; border-top: 0; }
+        td { display: grid; grid-template-columns: 92px 1fr; gap: 8px; padding: 6px 0; border-bottom: 0; }
+        td::before { content: attr(data-label); font-size: 12px; font-weight: 700; color: #555; }
+        .detail-cell { display: block; }
+        .detail-cell::before { content: none; }
+        .legend-item { grid-template-columns: 1fr; }
+      }
+      /* seo:homepage-improvements:end */
+    </style>`);
   html = html.replace(/<div class="stat-value" id="statEntries">[\s\S]*?<\/div>/, `<div class="stat-value" id="statEntries">${entries.length}</div>`);
   html = html.replace(/<div class="stat-value" id="statLayoffs">[\s\S]*?<\/div>/, `<div class="stat-value" id="statLayoffs">${fmtNumber(totalJobs)}</div>`);
   html = html.replace(/<div class="stat-value" id="statExplicit">[\s\S]*?<\/div>/, `<div class="stat-value" id="statExplicit">${explicitCount}</div>`);
-  html = html.replace(/<div class="stat-value" id="statUpdated">[\s\S]*?<\/div>/, `<div class="stat-value" id="statUpdated"><span class="desktop-date">${escapeHtml(lastUpdatedLabel)}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(maxUpdated).slice(0, 5))}</span></div>`);
-  html = html.replace(/<div class="stat-label" id="statUpdatedLabel">[\s\S]*?<\/div>/, `<div class="stat-label" id="statUpdatedLabel">last updated on ${escapeHtml(fmtDateCompact(maxUpdated))}</div>`);
+  html = html.replace(/<div class="stat-value" id="(?:statUpdated|statExplicitShare)">[\s\S]*?<\/div>/, `<div class="stat-value" id="statExplicitShare">${escapeHtml(fmtPercent(explicitShare))}</div>`);
+  html = html.replace(/<div class="stat-label" id="(?:statUpdatedLabel|statExplicitShareLabel)">[\s\S]*?<\/div>/, `<div class="stat-label" id="statExplicitShareLabel">explicitly cite AI</div>`);
   html = html.replace(/<time id="freshnessDate" datetime="[^"]*">[\s\S]*?<\/time>/, `<time id="freshnessDate" datetime="${escapeHtml(maxUpdated)}">${escapeHtml(lastUpdatedLabel)}</time>`);
   html = html.replace(/<div class="muted" id="resultSummary">[\s\S]*?<\/div>/, `<div class="muted" id="resultSummary">${entries.length} matching entries out of ${entries.length} total</div>`);
   html = html.replace(/<div class="muted" id="resultJobsImpacted">[\s\S]*?<\/div>/, `<div class="muted" id="resultJobsImpacted">(${escapeHtml(fmtNumber(totalJobs))} jobs impacted)</div>`);
+  html = html.replace(/<th>Receipts<\/th>/, `<th data-sort-header="date" aria-sort="descending">Date</th>`);
+  html = html.replace(/<th>Company<\/th>/, `<th data-sort-header="company" aria-sort="none">Company</th>`);
+  html = html.replace(/<th>Layoffs<\/th>/, `<th data-sort-header="layoffs" aria-sort="none">Layoffs</th>`);
+  html = html.replace("Company A–Z", "Company A-Z");
+  html = html.replace(/\r?\n\s*<caption class="visually-hidden">Verified AI layoff tracker entries with dates, job impact, industry, and AI relevance labels\.<\/caption>/g, "");
+  html = html.replace(/<table>/, `<table>\n        <caption class="visually-hidden">Verified AI layoff tracker entries with dates, job impact, industry, and AI relevance labels.</caption>`);
+  html = html.replace(/\r?\n    <section class="card" style="margin-top:20px;">\r?\n      <h2>By Industry<\/h2>[\s\S]*?    <\/section>\r?\n(?=\r?\n<!-- seo:faq:start -->)/, "\n");
 
   html = replaceRegion(
     html,
@@ -497,7 +1043,53 @@ async function prerenderHomepage() {
     `    <p class="muted intro-copy">Replaced by AI is a public AI layoff tracker. It documents layoffs tied to AI and automation, with every entry sourced to a primary statement or reputable reporting.</p>`,
     /(?=    <p class="muted freshness">)/,
   );
+  html = replaceRegion(
+    html,
+    "quote-stat",
+    `    <p class="quotable-stat">As of ${escapeHtml(lastUpdatedLabel)}, this tracker documents ${entries.length} verified layoff events impacting ${escapeHtml(fmtNumber(totalJobs))} workers, and ${escapeHtml(fmtPercent(explicitShare))} of them explicitly cite AI.</p>`,
+    /(?=    <div class="card list-card")/,
+  );
+  html = replaceRegion(
+    html,
+    "legend",
+    `      <div class="relevance-legend" aria-label="AI relevance legend">
+          ${buildLegend()}
+        </div>`,
+    /(?=      <table>)/,
+  );
   html = replaceEntriesBody(html, homepageEntryRows(sortedEntries));
+  html = replaceRegion(
+    html,
+    "trend",
+    `    ${buildTrendChart(entries)}`,
+    /(?=    <div class="card list-card")/,
+  );
+  html = replaceRegion(
+    html,
+    "links",
+    `    <section class="card link-section" aria-labelledby="browseTitle">
+      <h2 id="browseTitle">Browse the tracker</h2>
+      <h3>By Industry</h3>
+      <div class="section-link-grid">
+        ${buildIndustryLinks()}
+      </div>
+      <h3>By Year</h3>
+      <div class="section-link-grid">
+        ${buildYearLinks()}
+      </div>
+    </section>`,
+    /(?=    <div class="card" style="margin-top:20px;">\r?\n      <h2>Methodology<\/h2>)/,
+  );
+  html = replaceRegion(
+    html,
+    "data",
+    `    <section class="card data-section" aria-labelledby="dataTitle">
+      <h2 id="dataTitle">Data</h2>
+      <p><a href="/data/export/ai-layoffs.csv">Download CSV</a> · <a href="/data/entries/index.json">View JSON index</a> · <a href="mailto:?subject=AI%20layoff%20tip&body=Company%3A%0ADate%3A%0ASource%20link%3A%0ASource%20quote%3A">Submit a tip</a></p>
+      <p class="muted">Free to use with attribution. Cite as: Replaced by AI, AI Layoff Tracker, replacedbyai.app.</p>
+    </section>`,
+    /(?=    <div class="card" style="margin-top:20px;">\r?\n      <h2>Methodology<\/h2>)/,
+  );
   html = replaceRegion(
     html,
     "faq",
@@ -507,6 +1099,8 @@ async function prerenderHomepage() {
     </section>`,
     /(?=    <div class="card" style="margin-top:20px;">\r?\n      <h2>Methodology<\/h2>)/,
   );
+  html = html.replace(/<p class="footer-note" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"><\/span><\/span><a class="ba-badge" href="https:\/\/www\.b-average\.com\/" target="_blank" rel="noreferrer">B AVERAGE<\/a><\/p>/, `<p class="footer-note" style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"></span></span><a class="ba-badge" href="https://www.b-average.com/" target="_blank" rel="noreferrer">B AVERAGE</a><a href="/sitemap.xml">Sitemap</a><a href="/feed.xml">RSS</a><a href="mailto:?subject=AI%20layoff%20tip&body=Company%3A%0ADate%3A%0ASource%20link%3A%0ASource%20quote%3A">Submit a tip</a></p>`);
+  html = replaceHomepageScript(html, buildClientScript());
 
   html = replaceJsonLd(html, "WebSite", {
     "@context": "https://schema.org",
@@ -525,11 +1119,18 @@ async function prerenderHomepage() {
     dateModified: maxUpdated,
     keywords: ["ai layoffs", "ai layoff tracker", "ai replacement layoffs", "automation layoffs"],
     isAccessibleForFree: true,
-    distribution: {
-      "@type": "DataDownload",
-      encodingFormat: "application/json",
-      contentUrl: `${siteUrl}/data/entries/index.json`,
-    },
+    distribution: [
+      {
+        "@type": "DataDownload",
+        encodingFormat: "text/csv",
+        contentUrl: `${siteUrl}/data/export/ai-layoffs.csv`,
+      },
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/json",
+        contentUrl: `${siteUrl}/data/entries/index.json`,
+      },
+    ],
   });
   html = replaceJsonLd(html, "FAQPage", {
     "@context": "https://schema.org",
@@ -547,6 +1148,88 @@ async function prerenderHomepage() {
   await writeFile(indexPath, html);
 }
 
+async function writeCsvExport() {
+  const dir = path.join(root, "data", "export");
+  await mkdir(dir, { recursive: true });
+  const rows = [
+    ["company", "eventDate", "layoffsCount", "industry", "geography", "aiRelevance", "status", "sourceQuality", "primary source URL"],
+    ...entries
+      .slice()
+      .sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")))
+      .map((entry) => [
+        entry.company,
+        entry.eventDate,
+        entry.layoffsCount == null ? "" : entry.layoffsCount,
+        entry.industry,
+        entry.geography,
+        entry.aiRelevance,
+        entry.status,
+        entry.sourceQuality,
+        entry.sources?.[0]?.url || "",
+      ]),
+  ];
+  const csv = `${rows.map((row) => row.map(csvEscape).join(",")).join("\n")}\n`;
+  await writeFile(path.join(dir, "ai-layoffs.csv"), csv);
+}
+
+async function writeFeed() {
+  const recent = entries
+    .slice()
+    .sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")))
+    .slice(0, Math.min(20, entries.length));
+  const items = recent.map((entry) => {
+    const url = `${siteUrl}/company/${slugify(entry.company)}/`;
+    const title = `${entry.company} AI layoffs, ${fmtDate(entry.eventDate)}`;
+    const description = `${entry.company}: ${fmtLayoffs(entry.layoffsCount)} layoffs. ${aiLabels[entry.aiRelevance] || fmtAiRelevanceShort(entry.aiRelevance)}. ${entry.summary || ""}`;
+    return `    <item>
+      <title>${xmlEscape(title)}</title>
+      <link>${xmlEscape(url)}</link>
+      <guid>${xmlEscape(`${url}#${entry.id}`)}</guid>
+      <pubDate>${new Date(`${dateOnly(entry.eventDate)}T00:00:00Z`).toUTCString()}</pubDate>
+      <description>${xmlEscape(description)}</description>
+    </item>`;
+  }).join("\n");
+  const feed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Replaced by AI Layoff Tracker</title>
+    <link>${siteUrl}/</link>
+    <description>Recent sourced AI layoff tracker entries.</description>
+    <lastBuildDate>${new Date(`${maxUpdatedAt(entries)}T00:00:00Z`).toUTCString()}</lastBuildDate>
+${items}
+  </channel>
+</rss>
+`;
+  await writeFile(path.join(root, "feed.xml"), feed);
+}
+
+async function writeOgImage() {
+  const totalJobs = entries.reduce((sum, entry) => sum + Number(entry.layoffsCount || 0), 0);
+  const explicitCount = entries.filter((entry) => entry.aiRelevance === "explicit_ai_cited").length;
+  const explicitShare = entries.length ? Math.round((explicitCount / entries.length) * 100) : 0;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#e1e6ed"/>
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="#ffffff" stroke="#ccd3dc"/>
+  <rect x="112" y="118" width="428" height="86" rx="12" fill="#111111"/>
+  <text x="140" y="173" font-family="Consolas, Menlo, monospace" font-size="42" font-weight="700" fill="#f5f5f5">&gt; /replaced -ai</text>
+  <text x="112" y="284" font-family="Arial, sans-serif" font-size="70" font-weight="700" fill="#111111">AI Layoff Tracker</text>
+  <text x="112" y="342" font-family="Arial, sans-serif" font-size="30" fill="#333333">Verified cases with receipts</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="112" y="410" width="280" height="92" rx="14" fill="#0c5c5d"/>
+    <text x="138" y="462" font-size="38" font-weight="700" fill="#ffffff">${entries.length}</text>
+    <text x="138" y="488" font-size="20" fill="#dcecec">verified cases</text>
+    <rect x="424" y="410" width="280" height="92" rx="14" fill="#0c5c5d"/>
+    <text x="450" y="462" font-size="38" font-weight="700" fill="#ffffff">${fmtNumber(totalJobs)}</text>
+    <text x="450" y="488" font-size="20" fill="#dcecec">jobs impacted</text>
+    <rect x="736" y="410" width="280" height="92" rx="14" fill="#0c5c5d"/>
+    <text x="762" y="462" font-size="38" font-weight="700" fill="#ffffff">${fmtPercent(explicitShare)}</text>
+    <text x="762" y="488" font-size="20" fill="#dcecec">explicitly cite AI</text>
+  </g>
+</svg>
+`;
+  await writeFile(path.join(root, "og-image.svg"), svg);
+}
+
 const companyGroups = new Map();
 for (const entry of entries) {
   const slug = slugify(entry.company);
@@ -562,6 +1245,10 @@ const sitemapUrls = [
   { url: "/", lastmod: allEntriesLastmod },
   { url: "/about/", lastmod: allEntriesLastmod },
   { url: "/company/", lastmod: allEntriesLastmod },
+  { url: "/industries/", lastmod: allEntriesLastmod },
+  { url: "/data/export/ai-layoffs.csv", lastmod: allEntriesLastmod },
+  { url: "/feed.xml", lastmod: allEntriesLastmod },
+  { url: "/og-image.svg", lastmod: allEntriesLastmod },
 ];
 for (const [slug, companyEntries] of companyGroups.entries()) {
   companyEntries.sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")));
@@ -645,12 +1332,12 @@ for (const entry of entries) {
 
 for (const [industry, items] of industryGroups.entries()) {
   items.sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")));
-  const slug = industrySlugs[industry] || slugify(industry);
-  const title = `${industryTitles[industry] || `${industry} AI Layoffs`} - Replaced by AI`;
-  const description = `Track ${String(industryTitles[industry] || `${industry} AI layoffs`).toLowerCase()} with sourced receipts, company pages, dates, and AI relevance labels.`;
+  const slug = industrySlug(industry);
+  const title = `${industryTitle(industry)} - Replaced by AI`;
+  const description = `Track ${String(industryTitle(industry)).toLowerCase()} with sourced receipts, company pages, dates, and AI relevance labels.`;
   const body = `    <main>
       <p class="muted">Industry landing page</p>
-      <h1>${escapeHtml(industryTitles[industry] || `${industry} AI Layoffs`)}</h1>
+      <h1>${escapeHtml(industryTitle(industry))}</h1>
       <p>${escapeHtml(description)}</p>
       <section class="card">
         <h2>Recent AI Layoffs</h2>
@@ -662,6 +1349,37 @@ for (const [industry, items] of industryGroups.entries()) {
   await writeFile(path.join(dir, "index.html"), pageShell({ title, description, canonicalPath: `/industries/${slug}/`, body, schema: itemListSchema(items, `/industries/${slug}/`) }));
   sitemapUrls.push({ url: `/industries/${slug}/`, lastmod: maxUpdatedAt(items) });
 }
+
+const industryIndexBody = `    <main>
+      <p class="muted">Industry index</p>
+      <h1>AI layoffs by industry</h1>
+      <p>Browse every industry represented in the Replaced by AI layoff tracker, with counts generated from the current dataset.</p>
+      <section class="card">
+        <h2>Industry pages</h2>
+        <ul class="source-list">
+          ${[...industryGroups.entries()]
+            .sort((a, b) => {
+              if (a[0] === "Other") return 1;
+              if (b[0] === "Other") return -1;
+              return a[0].localeCompare(b[0]);
+            })
+            .map(([industry, items]) => `<li><a href="/industries/${industrySlug(industry)}/">${escapeHtml(industry)} AI layoffs</a> (${items.length})</li>`)
+            .join("\n          ")}
+        </ul>
+      </section>
+    </main>`;
+
+await mkdir(path.join(root, "industries"), { recursive: true });
+await writeFile(
+  path.join(root, "industries", "index.html"),
+  pageShell({
+    title: "AI layoffs by industry - Replaced by AI tracker",
+    description: "Browse AI layoffs by industry with static, indexable pages and current counts from the Replaced by AI layoff tracker.",
+    canonicalPath: "/industries/",
+    body: industryIndexBody,
+    schema: itemListSchema(entries, "/industries/"),
+  }),
+);
 
 const customerSupportEntries = entries.filter((entry) => /support|customer|service|moderation|contractor/i.test([entry.company, entry.summary, entry.notes, entry.industry].filter(Boolean).join(" ")));
 const customerSupportBody = `    <main>
@@ -737,10 +1455,7 @@ const aboutBody = `    <main>
       </section>
       <section class="card">
         <h2>Classification rules</h2>
-        <p><strong>Explicit AI cited</strong> means the source directly ties layoffs to AI, AI investment, AI replacement, or AI-driven operating changes.</p>
-        <p><strong>Automation / efficiency cited</strong> means the source ties cuts to automation, efficiency, or reduced manual work.</p>
-        <p><strong>AI-adjacent restructuring</strong> means the layoff is tied to AI-focused strategy, technology investment, or team reallocation, but not direct replacement.</p>
-        <p><strong>Speculative / unclear</strong> means the event is included as a lead or weakly related case and should not be read as confirmed AI replacement.</p>
+        ${Object.entries(aiLabels).map(([key, label]) => `<p id="${escapeHtml(relevanceSlugs[key] || slugify(key))}"><strong>${escapeHtml(label)}</strong> means ${escapeHtml(aiDefinitions[key]).replace(/^The source /, "the source ").replace(/^The layoff /, "the layoff ").replace(/^The event /, "the event ")}</p>`).join("\n        ")}
       </section>
       <section class="card">
         <h2>Source quality</h2>
@@ -763,6 +1478,9 @@ await writeFile(
   }),
 );
 
+await writeCsvExport();
+await writeFeed();
+await writeOgImage();
 await prerenderHomepage();
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
