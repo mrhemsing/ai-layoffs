@@ -440,13 +440,12 @@ function itemListSchema(items, canonicalPath) {
 function homepageEntryRows(items) {
   return items.map((entry) => {
     const source = (entry.sources && entry.sources[0]) || null;
-    const receipts = receiptLabel(entry);
     return `          <tr data-entry-id="${escapeHtml(entry.id || "")}" aria-expanded="false" aria-controls="details-${escapeHtml(entry.id || "")}" tabindex="0">
-            <td data-label="Company"><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted"><span class="desktop-date">${escapeHtml(entry.geography || "Unknown")}</span><span class="mobile-date">${escapeHtml(fmtGeography(entry.geography))}</span></span></td>
-            <td data-label="Date">${source ? `<a class="date-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer"><span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span></a>` : `<span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span>`}<br><span class="receipt-count">${escapeHtml(receipts)}</span></td>
-            <td data-label="Layoffs">${escapeHtml(fmtLayoffs(entry.layoffsCount))}</td>
-            <td data-label="Industry">${escapeHtml(entry.industry || "Unknown")}</td>
-            <td data-label="AI relevance"><span class="pill ${escapeHtml(entry.aiRelevance || "")}">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span></td>
+            <td><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted"><span class="desktop-date">${escapeHtml(entry.geography || "Unknown")}</span><span class="mobile-date">${escapeHtml(fmtGeography(entry.geography))}</span></span></td>
+            <td>${source ? `<a class="date-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer"><span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span></a>` : `<span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span>`}</td>
+            <td>${escapeHtml(fmtLayoffs(entry.layoffsCount))}</td>
+            <td>${escapeHtml(entry.industry || "Unknown")}</td>
+            <td><span class="pill ${escapeHtml(entry.aiRelevance || "")}">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span></td>
           </tr>`;
   }).join("\n");
 }
@@ -729,7 +728,6 @@ function buildClientScript() {
             <div class="details">
               <div class="quote-meta">
                 <span class="source-chip">\${source ? \`Source: <a href="\${source.url}" target="_blank" rel="noreferrer">\${source.name}</a>\` : 'Source unavailable'}</span>
-                <span class="source-chip">\${receiptLabel(entry)}</span>
                 <span class="pill \${entry.aiRelevance} mobile-only">\${fmtAiRelevanceShort(entry.aiRelevance)}</span>
               </div>
               <div class="quote">\${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
@@ -767,11 +765,11 @@ function buildClientScript() {
           if (isSelected) tr.classList.add('selected');
           tr.setAttribute('aria-expanded', isSelected ? 'true' : 'false');
           tr.innerHTML = \`
-            <td data-label="Company"><span class="company-line"><b><a href="/company/\${companySlug(entry.company)}/">\${entry.company}</a></b></span><br><span class="muted"><span class="desktop-date">\${entry.geography || 'Unknown'}</span><span class="mobile-date">\${fmtGeography(entry.geography)}</span></span></td>
-            <td data-label="Date">\${source ? \`<a class="date-link" href="\${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span></a>\` : \`<span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span>\`}<br><span class="receipt-count">\${receiptLabel(entry)}</span></td>
-            <td data-label="Layoffs">\${fmtLayoffs(entry.layoffsCount)}</td>
-            <td data-label="Industry">\${entry.industry || 'Unknown'}</td>
-            <td data-label="AI relevance"><span class="pill \${entry.aiRelevance}">\${fmtAiRelevance(entry.aiRelevance)}</span></td>
+            <td><span class="company-line"><b><a href="/company/\${companySlug(entry.company)}/">\${entry.company}</a></b></span><br><span class="muted"><span class="desktop-date">\${entry.geography || 'Unknown'}</span><span class="mobile-date">\${fmtGeography(entry.geography)}</span></span></td>
+            <td>\${source ? \`<a class="date-link" href="\${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span></a>\` : \`<span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span>\`}</td>
+            <td>\${fmtLayoffs(entry.layoffsCount)}</td>
+            <td>\${entry.industry || 'Unknown'}</td>
+            <td><span class="pill \${entry.aiRelevance}">\${fmtAiRelevance(entry.aiRelevance)}</span></td>
           \`;
           const toggle = (event) => {
             const clickedLink = event.target instanceof Element ? event.target.closest('a') : null;
@@ -905,20 +903,9 @@ async function prerenderHomepage() {
   html = html.replace(/    <\/style>/, `      /* seo:homepage-improvements:start */
       .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
       .quotable-stat { margin: -10px 0 22px; font-size: 17px; line-height: 1.55; color: #222; }
-      .receipt-count { display: inline-block; margin-top: 4px; font-size: 12px; color: #555; }
       thead th { position: sticky; top: 0; z-index: 2; background: #fff; }
       .link-section h3 { margin-bottom: 4px; }
       .data-section p:last-child { margin-bottom: 0; }
-      @media (max-width: 640px) {
-        table, thead, tbody, tr, th, td { display: block; width: 100%; }
-        thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
-        tbody tr { margin: 0 0 12px; padding: 12px; border: 1px solid #dde2e8; border-radius: 8px; background: #fff; }
-        tbody tr.detail-row { margin-top: -12px; padding: 0; border-top: 0; }
-        td { display: grid; grid-template-columns: 92px 1fr; gap: 8px; padding: 6px 0; border-bottom: 0; }
-        td::before { content: attr(data-label); font-size: 12px; font-weight: 700; color: #555; }
-        .detail-cell { display: block; }
-        .detail-cell::before { content: none; }
-      }
       /* seo:homepage-improvements:end */
     </style>`);
   html = html.replace(/<div class="stat-value" id="statEntries">[\s\S]*?<\/div>/, `<div class="stat-value" id="statEntries">${entries.length}</div>`);
