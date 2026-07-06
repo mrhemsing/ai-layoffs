@@ -1,25 +1,11 @@
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { evidenceTierOf } from "./lib/evidence.mjs";
 
 const root = process.cwd();
 const entriesPath = path.join(root, "data", "entries", "index.json");
 const entries = JSON.parse(readFileSync(entriesPath, "utf8"));
 const siteUrl = "https://www.replacedbyai.app";
-
-function assertNoMojibake(value, context) {
-  if (/[ÃÂâ][\s\S]?|�/.test(String(value || ""))) {
-    throw new Error(`Possible mojibake detected in ${context}: ${value}`);
-  }
-}
-
-for (const entry of entries) {
-  assertNoMojibake(entry.company, `company ${entry.id}`);
-  assertNoMojibake(entry.summary, `summary ${entry.id}`);
-  assertNoMojibake(entry.evidenceQuote, `evidenceQuote ${entry.id}`);
-  for (const source of entry.sources || []) assertNoMojibake(source.quote, `source quote ${entry.id}`);
-}
 
 const aiLabels = {
   explicit_ai_cited: "Explicit AI cited",
@@ -47,40 +33,6 @@ const relevanceSlugs = {
   ai_reorg_or_spend_linked: "ai-reorg-or-spend-linked",
   ai_replacement_cited: "ai-replacement-cited",
 };
-
-const tipMailto = "mailto:tips@replacedbyai.app?subject=AI%20layoff%20tip&body=Company%3A%0ADate%3A%0ASource%20link%3A%0ASource%20quote%3A";
-
-const fontPreloads = `    <link rel="preload" href="/fonts/ibm-plex-sans-latin-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/ibm-plex-mono-latin-400.woff2" as="font" type="font/woff2" crossorigin />`;
-
-const fontFaces = `      @font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans-latin-400.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: swap; }
-      @font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans-latin-600.woff2") format("woff2"); font-style: normal; font-weight: 600; font-display: swap; }
-      @font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans-latin-700.woff2") format("woff2"); font-style: normal; font-weight: 700; font-display: swap; }
-      @font-face { font-family: "IBM Plex Mono"; src: url("/fonts/ibm-plex-mono-latin-400.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: swap; }
-      @font-face { font-family: "IBM Plex Mono"; src: url("/fonts/ibm-plex-mono-latin-500.woff2") format("woff2"); font-style: normal; font-weight: 500; font-display: swap; }
-      @font-face { font-family: "IBM Plex Serif"; src: url("/fonts/ibm-plex-serif-latin-400-italic.woff2") format("woff2"); font-style: italic; font-weight: 400; font-display: swap; }`;
-
-const tokenBlock = `      :root {
-        --paper: #FCFCFA;
-        --ink: #17191D;
-        --ink-2: #50555D;
-        --rule: #E5E4DF;
-        --redline: #B3202F;
-        --redline-tint: #F8E9EA;
-        --redline-text: #8C1523;
-        --neutral-tint: #EFEEE9;
-        --graphite: #7A7F87;
-        --white: #FFFFFF;
-        --hover: rgba(0, 0, 0, 0.025);
-      }`;
-
-function evidenceTierLabel(entry) {
-  return evidenceTierOf(entry.aiRelevance) === "strong"
-    ? "strong evidence"
-    : evidenceTierOf(entry.aiRelevance) === "weak"
-      ? "weak evidence"
-      : "medium evidence";
-}
 
 const industrySlugs = {
   Technology: "tech",
@@ -129,10 +81,6 @@ function fmtLayoffs(value) {
   return value == null ? "Not disclosed" : Number(value).toLocaleString("en-US");
 }
 
-function fmtLayoffsLedger(value) {
-  return value == null ? "n/d" : Number(value).toLocaleString("en-US");
-}
-
 function fmtPercent(value) {
   return `${Math.round(value)}%`;
 }
@@ -145,24 +93,6 @@ function fmtDateShortYear(value) {
     year: "numeric",
     timeZone: "UTC",
   });
-}
-
-function fmtDateMedium(value) {
-  if (!value) return "Unknown date";
-  return new Date(`${dateOnly(value)}T00:00:00Z`).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-}
-
-function compactNumber(value) {
-  return new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 0 }).format(Number(value || 0)).toLowerCase();
-}
-
-function attr(value = "") {
-  return escapeHtml(value).replaceAll("\n", " ");
 }
 
 function receiptLabel(entry) {
@@ -245,33 +175,6 @@ function fmtAiRelevanceShort(value) {
   return String(value || "").replaceAll("_", " ");
 }
 
-function pillHtml(aiRelevance) {
-  const label = aiLabels[aiRelevance] || aiRelevance || "Unclassified";
-  const tier = evidenceTierOf(aiRelevance);
-  const definition = aiDefinitions[aiRelevance] || "";
-  return `<span class="pill ${escapeHtml(tier)}" data-tier="${escapeHtml(tier)}" data-definition="${attr(definition)}" title="${attr(definition)}">${escapeHtml(label)}</span>`;
-}
-
-function receiptStack(entry) {
-  const sources = Array.isArray(entry.sources) && entry.sources.length ? entry.sources : [{}];
-  const tier = evidenceTierOf(entry.aiRelevance);
-  const verdict = `Evidence: ${aiLabels[entry.aiRelevance] || fmtAiRelevanceShort(entry.aiRelevance) || "unclassified"}`;
-  return `<div class="receipt-stack" aria-label="${escapeHtml(entry.company || "Entry")} receipts">
-        ${sources.map((source, index) => {
-          const quote = source.quote || entry.evidenceQuote || "No evidence quote recorded.";
-          const name = source.name || "Source";
-          const date = source.publishedDate || entry.eventDate || "";
-          return `<article class="receipt-slip">
-          <div class="receipt-head"><a href="${escapeHtml(source.url || "#")}" target="_blank" rel="noreferrer">${escapeHtml(name.toUpperCase())}</a><time datetime="${escapeHtml(date)}">${escapeHtml(date || "n/a")}</time></div>
-          <hr class="receipt-rule" />
-          <div class="receipt-quote">${escapeHtml(quote)}</div>
-          <hr class="receipt-rule" />
-          <div class="receipt-foot" data-tier="${escapeHtml(tier)}"><span>${escapeHtml(verdict.toUpperCase())}</span>${sources.length > 1 ? `<span>${index + 1} OF ${sources.length}</span>` : ""}</div>
-        </article>`;
-        }).join("\n        ")}
-      </div>`;
-}
-
 function fmtGeography(value) {
   return value === "United Kingdom" ? "UK" : (value || "-");
 }
@@ -302,56 +205,155 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
     <meta name="description" content="${escapeHtml(description)}" />
     <link rel="canonical" href="${escapeHtml(canonical)}" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-${fontPreloads}
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${escapeHtml(canonical)}" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <style>
-${fontFaces}
-${tokenBlock}
-      *, *::before, *::after { box-sizing: border-box; }
-      body { max-width: 1100px; margin: 20px auto 40px; padding: 0 16px; color: var(--ink); background: var(--paper); font-family: "IBM Plex Sans", sans-serif; font-size: 16px; line-height: 1.55; overflow-x: hidden; }
-      a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-      a:hover { color: var(--redline); }
-      a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--redline); outline-offset: 2px; }
-      .top-nav { display: flex; gap: 14px; align-items: center; justify-content: flex-end; margin-bottom: 22px; font-size: 14px; }
-      .top-nav a { text-decoration: none; }
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1100px;
+        margin: 20px auto 40px;
+        padding: 0 16px;
+        color: #111;
+        background:
+          radial-gradient(circle at top, rgba(255,255,255,0.72), rgba(255,255,255,0.36) 30%, rgba(229,233,239,0.68) 58%, rgba(214,220,228,0.92) 100%),
+          #e1e6ed;
+        line-height: 1.55;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+      .ambient-bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        opacity: 1;
+      }
+      .ambient-shape {
+        position: absolute;
+        border-radius: 28px;
+        border: 2px solid rgba(53, 70, 92, 0.28);
+        background: rgba(255,255,255,0.14);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 30px rgba(34,44,60,0.08);
+        will-change: transform, opacity;
+      }
+      .ambient-shape.one {
+        width: 420px;
+        height: 420px;
+        top: 5%;
+        left: -40px;
+        transform: rotate(18deg);
+        animation: geoOne 20s ease-in-out infinite alternate;
+      }
+      .ambient-shape.two {
+        width: 300px;
+        height: 300px;
+        top: 22%;
+        right: 10px;
+        transform: rotate(34deg);
+        animation: geoTwo 24s ease-in-out infinite alternate;
+      }
+      .ambient-shape.three {
+        width: 240px;
+        height: 240px;
+        bottom: 10%;
+        left: 40px;
+        transform: rotate(12deg);
+        animation: geoThree 18s ease-in-out infinite alternate;
+      }
+      .ambient-shape.four {
+        width: 200px;
+        height: 200px;
+        bottom: 16%;
+        right: 80px;
+        transform: rotate(46deg);
+        animation: geoFour 26s ease-in-out infinite alternate;
+      }
+      @keyframes geoOne {
+        0% { transform: translate3d(0, 0, 0) rotate(18deg); opacity: 0.34; }
+        100% { transform: translate3d(46px, 24px, 0) rotate(26deg); opacity: 0.2; }
+      }
+      @keyframes geoTwo {
+        0% { transform: translate3d(0, 0, 0) rotate(34deg); opacity: 0.26; }
+        100% { transform: translate3d(-38px, 34px, 0) rotate(22deg); opacity: 0.16; }
+      }
+      @keyframes geoThree {
+        0% { transform: translate3d(0, 0, 0) rotate(12deg); opacity: 0.2; }
+        100% { transform: translate3d(24px, -16px, 0) rotate(20deg); opacity: 0.12; }
+      }
+      @keyframes geoFour {
+        0% { transform: translate3d(0, 0, 0) rotate(46deg); opacity: 0.18; }
+        100% { transform: translate3d(-18px, -26px, 0) rotate(56deg); opacity: 0.1; }
+      }
+      a { color: #0a58ca; }
+      .top-nav { display: flex; gap: 12px; align-items: center; justify-content: flex-end; margin-bottom: 0; font-size: 14px; }
+      .top-nav a { color: #111; text-decoration: none; }
       .top-nav a:hover { text-decoration: underline; }
-      .hero { margin-bottom: 20px; }
+      .hero { margin-bottom: 8px; }
       .logo-link { display: inline-flex; color: inherit; text-decoration: none; }
-      .prompt-title { display: inline-flex; align-items: center; gap: 10px; padding: 12px 15px; background: var(--ink); color: var(--paper); border-radius: 6px; font-family: "IBM Plex Mono", monospace; font-size: clamp(28px, 5vw, 42px); line-height: 1.1; letter-spacing: -0.02em; }
+      .prompt-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        background: #111;
+        color: #f5f5f5;
+        border-radius: 12px;
+        font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace;
+        font-size: clamp(28px, 5vw, 42px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      }
       .prompt-symbol { color: #7CFF6B; }
       .prompt-text { white-space: nowrap; }
-      .prompt-cursor { display: inline-block; width: 0.65ch; height: 1.05em; background: #7CFF6B; vertical-align: -0.12em; animation: blink 1s steps(1, end) infinite; }
+      .prompt-cursor {
+        display: inline-block;
+        width: 0.65ch;
+        height: 1.05em;
+        background: #7CFF6B;
+        vertical-align: -0.12em;
+        animation: blink 1s steps(1, end) infinite;
+      }
       @keyframes blink { 50% { opacity: 0; } }
-      @media (prefers-reduced-motion: reduce) { .prompt-cursor { animation: none; } }
-      h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: -0.02em; font-weight: 700; }
-      h2 { margin-top: 34px; font-weight: 600; letter-spacing: 0; }
-      h3 { font-weight: 600; }
-      .muted { color: var(--ink-2); }
-      .card { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; margin: 18px 0; }
-      .pill { display: inline-block; padding: 5px 8px; border-radius: 999px; font-family: "IBM Plex Mono", monospace; font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums; }
-      .pill[data-tier="strong"], .pill.strong { color: var(--redline-text); background: var(--redline-tint); border: 1px solid rgba(179,32,47,0.25); }
-      .pill[data-tier="medium"], .pill.medium { color: var(--ink-2); background: var(--neutral-tint); border: 1px solid var(--rule); }
-      .pill[data-tier="weak"], .pill.weak { color: var(--graphite); background: transparent; border: 1px dashed var(--graphite); }
+      h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: 0; }
+      h2 { margin-top: 34px; }
+      .muted { color: #555; }
+      .card { background: #fff; border: 1px solid #dde2e8; border-radius: 8px; padding: 18px; margin: 18px 0; }
+      .pill { display: inline-block; padding: 5px 9px; border-radius: 999px; background: #f2f4f7; font-size: 13px; margin-right: 6px; }
+      .quote { padding: 12px 14px; border-left: 4px solid #ccd3dc; background: #fafafa; }
       .source-list { padding-left: 20px; }
-      .footer { margin-top: 34px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); }
-      .receipt-stack { display: grid; gap: 10px; margin-top: 12px; }
-      .receipt-slip { max-width: 560px; background: var(--white); border: 1px solid var(--rule); border-bottom: 0; padding: 12px 14px 18px; position: relative; transform: translate(2px, 0); }
-      .receipt-slip::after { content: ""; position: absolute; left: -1px; right: -1px; bottom: -8px; height: 8px; background: linear-gradient(135deg, var(--white) 25%, transparent 25%) 0 0 / 12px 8px repeat-x, linear-gradient(225deg, var(--white) 25%, transparent 25%) 0 0 / 12px 8px repeat-x; border-top: 1px solid var(--rule); }
-      .receipt-head, .receipt-foot { display: flex; justify-content: space-between; gap: 12px; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
-      .receipt-rule { border: 0; border-top: 1px dashed var(--rule); margin: 10px 0; }
-      .receipt-quote { font-family: "IBM Plex Serif", serif; font-style: italic; font-size: 15px; line-height: 1.6; color: var(--ink); }
-      .receipt-foot[data-tier="strong"] { color: var(--redline-text); }
-      .receipt-foot[data-tier="medium"] { color: var(--ink-2); }
-      .receipt-foot[data-tier="weak"] { color: var(--graphite); }
-      @media (max-width: 800px) { body { font-size: 15px; } .top-nav { justify-content: flex-start; flex-wrap: wrap; } }
+      .footer { margin-top: 34px; font-size: 13px; color: #666; }
+      @media (max-width: 800px) {
+        .top-nav { justify-content: flex-start; flex-wrap: wrap; margin-bottom: 18px; }
+        .prompt-title { font-size: clamp(29.5px, 5.2vw, 43.7px); }
+        body {
+          background:
+            radial-gradient(circle at top, rgba(255,255,255,0.94), rgba(255,255,255,0.84) 36%, rgba(255,255,255,0.96) 66%),
+            linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
+        }
+        .ambient-shape.one { width: 220px; height: 220px; top: 10%; left: -70px; }
+        .ambient-shape.two { width: 180px; height: 180px; top: 34%; right: -60px; }
+        .ambient-shape.three { width: 150px; height: 150px; bottom: 10%; left: 6%; }
+        .ambient-shape.four { width: 120px; height: 120px; bottom: 22%; right: 4%; }
+      }
     </style>
     ${schemaItems.map((item) => `<script type="application/ld+json">${JSON.stringify(item)}</script>`).join("\n    ")}
   </head>
   <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-shape one"></div>
+      <div class="ambient-shape two"></div>
+      <div class="ambient-shape three"></div>
+      <div class="ambient-shape four"></div>
+    </div>
     <nav class="top-nav" aria-label="Site navigation">
       <a href="/about/">Methodology</a>
       <a href="/company/">Companies</a>
@@ -372,15 +374,20 @@ ${body}
 }
 
 function entryCard(entry) {
+  const sources = (entry.sources || [])
+    .map((source) => `<li><a href="${escapeHtml(source.url)}" rel="noreferrer">${escapeHtml(source.name)}</a>${source.publishedDate ? `, ${escapeHtml(source.publishedDate)}` : ""}</li>`)
+    .join("");
   return `<article class="card">
       <p class="muted"><time datetime="${escapeHtml(entry.eventDate || "")}">${escapeHtml(fmtDate(entry.eventDate))}</time></p>
       <h2>${escapeHtml(entry.company)} AI layoff details</h2>
-      <p>${pillHtml(entry.aiRelevance)} <span class="pill medium" data-tier="medium">${escapeHtml(entry.sourceQuality || "Unknown source quality")}</span></p>
+      <p><span class="pill">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span><span class="pill">${escapeHtml(entry.sourceQuality || "Unknown source quality")}</span></p>
       <p><strong>Reported layoffs:</strong> ${escapeHtml(fmtLayoffs(entry.layoffsCount))}</p>
       <p><strong>Industry:</strong> ${escapeHtml(entry.industry || "Unknown")} &middot; <strong>Geography:</strong> ${escapeHtml(entry.geography || "Unknown")}</p>
       <p>${escapeHtml(entry.summary || "")}</p>
-      ${receiptStack(entry)}
+      <div class="quote">${escapeHtml(entry.evidenceQuote || "No evidence quote recorded.")}</div>
       ${entry.notes ? `<p>${escapeHtml(entry.notes)}</p>` : ""}
+      <h3>Sources</h3>
+      <ul class="source-list">${sources}</ul>
     </article>`;
 }
 
@@ -432,15 +439,14 @@ function itemListSchema(items, canonicalPath) {
 
 function homepageEntryRows(items) {
   return items.map((entry) => {
+    const source = (entry.sources && entry.sources[0]) || null;
     const receipts = receiptLabel(entry);
-    const receiptCount = Array.isArray(entry.sources) ? entry.sources.length : 0;
-    const tier = evidenceTierOf(entry.aiRelevance);
     return `          <tr data-entry-id="${escapeHtml(entry.id || "")}" aria-expanded="false" aria-controls="details-${escapeHtml(entry.id || "")}" tabindex="0">
-            <td data-label="Company"><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted geography">${escapeHtml(entry.geography || "Unknown")}</span></td>
-            <td data-label="Date"><time datetime="${escapeHtml(entry.eventDate || "")}">${escapeHtml(fmtDateMedium(entry.eventDate))}</time><br><span class="receipt-count">${escapeHtml(receipts)}</span></td>
-            <td data-label="Layoffs" class="${entry.layoffsCount == null ? "is-undisclosed" : "is-disclosed"}">${escapeHtml(fmtLayoffsLedger(entry.layoffsCount))}</td>
+            <td data-label="Company"><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted"><span class="desktop-date">${escapeHtml(entry.geography || "Unknown")}</span><span class="mobile-date">${escapeHtml(fmtGeography(entry.geography))}</span></span></td>
+            <td data-label="Date">${source ? `<a class="date-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer"><span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span></a>` : `<span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span>`}<br><span class="receipt-count">${escapeHtml(receipts)}</span></td>
+            <td data-label="Layoffs">${escapeHtml(fmtLayoffs(entry.layoffsCount))}</td>
             <td data-label="Industry">${escapeHtml(entry.industry || "Unknown")}</td>
-            <td data-label="AI relevance">${pillHtml(entry.aiRelevance)}<span class="mobile-row-meta" aria-hidden="true">${escapeHtml(fmtDateShort(entry.eventDate))} · ${escapeHtml(entry.industry || "Unknown")} · ${receiptCount} receipt${receiptCount === 1 ? "" : "s"}</span><span class="mobile-chevron" aria-hidden="true">⌄</span></td>
+            <td data-label="AI relevance"><span class="pill ${escapeHtml(entry.aiRelevance || "")}">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span></td>
           </tr>`;
   }).join("\n");
 }
@@ -464,7 +470,10 @@ function buildYearLinks() {
 }
 
 function buildLegend() {
-  return `<a class="label-help" href="/about/">What do these labels mean?</a>`;
+  return Object.entries(aiLabels)
+    .filter(([key]) => relevanceGroups.has(key))
+    .map(([key, label]) => `<a class="legend-item" href="/about/#${escapeHtml(relevanceSlugs[key] || slugify(key))}"><span class="pill ${escapeHtml(key)}">${escapeHtml(label)}</span><span>${escapeHtml(aiDefinitions[key])}</span></a>`)
+    .join("\n          ");
 }
 
 function monthKey(value) {
@@ -499,204 +508,55 @@ function monthRange(items) {
 }
 
 function buildTrendChart(items) {
-  const disclosed = items
-    .filter((entry) => entry.layoffsCount != null && entry.eventDate)
-    .slice()
-    .sort((a, b) => String(a.eventDate).localeCompare(String(b.eventDate)));
+  const months = monthRange(items);
+  const totals = new Map(months.map((month) => [month, 0]));
+  for (const entry of items) {
+    if (entry.layoffsCount == null) continue;
+    const key = monthKey(entry.eventDate);
+    if (totals.has(key)) totals.set(key, totals.get(key) + Number(entry.layoffsCount || 0));
+  }
   const width = 920;
-  const height = 220;
-  const padLeft = 54;
-  const padRight = 118;
-  const padBottom = 34;
-  const padTop = 18;
-  const chartWidth = width - padLeft - padRight;
+  const height = 280;
+  const padLeft = 46;
+  const padBottom = 44;
+  const padTop = 24;
+  const chartWidth = width - padLeft - 16;
   const chartHeight = height - padTop - padBottom;
-  let cumulative = 0;
-  const points = disclosed.map((entry, index) => {
-    cumulative += Number(entry.layoffsCount || 0);
-    return { entry, index, total: cumulative };
-  });
-  const max = Math.max(1, cumulative);
-  const xFor = (index) => padLeft + (points.length <= 1 ? 0 : (index / (points.length - 1)) * chartWidth);
-  const yFor = (value) => padTop + chartHeight - (value / max) * chartHeight;
-  const pathParts = [];
-  points.forEach((point, index) => {
-    const x = xFor(index);
-    const y = yFor(point.total);
-    if (index === 0) {
-      pathParts.push(`M ${padLeft} ${yFor(0).toFixed(1)} L ${x.toFixed(1)} ${y.toFixed(1)}`);
-    } else {
-      const prevX = xFor(index - 1);
-      pathParts.push(`L ${x.toFixed(1)} ${yFor(points[index - 1].total).toFixed(1)} L ${x.toFixed(1)} ${y.toFixed(1)}`);
-      pathParts.push(`<title>${escapeHtml(point.entry.company)} · ${escapeHtml(fmtDateMedium(point.entry.eventDate))} · ${escapeHtml(fmtNumber(point.entry.layoffsCount))} jobs</title>`);
-    }
-  });
-  const linePath = pathParts.filter((part) => !part.startsWith("<title>")).join(" ");
-  const areaPath = `${linePath} L ${padLeft + chartWidth} ${padTop + chartHeight} L ${padLeft} ${padTop + chartHeight} Z`;
-  const eventTitles = points.map((point, index) => {
-    const x = xFor(index);
-    const y = yFor(point.total);
-    return `<circle class="trend-hit" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="8"><title>${escapeHtml(point.entry.company)} · ${escapeHtml(fmtDateMedium(point.entry.eventDate))} · ${escapeHtml(fmtNumber(point.entry.layoffsCount))} jobs</title></circle>`;
+  const max = Math.max(1, ...[...totals.values()]);
+  const gap = 3;
+  const barWidth = Math.max(3, (chartWidth - gap * Math.max(0, months.length - 1)) / Math.max(1, months.length));
+  const bars = months.map((month, index) => {
+    const value = totals.get(month) || 0;
+    const barHeight = Math.max(value ? 3 : 0, Math.round((value / max) * chartHeight));
+    const x = padLeft + index * (barWidth + gap);
+    const y = padTop + chartHeight - barHeight;
+    return `<rect class="trend-bar" data-month="${month}" x="${x.toFixed(1)}" y="${y}" width="${barWidth.toFixed(1)}" height="${barHeight}" rx="2"><title>${escapeHtml(monthLabel(month))}: ${escapeHtml(fmtNumber(value))} jobs impacted</title></rect>`;
   }).join("\n              ");
-  const years = [...new Set(disclosed.map((entry) => String(entry.eventDate).slice(0, 4)))];
-  const labels = years.map((year) => {
-    const index = points.findIndex((point) => String(point.entry.eventDate).startsWith(year));
-    return `<text x="${xFor(Math.max(0, index)).toFixed(1)}" y="${height - 10}" text-anchor="middle">${escapeHtml(year)}</text>`;
-  }).join("\n              ");
-  const yLabels = [0.25, 0.5, 0.75, 1].map((tick) => {
-    const value = Math.round(max * tick);
-    const y = yFor(value);
-    return `<line x1="${padLeft}" y1="${y.toFixed(1)}" x2="${padLeft + chartWidth}" y2="${y.toFixed(1)}" class="trend-grid"></line><text x="8" y="${(y + 4).toFixed(1)}">${escapeHtml(compactNumber(value))}</text>`;
-  }).join("\n              ");
-  const startLabel = disclosed[0] ? fmtDateShortYear(disclosed[0].eventDate) : "Unknown";
-  const endLabel = disclosed.at(-1) ? fmtDateShortYear(disclosed.at(-1).eventDate) : "present";
-  const endX = xFor(Math.max(0, points.length - 1));
-  const endY = yFor(cumulative);
+  const labels = months
+    .filter((_, index) => index === 0 || index === months.length - 1 || index % 6 === 0)
+    .map((month) => {
+      const index = months.indexOf(month);
+      const x = padLeft + index * (barWidth + gap) + barWidth / 2;
+      return `<text x="${x.toFixed(1)}" y="${height - 14}" text-anchor="middle">${escapeHtml(monthLabel(month).replace(" ", " '"))}</text>`;
+    })
+    .join("\n              ");
+  const startLabel = months[0] ? monthLabel(months[0]) : "Unknown";
+  const endLabel = months.at(-1) ? monthLabel(months.at(-1)) : "Unknown";
   return `<section class="card trend-section" aria-labelledby="trendTitle">
-        <h2 id="trendTitle">Jobs impacted, running total</h2>
-        <svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Cumulative disclosed jobs impacted by tracked AI layoffs">
-          <line x1="${padLeft}" y1="${padTop + chartHeight}" x2="${padLeft + chartWidth}" y2="${padTop + chartHeight}" class="trend-axis"></line>
+        <h2 id="trendTitle">Monthly jobs impacted</h2>
+        <svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Monthly jobs impacted by tracked AI layoffs">
+          <line x1="${padLeft}" y1="${padTop + chartHeight}" x2="${width - 16}" y2="${padTop + chartHeight}" class="trend-axis"></line>
           <line x1="${padLeft}" y1="${padTop}" x2="${padLeft}" y2="${padTop + chartHeight}" class="trend-axis"></line>
-          <g class="trend-y-label">
-              ${yLabels}
+          <text x="8" y="${padTop + 10}" class="trend-y-label">${escapeHtml(fmtNumber(max))}</text>
+          <g>
+              ${bars}
           </g>
-          <path class="trend-area" d="${areaPath}"></path>
-          <path class="trend-line" d="${linePath}"></path>
-          <g>${eventTitles}</g>
           <g class="trend-labels">
               ${labels}
           </g>
-          <g class="trend-terminal">
-            <text x="${(endX + 14).toFixed(1)}" y="${Math.max(18, endY - 3).toFixed(1)}">${escapeHtml(fmtNumber(cumulative))}</text>
-            <text x="${(endX + 14).toFixed(1)}" y="${Math.max(34, endY + 14).toFixed(1)}">jobs and counting</text>
-          </g>
         </svg>
-        <p class="muted trend-caption">Cumulative disclosed job losses across tracked events, ${escapeHtml(startLabel)} to ${escapeHtml(endLabel)}. Excludes events with undisclosed counts.</p>
+        <p class="muted trend-caption">Jobs impacted per month, ${escapeHtml(startLabel)} to ${escapeHtml(endLabel)}. Excludes events with undisclosed counts.</p>
       </section>`;
-}
-
-function homepageCss() {
-  return `<style>
-${fontFaces}
-${tokenBlock}
-      *, *::before, *::after { box-sizing: border-box; }
-      body { max-width: 1120px; margin: 20px auto 40px; padding: 0 16px; color: var(--ink); background: var(--paper); font-family: "IBM Plex Sans", sans-serif; font-size: 16px; line-height: 1.55; overflow-x: hidden; }
-      a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-      a:hover { color: var(--redline); }
-      a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, tr:focus-visible { outline: 2px solid var(--redline); outline-offset: 2px; }
-      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-      .top-nav { display: flex; gap: 14px; align-items: center; justify-content: flex-end; margin-bottom: 20px; font-size: 14px; }
-      .top-nav a { text-decoration: none; }
-      .top-nav a:hover { text-decoration: underline; }
-      .hero { margin-bottom: 16px; }
-      .prompt-title { display: inline-flex; align-items: center; gap: 10px; padding: 12px 15px; background: var(--ink); color: var(--paper); border-radius: 6px; font-family: "IBM Plex Mono", monospace; font-size: clamp(28px, 5vw, 42px); line-height: 1.1; letter-spacing: -0.02em; }
-      .prompt-symbol, .prompt-cursor { background: transparent; color: #7CFF6B; }
-      .prompt-text { white-space: nowrap; }
-      .prompt-cursor { display: inline-block; width: 0.65ch; height: 1.05em; background: #7CFF6B; vertical-align: -0.12em; animation: blink 1s steps(1, end) infinite; }
-      @keyframes blink { 50% { opacity: 0; } }
-      @media (prefers-reduced-motion: reduce) { .prompt-cursor { animation: none; } }
-      .seo-heading { margin: 18px 0 8px; font-size: clamp(32px, 5vw, 48px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; }
-      h2 { margin: 0 0 12px; font-size: 20px; font-weight: 600; }
-      .muted { color: var(--ink-2); }
-      .dek { max-width: 760px; margin: 0 0 18px; font-size: 18px; }
-      .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0 8px; }
-      .card { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; margin: 18px 0; }
-      .stat-card { min-height: 92px; }
-      .stat-value { font-family: "IBM Plex Mono", monospace; font-size: 30px; font-weight: 500; line-height: 1; font-variant-numeric: tabular-nums; }
-      #statLayoffs { color: var(--redline); }
-      .stat-label { margin-top: 8px; font-size: 13px; color: var(--ink-2); }
-      .stat-sub { margin-top: 4px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); }
-      .last-updated { margin: 0 0 18px; text-align: right; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); }
-      .trend-section { margin: 16px 0 20px; }
-      .trend-chart { width: 100%; height: 220px; display: block; }
-      .trend-axis, .trend-grid { stroke: var(--rule); stroke-width: 1; }
-      .trend-line { fill: none; stroke: var(--redline); stroke-width: 1.5; }
-      .trend-area { fill: var(--redline); opacity: 0.08; }
-      .trend-hit { fill: transparent; stroke: transparent; }
-      .trend-labels text, .trend-y-label text, .trend-terminal text { font-family: "IBM Plex Mono", monospace; font-size: 11px; fill: var(--ink-2); font-variant-numeric: tabular-nums; }
-      .trend-terminal text:first-child { fill: var(--redline); font-size: 18px; font-weight: 500; }
-      .trend-caption { margin: 10px 0 0; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
-      .list-card { padding: 0; overflow: visible; }
-      .filters-head, .toolbar, .filter-bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-      .filters-head { justify-content: space-between; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
-      .filters-toggle { display: none; }
-      .toolbar { padding: 14px 16px 6px; position: sticky; top: 0; z-index: 4; background: var(--paper); border-bottom: 1px solid var(--rule); }
-      select, input, button { min-height: 36px; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); color: var(--ink); font: 13px "IBM Plex Sans", sans-serif; padding: 7px 10px; }
-      input[type="search"] { flex: 1 1 220px; min-width: 220px; }
-      #resultSummary, #resultJobsImpacted { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); }
-      .label-help { display: inline-block; padding: 0 16px 12px; font-size: 13px; color: var(--ink-2); }
-      table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-      th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
-      th { position: sticky; top: 64px; z-index: 3; background: var(--paper); font-size: 12px; font-weight: 600; color: var(--ink-2); }
-      th:nth-child(1), td:nth-child(1) { width: 27%; }
-      th:nth-child(2), td:nth-child(2) { width: 17%; }
-      th:nth-child(3), td:nth-child(3) { width: 13%; text-align: right; }
-      th:nth-child(4), td:nth-child(4) { width: 16%; }
-      th:nth-child(5), td:nth-child(5) { width: 27%; }
-      tbody tr[data-entry-id] { height: 44px; cursor: pointer; }
-      tbody tr[data-entry-id]:hover { background: var(--hover); }
-      tbody tr[data-entry-id].selected { background: var(--hover); }
-      td[data-label="Date"], td[data-label="Layoffs"], .receipt-count { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-variant-numeric: tabular-nums; }
-      td.is-disclosed { color: var(--redline); font-weight: 500; }
-      td.is-undisclosed { color: var(--graphite); }
-      .company-line { display: inline-block; font-weight: 600; }
-      .company-line a { color: inherit; }
-      .geography { display: block; margin-top: 2px; font-size: 12px; }
-      .pill { position: relative; display: inline-block; padding: 5px 8px; border-radius: 999px; font-family: "IBM Plex Mono", monospace; font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums; }
-      .pill[data-tier="strong"], .pill.strong { color: var(--redline-text); background: var(--redline-tint); border: 1px solid rgba(179,32,47,0.25); }
-      .pill[data-tier="medium"], .pill.medium { color: var(--ink-2); background: var(--neutral-tint); border: 1px solid var(--rule); }
-      .pill[data-tier="weak"], .pill.weak { color: var(--graphite); background: transparent; border: 1px dashed var(--graphite); }
-      .pill:hover::after, .pill:focus::after { content: attr(data-definition); position: absolute; left: 0; bottom: calc(100% + 8px); z-index: 8; width: min(320px, 80vw); padding: 8px 10px; border: 1px solid var(--rule); background: var(--white); color: var(--ink); border-radius: 6px; font-family: "IBM Plex Sans", sans-serif; font-size: 12px; line-height: 1.4; }
-      .mobile-row-meta, .mobile-chevron { display: none; }
-      .detail-row, .detail-row:hover { background: var(--paper); cursor: default; }
-      .detail-cell { padding: 0; border-bottom: 1px solid var(--rule); }
-      .detail-panel { border-left: 2px solid var(--redline); padding: 14px 18px 18px; }
-      .details { display: grid; gap: 10px; max-width: 800px; }
-      .definition-line { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); }
-      .receipt-stack { display: grid; gap: 10px; margin-top: 4px; }
-      .receipt-slip { max-width: 560px; background: var(--white); border: 1px solid var(--rule); border-bottom: 0; padding: 12px 14px 18px; position: relative; transform: translate(2px, 0); }
-      .receipt-slip::after { content: ""; position: absolute; left: -1px; right: -1px; bottom: -8px; height: 8px; background: linear-gradient(135deg, var(--white) 25%, transparent 25%) 0 0 / 12px 8px repeat-x, linear-gradient(225deg, var(--white) 25%, transparent 25%) 0 0 / 12px 8px repeat-x; border-top: 1px solid var(--rule); }
-      .receipt-head, .receipt-foot { display: flex; justify-content: space-between; gap: 12px; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
-      .receipt-rule { border: 0; border-top: 1px dashed var(--rule); margin: 10px 0; }
-      .receipt-quote { font-family: "IBM Plex Serif", serif; font-style: italic; font-size: 15px; line-height: 1.6; color: var(--ink); }
-      .receipt-foot[data-tier="strong"] { color: var(--redline-text); }
-      .receipt-foot[data-tier="medium"] { color: var(--ink-2); }
-      .receipt-foot[data-tier="weak"] { color: var(--graphite); }
-      .section-link-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-      .footer-note, .data-note-text { color: var(--ink-2); }
-      .ba-badge { display: inline-block; font-family: "IBM Plex Sans", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2.16px; text-transform: uppercase; text-decoration: none; padding: 4px 8px; background: var(--ink); color: var(--paper); }
-      @media (max-width: 800px) {
-        body { font-size: 15px; padding: 0 12px; }
-        .top-nav { justify-content: flex-start; flex-wrap: wrap; }
-        .stats { grid-template-columns: 1fr; }
-        .stat-card { min-height: auto; }
-        .trend-chart { height: 150px; }
-        .filters-head { align-items: center; padding: 10px 0; }
-        .filters-toggle { display: inline-flex; align-items: center; justify-content: center; margin-left: auto; width: 92px; }
-        .toolbar { position: static; padding: 8px 0; border-bottom: 0; }
-        .list-card[data-filters-open="false"] .toolbar select, .list-card[data-filters-open="false"] .toolbar #sortBy { display: none; }
-        .list-card { border: 0; padding: 0; }
-        .label-help { padding: 0 0 8px; }
-        table, thead, tbody, tr, th, td { display: block; width: 100%; }
-        thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
-        tbody tr[data-entry-id] { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2px 10px; min-height: 68px; height: auto; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
-        tbody tr[data-entry-id] td { padding: 0; border: 0; }
-        tbody tr[data-entry-id] td::before { content: none; }
-        tbody tr[data-entry-id] td:nth-child(1) { grid-column: 1; grid-row: 1; }
-        tbody tr[data-entry-id] td:nth-child(2), tbody tr[data-entry-id] td:nth-child(4) { display: none; }
-        tbody tr[data-entry-id] td:nth-child(3) { grid-column: 2; grid-row: 1; align-self: start; text-align: right; font-size: 16px; }
-        tbody tr[data-entry-id] td:nth-child(5) { grid-column: 1 / -1; grid-row: 2 / span 2; display: grid; gap: 6px; }
-        .company-line { font-size: 16px; }
-        .geography, .receipt-count { display: none; }
-        .mobile-row-meta { display: block; padding-right: 28px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); }
-        .mobile-chevron { display: block; position: absolute; right: 14px; top: 33px; font-family: "IBM Plex Mono", monospace; transition: transform 160ms ease; }
-        tr[aria-expanded="true"] .mobile-chevron { transform: rotate(180deg); }
-        .pill { width: fit-content; font-size: 11px; text-transform: uppercase; }
-        .pill:hover::after, .pill:focus::after { content: none; }
-        .detail-cell { display: block; padding: 0; }
-        .detail-panel { padding: 12px 14px 18px; }
-      }
-    </style>`;
 }
 
 function replaceRegion(html, name, content, fallbackPattern) {
@@ -780,7 +640,7 @@ function buildClientScript() {
       }
 
       function fmtLayoffs(v) {
-        return v == null ? 'n/d' : fmtNumber(v);
+        return v == null ? 'Not disclosed' : fmtNumber(v);
       }
 
       function receiptLabel(entry) {
@@ -807,29 +667,6 @@ function buildClientScript() {
         return labelize(v);
       }
 
-      function aiDefinition(v) {
-        if (v === 'explicit_ai_cited') return 'The source directly ties layoffs to AI, AI investment, AI replacement, or AI-driven operating changes.';
-        if (v === 'automation_efficiency_cited') return 'The source ties cuts to automation, efficiency, or reduced manual work.';
-        if (v === 'ai_adjacent_restructuring') return 'The layoff is tied to AI-focused strategy, technology investment, or team reallocation, but not direct replacement.';
-        if (v === 'speculative_or_unclear') return 'The event is a weaker AI-related lead and should not be read as confirmed AI replacement.';
-        if (v === 'ai_reorg_or_spend_linked') return 'The source ties the layoff to AI reorganization, AI investment, or shifting spend toward AI.';
-        if (v === 'ai_replacement_cited') return 'The source directly says work or roles were replaced by AI.';
-        return '';
-      }
-
-      function evidenceTierOf(v) {
-        if (v === 'ai_replacement_cited' || v === 'explicit_ai_cited') return 'strong';
-        if (v === 'speculative_or_unclear') return 'weak';
-        return 'medium';
-      }
-
-      function pillHtml(v) {
-        const label = fmtAiRelevance(v);
-        const tier = evidenceTierOf(v);
-        const definition = aiDefinition(v);
-        return \`<span class="pill \${tier}" data-tier="\${tier}" data-definition="\${definition}" title="\${definition}">\${label}</span>\`;
-      }
-
       function fmtGeography(v) {
         return v === 'United Kingdom' ? 'UK' : (v || 'Unknown');
       }
@@ -842,24 +679,6 @@ function buildClientScript() {
         if (v === 'ai_reorg_or_spend_linked') return 'AI reorg';
         if (v === 'ai_replacement_cited') return 'AI replacement';
         return labelize(v);
-      }
-
-      function receiptStack(entry) {
-        const sources = Array.isArray(entry.sources) && entry.sources.length ? entry.sources : [{}];
-        const tier = evidenceTierOf(entry.aiRelevance);
-        const verdict = \`Evidence: \${fmtAiRelevance(entry.aiRelevance)}\`.toUpperCase();
-        return \`<div class="receipt-stack" aria-label="\${entry.company || 'Entry'} receipts">\${sources.map((source, index) => {
-          const quote = source.quote || entry.evidenceQuote || 'No evidence quote recorded.';
-          const name = source.name || 'Source';
-          const date = source.publishedDate || entry.eventDate || '';
-          return \`<article class="receipt-slip">
-            <div class="receipt-head"><a href="\${source.url || '#'}" target="_blank" rel="noreferrer">\${String(name).toUpperCase()}</a><time datetime="\${date}">\${date || 'n/a'}</time></div>
-            <hr class="receipt-rule" />
-            <div class="receipt-quote">\${quote}</div>
-            <hr class="receipt-rule" />
-            <div class="receipt-foot" data-tier="\${tier}"><span>\${verdict}</span>\${sources.length > 1 ? \`<span>\${index + 1} OF \${sources.length}</span>\` : ''}</div>
-          </article>\`;
-        }).join('')}</div>\`;
       }
 
       function companySlug(value) {
@@ -880,15 +699,14 @@ function buildClientScript() {
         document.getElementById('statEntries').textContent = String(total);
         const layoffsEl = document.getElementById('statLayoffs');
         if (layoffsEl) animateCount(layoffsEl, layoffsTotal);
-        const explicitEl = document.getElementById('statExplicit');
-        if (explicitEl) explicitEl.textContent = String(explicit);
+        document.getElementById('statExplicit').textContent = String(explicit);
         document.getElementById('statExplicitShare').textContent = \`\${share}%\`;
         const freshest = entries.slice().sort((a, b) => String(entryFreshnessDate(b)).localeCompare(String(entryFreshnessDate(a))))[0];
         const freshness = entryFreshnessDate(freshest);
         const freshnessDate = document.getElementById('freshnessDate');
         if (freshnessDate && freshness) {
           freshnessDate.dateTime = freshness;
-          freshnessDate.textContent = String(freshness).slice(0, 10);
+          freshnessDate.textContent = fmtDateMedium(freshness);
         }
       }
 
@@ -988,13 +806,24 @@ function buildClientScript() {
       }
 
       function renderDetailPanel(entry) {
+        const source = (entry.sources && entry.sources[0]) || null;
+        const whyIncluded = entry.aiRelevance === 'explicit_ai_cited'
+          ? 'Included because the source explicitly ties the layoffs to AI.'
+          : entry.aiRelevance === 'automation_efficiency_cited'
+            ? 'Included because the source ties the cuts to automation or AI-driven efficiency.'
+            : entry.aiRelevance === 'ai_adjacent_restructuring'
+              ? 'Included because the layoffs are tied to an AI-focused restructuring or reallocation.'
+              : 'Included as a more tentative AI-related lead.';
         return \`
           <div class="detail-panel" id="details-\${entry.id}" role="region" aria-label="\${entry.company} source details">
             <div class="details">
-              <div class="definition-line">\${fmtAiRelevance(entry.aiRelevance)}: \${aiDefinition(entry.aiRelevance)}</div>
-              <div><strong>Country:</strong> \${entry.geography || 'Unknown'}</div>
-              <div>\${entry.summary || ''}</div>
-              \${receiptStack(entry)}
+              <div class="quote-meta">
+                <span class="source-chip">\${source ? \`Source: <a href="\${source.url}" target="_blank" rel="noreferrer">\${source.name}</a>\` : 'Source unavailable'}</span>
+                <span class="source-chip">\${receiptLabel(entry)}</span>
+                <span class="pill \${entry.aiRelevance} mobile-only">\${fmtAiRelevanceShort(entry.aiRelevance)}</span>
+              </div>
+              <div class="quote">\${entry.evidenceQuote || 'No evidence quote recorded.'}</div>
+              <div class="why-included">\${whyIncluded}</div>
               <div class="detail-notes">\${entry.notes || ''}</div>
             </div>
           </div>
@@ -1023,16 +852,16 @@ function buildClientScript() {
           tr.dataset.entryId = entry.id;
           tr.tabIndex = 0;
           tr.setAttribute('aria-controls', \`details-\${entry.id}\`);
+          const source = (entry.sources && entry.sources[0]) || null;
           const isSelected = entry.id === selectedEntryId;
-          const receiptCount = Array.isArray(entry.sources) ? entry.sources.length : 0;
           if (isSelected) tr.classList.add('selected');
           tr.setAttribute('aria-expanded', isSelected ? 'true' : 'false');
           tr.innerHTML = \`
-            <td data-label="Company"><span class="company-line"><b><a href="/company/\${companySlug(entry.company)}/">\${entry.company}</a></b></span><br><span class="muted geography">\${entry.geography || 'Unknown'}</span></td>
-            <td data-label="Date"><time datetime="\${entry.eventDate || ''}">\${fmtDateMedium(entry.eventDate)}</time><br><span class="receipt-count">\${receiptLabel(entry)}</span></td>
-            <td data-label="Layoffs" class="\${entry.layoffsCount == null ? 'is-undisclosed' : 'is-disclosed'}">\${fmtLayoffs(entry.layoffsCount)}</td>
+            <td data-label="Company"><span class="company-line"><b><a href="/company/\${companySlug(entry.company)}/">\${entry.company}</a></b></span><br><span class="muted"><span class="desktop-date">\${entry.geography || 'Unknown'}</span><span class="mobile-date">\${fmtGeography(entry.geography)}</span></span></td>
+            <td data-label="Date">\${source ? \`<a class="date-link" href="\${source.url}" target="_blank" rel="noreferrer"><span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span></a>\` : \`<span class="desktop-date">\${fmtDate(entry.eventDate)}</span><span class="mobile-date">\${fmtDateShort(entry.eventDate)}</span>\`}<br><span class="receipt-count">\${receiptLabel(entry)}</span></td>
+            <td data-label="Layoffs">\${fmtLayoffs(entry.layoffsCount)}</td>
             <td data-label="Industry">\${entry.industry || 'Unknown'}</td>
-            <td data-label="AI relevance">\${pillHtml(entry.aiRelevance)}<span class="mobile-row-meta" aria-hidden="true">\${fmtDateShort(entry.eventDate)} · \${entry.industry || 'Unknown'} · \${receiptCount} receipt\${receiptCount === 1 ? '' : 's'}</span><span class="mobile-chevron" aria-hidden="true">⌄</span></td>
+            <td data-label="AI relevance"><span class="pill \${entry.aiRelevance}">\${fmtAiRelevance(entry.aiRelevance)}</span></td>
           \`;
           const toggle = (event) => {
             const clickedLink = event.target instanceof Element ? event.target.closest('a') : null;
@@ -1096,7 +925,7 @@ function buildClientScript() {
           if (!listCard || !filtersToggle) return;
           listCard.setAttribute('data-filters-open', open ? 'true' : 'false');
           filtersToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-          filtersToggle.textContent = open ? 'Hide filters' : 'Filters';
+          filtersToggle.innerHTML = open ? 'Hide<br>filters' : 'Show<br>filters';
         };
         const mobile = window.matchMedia('(max-width: 800px)').matches;
         setFiltersOpen(!mobile);
@@ -1122,7 +951,6 @@ async function prerenderHomepage() {
   const explicitCount = entries.filter((entry) => entry.aiRelevance === "explicit_ai_cited").length;
   const explicitShare = entries.length ? Math.round((explicitCount / entries.length) * 100) : 0;
   const lastUpdatedLabel = fmtDateShortYear(maxUpdated);
-  const dek = `A public tracker of layoffs tied to AI and automation. ${entries.length} verified events, ${fmtNumber(totalJobs)} workers, every entry sourced with receipts.`;
   const faqItems = [
     {
       question: "What counts as an AI layoff on this site?",
@@ -1145,22 +973,14 @@ async function prerenderHomepage() {
   const legacySiteUrl = `https://www.replacedbyai.${"com"}`;
   html = html.replaceAll(legacySiteUrl, siteUrl);
   html = html.replace(/<html>/, `<html lang="en">`);
-  html = html.replace(/    <style>[\s\S]*?    <\/style>/, `    ${homepageCss()}`);
-  html = html.replace(/\r?\n    <div class="ambient-bg" aria-hidden="true">[\s\S]*?    <\/div>\r?\n(?=    <nav class="top-nav")/, "\n");
-  if (!/ibm-plex-sans-latin-400\.woff2/.test(html)) {
-    html = html.replace(/(    <link rel="icon"[^>]+>\r?\n)/, `$1${fontPreloads}\n`);
-  }
   html = html.replace(`AI Layoff Tracker ${"\u2014"} Verified Cases with Receipts | Replaced by AI`, "AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI");
   html = html.replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI" />`);
   html = html.replace(/<meta name="twitter:card" content="[^"]*" \/>/, `<meta name="twitter:card" content="summary_large_image" />`);
   if (!/<meta property="og:image"/.test(html)) {
-    html = html.replace(/(    <meta property="og:url" content="[^"]+" \/>\r?\n)/, `$1    <meta property="og:image" content="${siteUrl}/og-image.png" />\n    <meta property="og:image:width" content="1200" />\n    <meta property="og:image:height" content="630" />\n    <meta name="twitter:image" content="${siteUrl}/og-image.png" />\n`);
+    html = html.replace(/(    <meta property="og:url" content="[^"]+" \/>\r?\n)/, `$1    <meta property="og:image" content="${siteUrl}/og-image.svg" />\n    <meta name="twitter:image" content="${siteUrl}/og-image.svg" />\n`);
   } else {
-    html = html.replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${siteUrl}/og-image.png" />`);
-    html = html.replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${siteUrl}/og-image.png" />`);
-    if (!/<meta property="og:image:width"/.test(html)) {
-      html = html.replace(/(<meta property="og:image" content="[^"]*" \/>\r?\n)/, `$1    <meta property="og:image:width" content="1200" />\n    <meta property="og:image:height" content="630" />\n`);
-    }
+    html = html.replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${siteUrl}/og-image.svg" />`);
+    html = html.replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${siteUrl}/og-image.svg" />`);
   }
   if (!/<link rel="alternate"[^>]+application\/rss\+xml/.test(html)) {
     html = html.replace(/(    <link rel="canonical" href="https:\/\/www\.replacedbyai\.app\/" \/>\r?\n)/, `$1    <link rel="alternate" type="application/rss+xml" title="Replaced by AI feed" href="${siteUrl}/feed.xml" />\n`);
@@ -1171,17 +991,41 @@ async function prerenderHomepage() {
     html = html.replace(/(    <meta name="description" content="[^"]+" \/>\r?\n)/, `$1    <link rel="canonical" href="${siteUrl}/" />\n`);
   }
   html = html.replace(new RegExp(`That skepticism is noted where relevant ${"\u2014"} the receipts are included so you can judge for yourself\\.`, "g"), "That skepticism is noted where relevant. The receipts are included so you can judge for yourself.");
-  html = html.replaceAll("mailto:?subject=AI%20layoff%20tip&body=Company%3A%0ADate%3A%0ASource%20link%3A%0ASource%20quote%3A", tipMailto);
   html = html.replace(/      \/\* seo:homepage-improvements:start \*\/[\s\S]*?      \/\* seo:homepage-improvements:end \*\/\r?\n/, "");
-  html = html.replace(/    <p class="muted tagline"[\s\S]*?<\/p>\r?\n/, "");
-  html = html.replace(/    <p class="muted freshness">[\s\S]*?<\/p>/, `    <p class="last-updated">last updated <time id="freshnessDate" datetime="${escapeHtml(maxUpdated)}">${escapeHtml(maxUpdated)}</time></p>`);
-  html = html.replace(/    <div class="stats">[\s\S]*?    <\/div>\r?\n\r?\n(?=<!-- seo:quote-stat:start -->)/, `    <div class="stats">
-      <div class="card stat-card"><div class="stat-value" id="statEntries">${entries.length}</div><div class="stat-label">verified cases</div></div>
-      <div class="card stat-card"><div class="stat-value" id="statLayoffs">${fmtNumber(totalJobs)}</div><div class="stat-label">jobs impacted</div></div>
-      <div class="card stat-card"><div class="stat-value" id="statExplicitShare">${escapeHtml(fmtPercent(explicitShare))}</div><div class="stat-label" id="statExplicitShareLabel">explicitly cite AI</div><div class="stat-sub"><span id="statExplicit">${explicitCount}</span> of ${entries.length} events</div></div>
-    </div>
-
-`);
+  html = html.replace(/    <\/style>/, `      /* seo:homepage-improvements:start */
+      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+      .quotable-stat { margin: -10px 0 22px; font-size: 17px; line-height: 1.55; color: #222; }
+      .relevance-legend { display: grid; gap: 8px; margin: 0 0 18px; }
+      .legend-item { display: grid; grid-template-columns: minmax(170px, max-content) 1fr; gap: 8px; align-items: baseline; color: inherit; text-decoration: none; font-size: 13px; }
+      .legend-item:hover span:last-child { text-decoration: underline; text-underline-offset: 2px; }
+      .receipt-count { display: inline-block; margin-top: 4px; font-size: 12px; color: #555; }
+      thead th { position: sticky; top: 0; z-index: 2; background: #fff; }
+      .trend-section { margin-bottom: 20px; }
+      .trend-chart { width: 100%; height: auto; display: block; }
+      .trend-bar { fill: #0c5c5d; }
+      .trend-axis { stroke: #c5cbd3; stroke-width: 1; }
+      .trend-labels text, .trend-y-label { font-size: 11px; fill: #555; }
+      .trend-caption { margin-bottom: 0; }
+      .link-section h3 { margin-bottom: 4px; }
+      .data-section p:last-child { margin-bottom: 0; }
+      @media (max-width: 640px) {
+        table, thead, tbody, tr, th, td { display: block; width: 100%; }
+        thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+        tbody tr { margin: 0 0 12px; padding: 12px; border: 1px solid #dde2e8; border-radius: 8px; background: #fff; }
+        tbody tr.detail-row { margin-top: -12px; padding: 0; border-top: 0; }
+        td { display: grid; grid-template-columns: 92px 1fr; gap: 8px; padding: 6px 0; border-bottom: 0; }
+        td::before { content: attr(data-label); font-size: 12px; font-weight: 700; color: #555; }
+        .detail-cell { display: block; }
+        .detail-cell::before { content: none; }
+        .legend-item { grid-template-columns: 1fr; }
+      }
+      /* seo:homepage-improvements:end */
+    </style>`);
+  html = html.replace(/<div class="stat-value" id="statEntries">[\s\S]*?<\/div>/, `<div class="stat-value" id="statEntries">${entries.length}</div>`);
+  html = html.replace(/<div class="stat-value" id="statLayoffs">[\s\S]*?<\/div>/, `<div class="stat-value" id="statLayoffs">${fmtNumber(totalJobs)}</div>`);
+  html = html.replace(/<div class="stat-value" id="statExplicit">[\s\S]*?<\/div>/, `<div class="stat-value" id="statExplicit">${explicitCount}</div>`);
+  html = html.replace(/<div class="stat-value" id="(?:statUpdated|statExplicitShare)">[\s\S]*?<\/div>/, `<div class="stat-value" id="statExplicitShare">${escapeHtml(fmtPercent(explicitShare))}</div>`);
+  html = html.replace(/<div class="stat-label" id="(?:statUpdatedLabel|statExplicitShareLabel)">[\s\S]*?<\/div>/, `<div class="stat-label" id="statExplicitShareLabel">explicitly cite AI</div>`);
   html = html.replace(/<time id="freshnessDate" datetime="[^"]*">[\s\S]*?<\/time>/, `<time id="freshnessDate" datetime="${escapeHtml(maxUpdated)}">${escapeHtml(lastUpdatedLabel)}</time>`);
   html = html.replace(/<div class="muted" id="resultSummary">[\s\S]*?<\/div>/, `<div class="muted" id="resultSummary">${entries.length} matching entries out of ${entries.length} total</div>`);
   html = html.replace(/<div class="muted" id="resultJobsImpacted">[\s\S]*?<\/div>/, `<div class="muted" id="resultJobsImpacted">(${escapeHtml(fmtNumber(totalJobs))} jobs impacted)</div>`);
@@ -1196,19 +1040,21 @@ async function prerenderHomepage() {
   html = replaceRegion(
     html,
     "intro",
-    `    <p class="dek">${escapeHtml(dek)}</p>`,
+    `    <p class="muted intro-copy">Replaced by AI is a public AI layoff tracker. It documents layoffs tied to AI and automation, with every entry sourced to a primary statement or reputable reporting.</p>`,
     /(?=    <p class="muted freshness">)/,
   );
   html = replaceRegion(
     html,
     "quote-stat",
-    "",
+    `    <p class="quotable-stat">As of ${escapeHtml(lastUpdatedLabel)}, this tracker documents ${entries.length} verified layoff events impacting ${escapeHtml(fmtNumber(totalJobs))} workers, and ${escapeHtml(fmtPercent(explicitShare))} of them explicitly cite AI.</p>`,
     /(?=    <div class="card list-card")/,
   );
   html = replaceRegion(
     html,
     "legend",
-    `      ${buildLegend()}`,
+    `      <div class="relevance-legend" aria-label="AI relevance legend">
+          ${buildLegend()}
+        </div>`,
     /(?=      <table>)/,
   );
   html = replaceEntriesBody(html, homepageEntryRows(sortedEntries));
@@ -1239,7 +1085,7 @@ async function prerenderHomepage() {
     "data",
     `    <section class="card data-section" aria-labelledby="dataTitle">
       <h2 id="dataTitle">Data</h2>
-      <p><a href="/data/export/ai-layoffs.csv">Download CSV</a> · <a href="/data/entries/index.json">View JSON index</a> · <a href="${tipMailto}">Submit a tip</a></p>
+      <p><a href="/data/export/ai-layoffs.csv">Download CSV</a> · <a href="/data/entries/index.json">View JSON index</a> · <a href="mailto:?subject=AI%20layoff%20tip&body=Company%3A%0ADate%3A%0ASource%20link%3A%0ASource%20quote%3A">Submit a tip</a></p>
       <p class="muted">Free to use with attribution. Cite as: Replaced by AI, AI Layoff Tracker, replacedbyai.app.</p>
     </section>`,
     /(?=    <div class="card" style="margin-top:20px;">\r?\n      <h2>Methodology<\/h2>)/,
@@ -1253,7 +1099,7 @@ async function prerenderHomepage() {
     </section>`,
     /(?=    <div class="card" style="margin-top:20px;">\r?\n      <h2>Methodology<\/h2>)/,
   );
-  html = html.replace(/<p class="footer-note" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"><\/span><\/span><a class="ba-badge" href="https:\/\/www\.b-average\.com\/" target="_blank" rel="noreferrer">B AVERAGE<\/a><\/p>/, `<p class="footer-note" style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"></span></span><a class="ba-badge" href="https://www.b-average.com/" target="_blank" rel="noreferrer">B AVERAGE</a><a href="/sitemap.xml">Sitemap</a><a href="/feed.xml">RSS</a><a href="${tipMailto}">Submit a tip</a></p>`);
+  html = html.replace(/<p class="footer-note" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"><\/span><\/span><a class="ba-badge" href="https:\/\/www\.b-average\.com\/" target="_blank" rel="noreferrer">B AVERAGE<\/a><\/p>/, `<p class="footer-note" style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"></span></span><a class="ba-badge" href="https://www.b-average.com/" target="_blank" rel="noreferrer">B AVERAGE</a><a href="/sitemap.xml">Sitemap</a><a href="/feed.xml">RSS</a><a href="mailto:?subject=AI%20layoff%20tip&body=Company%3A%0ADate%3A%0ASource%20link%3A%0ASource%20quote%3A">Submit a tip</a></p>`);
   html = replaceHomepageScript(html, buildClientScript());
 
   html = replaceJsonLd(html, "WebSite", {
@@ -1362,16 +1208,22 @@ async function writeOgImage() {
   const explicitCount = entries.filter((entry) => entry.aiRelevance === "explicit_ai_cited").length;
   const explicitShare = entries.length ? Math.round((explicitCount / entries.length) * 100) : 0;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#FCFCFA"/>
-  <rect x="72" y="72" width="1056" height="486" rx="6" fill="#FCFCFA" stroke="#E5E4DF"/>
-  <rect x="112" y="118" width="428" height="86" rx="6" fill="#17191D"/>
-  <text x="140" y="173" font-family="monospace" font-size="42" font-weight="700" fill="#FCFCFA">&gt; /replaced -ai</text>
-  <path d="M112 452 L290 410 L438 430 L594 366 L752 392 L1016 292" fill="none" stroke="#B3202F" stroke-width="7"/>
-  <text x="112" y="284" font-family="sans-serif" font-size="70" font-weight="700" fill="#17191D">AI Layoff Tracker</text>
-  <text x="112" y="342" font-family="sans-serif" font-size="30" fill="#50555D">Verified cases with receipts</text>
-  <g font-family="monospace">
-    <text x="112" y="515" font-size="54" font-weight="700" fill="#B3202F">${fmtNumber(totalJobs)}</text>
-    <text x="112" y="548" font-size="24" fill="#50555D">jobs impacted across ${entries.length} verified events · ${fmtPercent(explicitShare)} explicitly cite AI</text>
+  <rect width="1200" height="630" fill="#e1e6ed"/>
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="#ffffff" stroke="#ccd3dc"/>
+  <rect x="112" y="118" width="428" height="86" rx="12" fill="#111111"/>
+  <text x="140" y="173" font-family="Consolas, Menlo, monospace" font-size="42" font-weight="700" fill="#f5f5f5">&gt; /replaced -ai</text>
+  <text x="112" y="284" font-family="Arial, sans-serif" font-size="70" font-weight="700" fill="#111111">AI Layoff Tracker</text>
+  <text x="112" y="342" font-family="Arial, sans-serif" font-size="30" fill="#333333">Verified cases with receipts</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="112" y="410" width="280" height="92" rx="14" fill="#0c5c5d"/>
+    <text x="138" y="462" font-size="38" font-weight="700" fill="#ffffff">${entries.length}</text>
+    <text x="138" y="488" font-size="20" fill="#dcecec">verified cases</text>
+    <rect x="424" y="410" width="280" height="92" rx="14" fill="#0c5c5d"/>
+    <text x="450" y="462" font-size="38" font-weight="700" fill="#ffffff">${fmtNumber(totalJobs)}</text>
+    <text x="450" y="488" font-size="20" fill="#dcecec">jobs impacted</text>
+    <rect x="736" y="410" width="280" height="92" rx="14" fill="#0c5c5d"/>
+    <text x="762" y="462" font-size="38" font-weight="700" fill="#ffffff">${fmtPercent(explicitShare)}</text>
+    <text x="762" y="488" font-size="20" fill="#dcecec">explicitly cite AI</text>
   </g>
 </svg>
 `;
@@ -1396,7 +1248,7 @@ const sitemapUrls = [
   { url: "/industries/", lastmod: allEntriesLastmod },
   { url: "/data/export/ai-layoffs.csv", lastmod: allEntriesLastmod },
   { url: "/feed.xml", lastmod: allEntriesLastmod },
-  { url: "/og-image.png", lastmod: allEntriesLastmod },
+  { url: "/og-image.svg", lastmod: allEntriesLastmod },
 ];
 for (const [slug, companyEntries] of companyGroups.entries()) {
   companyEntries.sort((a, b) => String(b.eventDate || "").localeCompare(String(a.eventDate || "")));
@@ -1431,20 +1283,25 @@ for (const [slug, companyEntries] of companyGroups.entries()) {
   sitemapUrls.push({ url: `/company/${slug}/`, lastmod: maxUpdatedAt(companyEntries) });
 }
 
-if (companyGroups.has("nestle")) {
-  const aliasDir = path.join(root, "company", "nestla");
-  await mkdir(aliasDir, { recursive: true });
-  await writeFile(path.join(aliasDir, "index.html"), `<!doctype html>
+const legacyCompanyAliases = {
+  nestla: "nestle",
+};
+
+for (const [legacySlug, canonicalSlug] of Object.entries(legacyCompanyAliases)) {
+  if (!companyGroups.has(canonicalSlug)) continue;
+  const dir = path.join(root, "company", legacySlug);
+  await mkdir(dir, { recursive: true });
+  await writeFile(path.join(dir, "index.html"), `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nestlé AI layoffs - moved</title>
-    <link rel="canonical" href="${siteUrl}/company/nestle/" />
-    <meta http-equiv="refresh" content="0; url=/company/nestle/" />
+    <title>Company page moved</title>
+    <link rel="canonical" href="${siteUrl}/company/${canonicalSlug}/" />
+    <meta http-equiv="refresh" content="0; url=/company/${canonicalSlug}/" />
   </head>
   <body>
-    <p><a href="/company/nestle/">Nestlé AI layoffs moved to /company/nestle/.</a></p>
+    <p><a href="/company/${canonicalSlug}/">Company page moved to /company/${canonicalSlug}/.</a></p>
   </body>
 </html>
 `);
@@ -1622,7 +1479,7 @@ const aboutBody = `    <main>
       </section>
       <section class="card">
         <h2>Classification rules</h2>
-        ${Object.entries(aiLabels).map(([key, label]) => `<p id="${escapeHtml(relevanceSlugs[key] || slugify(key))}"><strong>${escapeHtml(label)}</strong>: ${escapeHtml(aiDefinitions[key])}</p>`).join("\n        ")}
+        ${Object.entries(aiLabels).map(([key, label]) => `<p id="${escapeHtml(relevanceSlugs[key] || slugify(key))}"><strong>${escapeHtml(label)}</strong> means ${escapeHtml(aiDefinitions[key]).replace(/^The source /, "the source ").replace(/^The layoff /, "the layoff ").replace(/^The event /, "the event ")}</p>`).join("\n        ")}
       </section>
       <section class="card">
         <h2>Source quality</h2>
