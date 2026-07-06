@@ -1,5 +1,30 @@
 [
     {
+        "id": "microsoft-2026-07-06",
+        "company": "Microsoft",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-07-06",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_reorg_or_spend_linked",
+        "sourceQuality": "reputable_reporting",
+        "summary": "The New York Times reported that Microsoft laid off thousands of Xbox employees and closed game studios as part of wider company cuts while prioritizing artificial intelligence spending.",
+        "evidenceQuote": "The layoffs were part of wider cuts at Microsoft, as the company prioritizes spending on artificial intelligence.",
+        "notes": "The New York Times Technology RSS feed described the cuts as thousands of Xbox employees and game studio closures, but did not provide an exact count in the accessible feed metadata, so the count is recorded as not disclosed.",
+        "sources": [
+            {
+                "name": "The New York Times",
+                "url": "https://www.nytimes.com/2026/07/06/technology/microsoft-xbox-layoffs-ai.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-07-06",
+                "quote": "Microsoft Lays Off Thousands of Xbox Employees, Closes Game Studios. The layoffs were part of wider cuts at Microsoft, as the company prioritizes spending on artificial intelligence."
+            }
+        ],
+        "createdAt": "2026-07-06T07:24:00-07:00",
+        "updatedAt": "2026-07-06T07:24:00-07:00"
+    },
+    {
         "id": "amperity-2026-06-25",
         "company": "Amperity",
         "industry": "Technology",
