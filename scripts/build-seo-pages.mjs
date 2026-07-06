@@ -54,6 +54,25 @@ const industryTitles = {
   Other: "Other AI Layoffs",
 };
 
+const faqItems = [
+  {
+    question: "What counts as an AI layoff on this site?",
+    answer: "An entry is included when AI, automation, AI replacement, or AI-driven restructuring is part of the documented rationale for the layoff.",
+  },
+  {
+    question: "How are entries verified?",
+    answer: "Each verified entry needs a primary source or reputable reporting, plus a source quote that supports the AI connection.",
+  },
+  {
+    question: "How are AI-cited layoffs different from ordinary layoffs?",
+    answer: "The tracker separates layoffs explicitly tied to AI from ordinary cost cuts where AI is only background context or company strategy.",
+  },
+  {
+    question: "Does every entry prove workers were replaced by AI?",
+    answer: "No. The relevance labels show whether the evidence points to direct AI replacement, automation, AI-focused restructuring, or a weaker connection.",
+  },
+];
+
 function escapeHtml(value = "") {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -496,6 +515,11 @@ function replaceJsonLd(html, type, value) {
   return html.replace(/    <script>\r?\n      let allEntries = \[\];/, `${block}\n    <script>\n      let allEntries = [];`);
 }
 
+function removeJsonLd(html, type) {
+  const pattern = new RegExp(`\\r?\\n?    <script type="application/ld\\+json">(?:(?!</script>)[\\s\\S])*?"@type"\\s*:\\s*"${type}"(?:(?!</script>)[\\s\\S])*?</script>`, "g");
+  return html.replace(pattern, "");
+}
+
 function replaceHomepageScript(html, scriptContent) {
   return html.replace(/    <script>\r?\n      let allEntries = \[\];[\s\S]*?    <\/script>\r?\n    <script defer src="https:\/\/cdn\.vercel-insights\.com\/v1\/script\.js"><\/script>/, `    <script>\n${scriptContent}\n    </script>\n    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>`);
 }
@@ -605,10 +629,12 @@ function buildClientScript() {
         const layoffsTotal = entries.reduce((sum, e) => sum + Number(e.layoffsCount || 0), 0);
         const explicit = entries.filter((e) => e.aiRelevance === 'explicit_ai_cited').length;
         const share = total ? Math.round((explicit / total) * 100) : 0;
+        const companies = new Set(entries.map((e) => e.company).filter(Boolean)).size;
         document.getElementById('statEntries').textContent = String(total);
         const layoffsEl = document.getElementById('statLayoffs');
         if (layoffsEl) animateCount(layoffsEl, layoffsTotal);
-        document.getElementById('statExplicit').textContent = String(explicit);
+        const companiesEl = document.getElementById('statCompanies');
+        if (companiesEl) companiesEl.textContent = String(companies);
         document.getElementById('statExplicitShare').textContent = \`\${share}%\`;
         const freshest = entries.slice().sort((a, b) => String(entryFreshnessDate(b)).localeCompare(String(entryFreshnessDate(a))))[0];
         const freshness = entryFreshnessDate(freshest);
@@ -858,31 +884,18 @@ async function prerenderHomepage() {
   const totalJobs = entries.reduce((sum, entry) => sum + Number(entry.layoffsCount || 0), 0);
   const explicitCount = entries.filter((entry) => entry.aiRelevance === "explicit_ai_cited").length;
   const explicitShare = entries.length ? Math.round((explicitCount / entries.length) * 100) : 0;
+  const companyCount = new Set(entries.map((entry) => entry.company).filter(Boolean)).size;
   const lastUpdatedLabel = fmtDateShortYear(maxUpdated);
-  const faqItems = [
-    {
-      question: "What counts as an AI layoff on this site?",
-      answer: "An entry is included when AI, automation, AI replacement, or AI-driven restructuring is part of the documented rationale for the layoff.",
-    },
-    {
-      question: "How are entries verified?",
-      answer: "Each verified entry needs a primary source or reputable reporting, plus a source quote that supports the AI connection.",
-    },
-    {
-      question: "How are AI-cited layoffs different from ordinary layoffs?",
-      answer: "The tracker separates layoffs explicitly tied to AI from ordinary cost cuts where AI is only background context or company strategy.",
-    },
-    {
-      question: "Does every entry prove workers were replaced by AI?",
-      answer: "No. The relevance labels show whether the evidence points to direct AI replacement, automation, AI-focused restructuring, or a weaker connection.",
-    },
-  ];
+  const homepageDescription = `Track ${entries.length} verified layoff events tied to AI and automation, with ${fmtNumber(totalJobs)} reported jobs impacted and sourced receipts.`;
 
   const legacySiteUrl = `https://www.replacedbyai.${"com"}`;
   html = html.replaceAll(legacySiteUrl, siteUrl);
   html = html.replace(/<html>/, `<html lang="en">`);
   html = html.replace(`AI Layoff Tracker ${"\u2014"} Verified Cases with Receipts | Replaced by AI`, "AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI");
+  html = html.replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(homepageDescription)}" />`);
   html = html.replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="AI Layoff Tracker: Verified Cases with Receipts | Replaced by AI" />`);
+  html = html.replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(homepageDescription)}" />`);
+  html = html.replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(homepageDescription)}" />`);
   html = html.replace(/<meta name="twitter:card" content="[^"]*" \/>/, `<meta name="twitter:card" content="summary_large_image" />`);
   if (!/<meta property="og:image"/.test(html)) {
     html = html.replace(/(    <meta property="og:url" content="[^"]+" \/>\r?\n)/, `$1    <meta property="og:image" content="${siteUrl}/og-image.svg" />\n    <meta name="twitter:image" content="${siteUrl}/og-image.svg" />\n`);
@@ -902,7 +915,6 @@ async function prerenderHomepage() {
   html = html.replace(/      \/\* seo:homepage-improvements:start \*\/[\s\S]*?      \/\* seo:homepage-improvements:end \*\/\r?\n/, "");
   html = html.replace(/    <\/style>/, `      /* seo:homepage-improvements:start */
       .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-      .quotable-stat { margin: -10px 0 22px; font-size: 17px; line-height: 1.55; color: #222; }
       thead th { position: sticky; top: 0; z-index: 2; background: #fff; }
       .link-section h3 { margin-bottom: 4px; }
       .data-section p:last-child { margin-bottom: 0; }
@@ -910,7 +922,8 @@ async function prerenderHomepage() {
     </style>`);
   html = html.replace(/<div class="stat-value" id="statEntries">[\s\S]*?<\/div>/, `<div class="stat-value" id="statEntries">${entries.length}</div>`);
   html = html.replace(/<div class="stat-value" id="statLayoffs">[\s\S]*?<\/div>/, `<div class="stat-value" id="statLayoffs">${fmtNumber(totalJobs)}</div>`);
-  html = html.replace(/<div class="stat-value" id="statExplicit">[\s\S]*?<\/div>/, `<div class="stat-value" id="statExplicit">${explicitCount}</div>`);
+  html = html.replace(/<div class="stat-value" id="(?:statExplicit|statCompanies)">[\s\S]*?<\/div>/, `<div class="stat-value" id="statCompanies">${companyCount}</div>`);
+  html = html.replace(/<div class="stat-label">explicitly AI-cited<\/div>/, `<div class="stat-label">companies tracked</div>`);
   html = html.replace(/<div class="stat-value" id="(?:statUpdated|statExplicitShare)">[\s\S]*?<\/div>/, `<div class="stat-value" id="statExplicitShare">${escapeHtml(fmtPercent(explicitShare))}</div>`);
   html = html.replace(/<div class="stat-label" id="(?:statUpdatedLabel|statExplicitShareLabel)">[\s\S]*?<\/div>/, `<div class="stat-label" id="statExplicitShareLabel">explicitly cite AI</div>`);
   html = html.replace(/<time id="freshnessDate" datetime="[^"]*">[\s\S]*?<\/time>/, `<time id="freshnessDate" datetime="${escapeHtml(maxUpdated)}">${escapeHtml(lastUpdatedLabel)}</time>`);
@@ -927,13 +940,13 @@ async function prerenderHomepage() {
   html = replaceRegion(
     html,
     "intro",
-    `    <p class="muted intro-copy">Replaced by AI is a public AI layoff tracker. It documents layoffs tied to AI and automation, with every entry sourced to a primary statement or reputable reporting.</p>`,
+    "",
     /(?=    <p class="muted freshness">)/,
   );
   html = replaceRegion(
     html,
     "quote-stat",
-    `    <p class="quotable-stat">As of ${escapeHtml(lastUpdatedLabel)}, this tracker documents ${entries.length} verified layoff events impacting ${escapeHtml(fmtNumber(totalJobs))} workers, and ${escapeHtml(fmtPercent(explicitShare))} of them explicitly cite AI.</p>`,
+    "",
     /(?=    <div class="card list-card")/,
   );
   html = replaceRegion(
@@ -978,12 +991,11 @@ async function prerenderHomepage() {
   html = replaceRegion(
     html,
     "faq",
-    `    <section class="card faq-section" style="margin-top:20px;">
-      <h2>AI Layoff Tracker FAQ</h2>
-      ${faqItems.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join("\n      ")}
-    </section>`,
+    "",
     /(?=    <div class="card" style="margin-top:20px;">\r?\n      <h2>Methodology<\/h2>)/,
   );
+  html = html.replaceAll("Entries in this AI layoff tracker are sourced", "Entries in this dataset are sourced");
+  html = html.replaceAll("Replaced by AI, AI Layoff Tracker, replacedbyai.app.", "Replaced by AI, replacedbyai.app.");
   html = html.replace(/<p class="footer-note" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"><\/span><\/span><a class="ba-badge" href="https:\/\/www\.b-average\.com\/" target="_blank" rel="noreferrer">B AVERAGE<\/a><\/p>/, `<p class="footer-note" style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;"><span>© <span id="copyrightYear"></span></span><a class="ba-badge" href="https://www.b-average.com/" target="_blank" rel="noreferrer">B AVERAGE</a><a href="/sitemap.xml">Sitemap</a><a href="/feed.xml">RSS</a><a href="mailto:?subject=AI%20layoff%20tip&body=Company%3A%0ADate%3A%0ASource%20link%3A%0ASource%20quote%3A">Submit a tip</a></p>`);
   html = replaceHomepageScript(html, buildClientScript());
 
@@ -992,7 +1004,7 @@ async function prerenderHomepage() {
     "@type": "WebSite",
     name: "Replaced by AI",
     url: `${siteUrl}/`,
-    description: "Track layoffs tied to AI and automation. Verified cases with sourced receipts from primary statements and reporting.",
+    description: homepageDescription,
     keywords: ["ai layoffs", "ai layoff tracker", "companies replacing workers with ai", "automation layoffs"],
   });
   html = replaceJsonLd(html, "Dataset", {
@@ -1017,18 +1029,7 @@ async function prerenderHomepage() {
       },
     ],
   });
-  html = replaceJsonLd(html, "FAQPage", {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  });
+  html = removeJsonLd(html, "FAQPage");
 
   await writeFile(indexPath, html);
 }
@@ -1374,6 +1375,10 @@ const aboutBody = `    <main>
         <h2>Receipts first</h2>
         <p>The AI layoff tracker separates facts from interpretation. Each entry includes a source quote, a summary, and notes explaining why the event was included and how strong the AI connection is.</p>
       </section>
+      <section class="card faq-section">
+        <h2>AI Layoff Tracker FAQ</h2>
+        ${faqItems.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join("\n        ")}
+      </section>
     </main>`;
 
 await mkdir(path.join(root, "about"), { recursive: true });
@@ -1384,6 +1389,18 @@ await writeFile(
     description: "Methodology for the Replaced by AI layoff tracker, including AI layoffs inclusion rules, source quality standards, and AI relevance classifications.",
     canonicalPath: "/about/",
     body: aboutBody,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
   }),
 );
 
