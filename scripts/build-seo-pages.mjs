@@ -97,7 +97,11 @@ function fmtNumber(value) {
 }
 
 function fmtLayoffs(value) {
-  return value == null ? "Not disclosed" : Number(value).toLocaleString("en-US");
+  return value == null ? "–" : Number(value).toLocaleString("en-US");
+}
+
+function fmtLayoffsHtml(value) {
+  return value == null ? `<span class="muted">–</span>` : escapeHtml(fmtLayoffs(value));
 }
 
 function fmtPercent(value) {
@@ -400,7 +404,7 @@ function entryCard(entry) {
       <p class="muted"><time datetime="${escapeHtml(entry.eventDate || "")}">${escapeHtml(fmtDate(entry.eventDate))}</time></p>
       <h2>${escapeHtml(entry.company)} AI layoff details</h2>
       <p><span class="pill">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span><span class="pill">${escapeHtml(entry.sourceQuality || "Unknown source quality")}</span></p>
-      <p><strong>Reported layoffs:</strong> ${escapeHtml(fmtLayoffs(entry.layoffsCount))}</p>
+      <p><strong>Reported layoffs:</strong> ${fmtLayoffsHtml(entry.layoffsCount)}</p>
       <p><strong>Industry:</strong> ${escapeHtml(entry.industry || "Unknown")} &middot; <strong>Geography:</strong> ${escapeHtml(entry.geography || "Unknown")}</p>
       <p>${escapeHtml(entry.summary || "")}</p>
       <div class="quote">${escapeHtml(entry.evidenceQuote || "No evidence quote recorded.")}</div>
@@ -462,7 +466,7 @@ function homepageEntryRows(items) {
     return `          <tr data-entry-id="${escapeHtml(entry.id || "")}" aria-expanded="false" aria-controls="details-${escapeHtml(entry.id || "")}" tabindex="0">
             <td><span class="company-line"><b><a href="/company/${slugify(entry.company)}/">${escapeHtml(entry.company)}</a></b></span><br><span class="muted"><span class="desktop-date">${escapeHtml(entry.geography || "Unknown")}</span><span class="mobile-date">${escapeHtml(fmtGeography(entry.geography))}</span></span></td>
             <td>${source ? `<a class="date-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer"><span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span></a>` : `<span class="desktop-date">${escapeHtml(fmtDate(entry.eventDate))}</span><span class="mobile-date">${escapeHtml(fmtDateCompact(entry.eventDate))}</span>`}</td>
-            <td>${escapeHtml(fmtLayoffs(entry.layoffsCount))}</td>
+            <td>${fmtLayoffsHtml(entry.layoffsCount)}</td>
             <td>${escapeHtml(entry.industry || "Unknown")}</td>
             <td><span class="pill ${escapeHtml(entry.aiRelevance || "")}">${escapeHtml(aiLabels[entry.aiRelevance] || entry.aiRelevance || "Unclassified")}</span></td>
           </tr>`;
@@ -573,7 +577,7 @@ function buildClientScript() {
       }
 
       function fmtLayoffs(v) {
-        return v == null ? 'Not disclosed' : fmtNumber(v);
+        return v == null ? '<span class="muted">–</span>' : fmtNumber(v);
       }
 
       function receiptLabel(entry) {
