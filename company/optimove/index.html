@@ -7,156 +7,75 @@
     <meta name="description" content="Optimove AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact." />
     <link rel="canonical" href="https://www.replacedbyai.app/company/optimove/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/ibm-plex-sans-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ibm-plex-mono-latin-400.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content="Optimove AI layoffs - AI Layoff Tracker with Receipts" />
     <meta property="og:description" content="Optimove AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.replacedbyai.app/company/optimove/" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 1100px;
-        margin: 20px auto 40px;
-        padding: 0 16px;
-        color: #111;
-        background:
-          radial-gradient(circle at top, rgba(255,255,255,0.72), rgba(255,255,255,0.36) 30%, rgba(229,233,239,0.68) 58%, rgba(214,220,228,0.92) 100%),
-          #e1e6ed;
-        line-height: 1.55;
-        position: relative;
-        overflow-x: hidden;
+      @font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans-latin-400.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: swap; }
+      @font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans-latin-600.woff2") format("woff2"); font-style: normal; font-weight: 600; font-display: swap; }
+      @font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans-latin-700.woff2") format("woff2"); font-style: normal; font-weight: 700; font-display: swap; }
+      @font-face { font-family: "IBM Plex Mono"; src: url("/fonts/ibm-plex-mono-latin-400.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: swap; }
+      @font-face { font-family: "IBM Plex Mono"; src: url("/fonts/ibm-plex-mono-latin-500.woff2") format("woff2"); font-style: normal; font-weight: 500; font-display: swap; }
+      @font-face { font-family: "IBM Plex Serif"; src: url("/fonts/ibm-plex-serif-latin-400-italic.woff2") format("woff2"); font-style: italic; font-weight: 400; font-display: swap; }
+      :root {
+        --paper: #FCFCFA;
+        --ink: #17191D;
+        --ink-2: #50555D;
+        --rule: #E5E4DF;
+        --redline: #B3202F;
+        --redline-tint: #F8E9EA;
+        --redline-text: #8C1523;
+        --neutral-tint: #EFEEE9;
+        --graphite: #7A7F87;
+        --white: #FFFFFF;
+        --hover: rgba(0, 0, 0, 0.025);
       }
-      body > * {
-        position: relative;
-        z-index: 1;
-      }
-      .ambient-bg {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 0;
-        overflow: hidden;
-        opacity: 1;
-      }
-      .ambient-shape {
-        position: absolute;
-        border-radius: 28px;
-        border: 2px solid rgba(53, 70, 92, 0.28);
-        background: rgba(255,255,255,0.14);
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 30px rgba(34,44,60,0.08);
-        will-change: transform, opacity;
-      }
-      .ambient-shape.one {
-        width: 420px;
-        height: 420px;
-        top: 5%;
-        left: -40px;
-        transform: rotate(18deg);
-        animation: geoOne 20s ease-in-out infinite alternate;
-      }
-      .ambient-shape.two {
-        width: 300px;
-        height: 300px;
-        top: 22%;
-        right: 10px;
-        transform: rotate(34deg);
-        animation: geoTwo 24s ease-in-out infinite alternate;
-      }
-      .ambient-shape.three {
-        width: 240px;
-        height: 240px;
-        bottom: 10%;
-        left: 40px;
-        transform: rotate(12deg);
-        animation: geoThree 18s ease-in-out infinite alternate;
-      }
-      .ambient-shape.four {
-        width: 200px;
-        height: 200px;
-        bottom: 16%;
-        right: 80px;
-        transform: rotate(46deg);
-        animation: geoFour 26s ease-in-out infinite alternate;
-      }
-      @keyframes geoOne {
-        0% { transform: translate3d(0, 0, 0) rotate(18deg); opacity: 0.34; }
-        100% { transform: translate3d(46px, 24px, 0) rotate(26deg); opacity: 0.2; }
-      }
-      @keyframes geoTwo {
-        0% { transform: translate3d(0, 0, 0) rotate(34deg); opacity: 0.26; }
-        100% { transform: translate3d(-38px, 34px, 0) rotate(22deg); opacity: 0.16; }
-      }
-      @keyframes geoThree {
-        0% { transform: translate3d(0, 0, 0) rotate(12deg); opacity: 0.2; }
-        100% { transform: translate3d(24px, -16px, 0) rotate(20deg); opacity: 0.12; }
-      }
-      @keyframes geoFour {
-        0% { transform: translate3d(0, 0, 0) rotate(46deg); opacity: 0.18; }
-        100% { transform: translate3d(-18px, -26px, 0) rotate(56deg); opacity: 0.1; }
-      }
-      a { color: #0a58ca; }
-      .top-nav { display: flex; gap: 12px; align-items: center; justify-content: flex-end; margin-bottom: 0; font-size: 14px; }
-      .top-nav a { color: #111; text-decoration: none; }
+      *, *::before, *::after { box-sizing: border-box; }
+      body { max-width: 1100px; margin: 20px auto 40px; padding: 0 16px; color: var(--ink); background: var(--paper); font-family: "IBM Plex Sans", sans-serif; font-size: 16px; line-height: 1.55; overflow-x: hidden; }
+      a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+      a:hover { color: var(--redline); }
+      a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--redline); outline-offset: 2px; }
+      .top-nav { display: flex; gap: 14px; align-items: center; justify-content: flex-end; margin-bottom: 22px; font-size: 14px; }
+      .top-nav a { text-decoration: none; }
       .top-nav a:hover { text-decoration: underline; }
-      .hero { margin-bottom: 8px; }
+      .hero { margin-bottom: 20px; }
       .logo-link { display: inline-flex; color: inherit; text-decoration: none; }
-      .prompt-title {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 14px 18px;
-        background: #111;
-        color: #f5f5f5;
-        border-radius: 12px;
-        font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace;
-        font-size: clamp(28px, 5vw, 42px);
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-      }
+      .prompt-title { display: inline-flex; align-items: center; gap: 10px; padding: 12px 15px; background: var(--ink); color: var(--paper); border-radius: 6px; font-family: "IBM Plex Mono", monospace; font-size: clamp(28px, 5vw, 42px); line-height: 1.1; letter-spacing: -0.02em; }
       .prompt-symbol { color: #7CFF6B; }
       .prompt-text { white-space: nowrap; }
-      .prompt-cursor {
-        display: inline-block;
-        width: 0.65ch;
-        height: 1.05em;
-        background: #7CFF6B;
-        vertical-align: -0.12em;
-        animation: blink 1s steps(1, end) infinite;
-      }
+      .prompt-cursor { display: inline-block; width: 0.65ch; height: 1.05em; background: #7CFF6B; vertical-align: -0.12em; animation: blink 1s steps(1, end) infinite; }
       @keyframes blink { 50% { opacity: 0; } }
-      h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: 0; }
-      h2 { margin-top: 34px; }
-      .muted { color: #555; }
-      .card { background: #fff; border: 1px solid #dde2e8; border-radius: 8px; padding: 18px; margin: 18px 0; }
-      .pill { display: inline-block; padding: 5px 9px; border-radius: 999px; background: #f2f4f7; font-size: 13px; margin-right: 6px; }
-      .quote { padding: 12px 14px; border-left: 4px solid #ccd3dc; background: #fafafa; }
+      @media (prefers-reduced-motion: reduce) { .prompt-cursor { animation: none; } }
+      h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: -0.02em; font-weight: 700; }
+      h2 { margin-top: 34px; font-weight: 600; letter-spacing: 0; }
+      h3 { font-weight: 600; }
+      .muted { color: var(--ink-2); }
+      .card { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; margin: 18px 0; }
+      .pill { display: inline-block; padding: 5px 8px; border-radius: 999px; font-family: "IBM Plex Mono", monospace; font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+      .pill[data-tier="strong"], .pill.strong { color: var(--redline-text); background: var(--redline-tint); border: 1px solid rgba(179,32,47,0.25); }
+      .pill[data-tier="medium"], .pill.medium { color: var(--ink-2); background: var(--neutral-tint); border: 1px solid var(--rule); }
+      .pill[data-tier="weak"], .pill.weak { color: var(--graphite); background: transparent; border: 1px dashed var(--graphite); }
       .source-list { padding-left: 20px; }
-      .footer { margin-top: 34px; font-size: 13px; color: #666; }
-      @media (max-width: 800px) {
-        .top-nav { justify-content: flex-start; flex-wrap: wrap; margin-bottom: 18px; }
-        .prompt-title { font-size: clamp(29.5px, 5.2vw, 43.7px); }
-        body {
-          background:
-            radial-gradient(circle at top, rgba(255,255,255,0.94), rgba(255,255,255,0.84) 36%, rgba(255,255,255,0.96) 66%),
-            linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
-        }
-        .ambient-shape.one { width: 220px; height: 220px; top: 10%; left: -70px; }
-        .ambient-shape.two { width: 180px; height: 180px; top: 34%; right: -60px; }
-        .ambient-shape.three { width: 150px; height: 150px; bottom: 10%; left: 6%; }
-        .ambient-shape.four { width: 120px; height: 120px; bottom: 22%; right: 4%; }
-      }
+      .footer { margin-top: 34px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2); }
+      .receipt-stack { display: grid; gap: 10px; margin-top: 12px; }
+      .receipt-slip { max-width: 560px; background: var(--white); border: 1px solid var(--rule); border-bottom: 0; padding: 12px 14px 18px; position: relative; transform: translate(2px, 0); }
+      .receipt-slip::after { content: ""; position: absolute; left: -1px; right: -1px; bottom: -8px; height: 8px; background: linear-gradient(135deg, var(--white) 25%, transparent 25%) 0 0 / 12px 8px repeat-x, linear-gradient(225deg, var(--white) 25%, transparent 25%) 0 0 / 12px 8px repeat-x; border-top: 1px solid var(--rule); }
+      .receipt-head, .receipt-foot { display: flex; justify-content: space-between; gap: 12px; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+      .receipt-rule { border: 0; border-top: 1px dashed var(--rule); margin: 10px 0; }
+      .receipt-quote { font-family: "IBM Plex Serif", serif; font-style: italic; font-size: 15px; line-height: 1.6; color: var(--ink); }
+      .receipt-foot[data-tier="strong"] { color: var(--redline-text); }
+      .receipt-foot[data-tier="medium"] { color: var(--ink-2); }
+      .receipt-foot[data-tier="weak"] { color: var(--graphite); }
+      @media (max-width: 800px) { body { font-size: 15px; } .top-nav { justify-content: flex-start; flex-wrap: wrap; } }
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Optimove AI layoffs - AI Layoff Tracker with Receipts","description":"Optimove AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact.","url":"https://www.replacedbyai.app/company/optimove/","isPartOf":{"@type":"WebSite","name":"Replaced by AI","url":"https://www.replacedbyai.app"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Optimove AI layoffs","description":"InterGame reported that Optimove CEO Pini Yakuel said the marketing services provider would cut 10% of staff in a push toward AI and train remaining employees to shape the next version of the company.","datePublished":"2026-06-17","dateModified":"2026-07-04T11:15:00-07:00","mainEntityOfPage":"https://www.replacedbyai.app/company/optimove/","author":{"@type":"Organization","name":"Replaced by AI"},"publisher":{"@type":"Organization","name":"Replaced by AI"},"citation":"https://www.intergameonline.com/igaming/news/optimove-cut-jobs-artificial-intelligence-ai","keywords":["ai layoffs","ai layoff tracker","Optimove ai layoffs"]}</script>
   </head>
   <body>
-    <div class="ambient-bg" aria-hidden="true">
-      <div class="ambient-shape one"></div>
-      <div class="ambient-shape two"></div>
-      <div class="ambient-shape three"></div>
-      <div class="ambient-shape four"></div>
-    </div>
     <nav class="top-nav" aria-label="Site navigation">
       <a href="/about/">Methodology</a>
       <a href="/company/">Companies</a>
@@ -175,14 +94,20 @@
       <article class="card">
       <p class="muted"><time datetime="2026-06-17">June 17, 2026</time></p>
       <h2>Optimove AI layoff details</h2>
-      <p><span class="pill">Explicit AI cited</span><span class="pill">reputable_reporting</span></p>
+      <p><span class="pill strong" data-tier="strong" data-definition="The source directly ties layoffs to AI, AI investment, AI replacement, or AI-driven operating changes." title="The source directly ties layoffs to AI, AI investment, AI replacement, or AI-driven operating changes.">Explicit AI cited</span> <span class="pill medium" data-tier="medium">reputable_reporting</span></p>
       <p><strong>Reported layoffs:</strong> Not disclosed</p>
       <p><strong>Industry:</strong> Technology &middot; <strong>Geography:</strong> Global</p>
       <p>InterGame reported that Optimove CEO Pini Yakuel said the marketing services provider would cut 10% of staff in a push toward AI and train remaining employees to shape the next version of the company.</p>
-      <div class="quote">The CEO of igaming marketing services provider Optimove, Pini Yakuel, has revealed the &quot;painful&quot; decision to cut 10 per cent of his staff in a push towards AI.</div>
+      <div class="receipt-stack" aria-label="Optimove receipts">
+        <article class="receipt-slip">
+          <div class="receipt-head"><a href="https://www.intergameonline.com/igaming/news/optimove-cut-jobs-artificial-intelligence-ai" target="_blank" rel="noreferrer">INTERGAME</a><time datetime="2026-06-17">2026-06-17</time></div>
+          <hr class="receipt-rule" />
+          <div class="receipt-quote">The CEO of igaming marketing services provider Optimove, Pini Yakuel, has revealed the &quot;painful&quot; decision to cut 10 per cent of his staff in a push towards AI.</div>
+          <hr class="receipt-rule" />
+          <div class="receipt-foot" data-tier="strong"><span>EVIDENCE: EXPLICIT AI CITED</span></div>
+        </article>
+      </div>
       <p>The source gives a percentage reduction rather than an exact headcount, so layoffsCount remains null. Because the CEO directly framed the cuts as part of a push toward AI and said the company would lead with AI in product and operations, this is classified as explicit AI cited.</p>
-      <h3>Sources</h3>
-      <ul class="source-list"><li><a href="https://www.intergameonline.com/igaming/news/optimove-cut-jobs-artificial-intelligence-ai" rel="noreferrer">InterGame</a>, 2026-06-17</li></ul>
     </article>
       <section class="card">
         <h2>Related AI layoffs</h2>
