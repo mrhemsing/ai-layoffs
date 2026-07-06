@@ -1,5 +1,5 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
-Microsoft,2026-07-06,,Technology,Global,ai_reorg_or_spend_linked,verified,reputable_reporting,https://www.nytimes.com/2026/07/06/technology/microsoft-xbox-layoffs-ai.html
+Microsoft,2026-07-06,4800,Technology,Global,ai_reorg_or_spend_linked,verified,reputable_reporting,https://www.bbc.com/news/articles/c36yy27rnpeo
 Amperity,2026-06-25,,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.geekwire.com/2026/amperity-hit-with-layoffs-as-ai-changes-the-shape-of-the-customer-data-startup-and-how-it-operates/
 Elastic,2026-06-24,281,Technology,Global,explicit_ai_cited,verified,primary,https://www.elastic.co/blog/ceo-ash-kulkarni-announcement-to-elastic-employees
 Snyk,2026-06-24,90,Cybersecurity,Global,explicit_ai_cited,verified,reputable_reporting,https://cybernews.com/security/snyk-cuts-jobs-focus-on-ai-security/

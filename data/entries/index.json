@@ -5,14 +5,21 @@
         "industry": "Technology",
         "geography": "Global",
         "eventDate": "2026-07-06",
-        "layoffsCount": null,
+        "layoffsCount": 4800,
         "status": "verified",
         "aiRelevance": "ai_reorg_or_spend_linked",
         "sourceQuality": "reputable_reporting",
-        "summary": "The New York Times reported that Microsoft laid off thousands of Xbox employees and closed game studios as part of wider company cuts while prioritizing artificial intelligence spending.",
-        "evidenceQuote": "The layoffs were part of wider cuts at Microsoft, as the company prioritizes spending on artificial intelligence.",
-        "notes": "The New York Times Technology RSS feed described the cuts as thousands of Xbox employees and game studio closures, but did not provide an exact count in the accessible feed metadata, so the count is recorded as not disclosed.",
+        "summary": "BBC reported that Microsoft announced 4,800 job cuts, roughly 2.1% of its workforce, with Xbox bearing a large share of the layoffs amid a significant restructure and Microsoft continuing to prioritize artificial intelligence spending.",
+        "evidenceQuote": "Microsoft has announced it has cut 4,800 jobs - roughly 2.1% of its workforce - with Xbox to bear a large number of its latest layoffs.",
+        "notes": "Updated on 2026-07-06 after BBC reported Microsoft announced 4,800 cuts. The BBC article says Microsoft would not replace the lost roles with AI, but also reports the wider context of AI changing work and Microsoft's recent AI spending; this remains classified as AI reorg or spending linked rather than direct AI replacement.",
         "sources": [
+            {
+                "name": "BBC",
+                "url": "https://www.bbc.com/news/articles/c36yy27rnpeo",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-07-06",
+                "quote": "Microsoft has announced it has cut 4,800 jobs - roughly 2.1% of its workforce - with Xbox to bear a large number of its latest layoffs."
+            },
             {
                 "name": "The New York Times",
                 "url": "https://www.nytimes.com/2026/07/06/technology/microsoft-xbox-layoffs-ai.html",
@@ -22,7 +29,7 @@
             }
         ],
         "createdAt": "2026-07-06T07:24:00-07:00",
-        "updatedAt": "2026-07-06T07:24:00-07:00"
+        "updatedAt": "2026-07-06T11:12:00-07:00"
     },
     {
         "id": "amperity-2026-06-25",
