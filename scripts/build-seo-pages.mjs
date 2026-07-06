@@ -469,96 +469,6 @@ function buildYearLinks() {
     .join("\n        ");
 }
 
-function buildLegend() {
-  return Object.entries(aiLabels)
-    .filter(([key]) => relevanceGroups.has(key))
-    .map(([key, label]) => `<a class="legend-item" href="/about/#${escapeHtml(relevanceSlugs[key] || slugify(key))}"><span class="pill ${escapeHtml(key)}">${escapeHtml(label)}</span><span>${escapeHtml(aiDefinitions[key])}</span></a>`)
-    .join("\n          ");
-}
-
-function monthKey(value) {
-  return String(value || "").slice(0, 7);
-}
-
-function monthLabel(value) {
-  const [year, month] = value.split("-").map(Number);
-  return new Date(Date.UTC(year, month - 1, 1)).toLocaleDateString("en-US", {
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-}
-
-function monthRange(items) {
-  const months = items.map((entry) => monthKey(entry.eventDate)).filter((value) => /^\d{4}-\d{2}$/.test(value)).sort();
-  const start = months[0];
-  const end = months.at(-1);
-  if (!start || !end) return [];
-  const [startYear, startMonth] = start.split("-").map(Number);
-  const [endYear, endMonth] = end.split("-").map(Number);
-  const out = [];
-  for (let year = startYear, month = startMonth; year < endYear || (year === endYear && month <= endMonth); month += 1) {
-    if (month === 13) {
-      month = 1;
-      year += 1;
-    }
-    out.push(`${year}-${String(month).padStart(2, "0")}`);
-  }
-  return out;
-}
-
-function buildTrendChart(items) {
-  const months = monthRange(items);
-  const totals = new Map(months.map((month) => [month, 0]));
-  for (const entry of items) {
-    if (entry.layoffsCount == null) continue;
-    const key = monthKey(entry.eventDate);
-    if (totals.has(key)) totals.set(key, totals.get(key) + Number(entry.layoffsCount || 0));
-  }
-  const width = 920;
-  const height = 280;
-  const padLeft = 46;
-  const padBottom = 44;
-  const padTop = 24;
-  const chartWidth = width - padLeft - 16;
-  const chartHeight = height - padTop - padBottom;
-  const max = Math.max(1, ...[...totals.values()]);
-  const gap = 3;
-  const barWidth = Math.max(3, (chartWidth - gap * Math.max(0, months.length - 1)) / Math.max(1, months.length));
-  const bars = months.map((month, index) => {
-    const value = totals.get(month) || 0;
-    const barHeight = Math.max(value ? 3 : 0, Math.round((value / max) * chartHeight));
-    const x = padLeft + index * (barWidth + gap);
-    const y = padTop + chartHeight - barHeight;
-    return `<rect class="trend-bar" data-month="${month}" x="${x.toFixed(1)}" y="${y}" width="${barWidth.toFixed(1)}" height="${barHeight}" rx="2"><title>${escapeHtml(monthLabel(month))}: ${escapeHtml(fmtNumber(value))} jobs impacted</title></rect>`;
-  }).join("\n              ");
-  const labels = months
-    .filter((_, index) => index === 0 || index === months.length - 1 || index % 6 === 0)
-    .map((month) => {
-      const index = months.indexOf(month);
-      const x = padLeft + index * (barWidth + gap) + barWidth / 2;
-      return `<text x="${x.toFixed(1)}" y="${height - 14}" text-anchor="middle">${escapeHtml(monthLabel(month).replace(" ", " '"))}</text>`;
-    })
-    .join("\n              ");
-  const startLabel = months[0] ? monthLabel(months[0]) : "Unknown";
-  const endLabel = months.at(-1) ? monthLabel(months.at(-1)) : "Unknown";
-  return `<section class="card trend-section" aria-labelledby="trendTitle">
-        <h2 id="trendTitle">Monthly jobs impacted</h2>
-        <svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Monthly jobs impacted by tracked AI layoffs">
-          <line x1="${padLeft}" y1="${padTop + chartHeight}" x2="${width - 16}" y2="${padTop + chartHeight}" class="trend-axis"></line>
-          <line x1="${padLeft}" y1="${padTop}" x2="${padLeft}" y2="${padTop + chartHeight}" class="trend-axis"></line>
-          <text x="8" y="${padTop + 10}" class="trend-y-label">${escapeHtml(fmtNumber(max))}</text>
-          <g>
-              ${bars}
-          </g>
-          <g class="trend-labels">
-              ${labels}
-          </g>
-        </svg>
-        <p class="muted trend-caption">Jobs impacted per month, ${escapeHtml(startLabel)} to ${escapeHtml(endLabel)}. Excludes events with undisclosed counts.</p>
-      </section>`;
-}
-
 function replaceRegion(html, name, content, fallbackPattern) {
   const start = `<!-- seo:${name}:start -->`;
   const end = `<!-- seo:${name}:end -->`;
@@ -995,17 +905,8 @@ async function prerenderHomepage() {
   html = html.replace(/    <\/style>/, `      /* seo:homepage-improvements:start */
       .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
       .quotable-stat { margin: -10px 0 22px; font-size: 17px; line-height: 1.55; color: #222; }
-      .relevance-legend { display: grid; gap: 8px; margin: 0 0 18px; }
-      .legend-item { display: grid; grid-template-columns: minmax(170px, max-content) 1fr; gap: 8px; align-items: baseline; color: inherit; text-decoration: none; font-size: 13px; }
-      .legend-item:hover span:last-child { text-decoration: underline; text-underline-offset: 2px; }
       .receipt-count { display: inline-block; margin-top: 4px; font-size: 12px; color: #555; }
       thead th { position: sticky; top: 0; z-index: 2; background: #fff; }
-      .trend-section { margin-bottom: 20px; }
-      .trend-chart { width: 100%; height: auto; display: block; }
-      .trend-bar { fill: #0c5c5d; }
-      .trend-axis { stroke: #c5cbd3; stroke-width: 1; }
-      .trend-labels text, .trend-y-label { font-size: 11px; fill: #555; }
-      .trend-caption { margin-bottom: 0; }
       .link-section h3 { margin-bottom: 4px; }
       .data-section p:last-child { margin-bottom: 0; }
       @media (max-width: 640px) {
@@ -1017,7 +918,6 @@ async function prerenderHomepage() {
         td::before { content: attr(data-label); font-size: 12px; font-weight: 700; color: #555; }
         .detail-cell { display: block; }
         .detail-cell::before { content: none; }
-        .legend-item { grid-template-columns: 1fr; }
       }
       /* seo:homepage-improvements:end */
     </style>`);
@@ -1052,16 +952,14 @@ async function prerenderHomepage() {
   html = replaceRegion(
     html,
     "legend",
-    `      <div class="relevance-legend" aria-label="AI relevance legend">
-          ${buildLegend()}
-        </div>`,
+    "",
     /(?=      <table>)/,
   );
   html = replaceEntriesBody(html, homepageEntryRows(sortedEntries));
   html = replaceRegion(
     html,
     "trend",
-    `    ${buildTrendChart(entries)}`,
+    "",
     /(?=    <div class="card list-card")/,
   );
   html = replaceRegion(
