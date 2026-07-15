@@ -1,0 +1,38 @@
+{
+  "id": "thomson-reuters-2026-07-13",
+  "company": "Thomson Reuters",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-07-13",
+  "layoffsCount": 500,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters-backed reporting said Thomson Reuters would cut up to 500 engineering roles globally as the company aggressively deploys artificial intelligence across its businesses and shifts hiring toward senior, AI-native engineering roles.",
+  "evidenceQuote": "Thomson Reuters, the Canadian parent company behind Reuters News, is cutting up to 500 engineering jobs, joining a long list of technology providers shedding parts of their workforce in preference for AI.",
+  "notes": "Silicon Republic cited and linked the Reuters report, saying the cuts could affect about 1.8% of Thomson Reuters' global workforce and about 5.2% of its operations and technology unit. This is classified as explicit AI cited because the reported rationale is tied to AI deployment and AI-native hiring, not because the source says every cut role was directly replaced by AI.",
+  "sources": [
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/legal/litigation/thomson-reuters-cut-small-number-engineering-jobs-2026-07-13/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-07-13"
+    },
+    {
+      "name": "Silicon Republic citing Reuters",
+      "url": "https://www.siliconrepublic.com/business/reuters-ai-job-cuts-thomson-engineering-technology",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-07-14",
+      "quote": "Thomson Reuters, the Canadian parent company behind Reuters News, is cutting up to 500 engineering jobs, joining a long list of technology providers shedding parts of their workforce in preference for AI."
+    },
+    {
+      "name": "MarketScreener / MT Newswires citing Reuters",
+      "url": "https://www.marketscreener.com/news/thomson-reuters-to-cut-up-to-500-engineering-jobs-amid-ai-deployment-ce7f5edcdd89f324",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-07-13",
+      "quote": "Thomson Reuters plans to eliminate up to 500 jobs globally in engineering, as the company expands its use of artificial intelligence, Reuters reported Monday, citing an employee who attended a..."
+    }
+  ],
+  "createdAt": "2026-07-14T19:18:00-07:00",
+  "updatedAt": "2026-07-14T19:18:00-07:00"
+}
