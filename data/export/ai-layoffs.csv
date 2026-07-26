@@ -1,4 +1,6 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+Monday.com,2026-07-26,,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.techbuzz.ai/articles/monday-com-joins-20-tech-giants-citing-ai-for-2026-layoffs
+Patreon,2026-07-23,93,Technology,United States,speculative_or_unclear,verified,reputable_reporting,https://techcrunch.com/2026/07/23/patreon-lays-off-off-20-of-its-workforce/
 Thomson Reuters,2026-07-13,500,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/legal/litigation/thomson-reuters-cut-small-number-engineering-jobs-2026-07-13/
 Microsoft,2026-07-06,4800,Technology,Global,ai_reorg_or_spend_linked,verified,reputable_reporting,https://www.bbc.com/news/articles/c36yy27rnpeo
 Amperity,2026-06-25,,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://www.geekwire.com/2026/amperity-hit-with-layoffs-as-ai-changes-the-shape-of-the-customer-data-startup-and-how-it-operates/
@@ -25,8 +27,8 @@ Kraken,2026-05-15,150,Finance,United States,automation_efficiency_cited,verified
 Jumia,2026-05-14,200,Other,Africa,explicit_ai_cited,verified,reputable_reporting,https://www.bloomberg.com/news/articles/2026-05-14/africa-e-commerce-giant-jumia-to-cut-workforce-due-to-ai
 Cisco,2026-05-13,4000,Technology,Global,ai_adjacent_restructuring,verified,reputable_reporting,https://au.finance.yahoo.com/news/cisco-to-cut-about-4000-jobs-in-ai-focused-restructuring-as-orders-surge-200934836.html
 Walmart,2026-05-12,1000,Other,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.wsj.com/business/retail/walmart-layoffs-relocates-technology-jobs-23bbf322
-MRI Software,2026-05-11,200,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://propmodo.com/private-equity-backed-proptech-firm-cuts-200-jobs-cites-ai-adoption/
 General Motors,2026-05-11,600,Other,United States,explicit_ai_cited,verified,reputable_reporting,https://techcrunch.com/2026/05/11/gm-just-laid-off-hundreds-of-it-workers-to-hire-those-with-stronger-ai-skills/
+MRI Software,2026-05-11,200,Technology,United States,explicit_ai_cited,verified,reputable_reporting,https://propmodo.com/private-equity-backed-proptech-firm-cuts-200-jobs-cites-ai-adoption/
 Cloudflare,2026-05-07,1100,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/cloudflare-cut-over-1100-jobs-2026-05-07/
 Upwork,2026-05-07,145,Technology,Global,explicit_ai_cited,verified,primary,https://investors.upwork.com/static-files/0574d044-06d1-433c-918b-854f710ad10a
 Arctic Wolf,2026-05-06,250,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.theregister.com/ai-and-ml/2026/05/06/arctic-wolf-cuts-250-jobs-in-ai-push/5231213

@@ -1,0 +1,25 @@
+{
+  "id": "patreon-2026-07-23",
+  "company": "Patreon",
+  "industry": "Technology",
+  "geography": "United States",
+  "eventDate": "2026-07-23",
+  "layoffsCount": 93,
+  "status": "verified",
+  "aiRelevance": "speculative_or_unclear",
+  "sourceQuality": "reputable_reporting",
+  "summary": "TechCrunch reported that Patreon would lay off 20% of its workforce, or 93 people, after CEO Jack Conte said the company needed to respond to market changes and adjust its cost structure while noting that AI has fundamentally transformed the tech industry.",
+  "evidenceQuote": "Conte wrote that \"AI has fundamentally transformed the tech industry,\" and that the pace of change has \"never been more intense.\" However, Conte went on to note that Patreon isn't making the cuts because it wants to replace employees with AI.",
+  "notes": "Included as a weaker AI-related lead because the company discussed AI as part of the changed technology-market context but explicitly said the cuts were not because Patreon believes AI replaces humans. The layoff count comes from TechCrunch's reported 20% workforce reduction, or 93 people.",
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/23/patreon-lays-off-off-20-of-its-workforce/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-07-23",
+      "quote": "Patreon is laying off 20% of its workforce, or 93 people, CEO Jack Conte told employees on Thursday."
+    }
+  ],
+  "createdAt": "2026-07-26T10:20:00-07:00",
+  "updatedAt": "2026-07-26T10:20:00-07:00"
+}

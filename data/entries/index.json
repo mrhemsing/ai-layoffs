@@ -1,5 +1,55 @@
 [
     {
+        "id": "monday-com-2026-07-26",
+        "company": "Monday.com",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-07-26",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "The Tech Buzz reported that Monday.com joined a group of major tech companies explicitly citing artificial intelligence as a driver for workforce reductions, describing the work-management platform as blaming automation for job cuts.",
+        "evidenceQuote": "The work management platform became the 21st major tech company in 2026 to explicitly cite artificial intelligence as a driver for workforce reductions, according to a TechCrunch analysis.",
+        "notes": "The source frames the layoff as explicitly AI-cited but does not provide a confirmed headcount, so layoffsCount remains null.",
+        "sources": [
+            {
+                "name": "The Tech Buzz",
+                "url": "https://www.techbuzz.ai/articles/monday-com-joins-20-tech-giants-citing-ai-for-2026-layoffs",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-07-26",
+                "quote": "Work management platform becomes latest in growing wave of companies blaming automation for job cuts."
+            }
+        ],
+        "createdAt": "2026-07-26T10:20:00-07:00",
+        "updatedAt": "2026-07-26T10:20:00-07:00"
+    },
+    {
+        "id": "patreon-2026-07-23",
+        "company": "Patreon",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-07-23",
+        "layoffsCount": 93,
+        "status": "verified",
+        "aiRelevance": "speculative_or_unclear",
+        "sourceQuality": "reputable_reporting",
+        "summary": "TechCrunch reported that Patreon would lay off 20% of its workforce, or 93 people, after CEO Jack Conte said the company needed to respond to market changes and adjust its cost structure while noting that AI has fundamentally transformed the tech industry.",
+        "evidenceQuote": "Conte wrote that \"AI has fundamentally transformed the tech industry,\" and that the pace of change has \"never been more intense.\" However, Conte went on to note that Patreon isn't making the cuts because it wants to replace employees with AI.",
+        "notes": "Included as a weaker AI-related lead because the company discussed AI as part of the changed technology-market context but explicitly said the cuts were not because Patreon believes AI replaces humans. The layoff count comes from TechCrunch's reported 20% workforce reduction, or 93 people.",
+        "sources": [
+            {
+                "name": "TechCrunch",
+                "url": "https://techcrunch.com/2026/07/23/patreon-lays-off-off-20-of-its-workforce/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-07-23",
+                "quote": "Patreon is laying off 20% of its workforce, or 93 people, CEO Jack Conte told employees on Thursday."
+            }
+        ],
+        "createdAt": "2026-07-26T10:20:00-07:00",
+        "updatedAt": "2026-07-26T10:20:00-07:00"
+    },
+    {
         "id": "thomson-reuters-2026-07-13",
         "company": "Thomson Reuters",
         "industry": "Technology",
@@ -838,31 +888,6 @@
         "updatedAt": "2026-05-13T11:40:00-07:00"
     },
     {
-        "id": "mri-software-2026-05-11",
-        "company": "MRI Software",
-        "industry": "Technology",
-        "geography": "United States",
-        "eventDate": "2026-05-11",
-        "layoffsCount": 200,
-        "status": "verified",
-        "aiRelevance": "explicit_ai_cited",
-        "sourceQuality": "reputable_reporting",
-        "summary": "Propmodo reported that MRI Software eliminated approximately 200 positions in a global workforce reorganization and attributed the cuts to advancing AI adoption across products and operations.",
-        "evidenceQuote": "MRI attributed the cuts to advancing AI adoption across products and operations, stating the changes would improve scalability and responsiveness without a meaningful impact to overall headcount or client resources.",
-        "notes": "Propmodo reported the company confirmed a restructuring to Crain's Cleveland Business but did not specify the impacted number; the approximately 200 count comes from current and former employee posts cited in the article. Because the company attributed the restructuring to AI adoption, this is classified as explicit AI cited.",
-        "sources": [
-            {
-                "name": "Propmodo",
-                "url": "https://propmodo.com/private-equity-backed-proptech-firm-cuts-200-jobs-cites-ai-adoption/",
-                "type": "reputable_reporting",
-                "publishedDate": "2026-05-11",
-                "quote": "MRI Software, an Ohio-based real estate management software provider, has eliminated approximately 200 positions as part of what the company calls a global workforce reorganization."
-            }
-        ],
-        "createdAt": "2026-07-04T11:15:00-07:00",
-        "updatedAt": "2026-07-04T11:15:00-07:00"
-    },
-    {
         "id": "gm-2026-05-11",
         "company": "General Motors",
         "industry": "Other",
@@ -886,6 +911,31 @@
         ],
         "createdAt": "2026-05-11T22:34:00-07:00",
         "updatedAt": "2026-05-11T22:34:00-07:00"
+    },
+    {
+        "id": "mri-software-2026-05-11",
+        "company": "MRI Software",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-05-11",
+        "layoffsCount": 200,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Propmodo reported that MRI Software eliminated approximately 200 positions in a global workforce reorganization and attributed the cuts to advancing AI adoption across products and operations.",
+        "evidenceQuote": "MRI attributed the cuts to advancing AI adoption across products and operations, stating the changes would improve scalability and responsiveness without a meaningful impact to overall headcount or client resources.",
+        "notes": "Propmodo reported the company confirmed a restructuring to Crain's Cleveland Business but did not specify the impacted number; the approximately 200 count comes from current and former employee posts cited in the article. Because the company attributed the restructuring to AI adoption, this is classified as explicit AI cited.",
+        "sources": [
+            {
+                "name": "Propmodo",
+                "url": "https://propmodo.com/private-equity-backed-proptech-firm-cuts-200-jobs-cites-ai-adoption/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-05-11",
+                "quote": "MRI Software, an Ohio-based real estate management software provider, has eliminated approximately 200 positions as part of what the company calls a global workforce reorganization."
+            }
+        ],
+        "createdAt": "2026-07-04T11:15:00-07:00",
+        "updatedAt": "2026-07-04T11:15:00-07:00"
     },
     {
         "id": "cloudflare-2026-05-07",
@@ -3327,4 +3377,3 @@
         "updatedAt": "2026-03-11T01:20:00Z"
     }
 ]
-
