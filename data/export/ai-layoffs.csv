@@ -1,5 +1,5 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
-Monday.com,2026-07-26,,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.techbuzz.ai/articles/monday-com-joins-20-tech-giants-citing-ai-for-2026-layoffs
+Monday.com,2026-07-26,600,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://bitcoinworld.co.in/monday-com-ai-layoffs-tech-companies-2026/
 Patreon,2026-07-23,93,Technology,United States,speculative_or_unclear,verified,reputable_reporting,https://techcrunch.com/2026/07/23/patreon-lays-off-off-20-of-its-workforce/
 Thomson Reuters,2026-07-13,500,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/legal/litigation/thomson-reuters-cut-small-number-engineering-jobs-2026-07-13/
 Microsoft,2026-07-06,4800,Technology,Global,ai_reorg_or_spend_linked,verified,reputable_reporting,https://www.bbc.com/news/articles/c36yy27rnpeo

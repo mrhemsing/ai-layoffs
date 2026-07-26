@@ -5,14 +5,21 @@
         "industry": "Technology",
         "geography": "Global",
         "eventDate": "2026-07-26",
-        "layoffsCount": null,
+        "layoffsCount": 600,
         "status": "verified",
         "aiRelevance": "explicit_ai_cited",
         "sourceQuality": "reputable_reporting",
-        "summary": "The Tech Buzz reported that Monday.com joined a group of major tech companies explicitly citing artificial intelligence as a driver for workforce reductions, describing the work-management platform as blaming automation for job cuts.",
-        "evidenceQuote": "The work management platform became the 21st major tech company in 2026 to explicitly cite artificial intelligence as a driver for workforce reductions, according to a TechCrunch analysis.",
-        "notes": "The source frames the layoff as explicitly AI-cited but does not provide a confirmed headcount, so layoffsCount remains null.",
+        "summary": "BitcoinWorld reported that Monday.com blamed AI for 600 layoffs, while The Tech Buzz reported that the work-management platform joined a group of major tech companies explicitly citing artificial intelligence as a driver for workforce reductions.",
+        "evidenceQuote": "Monday.com blames AI for 600 layoffs - joining a growing list of tech companies doing the same.",
+        "notes": "Updated on 2026-07-26 to add the reported 600-worker layoff count from BitcoinWorld. Both sources frame the layoff as explicitly AI-cited.",
         "sources": [
+            {
+                "name": "BitcoinWorld",
+                "url": "https://bitcoinworld.co.in/monday-com-ai-layoffs-tech-companies-2026/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-07-26",
+                "quote": "Monday.com blames AI for 600 layoffs - joining a growing list of tech companies doing the same."
+            },
             {
                 "name": "The Tech Buzz",
                 "url": "https://www.techbuzz.ai/articles/monday-com-joins-20-tech-giants-citing-ai-for-2026-layoffs",
@@ -22,7 +29,7 @@
             }
         ],
         "createdAt": "2026-07-26T10:20:00-07:00",
-        "updatedAt": "2026-07-26T10:20:00-07:00"
+        "updatedAt": "2026-07-26T11:30:00-07:00"
     },
     {
         "id": "patreon-2026-07-23",
