@@ -1,5 +1,30 @@
 [
     {
+        "id": "visa-2026-07-28",
+        "company": "Visa",
+        "industry": "Finance",
+        "geography": "Global",
+        "eventDate": "2026-07-28",
+        "layoffsCount": 2600,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "CNBC reported Visa plans to cut about 7% of its workforce, or roughly 2,600 employees, as CEO Ryan McInerney seeks to streamline the payments company while AI reshapes how work gets done.",
+        "evidenceQuote": "AI is also helping to accelerate this evolution and shape the way work gets done at Visa.",
+        "notes": "CNBC reported that affected employees would start to be contacted on July 28, 2026, and that Visa had about 34,100 employees at the end of its last fiscal year. CNBC said AI played a significant role in the layoffs but was not the sole driver, with Visa also shifting investment toward growth areas including affluent customers, cross-border activity, business payments, stablecoins, and geographic expansion.",
+        "sources": [
+            {
+                "name": "CNBC",
+                "url": "https://www.cnbc.com/2026/07/28/visa-is-cutting-7percent-of-employees-in-efficiency-push-as-ai-reshapes-work.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-07-28",
+                "quote": "While AI played a significant role in the layoffs, it wasn't the sole driver, according to the person with direct knowledge of the matter."
+            }
+        ],
+        "createdAt": "2026-07-29T09:35:00-07:00",
+        "updatedAt": "2026-07-29T09:35:00-07:00"
+    },
+    {
         "id": "monday-com-2026-07-26",
         "company": "Monday.com",
         "industry": "Technology",
