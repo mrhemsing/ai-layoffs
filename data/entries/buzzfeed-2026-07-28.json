@@ -1,0 +1,25 @@
+{
+  "id": "buzzfeed-2026-07-28",
+  "company": "BuzzFeed",
+  "industry": "Media",
+  "geography": "United States",
+  "eventDate": "2026-07-28",
+  "layoffsCount": 180,
+  "status": "verified",
+  "aiRelevance": "speculative_or_unclear",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Futurism reported BuzzFeed announced layoffs of 180 employees, about one-third of its remaining workforce, in the latest sign of its decline since the company's pivot to AI.",
+  "evidenceQuote": "On Monday, the struggling media company announced the layoffs of 180 employees, or about a third of its entire workforce, in the latest sign of its decline since its unexpected pivot to AI.",
+  "notes": "Included as a weaker AI-related media lead. Futurism links the layoffs to BuzzFeed's post-AI-pivot decline and broader media pressure from AI, while the cited memo also frames the cuts as cost management and role eliminations across the company.",
+  "sources": [
+    {
+      "name": "Futurism",
+      "url": "https://futurism.com/artificial-intelligence/buzzfeed-layoffs-pivot-ai",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-07-28",
+      "quote": "On Monday, the struggling media company announced the layoffs of 180 employees, or about a third of its entire workforce, in the latest sign of its decline since its unexpected pivot to AI."
+    }
+  ],
+  "createdAt": "2026-08-03T10:25:00-07:00",
+  "updatedAt": "2026-08-03T10:25:00-07:00"
+}

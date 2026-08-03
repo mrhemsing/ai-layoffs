@@ -1,0 +1,32 @@
+{
+  "id": "chime-2026-07-31",
+  "company": "Chime",
+  "industry": "Finance",
+  "geography": "United States",
+  "eventDate": "2026-07-31",
+  "layoffsCount": 140,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters reported that fintech company Chime is cutting 10% of its workforce, about 140 jobs, as it joins companies using AI-driven efficiencies to streamline operations.",
+  "evidenceQuote": "Financial technology company Chime is cutting 10% of its total workforce, or about 140 jobs, a source familiar with the matter told Reuters on Friday.",
+  "notes": "Reuters reporting and syndication tied the reduction to AI-driven efficiencies and cited CEO Chris Britt saying AI is changing what is possible but requires new skills. Reuters access was blocked directly in this environment, so the entry uses the Reuters URL plus accessible Reuters snippets and syndication excerpts.",
+  "sources": [
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/business/world-at-work/chime-cut-10-total-workforce-or-about-140-jobs-source-says-2026-07-31/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-07-31",
+      "quote": "Financial technology company Chime is cutting 10% of its total workforce, or about 140 jobs, a source familiar with the matter told Reuters on Friday."
+    },
+    {
+      "name": "WMBD Radio / Reuters syndication",
+      "url": "https://wmbdradio.com/2026/07/31/chime-to-cut-10-of-total-workforce-on-ai-driven-efficiencies-source-says/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-07-31",
+      "quote": "AI is changing what's possible but requires new skills."
+    }
+  ],
+  "createdAt": "2026-08-03T10:25:00-07:00",
+  "updatedAt": "2026-08-03T10:25:00-07:00"
+}
