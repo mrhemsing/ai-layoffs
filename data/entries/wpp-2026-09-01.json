@@ -1,0 +1,32 @@
+{
+  "id": "wpp-2026-09-01",
+  "company": "WPP",
+  "industry": "Media",
+  "geography": "United Kingdom",
+  "eventDate": "2026-09-01",
+  "layoffsCount": 1000,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters reported, citing the Financial Times, that WPP is cutting up to 1,000 more jobs by year-end while accelerating a restructuring that brings major creative agencies under WPP Creative to harness AI.",
+  "evidenceQuote": "Rose in February set out her plan to return to growth in 2027 by simplifying WPP and bringing its creative agencies Ogilvy, VML and AKQA under a new \"WPP Creative\" umbrella to harness the power of AI.",
+  "notes": "Reuters said it could not immediately verify the Financial Times report and WPP had not commented. The AI connection is strategic and industry-restructuring related; this entry should not be read as proof that AI directly replaced every affected role.",
+  "sources": [
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/business/world-at-work/wpp-cutting-up-1000-more-jobs-by-year-end-ft-reports-2026-09-01/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-01",
+      "quote": "WPP is cutting up to 1,000 more jobs by year-end as Britain's biggest advertising group accelerates a restructuring programme under new chief Cindy Rose, the Financial Times reported on Tuesday, citing people familiar with the matter."
+    },
+    {
+      "name": "Investing.com / Reuters",
+      "url": "https://www.investing.com/news/stock-market-news/wpp-cutting-up-to-1000-more-jobs-by-yearend-ft-reports-4883479",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-01",
+      "quote": "Reuters could not immediately verify the report."
+    }
+  ],
+  "createdAt": "2026-09-03T10:20:00-07:00",
+  "updatedAt": "2026-09-03T10:20:00-07:00"
+}

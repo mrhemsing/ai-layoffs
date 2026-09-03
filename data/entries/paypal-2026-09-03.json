@@ -1,0 +1,32 @@
+{
+  "id": "paypal-2026-09-03",
+  "company": "PayPal",
+  "industry": "Finance",
+  "geography": "India",
+  "eventDate": "2026-09-03",
+  "layoffsCount": 220,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters reported that PayPal cut roughly 220 jobs in India as part of a broader multi-year transformation focused on simplifying operations, improving productivity, and integrating AI and automation across the business.",
+  "evidenceQuote": "Among the initiatives are plans to reduce organizational layers, improve productivity and integrate AI and automation across the business.",
+  "notes": "Reuters access was blocked directly in this environment, so this entry uses the Reuters URL plus accessible Reuters snippets and syndication excerpts. Reuters did not establish that AI directly replaced all 220 employees, so this is classified as AI-adjacent restructuring rather than direct AI replacement.",
+  "sources": [
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/world/india/paypal-cuts-220-india-jobs-part-previously-announced-restructuring-plan-source-2026-09-03/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-03",
+      "quote": "PayPal has cut roughly 220 jobs in India as part of the payments firm's broader, multi-year turnaround plan laid out earlier this year, a person familiar with the matter told Reuters on Thursday."
+    },
+    {
+      "name": "The Hindu BusinessLine / Reuters syndication",
+      "url": "https://www.thehindubusinessline.com/money-and-banking/paypal-cuts-roughly-220-jobs-in-india-as-part-of-turnaround-plan/article71424804.ece",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-03",
+      "quote": "Among the initiatives are plans to reduce organizational layers, improve productivity and integrate AI and automation across the business."
+    }
+  ],
+  "createdAt": "2026-09-03T10:20:00-07:00",
+  "updatedAt": "2026-09-03T10:20:00-07:00"
+}

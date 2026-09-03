@@ -1,0 +1,25 @@
+{
+  "id": "rapid7-2026-08-10",
+  "company": "Rapid7",
+  "industry": "Cybersecurity",
+  "geography": "United States",
+  "eventDate": "2026-08-10",
+  "layoffsCount": 300,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "The Boston Globe reported that Rapid7 cut about 300 jobs, or roughly 12% of its workforce, as new CEO Wael Mohamed overhauls the cybersecurity company amid a focus on adding AI-powered features.",
+  "evidenceQuote": "New CEO Wael Mohamed is overhauling the struggling company amid a focus on adding AI-powered features.",
+  "notes": "The Boston Globe ties the cuts to an overhaul and AI-powered product focus, while also describing business pressure and falling revenue as factors. This is classified as AI-adjacent restructuring rather than direct AI replacement.",
+  "sources": [
+    {
+      "name": "The Boston Globe",
+      "url": "https://www.bostonglobe.com/2026/08/10/business/rapid7-layoffs/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-08-10",
+      "quote": "Boston cybersecurity firm Rapid7 cuts 300 jobs."
+    }
+  ],
+  "createdAt": "2026-09-03T10:20:00-07:00",
+  "updatedAt": "2026-09-03T10:20:00-07:00"
+}

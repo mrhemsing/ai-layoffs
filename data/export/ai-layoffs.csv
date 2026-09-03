@@ -1,4 +1,7 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+PayPal,2026-09-03,220,Finance,India,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/world/india/paypal-cuts-220-india-jobs-part-previously-announced-restructuring-plan-source-2026-09-03/
+WPP,2026-09-01,1000,Media,United Kingdom,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/wpp-cutting-up-1000-more-jobs-by-year-end-ft-reports-2026-09-01/
+Rapid7,2026-08-10,300,Cybersecurity,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.bostonglobe.com/2026/08/10/business/rapid7-layoffs/
 Chime,2026-07-31,140,Finance,United States,explicit_ai_cited,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/chime-cut-10-total-workforce-or-about-140-jobs-source-says-2026-07-31/
 BuzzFeed,2026-07-28,180,Media,United States,speculative_or_unclear,verified,reputable_reporting,https://futurism.com/artificial-intelligence/buzzfeed-layoffs-pivot-ai
 Visa,2026-07-28,2600,Finance,Global,explicit_ai_cited,verified,reputable_reporting,https://www.cnbc.com/2026/07/28/visa-is-cutting-7percent-of-employees-in-efficiency-push-as-ai-reshapes-work.html
