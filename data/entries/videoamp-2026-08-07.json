@@ -1,0 +1,32 @@
+{
+  "id": "videoamp-2026-08-07",
+  "company": "VideoAmp",
+  "industry": "Media",
+  "geography": "United States",
+  "eventDate": "2026-08-07",
+  "layoffsCount": 55,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "The Wall Street Journal reported that VideoAmp laid off roughly 20% of its staff, about 50 to 60 employees, as CEO Tony Fagan said the company is investing in agentic software development and becoming an AI-powered media performance platform.",
+  "evidenceQuote": "For VideoAmp, that means continuing to invest in agentic software development and becoming an AI-powered media performance platform, aligning our organization, resources, and operating model to support that direction.",
+  "notes": "The layoff count is recorded as 55 to represent the reported 50-to-60 employee range. This is classified as AI-adjacent restructuring because the company tied the restructuring to AI strategy and agentic software investment, not because the reporting proves every eliminated role was directly replaced by AI.",
+  "sources": [
+    {
+      "name": "The Wall Street Journal",
+      "url": "https://www.wsj.com/cmo-today/videoamp-cuts-staff-as-ai-agents-take-center-stage-ef6f44d1",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-08-07",
+      "quote": "VideoAmp laid off approximately 20% of its staff this week as the ad measurement platform responds to the rise of AI, a spokeswoman confirmed to the Wall Street Journal Leadership Institute."
+    },
+    {
+      "name": "Main Street Independent",
+      "url": "https://mainstreetindependent.com/articles/2026-08-07-videoamp-cuts-about-20-of-staff-as-it-shifts-toward-ai",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-08-07",
+      "quote": "Fagan said VideoAmp would continue investing in agentic software development and become an AI-powered media performance platform."
+    }
+  ],
+  "createdAt": "2026-09-03T10:25:00-07:00",
+  "updatedAt": "2026-09-03T10:25:00-07:00"
+}

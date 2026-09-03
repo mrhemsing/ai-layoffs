@@ -1,0 +1,32 @@
+{
+  "id": "e-w-scripps-2026-08-04",
+  "company": "E.W. Scripps",
+  "industry": "Media",
+  "geography": "United States",
+  "eventDate": "2026-08-04",
+  "layoffsCount": 268,
+  "status": "verified",
+  "aiRelevance": "automation_efficiency_cited",
+  "sourceQuality": "primary",
+  "summary": "E.W. Scripps disclosed transformation-related job reductions affecting about 6% of its workforce, later identified as 268 jobs, while CEO Adam Symson said the transformation uses advanced technology, AI and automation to change operations and improve results.",
+  "evidenceQuote": "These changes leverage today's most advanced technology, AI and automation to both deliver improved operating results and allow us to better serve our local consumers, audiences and advertisers that rely on us across the nation.",
+  "notes": "Scripps also cited financial pressure, audience measurement challenges, advertising-market weakness, automation, centralization, and broader media disruption. TheWrap reported Scripps had eliminated 432 positions and 126 open roles since the beginning of 2026, including the 268 layoffs disclosed that week; this entry records the specific August reduction.",
+  "sources": [
+    {
+      "name": "The E.W. Scripps Company",
+      "url": "https://scripps.com/press-releases/scripps-reports-q2-2026-financial-results/",
+      "type": "primary",
+      "publishedDate": "2026-08-06",
+      "quote": "For the third quarter, expense improvement will include the impact of transformation-related job reductions communicated on Tuesday affecting about 6% of our workforce."
+    },
+    {
+      "name": "TheWrap",
+      "url": "https://www.thewrap.com/industry-news/business/ew-scripps-layoffs-ai-local-news/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-08-07",
+      "quote": "That includes 268 layoffs disclosed earlier this week, most of which affected employees at the company's local television stations."
+    }
+  ],
+  "createdAt": "2026-09-03T10:25:00-07:00",
+  "updatedAt": "2026-09-03T10:25:00-07:00"
+}

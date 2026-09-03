@@ -89,6 +89,70 @@
         "updatedAt": "2026-09-03T10:20:00-07:00"
     },
     {
+        "id": "videoamp-2026-08-07",
+        "company": "VideoAmp",
+        "industry": "Media",
+        "geography": "United States",
+        "eventDate": "2026-08-07",
+        "layoffsCount": 55,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "reputable_reporting",
+        "summary": "The Wall Street Journal reported that VideoAmp laid off roughly 20% of its staff, about 50 to 60 employees, as CEO Tony Fagan said the company is investing in agentic software development and becoming an AI-powered media performance platform.",
+        "evidenceQuote": "For VideoAmp, that means continuing to invest in agentic software development and becoming an AI-powered media performance platform, aligning our organization, resources, and operating model to support that direction.",
+        "notes": "The layoff count is recorded as 55 to represent the reported 50-to-60 employee range. This is classified as AI-adjacent restructuring because the company tied the restructuring to AI strategy and agentic software investment, not because the reporting proves every eliminated role was directly replaced by AI.",
+        "sources": [
+            {
+                "name": "The Wall Street Journal",
+                "url": "https://www.wsj.com/cmo-today/videoamp-cuts-staff-as-ai-agents-take-center-stage-ef6f44d1",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-08-07",
+                "quote": "VideoAmp laid off approximately 20% of its staff this week as the ad measurement platform responds to the rise of AI, a spokeswoman confirmed to the Wall Street Journal Leadership Institute."
+            },
+            {
+                "name": "Main Street Independent",
+                "url": "https://mainstreetindependent.com/articles/2026-08-07-videoamp-cuts-about-20-of-staff-as-it-shifts-toward-ai",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-08-07",
+                "quote": "Fagan said VideoAmp would continue investing in agentic software development and become an AI-powered media performance platform."
+            }
+        ],
+        "createdAt": "2026-09-03T10:25:00-07:00",
+        "updatedAt": "2026-09-03T10:25:00-07:00"
+    },
+    {
+        "id": "e-w-scripps-2026-08-04",
+        "company": "E.W. Scripps",
+        "industry": "Media",
+        "geography": "United States",
+        "eventDate": "2026-08-04",
+        "layoffsCount": 268,
+        "status": "verified",
+        "aiRelevance": "automation_efficiency_cited",
+        "sourceQuality": "primary",
+        "summary": "E.W. Scripps disclosed transformation-related job reductions affecting about 6% of its workforce, later identified as 268 jobs, while CEO Adam Symson said the transformation uses advanced technology, AI and automation to change operations and improve results.",
+        "evidenceQuote": "These changes leverage today's most advanced technology, AI and automation to both deliver improved operating results and allow us to better serve our local consumers, audiences and advertisers that rely on us across the nation.",
+        "notes": "Scripps also cited financial pressure, audience measurement challenges, advertising-market weakness, automation, centralization, and broader media disruption. TheWrap reported Scripps had eliminated 432 positions and 126 open roles since the beginning of 2026, including the 268 layoffs disclosed that week; this entry records the specific August reduction.",
+        "sources": [
+            {
+                "name": "The E.W. Scripps Company",
+                "url": "https://scripps.com/press-releases/scripps-reports-q2-2026-financial-results/",
+                "type": "primary",
+                "publishedDate": "2026-08-06",
+                "quote": "For the third quarter, expense improvement will include the impact of transformation-related job reductions communicated on Tuesday affecting about 6% of our workforce."
+            },
+            {
+                "name": "TheWrap",
+                "url": "https://www.thewrap.com/industry-news/business/ew-scripps-layoffs-ai-local-news/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-08-07",
+                "quote": "That includes 268 layoffs disclosed earlier this week, most of which affected employees at the company's local television stations."
+            }
+        ],
+        "createdAt": "2026-09-03T10:25:00-07:00",
+        "updatedAt": "2026-09-03T10:25:00-07:00"
+    },
+    {
         "id": "chime-2026-07-31",
         "company": "Chime",
         "industry": "Finance",
