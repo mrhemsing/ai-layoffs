@@ -4,13 +4,20 @@
     <title>Replaced by AI Layoff Tracker</title>
     <link>https://www.replacedbyai.app/</link>
     <description>Recent sourced AI layoff tracker entries.</description>
-    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 00:00:00 GMT</lastBuildDate>
     <item>
       <title>PayPal AI layoffs, September 3, 2026</title>
       <link>https://www.replacedbyai.app/company/paypal/</link>
       <guid>https://www.replacedbyai.app/company/paypal/#paypal-2026-09-03</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
       <description>PayPal: 220 layoffs. AI-adjacent restructuring. Reuters reported that PayPal cut roughly 220 jobs in India as part of a broader multi-year transformation focused on simplifying operations, improving productivity, and integrating AI and automation across the business.</description>
+    </item>
+    <item>
+      <title>Wonder AI layoffs, September 1, 2026</title>
+      <link>https://www.replacedbyai.app/company/wonder/</link>
+      <guid>https://www.replacedbyai.app/company/wonder/#wonder-2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Wonder: 150 layoffs. Automation / efficiency cited. The New York Post reported that Wonder cut 150 jobs, about 7% of its workforce, across multiple corporate teams while the company said the cuts let it focus resources on physical expansion and investments in robotics and automation.</description>
     </item>
     <item>
       <title>WPP AI layoffs, September 1, 2026</title>
@@ -137,13 +144,6 @@
       <guid>https://www.replacedbyai.app/company/robinhood/#robinhood-2026-06-16</guid>
       <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
       <description>Robinhood: 290 layoffs. Speculative / unclear. Robinhood announced a reduction in force affecting approximately 10% of full-time employees, with reporting putting the cut at about 290 roles, as part of a push to stay lean, flatten layers, and accelerate product velocity.</description>
-    </item>
-    <item>
-      <title>Rackspace Technology AI layoffs, June 10, 2026</title>
-      <link>https://www.replacedbyai.app/company/rackspace-technology/</link>
-      <guid>https://www.replacedbyai.app/company/rackspace-technology/#rackspace-technology-2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Rackspace Technology: 750 layoffs. Explicit AI cited. Rackspace Technology approved a workforce realignment expected to terminate approximately 15% of its global workforce, roughly 750 roles based on its latest reported 5,000-person employee base, as it deemphasizes legacy public-cloud service delivery and redeploys resources toward governed enterprise AI.</description>
     </item>
   </channel>
 </rss>

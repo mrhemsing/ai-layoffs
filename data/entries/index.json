@@ -1,5 +1,30 @@
 [
     {
+        "id": "wonder-2026-09-01",
+        "company": "Wonder",
+        "industry": "Food & Beverage",
+        "geography": "United States",
+        "eventDate": "2026-09-01",
+        "layoffsCount": 150,
+        "status": "verified",
+        "aiRelevance": "automation_efficiency_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "The New York Post reported that Wonder cut 150 jobs, about 7% of its workforce, across multiple corporate teams while the company said the cuts let it focus resources on physical expansion and investments in robotics and automation.",
+        "evidenceQuote": "The layoffs were across \"multiple corporate teams,\" and allow Wonder to \"focus on areas key to our growth like physical expansion and investments in robotics and automation,\" the company said in a statement.",
+        "notes": "Wonder tied the reduction to resource reallocation toward growth areas including robotics and automation, while also saying no stores were shuttered and it planned to expand locations. The source does not say robots or automation had already replaced these specific corporate employees, so this is classified as automation-efficiency cited rather than direct AI replacement.",
+        "sources": [
+            {
+                "name": "New York Post",
+                "url": "https://nypost.com/2026/09/03/business/food-delivery-biz-wonder-slashes-150-jobs-to-invest-in-robotics/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-09-03",
+                "quote": "Food delivery startup Wonder said it slashed 150 jobs - or 7% of its workforce - this week as it invests in robotics and automation."
+            }
+        ],
+        "createdAt": "2026-09-04T10:45:00-07:00",
+        "updatedAt": "2026-09-04T10:45:00-07:00"
+    },
+    {
         "id": "paypal-2026-09-03",
         "company": "PayPal",
         "industry": "Finance",

@@ -1,5 +1,6 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
 PayPal,2026-09-03,220,Finance,India,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/world/india/paypal-cuts-220-india-jobs-part-previously-announced-restructuring-plan-source-2026-09-03/
+Wonder,2026-09-01,150,Food & Beverage,United States,automation_efficiency_cited,verified,reputable_reporting,https://nypost.com/2026/09/03/business/food-delivery-biz-wonder-slashes-150-jobs-to-invest-in-robotics/
 WPP,2026-09-01,1000,Media,United Kingdom,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/business/world-at-work/wpp-cutting-up-1000-more-jobs-by-year-end-ft-reports-2026-09-01/
 Rapid7,2026-08-10,300,Cybersecurity,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.bostonglobe.com/2026/08/10/business/rapid7-layoffs/
 VideoAmp,2026-08-07,55,Media,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.wsj.com/cmo-today/videoamp-cuts-staff-as-ai-agents-take-center-stage-ef6f44d1
