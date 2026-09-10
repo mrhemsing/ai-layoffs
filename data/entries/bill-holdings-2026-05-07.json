@@ -1,0 +1,32 @@
+{
+  "id": "bill-holdings-2026-05-07",
+  "company": "BILL Holdings",
+  "industry": "Finance",
+  "geography": "United States",
+  "eventDate": "2026-05-07",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "primary",
+  "summary": "BILL Holdings announced plans to reduce its workforce by up to 30% by the end of Q4 FY2026 as it became an AI-native company; a later Wall Street Journal CFO profile reported the spring reduction in the context of CFO Rohini Jain's AI-first transformation work.",
+  "evidenceQuote": "First, we will become an AI native company... Second, we have made the hard decision to reduce our workforce by up to 30% by the end of Q4 FY2026.",
+  "notes": "BILL's primary employee message says the reduction would be up to 30% by the end of Q4 FY2026 and would begin with a voluntary separation program capped at about 20% of the workforce, followed by final reductions by the end of June. The exact affected headcount and final layoffs-versus-buyouts split are not recorded because the verified sources reviewed here give percentages and program structure rather than a final absolute count. This is classified as explicit AI cited because BILL directly tied the workforce reduction to becoming AI native and operating more efficiently in an AI-first world. The September 10 Wall Street Journal CFO profile is retained as the later CFO-attribution source, but the paywalled article text was not directly accessible in this environment; the primary BILL source anchors the verified reduction and AI connection.",
+  "sources": [
+    {
+      "name": "BILL employee message",
+      "url": "https://www.bill.com/blog/a-message-to-bill-employees-may-2026",
+      "type": "primary",
+      "publishedDate": "2026-05-07",
+      "quote": "First, we will become an AI native company... Second, we have made the hard decision to reduce our workforce by up to 30% by the end of Q4 FY2026."
+    },
+    {
+      "name": "The Wall Street Journal",
+      "url": "https://www.wsj.com/cfo-journal/bills-cfo-on-going-ai-firstand-cutting-jobsin-her-rookie-year-84da6c1e",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-10",
+      "quote": "The article title is \"Bill's CFO on Going AI-First-and Cutting Jobs-in Her Rookie Year.\" Search excerpts reported that BILL cut its workforce by 30% in spring 2026 as it shifted to an AI-first model."
+    }
+  ],
+  "createdAt": "2026-09-10T11:42:00-07:00",
+  "updatedAt": "2026-09-10T11:42:00-07:00"
+}
