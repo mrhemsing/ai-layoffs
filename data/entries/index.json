@@ -1,5 +1,30 @@
 [
     {
+        "id": "oracle-2026-09-14",
+        "company": "Oracle",
+        "industry": "Technology",
+        "geography": "United States",
+        "eventDate": "2026-09-14",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_reorg_or_spend_linked",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Business Insider reported that Oracle began a new round of layoffs on September 14, 2026, with affected employees and an internal termination email confirming the cuts; the publication tied the round to Oracle's previously reported plan to reduce payroll while taking on substantial debt to fund AI data center infrastructure.",
+        "evidenceQuote": "Business Insider last month reported that the company had drawn up plans for a new round of job cuts to reduce payroll as it racks up billions in debt to fund AI infrastructure.",
+        "notes": "Oracle's termination notice cited only current business needs and broader organizational change, not AI. The AI connection is therefore journalist-reported and spending/reorganization-linked rather than a company-stated AI layoff rationale. The affected headcount was not disclosed; Business Insider reported that planned cuts reached double-digit percentages on some teams, according to an internal document.",
+        "sources": [
+            {
+                "name": "Business Insider Africa",
+                "url": "https://africa.businessinsider.com/news/oracle-begins-a-new-round-of-layoffs-read-the-email/khh1jh9",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-09-14",
+                "quote": "Oracle has started a new round of layoffs, according to three people impacted and an email shared with Business Insider."
+            }
+        ],
+        "createdAt": "2026-09-14T10:28:00-07:00",
+        "updatedAt": "2026-09-14T10:28:00-07:00"
+    },
+    {
         "id": "bill-holdings-2026-05-07",
         "company": "BILL Holdings",
         "industry": "Finance",
