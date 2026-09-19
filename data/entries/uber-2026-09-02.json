@@ -1,0 +1,39 @@
+{
+  "id": "uber-2026-09-02",
+  "company": "Uber",
+  "industry": "Technology",
+  "geography": "United States",
+  "eventDate": "2026-09-02",
+  "layoffsCount": 3300,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Reuters and Business Insider reported that Uber cut about 3,300 jobs, roughly 10% of staff, in a management-layer restructuring; Khosrowshahi did not initially blame AI, but later said the restructuring created an opportunity to benefit from AI and other productivity technologies while laid-off employees described AI taking over substantial parts of some workflows.",
+  "evidenceQuote": "At the same time, Uber saw an opportunity with the restructuring to take advantage of \"real tailwinds as it relates to productivity, whether it is AI or general productivity technology as well,\" he said.",
+  "notes": "Classified as AI-adjacent restructuring because Uber did not present AI as the primary cause of the 10% layoff round. The company-linked AI productivity language and six laid-off employee accounts strengthen the connection, including support responses and internal guidance work, but the sources do not prove direct replacement of all affected roles.",
+  "sources": [
+    {
+      "name": "Business Insider",
+      "url": "https://www.businessinsider.com/uber-ai-usage-layoffs-questioned-by-former-staff-2026-9",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-17",
+      "quote": "Six recently laid-off employees who spoke with Business Insider pointed to several ways that AI became more prevalent in their jobs over the past few months. Some said that they were prompting AI to do substantial portions of their work."
+    },
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/business/world-at-work/uber-cut-3300-jobs-overhaul-bloomberg-news-reports-2026-09-02/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-02",
+      "quote": "Uber Technologies will lay off about 3,300 employees, or 10% of staff, in its largest cuts since the COVID-19 pandemic."
+    },
+    {
+      "name": "Business Insider",
+      "url": "https://www.businessinsider.com/uber-layoffs-corporate-workforce-restructuring-memo-2026-9",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-02",
+      "quote": "Uber's Wednesday announcement did not mention AI."
+    }
+  ],
+  "createdAt": "2026-09-18T17:08:00-07:00",
+  "updatedAt": "2026-09-18T17:08:00-07:00"
+}

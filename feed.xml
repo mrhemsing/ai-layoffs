@@ -4,7 +4,7 @@
     <title>Replaced by AI Layoff Tracker</title>
     <link>https://www.replacedbyai.app/</link>
     <description>Recent sourced AI layoff tracker entries.</description>
-    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 GMT</lastBuildDate>
     <item>
       <title>Oracle AI layoffs, September 14, 2026</title>
       <link>https://www.replacedbyai.app/company/oracle/</link>
@@ -18,6 +18,13 @@
       <guid>https://www.replacedbyai.app/company/paypal/#paypal-2026-09-03</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
       <description>PayPal: 220 layoffs. AI-adjacent restructuring. Reuters reported that PayPal cut roughly 220 jobs in India as part of a broader multi-year transformation focused on simplifying operations, improving productivity, and integrating AI and automation across the business.</description>
+    </item>
+    <item>
+      <title>Uber AI layoffs, September 2, 2026</title>
+      <link>https://www.replacedbyai.app/company/uber/</link>
+      <guid>https://www.replacedbyai.app/company/uber/#uber-2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Uber: 3,300 layoffs. AI-adjacent restructuring. Reuters and Business Insider reported that Uber cut about 3,300 jobs, roughly 10% of staff, in a management-layer restructuring; Khosrowshahi did not initially blame AI, but later said the restructuring created an opportunity to benefit from AI and other productivity technologies while laid-off employees described AI taking over substantial parts of some workflows.</description>
     </item>
     <item>
       <title>Wonder AI layoffs, September 1, 2026</title>
@@ -137,13 +144,6 @@
       <guid>https://www.replacedbyai.app/company/oracle/#oracle-2026-06-22</guid>
       <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
       <description>Oracle: 21,000 layoffs. Explicit AI cited. Oracle&apos;s FY2026 Form 10-K confirmed a drop from approximately 162,000 full-time employees at the end of FY2025 to approximately 141,000 at the end of FY2026, a 21,000-role reduction that BBC and CNBC reported in the context of Oracle&apos;s AI spending and restructuring.</description>
-    </item>
-    <item>
-      <title>Optimove AI layoffs, June 17, 2026</title>
-      <link>https://www.replacedbyai.app/company/optimove/</link>
-      <guid>https://www.replacedbyai.app/company/optimove/#optimove-2026-06-17</guid>
-      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Optimove: – layoffs. Explicit AI cited. InterGame reported that Optimove CEO Pini Yakuel said the marketing services provider would cut 10% of staff in a push toward AI and train remaining employees to shape the next version of the company.</description>
     </item>
   </channel>
 </rss>
