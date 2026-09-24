@@ -1,0 +1,30 @@
+{
+  "id": "att-2026-09-23",
+  "company": "AT&T",
+  "industry": "Other",
+  "geography": "United States",
+  "eventDate": "2026-09-23",
+  "layoffsCount": 2100,
+  "status": "verified",
+  "aiRelevance": "automation_efficiency_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "WIRED reported that AT&T reduced its workforce by about 2,100 in H1 2026 and confirmed continued layoffs as it automates manual processes and deploys AI in customer service, network operations, coding, and service management. Attribution is mixed: AT&T did not attribute all 2,100 reductions to AI; copper-network retirement and broader cost reduction are also significant factors.",
+  "evidenceQuote": "We’re not going to have the same headcount in five years as we do today",
+  "notes": "September 23 is the report date, not a new round of 2,100 layoffs announced that day. AT&T's Q2 2026 Trending Schedule, page 2, reports total employees (000) of 133.0 at December 31, 2025 and 130.9 at June 30, 2026, supporting an approximately 2,100 net workforce reduction, not a separately disclosed gross layoff count or AI-only total. CTO Jeremy Legg confirmed lower future headcount and described AI and automation deployments. WIRED reported that middle-management and junior-developer roles are expected to disappear as more tasks are automated; that broader connection is partly journalistic analysis, not company attribution of every H1 reduction to AI. Copper retirement, cost reduction, and natural attrition also contribute to workforce shrinkage. AT&T disputed WIRED's source's claimed 85,000-employee target for 2030; no projected cuts are included here.",
+  "sources": [
+    {
+      "name": "WIRED",
+      "url": "https://www.wired.com/story/atandt-is-automating-away-its-old-telecom-empire/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-23",
+      "quote": "In the first half of 2026, the telecom giant cut some 2,100 jobs."
+    },
+    {
+      "name": "AT&T Q2 2026 Trending Schedule (page 2)",
+      "url": "https://investors.att.com/~/media/Files/A/ATT-IR-V2/financial-reports/quarterly-earnings/2026/2Q-2026/2Q26_ATT_Trending_Schedule.pdf",
+      "type": "primary"
+    }
+  ],
+  "createdAt": "2026-09-24T18:08:52.131Z",
+  "updatedAt": "2026-09-24T18:08:52.131Z"
+}

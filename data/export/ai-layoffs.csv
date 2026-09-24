@@ -1,4 +1,5 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+AT&T,2026-09-23,2100,Other,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.wired.com/story/atandt-is-automating-away-its-old-telecom-empire/
 Oracle,2026-09-14,,Technology,United States,ai_reorg_or_spend_linked,verified,reputable_reporting,https://africa.businessinsider.com/news/oracle-begins-a-new-round-of-layoffs-read-the-email/khh1jh9
 PayPal,2026-09-03,220,Finance,India,ai_adjacent_restructuring,verified,reputable_reporting,https://www.reuters.com/world/india/paypal-cuts-220-india-jobs-part-previously-announced-restructuring-plan-source-2026-09-03/
 Uber,2026-09-02,3300,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.businessinsider.com/uber-ai-usage-layoffs-questioned-by-former-staff-2026-9
