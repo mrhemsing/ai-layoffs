@@ -1,0 +1,43 @@
+{
+  "id": "apple-2026-09-29",
+  "company": "Apple",
+  "industry": "Technology",
+  "geography": "Not disclosed",
+  "eventDate": "2026-09-29",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Bloomberg reporting, covered by Reuters and specialist Apple publications, described recent engineering program-management cuts affecting several managers, including roughly six directors, and cutbacks in Siri, Vision Pro and AI-software teams as CEO John Ternus pursues a leaner organization in the AI era. Total jobs affected are undisclosed. The AI connection is journalist-linked, not company-stated causation; some managers can transfer internally before layoffs later in 2026.",
+  "evidenceQuote": "The cuts affected several program managers, including roughly half a dozen directors, one of the company’s most senior employee levels",
+  "notes": "September 29 is the report date. 9to5Mac and MacRumors, citing Bloomberg, place engineering program-manager dismissals in the preceding two weeks and say affected employees have weeks to find internal roles; those without placements will be laid off later this year. Roughly six directors are an affected subgroup, not a total layoff count or a confirmed count of completed departures. MacRumors also reports recent cutbacks in Siri, Vision Pro, AI-related software engineering and Fitness+. These reports place the reductions alongside Ternus's push for faster development and competitiveness in the AI era, but do not establish that AI caused the cuts. Broader cost control and management restructuring are also described. No AI-attributable headcount is recorded. A separately reported proposal to replace about 5,000 AppleCare employees with AI agents was shelved and is excluded. Verification used the accessible Reuters syndication in The Economic Times and full 9to5Mac/MacRumors coverage of Bloomberg; direct Reuters access was blocked and Bloomberg exposed only introductory text. The more specific claims that Ternus explored automating employee tasks and that some cuts were performance-related could not be corroborated in the accessible full article text and are not used as verified evidence for this entry.",
+  "sources": [
+    {
+      "name": "Reuters (via The Economic Times)",
+      "url": "https://economictimes.indiatimes.com/tech/technology/apple-plans-engineering-focused-overhaul-under-ternus-bloomberg-news/articleshow/134570260.cms",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-29"
+    },
+    {
+      "name": "9to5Mac (quoting Bloomberg)",
+      "url": "https://9to5mac.com/2026/09/29/john-ternus-apple-new-products-leaner/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-29",
+      "quote": "Those who don’t secure new roles will be laid off later this year."
+    },
+    {
+      "name": "MacRumors (reporting Bloomberg)",
+      "url": "https://www.macrumors.com/2026/09/29/apple-to-launch-products-faster-and-more-often/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-29"
+    },
+    {
+      "name": "Bloomberg (original reporting; full text not directly accessible)",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-29/apple-s-new-ceo-moves-to-overhaul-company-to-run-faster-and-leaner",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-09-29"
+    }
+  ],
+  "createdAt": "2026-09-29T17:38:00.000Z",
+  "updatedAt": "2026-09-29T17:38:00.000Z"
+}
