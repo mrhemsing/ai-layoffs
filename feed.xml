@@ -4,7 +4,14 @@
     <title>Replaced by AI Layoff Tracker</title>
     <link>https://www.replacedbyai.app/</link>
     <description>Recent sourced AI layoff tracker entries.</description>
-    <lastBuildDate>Tue, 29 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>DNB Bank AI layoffs, October 6, 2026</title>
+      <link>https://www.replacedbyai.app/company/dnb-bank/</link>
+      <guid>https://www.replacedbyai.app/company/dnb-bank/#dnb-bank-2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <description>DNB Bank: 400 layoffs. Explicit AI cited. DNB Bank announced about 400 full-time-equivalent (FTE) reductions in Technology &amp; Services, scheduled for completion during Q4 2026. The company explicitly linked the restructuring to gains from AI agents, technology and digital solutions. This is a planned reduction, not a confirmed completed layoff count; DNB did not isolate an AI-only share of the approximately 400 FTEs.</description>
+    </item>
     <item>
       <title>Apple AI layoffs, September 29, 2026</title>
       <link>https://www.replacedbyai.app/company/apple/</link>
@@ -137,13 +144,6 @@
       <guid>https://www.replacedbyai.app/company/elastic/#elastic-2026-06-24</guid>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
       <description>Elastic: 281 layoffs. Explicit AI cited. Elastic announced an organizational change including an approximately 7% workforce reduction, about 281 workers, while CEO Ash Kulkarni said advances in AI and automation are letting the company operate with leaner teams.</description>
-    </item>
-    <item>
-      <title>Snyk AI layoffs, June 24, 2026</title>
-      <link>https://www.replacedbyai.app/company/snyk/</link>
-      <guid>https://www.replacedbyai.app/company/snyk/#snyk-2026-06-24</guid>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Snyk: 90 layoffs. Explicit AI cited. Globes reported that cybersecurity company Snyk is laying off about 90 employees in Israel and worldwide, while Cybernews reported that the company is reorganizing to prioritize its AI Security Platform development.</description>
     </item>
   </channel>
 </rss>
