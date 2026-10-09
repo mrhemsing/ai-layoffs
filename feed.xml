@@ -4,7 +4,14 @@
     <title>Replaced by AI Layoff Tracker</title>
     <link>https://www.replacedbyai.app/</link>
     <description>Recent sourced AI layoff tracker entries.</description>
-    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>HoneyBook AI layoffs, October 8, 2026</title>
+      <link>https://www.replacedbyai.app/company/honeybook/</link>
+      <guid>https://www.replacedbyai.app/company/honeybook/#honeybook-2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>HoneyBook: 30 layoffs. Explicit AI cited. HoneyBook is cutting around 30 to 35 employees, approximately 14% of its workforce, with most affected employees in Israel. The company explicitly linked the restructuring to aligning its structure and workflows with the AI era and integrating AI into its product and customer value proposition. This is company-stated strategic restructuring, not a claim that AI directly replaced the affected workers. The tracker uses 30, the lower end of the reported range, for aggregate totals.</description>
+    </item>
     <item>
       <title>DNB Bank AI layoffs, October 6, 2026</title>
       <link>https://www.replacedbyai.app/company/dnb-bank/</link>
@@ -137,13 +144,6 @@
       <guid>https://www.replacedbyai.app/company/amperity/#amperity-2026-06-25</guid>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>Amperity: – layoffs. Explicit AI cited. GeekWire reported that Amperity conducted layoffs as the customer data startup transforms its operations around AI, with the company saying the shift changes where it invests and the shape of the team it needs.</description>
-    </item>
-    <item>
-      <title>Elastic AI layoffs, June 24, 2026</title>
-      <link>https://www.replacedbyai.app/company/elastic/</link>
-      <guid>https://www.replacedbyai.app/company/elastic/#elastic-2026-06-24</guid>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Elastic: 281 layoffs. Explicit AI cited. Elastic announced an organizational change including an approximately 7% workforce reduction, about 281 workers, while CEO Ash Kulkarni said advances in AI and automation are letting the company operate with leaner teams.</description>
     </item>
   </channel>
 </rss>
