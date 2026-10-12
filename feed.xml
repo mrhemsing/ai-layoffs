@@ -4,7 +4,14 @@
     <title>Replaced by AI Layoff Tracker</title>
     <link>https://www.replacedbyai.app/</link>
     <description>Recent sourced AI layoff tracker entries.</description>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Bird AI layoffs, October 12, 2026</title>
+      <link>https://www.replacedbyai.app/company/bird/</link>
+      <guid>https://www.replacedbyai.app/company/bird/#bird-2026-10-12</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Bird: 880 layoffs. Explicit AI cited. Bird, formerly MessageBird, disclosed a decline from more than 1,000 employees to 120 over roughly three years as it extensively automated operations. CEO Robert Vis explicitly linked AI to reduced specialist staffing needs and a preference for multidisciplinary, autonomous workers. This represents more than 880 net positions eliminated or vacated, not a new October 12 layoff round. The involuntary-layoff versus attrition split and an AI-only count were not disclosed; 880 is a conservative lower bound used for tracker totals.</description>
+    </item>
     <item>
       <title>HoneyBook AI layoffs, October 8, 2026</title>
       <link>https://www.replacedbyai.app/company/honeybook/</link>
@@ -137,13 +144,6 @@
       <guid>https://www.replacedbyai.app/company/microsoft/#microsoft-2026-07-06</guid>
       <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
       <description>Microsoft: 4,800 layoffs. AI reorg or spending linked. BBC reported that Microsoft announced 4,800 job cuts, roughly 2.1% of its workforce, with Xbox bearing a large share of the layoffs amid a significant restructure and Microsoft continuing to prioritize artificial intelligence spending.</description>
-    </item>
-    <item>
-      <title>Amperity AI layoffs, June 25, 2026</title>
-      <link>https://www.replacedbyai.app/company/amperity/</link>
-      <guid>https://www.replacedbyai.app/company/amperity/#amperity-2026-06-25</guid>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Amperity: – layoffs. Explicit AI cited. GeekWire reported that Amperity conducted layoffs as the customer data startup transforms its operations around AI, with the company saying the shift changes where it invests and the shape of the team it needs.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,25 @@
+{
+  "id": "bird-2026-10-12",
+  "company": "Bird",
+  "industry": "Technology",
+  "geography": "Netherlands",
+  "eventDate": "2026-10-12",
+  "layoffsCount": 880,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Bird, formerly MessageBird, disclosed a decline from more than 1,000 employees to 120 over roughly three years as it extensively automated operations. CEO Robert Vis explicitly linked AI to reduced specialist staffing needs and a preference for multidisciplinary, autonomous workers. This represents more than 880 net positions eliminated or vacated, not a new October 12 layoff round. The involuntary-layoff versus attrition split and an AI-only count were not disclosed; 880 is a conservative lower bound used for tracker totals.",
+  "evidenceQuote": "It's not like you need zero designers, but you need less, and it enables entire teams to be able to output good design within a framework that a design team sets,",
+  "notes": "October 12, 2026 is the Business Insider publication date; Vis made the comments in late September following the company's debt-financing announcement. The workforce reduction occurred over roughly three years, not entirely in October or in 2026. More than 1,000 minus 120 implies a net decline of more than 880; the numeric field stores 880 as a conservative floor, not an exact gross layoff count. The article describes layoffs and selection based on multidisciplinary skills, performance and autonomy but does not quantify involuntary departures versus attrition or isolate reductions solely caused by AI. Vis described AI-enabled work across engineering, product, design, support, sales and accounting, while noting that specialists such as a revenue accountant and security engineers remain. He also cautioned against using AI simply as a pretext for cuts. Attribution is company-stated by the CEO through a Business Insider interview, not a separate primary announcement. Netherlands identifies the company's Amsterdam origins; affected employee locations were not specified.",
+  "sources": [
+    {
+      "name": "Business Insider (Thibault Spirlet)",
+      "url": "https://www.businessinsider.com/bird-ceo-says-ai-is-empowering-high-agency-generalist-workers-2026-9",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-12",
+      "quote": "If you had very high performance but you were not multidisciplinary, you would not stay,"
+    }
+  ],
+  "createdAt": "2026-10-12T17:05:02.176Z",
+  "updatedAt": "2026-10-12T17:05:02.176Z"
+}
