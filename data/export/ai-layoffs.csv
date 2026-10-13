@@ -1,4 +1,6 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+Kroger,2026-10-12,3000,Retail,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.2news.com/news/national/kroger-to-layoff-3-000-corporate-employees-over-3-years-as-it-leans-into-artificial/article_5025dbcf-25f7-513d-931d-8d117a80d145.html
+Airtable,2026-10-12,,Technology,Not disclosed,ai_adjacent_restructuring,verified,primary,https://investors.bendingspoons.com/newsroom/airtable-back-to-bases
 Bird,2026-10-12,880,Technology,Netherlands,explicit_ai_cited,verified,reputable_reporting,https://www.businessinsider.com/bird-ceo-says-ai-is-empowering-high-agency-generalist-workers-2026-9
 HoneyBook,2026-10-08,30,Technology,Israel,explicit_ai_cited,verified,reputable_reporting,https://www.calcalistech.com/ctechnews/article/syg9pbhizx
 DNB Bank,2026-10-06,400,Finance,Norway,explicit_ai_cited,verified,primary,https://www.ir.dnb.no/press-and-reports/press-releases/dnb-making-organisational-changes-technology-services-2485833

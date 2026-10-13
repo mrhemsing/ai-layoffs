@@ -1,5 +1,66 @@
 [
     {
+        "id": "kroger-2026-10-12",
+        "company": "Kroger",
+        "industry": "Retail",
+        "geography": "United States",
+        "eventDate": "2026-10-12",
+        "layoffsCount": 3000,
+        "status": "verified",
+        "aiRelevance": "automation_efficiency_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Kroger announced approximately 3,000 corporate job cuts over the next three years. CEO Greg Foran tied the restructuring to adopting technology, reducing duplicative work and simplifying the organization; AP reported the cuts alongside expanded AI use. These are planned reductions, not completed layoffs. AI is part of the broader strategy, but Kroger did not identify an AI-only share or say every affected role would be directly replaced by AI.",
+        "evidenceQuote": "The way work gets done is changing across every industry; we must adapt and take advantage of technology. We need to adopt capabilities, reduce duplicative work and look closely at where work is best fit to be done.",
+        "notes": "October 12, 2026 is the announcement date of the CEO memo; AP coverage used here was published October 13. Grocery Dive said Kroger shared the memo directly with it and confirmed approximately 3,000 corporate reductions over three years, with details on impacted roles to follow in coming months. The memo also emphasizes lowering prices, investing in associates, reducing organizational layers and faster decisions. Company-stated attribution is to technology and efficiency; AP connects the restructuring to Kroger's AI expansion and the AI strategy outlined the prior month. This is not company confirmation of 3,000 direct AI replacements. Store-worker cuts are not included. The reported approximately 37% corporate-workforce share was not independently verified in the accessible full-text sources used here and is not recorded as a verified figure.",
+        "sources": [
+            {
+                "name": "Associated Press (Matt Ott, via 2 News Nevada)",
+                "url": "https://www.2news.com/news/national/kroger-to-layoff-3-000-corporate-employees-over-3-years-as-it-leans-into-artificial/article_5025dbcf-25f7-513d-931d-8d117a80d145.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-13"
+            },
+            {
+                "name": "Grocery Dive (CEO memo shared by Kroger)",
+                "url": "https://www.grocerydive.com/news/kroger-corporate-layoffs-3000-employees/832811/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-12"
+            }
+        ],
+        "createdAt": "2026-10-13T17:36:53.501Z",
+        "updatedAt": "2026-10-13T17:36:53.501Z"
+    },
+    {
+        "id": "airtable-2026-10-12",
+        "company": "Airtable",
+        "industry": "Technology",
+        "geography": "Not disclosed",
+        "eventDate": "2026-10-12",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "primary",
+        "summary": "New owner Bending Spoons announced departures for a large portion of Airtable's pre-acquisition team, with no exact number disclosed. Management emphasized smaller, faster-moving teams while outlining investment in core improvements and AI features. This is company-stated strategic restructuring alongside AI investment, not a claim that AI directly replaced the affected employees; multiple business priorities underpin the change.",
+        "evidenceQuote": "At Bending Spoons, we’ve seen firsthand how smaller, faster-moving teams with streamlined responsibilities can have an outsized impact, and we have the same ambitions at Airtable.",
+        "notes": "The October 12, 2026 announcement by product lead Alessandro Savarese says affected employees will leave by the end of that week with substantial separation packages. Bending Spoons' acquisition closed in early September. The strategy combines core-platform improvements, AI features and centralized controls; investment in AI does not establish that AI caused every departure. Business Insider quotes product leader Federico Simionato's belief that small teams ship more and better, and a spokesperson declining to disclose the number impacted. The primary announcement says the customer-facing organization was not impacted and describes embedding experienced Bending Spoons engineers, product managers and designers. Count remains null, not zero; affected employee locations were not specified.",
+        "sources": [
+            {
+                "name": "Bending Spoons / Airtable (Alessandro Savarese)",
+                "url": "https://investors.bendingspoons.com/newsroom/airtable-back-to-bases",
+                "type": "primary",
+                "publishedDate": "2026-10-12",
+                "quote": "We’re parting ways with a large portion of the pre-acquisition team, who will be leaving by the end of the week with substantial separation packages."
+            },
+            {
+                "name": "Business Insider (Natalie Musumeci, via BI Africa)",
+                "url": "https://africa.businessinsider.com/careers/airtables-new-owner-is-laying-off-a-large-part-of-its-team/sb7jdsd",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-12"
+            }
+        ],
+        "createdAt": "2026-10-13T17:36:53.501Z",
+        "updatedAt": "2026-10-13T17:36:53.501Z"
+    },
+    {
         "id": "bird-2026-10-12",
         "company": "Bird",
         "industry": "Technology",

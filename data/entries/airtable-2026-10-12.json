@@ -1,0 +1,31 @@
+{
+  "id": "airtable-2026-10-12",
+  "company": "Airtable",
+  "industry": "Technology",
+  "geography": "Not disclosed",
+  "eventDate": "2026-10-12",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "primary",
+  "summary": "New owner Bending Spoons announced departures for a large portion of Airtable's pre-acquisition team, with no exact number disclosed. Management emphasized smaller, faster-moving teams while outlining investment in core improvements and AI features. This is company-stated strategic restructuring alongside AI investment, not a claim that AI directly replaced the affected employees; multiple business priorities underpin the change.",
+  "evidenceQuote": "At Bending Spoons, we’ve seen firsthand how smaller, faster-moving teams with streamlined responsibilities can have an outsized impact, and we have the same ambitions at Airtable.",
+  "notes": "The October 12, 2026 announcement by product lead Alessandro Savarese says affected employees will leave by the end of that week with substantial separation packages. Bending Spoons' acquisition closed in early September. The strategy combines core-platform improvements, AI features and centralized controls; investment in AI does not establish that AI caused every departure. Business Insider quotes product leader Federico Simionato's belief that small teams ship more and better, and a spokesperson declining to disclose the number impacted. The primary announcement says the customer-facing organization was not impacted and describes embedding experienced Bending Spoons engineers, product managers and designers. Count remains null, not zero; affected employee locations were not specified.",
+  "sources": [
+    {
+      "name": "Bending Spoons / Airtable (Alessandro Savarese)",
+      "url": "https://investors.bendingspoons.com/newsroom/airtable-back-to-bases",
+      "type": "primary",
+      "publishedDate": "2026-10-12",
+      "quote": "We’re parting ways with a large portion of the pre-acquisition team, who will be leaving by the end of the week with substantial separation packages."
+    },
+    {
+      "name": "Business Insider (Natalie Musumeci, via BI Africa)",
+      "url": "https://africa.businessinsider.com/careers/airtables-new-owner-is-laying-off-a-large-part-of-its-team/sb7jdsd",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-12"
+    }
+  ],
+  "createdAt": "2026-10-13T17:36:53.501Z",
+  "updatedAt": "2026-10-13T17:36:53.501Z"
+}

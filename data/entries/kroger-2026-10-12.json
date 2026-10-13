@@ -1,0 +1,30 @@
+{
+  "id": "kroger-2026-10-12",
+  "company": "Kroger",
+  "industry": "Retail",
+  "geography": "United States",
+  "eventDate": "2026-10-12",
+  "layoffsCount": 3000,
+  "status": "verified",
+  "aiRelevance": "automation_efficiency_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Kroger announced approximately 3,000 corporate job cuts over the next three years. CEO Greg Foran tied the restructuring to adopting technology, reducing duplicative work and simplifying the organization; AP reported the cuts alongside expanded AI use. These are planned reductions, not completed layoffs. AI is part of the broader strategy, but Kroger did not identify an AI-only share or say every affected role would be directly replaced by AI.",
+  "evidenceQuote": "The way work gets done is changing across every industry; we must adapt and take advantage of technology. We need to adopt capabilities, reduce duplicative work and look closely at where work is best fit to be done.",
+  "notes": "October 12, 2026 is the announcement date of the CEO memo; AP coverage used here was published October 13. Grocery Dive said Kroger shared the memo directly with it and confirmed approximately 3,000 corporate reductions over three years, with details on impacted roles to follow in coming months. The memo also emphasizes lowering prices, investing in associates, reducing organizational layers and faster decisions. Company-stated attribution is to technology and efficiency; AP connects the restructuring to Kroger's AI expansion and the AI strategy outlined the prior month. This is not company confirmation of 3,000 direct AI replacements. Store-worker cuts are not included. The reported approximately 37% corporate-workforce share was not independently verified in the accessible full-text sources used here and is not recorded as a verified figure.",
+  "sources": [
+    {
+      "name": "Associated Press (Matt Ott, via 2 News Nevada)",
+      "url": "https://www.2news.com/news/national/kroger-to-layoff-3-000-corporate-employees-over-3-years-as-it-leans-into-artificial/article_5025dbcf-25f7-513d-931d-8d117a80d145.html",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-13"
+    },
+    {
+      "name": "Grocery Dive (CEO memo shared by Kroger)",
+      "url": "https://www.grocerydive.com/news/kroger-corporate-layoffs-3000-employees/832811/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-12"
+    }
+  ],
+  "createdAt": "2026-10-13T17:36:53.501Z",
+  "updatedAt": "2026-10-13T17:36:53.501Z"
+}
