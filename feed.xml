@@ -4,7 +4,7 @@
     <title>Replaced by AI Layoff Tracker</title>
     <link>https://www.replacedbyai.app/</link>
     <description>Recent sourced AI layoff tracker entries.</description>
-    <lastBuildDate>Tue, 13 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 00:00:00 GMT</lastBuildDate>
     <item>
       <title>Kroger AI layoffs, October 12, 2026</title>
       <link>https://www.replacedbyai.app/company/kroger/</link>
@@ -46,6 +46,13 @@
       <guid>https://www.replacedbyai.app/company/apple/#apple-2026-09-29</guid>
       <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
       <description>Apple: – layoffs. AI-adjacent restructuring. Bloomberg reporting, covered by Reuters and specialist Apple publications, described recent engineering program-management cuts affecting several managers, including roughly six directors, and cutbacks in Siri, Vision Pro and AI-software teams as CEO John Ternus pursues a leaner organization in the AI era. Total jobs affected are undisclosed. The AI connection is journalist-linked, not company-stated causation; some managers can transfer internally before layoffs later in 2026.</description>
+    </item>
+    <item>
+      <title>Disney AI layoffs, September 29, 2026</title>
+      <link>https://www.replacedbyai.app/company/disney/</link>
+      <guid>https://www.replacedbyai.app/company/disney/#disney-2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Disney: – layoffs. AI reorg or spending linked. Disney cut several hundred employees in human resources and technology, with no exact number disclosed. October 16 reporting detailed offers to 66 Character.AI employees, approximately $180 million in compensation and retention over three years, and a separate $20 million agreement for Character.AI assets. The juxtaposition suggests resource reallocation toward AI, but that connection is journalist-inferred: Disney has not said AI replaced the affected employees or directly caused the layoffs.</description>
     </item>
     <item>
       <title>AT&amp;T AI layoffs, September 23, 2026</title>
@@ -137,13 +144,6 @@
       <guid>https://www.replacedbyai.app/company/monday-com/#monday-com-2026-07-26</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <description>Monday.com: 600 layoffs. Explicit AI cited. BitcoinWorld reported that Monday.com blamed AI for 600 layoffs, while The Tech Buzz reported that the work-management platform joined a group of major tech companies explicitly citing artificial intelligence as a driver for workforce reductions.</description>
-    </item>
-    <item>
-      <title>Patreon AI layoffs, July 23, 2026</title>
-      <link>https://www.replacedbyai.app/company/patreon/</link>
-      <guid>https://www.replacedbyai.app/company/patreon/#patreon-2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
-      <description>Patreon: 93 layoffs. Speculative / unclear. TechCrunch reported that Patreon would lay off 20% of its workforce, or 93 people, after CEO Jack Conte said the company needed to respond to market changes and adjust its cost structure while noting that AI has fundamentally transformed the tech industry.</description>
     </item>
   </channel>
 </rss>

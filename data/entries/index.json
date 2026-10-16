@@ -185,6 +185,42 @@
         "updatedAt": "2026-09-29T17:38:00.000Z"
     },
     {
+        "id": "disney-2026-09-29",
+        "company": "Disney",
+        "industry": "Media",
+        "geography": "Not disclosed",
+        "eventDate": "2026-09-29",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_reorg_or_spend_linked",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Disney cut several hundred employees in human resources and technology, with no exact number disclosed. October 16 reporting detailed offers to 66 Character.AI employees, approximately $180 million in compensation and retention over three years, and a separate $20 million agreement for Character.AI assets. The juxtaposition suggests resource reallocation toward AI, but that connection is journalist-inferred: Disney has not said AI replaced the affected employees or directly caused the layoffs.",
+        "evidenceQuote": "Disney is paying up for employees from an AI chatbot startup that filed for bankruptcy, shortly after trimming its own tech workforce.",
+        "notes": "September 29, 2026 is the layoff reporting date; October 16 is the Business Insider publication date for the new compensation details, not a new layoff round. Reuters reported a few hundred cuts across HR and technology; the exact number and affected employee locations were not disclosed, so layoffsCount remains null rather than an estimated figure. Business Insider reported offers to 66 Character.AI employees: 56 had resigned from the startup and 10 were awaiting visa updates. Its cited bankruptcy filing estimated approximately $180 million in total compensation and retention over three years; do not add the reported $30 million retention pool again to that total. The separate $20 million asset agreement remained subject to competing bids and bankruptcy-court oversight. Disney announced Character.AI CEO Karandeep Anand's appointment on September 18, before the September 29 cuts, to oversee technology and infrastructure, data and AI platforms, and product and engineering teams. The October reporting reveals spending details; it does not establish that all hiring decisions occurred after the layoffs. Attribution is journalist-inferred resource reallocation, not company-confirmed AI causation or direct job replacement. Business Insider reported that Disney did not respond to its requests for comment.",
+        "sources": [
+            {
+                "name": "Business Insider (James Faris)",
+                "url": "https://www.businessinsider.com/disney-pays-60-million-characterai-employees-tech-layoffs-karandeep-anand-2026-10",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-16"
+            },
+            {
+                "name": "Reuters",
+                "url": "https://www.reuters.com/legal/litigation/disney-laying-off-several-hundred-employees-variety-reports-2026-09-29/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-09-29"
+            },
+            {
+                "name": "The Wall Street Journal",
+                "url": "https://www.wsj.com/business/media/disney-beefs-up-tech-ambitions-with-newly-created-cto-role-87a5e473",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-09-18"
+            }
+        ],
+        "createdAt": "2026-10-16T17:35:38.020Z",
+        "updatedAt": "2026-10-16T17:35:38.020Z"
+    },
+    {
         "id": "att-2026-09-23",
         "company": "AT&T",
         "industry": "Other",
