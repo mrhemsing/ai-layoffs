@@ -1,0 +1,31 @@
+{
+  "id": "vermont-information-processing-2026-10-20",
+  "company": "Vermont Information Processing",
+  "industry": "Technology",
+  "geography": "United States",
+  "eventDate": "2026-10-20",
+  "layoffsCount": 66,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Vermont Information Processing (VIP) announced cuts affecting 66 employees, confirmed by its October 20 Vermont WARN notice, or roughly 11% of its approximately 600 Vermont employees. An anonymous employee told Seven Days that management presented a streamlined, product-led model with AI front and center, following company-wide AI training and the acquisition of AI-focused Encompass Technologies. The AI connection is employee-reported and journalist-inferred, not company-confirmed causation: VIP cited organizational priorities and investment alignment without naming AI as the cause. These are not 66 confirmed direct AI replacements.",
+  "evidenceQuote": "They kind of made it seem like there were too many cooks in the kitchen and they wanted a streamlined approach where AI was front and center,",
+  "notes": "October 20, 2026 is the staff announcement and WARN notice date. Seven Days updated its report October 21 after the state database disclosed 66 affected employees; the primary notice confirms the number and date but does not establish AI causation or give a departure-completion date. Roughly 11% is calculated from 66 divided by the reported approximately 600 Vermont employees, not a precise global-workforce percentage. The evidence quote is an anonymous employee's recollection of a meeting, not a direct quote from CEO Andrew Criezis. Seven Days reported April AI training and the September Encompass acquisition; these support the strategic context but do not prove each eliminated role was automated. VIP's official statement describes a product-led transition, clear product ownership, accountability, business priorities and resource alignment. The AI link therefore remains employee-reported and journalistic rather than a company admission of AI replacement.",
+  "sources": [
+    {
+      "name": "Seven Days (Kevin McCallum; updated October 21)",
+      "url": "https://www.sevendaysvt.com/news/a-colchester-tech-firm-has-been-leaning-into-ai-on-tuesday-it-announced-layoffs/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "name": "Vermont Department of Labor / Vermont JobLink WARN notice",
+      "url": "https://www.vermontjoblink.com/search/warn_lookups/366",
+      "type": "primary",
+      "publishedDate": "2026-10-20",
+      "quote": "Number of Employees Affected: 66"
+    }
+  ],
+  "createdAt": "2026-10-21T17:37:00.815Z",
+  "updatedAt": "2026-10-21T17:37:00.815Z"
+}
