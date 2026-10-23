@@ -1,0 +1,30 @@
+{
+  "id": "american-express-2026-10-23",
+  "company": "American Express",
+  "industry": "Finance",
+  "geography": "Global",
+  "eventDate": "2026-10-23",
+  "layoffsCount": 3500,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "American Express announced about 3,500 planned job cuts globally, described as roughly 5% of its workforce, and a $336 million restructuring charge. CFO Christophe Le Caillec explicitly said the restructuring would make AmEx leaner and prepare it for AI by reducing management layers and improving processes ahead of automation. AI is one element of a broader efficiency program; these are planned reductions, not 3,500 confirmed direct AI replacements.",
+  "evidenceQuote": "So what we're doing here is to reduce layers and increase spans of controls, so that we can automate and take advantage of AI in the coming quarters and the coming years.",
+  "notes": "October 23, 2026 is the announcement date, not a confirmed completion date. Banking Dive reports about 3,500 worldwide cuts based on a company spokesperson and describes the share as nearly 4.5% of roughly 78,000 workers; CNBC reports the CEO described the reduction as 5%. The percentage is therefore approximate, not a basis for deriving a different job count. The evidence quote is CFO Christophe Le Caillec speaking directly to CNBC. His stated rationale includes a leaner, more agile organization, fewer management layers and wider spans of control before future automation. The CEO also cited productivity, faster decisions and greater investment capacity. No AI-only share of the cuts or confirmation that every affected role will be automated was disclosed. The $336 million is a restructuring charge, not a headcount measure.",
+  "sources": [
+    {
+      "name": "CNBC (Hugh Son; direct CFO interview)",
+      "url": "https://www.cnbc.com/2026/10/23/american-express-job-cuts.html",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "name": "Banking Dive / Payments Dive (Lynne Marek; company spokesperson)",
+      "url": "https://www.bankingdive.com/news/amex-american-express-cut-3500-employees-ai-squeri/833861/",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-23"
+    }
+  ],
+  "createdAt": "2026-10-23T17:25:03.833Z",
+  "updatedAt": "2026-10-23T17:25:03.833Z"
+}

@@ -1,4 +1,5 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+American Express,2026-10-23,3500,Finance,Global,explicit_ai_cited,verified,reputable_reporting,https://www.cnbc.com/2026/10/23/american-express-job-cuts.html
 Vermont Information Processing,2026-10-20,66,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.sevendaysvt.com/news/a-colchester-tech-firm-has-been-leaning-into-ai-on-tuesday-it-announced-layoffs/
 Kroger,2026-10-12,3000,Retail,United States,automation_efficiency_cited,verified,reputable_reporting,https://www.2news.com/news/national/kroger-to-layoff-3-000-corporate-employees-over-3-years-as-it-leans-into-artificial/article_5025dbcf-25f7-513d-931d-8d117a80d145.html
 Airtable,2026-10-12,,Technology,Not disclosed,ai_adjacent_restructuring,verified,primary,https://investors.bendingspoons.com/newsroom/airtable-back-to-bases
