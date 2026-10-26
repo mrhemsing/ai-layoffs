@@ -1,5 +1,35 @@
 [
     {
+        "id": "microsoft-2026-10-26",
+        "company": "Microsoft",
+        "industry": "Technology",
+        "geography": "United States, Canada, United Kingdom, India",
+        "eventDate": "2026-10-26",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_reorg_or_spend_linked",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Microsoft announced a voluntary exit offer for participating teams in four countries, with about 60,000 employees eligible according to CNBC. Final departures are unknown: eligibility is not a job-cut count, and this is not a compulsory layoff of 60,000 workers. Microsoft confirmed the program and said it helps organizations adapt staffing to changing needs; CNBC linked the move to balancing costly AI infrastructure investment with capital efficiency. The AI-spending connection is journalistic context, not company confirmation of direct AI replacement.",
+        "evidenceQuote": "It also gives participating organizations another way to adapt their workforce to changing needs.",
+        "notes": "October 26, 2026 is the announcement date. Microsoft confirms a time-limited, voluntary offer for eligible employees at level 70 and below in participating teams in Canada, India, the United Kingdom and the United States. Not all teams participate. CNBC attributes the approximately 60,000 eligibility figure (about 27% of 223,000 employees globally) to a person familiar with the matter, not to a published Microsoft headcount target. CNBC reports decisions are due in early December and participating employees will leave December 31; these are prospective dates, not completed departures. The number of departures is unknown, and eligible employees are not included in the reported jobs total. The evidence quote is from Chief People Officer Amy Coleman in the official Microsoft announcement, which does not explicitly cite AI as the reason for the program. CNBC supplies the AI-infrastructure and capital-efficiency context. This event is distinct from the earlier voluntary retirement program and the July 2026 layoffs already tracked; neither is added again here.",
+        "sources": [
+            {
+                "name": "Microsoft official blog (Amy Coleman, Chief People Officer)",
+                "url": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/",
+                "type": "primary",
+                "publishedDate": "2026-10-26"
+            },
+            {
+                "name": "CNBC (Jordan Novet)",
+                "url": "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-26"
+            }
+        ],
+        "createdAt": "2026-10-26T17:38:49.724Z",
+        "updatedAt": "2026-10-26T17:38:49.724Z"
+    },
+    {
         "id": "american-express-2026-10-23",
         "company": "American Express",
         "industry": "Finance",
