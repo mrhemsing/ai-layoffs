@@ -1,0 +1,36 @@
+{
+  "id": "skydance-2026-10-26",
+  "company": "Skydance",
+  "industry": "Media",
+  "geography": "United States",
+  "eventDate": "2026-10-26",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "reputable_reporting",
+  "summary": "Skydance offered eligible employees a one-time voluntary buyout following its Warner Bros. Discovery acquisition. Eligibility numbers and final departures are undisclosed; this is a voluntary separation program, not confirmed compulsory layoffs. Reuters reported merger-related cost and debt pressures. The Wall Street Journal placed the buyouts within broader pressure to shrink headcount while investing in AI. That AI connection is journalist-inferred, not company-stated: Skydance did not identify AI as the direct cause.",
+  "evidenceQuote": "The two companies each offered voluntary buyouts to workers Monday, reflecting the pressure companies face to shrink head count as they invest in AI",
+  "notes": "October 26, 2026 is the buyout announcement date; the WSJ analysis was published October 27. Reuters reviewed the company memo, which offered qualifying employees a window to accept individualized terms and accompanied a five-day in-office policy. Reuters described cost reduction following the Warner Bros. Discovery acquisition and substantial assumed debt; it did not attribute this buyout program to AI. The evidence quote is an excerpt of WSJ journalists Chip Cutter and Isabella Simonetti discussing Microsoft and Skydance together, reproduced on October 27 by Goodwin Recruiting, whose CEO was interviewed for the article. The full WSJ article was not accessible during verification; only the relevant reproduced passage is relied upon for that attribution. The passage continues that companies are not sure which jobs AI will eventually replace. It is broader journalistic framing, not proof that these departures fund specific AI projects or replace workers with AI. The 60,000 eligibility figure in the same WSJ passage refers to Microsoft, not Skydance. Reuters' approximately 53,000 combined workforce figure is not a buyout eligibility or departure count. Neither figure is counted here. United States identifies the company base; the reviewed sources do not establish the geographic scope of participating employees.",
+  "sources": [
+    {
+      "name": "Reuters (Jaspreet Singh), via San Luis Obispo Tribune",
+      "url": "https://www.sanluisobispo.com/entertainment/article317786743.html",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-26"
+    },
+    {
+      "name": "The Wall Street Journal (Chip Cutter and Isabella Simonetti; excerpt reproduced by Goodwin Recruiting)",
+      "url": "https://www.wsj.com/business/microsoft-job-cuts-buyout-offers-ff3c5dde",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "name": "Goodwin Recruiting (reproduced WSJ passage; not independent reporting)",
+      "url": "https://www.goodwinrecruiting.com/blog/andy-decker-included-in-wall-street-journal-article",
+      "type": "secondary_lead",
+      "publishedDate": "2026-10-27"
+    }
+  ],
+  "createdAt": "2026-10-27T17:01:18.957Z",
+  "updatedAt": "2026-10-27T17:01:18.957Z"
+}

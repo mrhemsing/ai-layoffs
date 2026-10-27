@@ -1,4 +1,5 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+Skydance,2026-10-26,,Media,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.sanluisobispo.com/entertainment/article317786743.html
 Microsoft,2026-10-26,,Technology,"United States, Canada, United Kingdom, India",ai_reorg_or_spend_linked,verified,reputable_reporting,https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/
 American Express,2026-10-23,3500,Finance,Global,explicit_ai_cited,verified,reputable_reporting,https://www.cnbc.com/2026/10/23/american-express-job-cuts.html
 Vermont Information Processing,2026-10-20,66,Technology,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.sevendaysvt.com/news/a-colchester-tech-firm-has-been-leaning-into-ai-on-tuesday-it-announced-layoffs/
