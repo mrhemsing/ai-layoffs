@@ -1,5 +1,35 @@
 [
     {
+        "id": "ing-2026-10-29",
+        "company": "ING",
+        "industry": "Finance",
+        "geography": "Global",
+        "eventDate": "2026-10-29",
+        "layoffsCount": 400,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "primary",
+        "summary": "ING announced around 400 planned redundancies globally as it restructures Wholesale Banking, with organizational changes effective March 1, 2027. The formal announcement emphasizes simplification and a new client-service model, with around EUR 75 million in annual savings fully effective from 2028. CEO Steven van Rijswijk separately acknowledged AI as part of ING's efficiency and growth strategy in a Dow Jones interview. AI is not established as the sole or direct cause of these cuts; these are planned redundancies, not 400 confirmed AI replacements or completed departures.",
+        "evidenceQuote": "not only to save on costs, also to be able to enlarge the scalability of the growth.",
+        "notes": "October 29, 2026 is the announcement date. ING states the organizational changes are effective March 1, 2027 and expects around 400 redundancies globally; it does not give an exact completion date for all departures. The division will be renamed Corporate and Institutional Banking. Corporate-client coverage changes from a sector-focused to a country-focused model, while financial institutions retain global coverage and specialist expertise is brought into global product teams. ING expects a pre-tax redundancy provision of around EUR 175 million in Q4 2026 and annual cost reductions of around EUR 75 million fully effective from 2028. These monetary amounts are not job counts. The formal announcement does not name AI. In Michael Hennessey's Dow Jones report, the journalist says AI is in the mix for efficiency, attributing that observation to the CEO, followed by the direct CEO quote reproduced here. Thus the AI role is company-acknowledged at the strategy level, but no AI-only share of the 400 redundancies or direct replacement mechanism is disclosed. The words in the mix are reporter narration in the accessible report, not presented here as a verbatim CEO quote.",
+        "sources": [
+            {
+                "name": "ING Wholesale Banking (official restructuring announcement)",
+                "url": "https://www.ingwb.com/en/insights/news/ing-to-simplify-the-wb-organisation-sharpen-our-focus-and-better-serve-clients",
+                "type": "primary",
+                "publishedDate": "2026-10-29"
+            },
+            {
+                "name": "Dow Jones Newswires (Michael Hennessey, CEO interview), via Morningstar",
+                "url": "https://www.morningstar.com/news/dow-jones/2026102912423/ing-launches-buyback-but-flags-job-cuts-and-unit-restructuring-2nd-update",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-29"
+            }
+        ],
+        "createdAt": "2026-10-29T17:07:15.944Z",
+        "updatedAt": "2026-10-29T17:07:15.944Z"
+    },
+    {
         "id": "skydance-2026-10-26",
         "company": "Skydance",
         "industry": "Media",
