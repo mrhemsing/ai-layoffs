@@ -1,5 +1,35 @@
 [
     {
+        "id": "natwest-2026-10-30",
+        "company": "NatWest",
+        "industry": "Finance",
+        "geography": "Global",
+        "eventDate": "2026-10-30",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "primary",
+        "summary": "NatWest disclosed a net headcount decrease of around 1,000 full-time equivalents in Q3 2026 and a 1,400-FTE year-to-date reduction excluding the Evelyn Partners acquisition. Including roughly 2,200 acquired FTEs, total headcount rose by about 800 year-to-date. CEO Paul Thwaite acknowledged that AI is changing some roles, alongside broader transformation and changes in the business portfolio. These are net workforce movements, not a disclosed gross layoff count or 1,000 confirmed AI replacements; the AI-only share is unknown.",
+        "evidenceQuote": "Roles are changing. We've got new roles that are very much dedicated on AI, and we've got other roles that are being changed because of AI.",
+        "notes": "October 30, 2026 is the results disclosure date, not a new future layoff announcement. The quarterly reduction covers the three months to September 30, 2026. The official CFO review states: Headcount decreased by around 1,000 full-time equivalent (FTE) in the quarter and increased by around 800 FTE for the year to date, which included around 2,200 FTE related to Evelyn Partners. Ongoing transformation has driven the remaining net reduction of 1,400 FTE. The quarterly and year-to-date figures overlap and must not be added together. FTEs are a workforce measure, not necessarily an equal number of individual employees dismissed. The layoff count is left unknown because the disclosure does not separate gross dismissals from other headcount movements. ITV's full report quotes Thwaite describing AI as pervasive across the organization and roles changing because of AI, while stressing customer and colleague benefits beyond efficiency. It also describes spending-insight and credit-card fraud-agent trials. The company acknowledges AI-driven role changes, but the sources do not quantify how much of the net reduction was caused by AI. Acquisition effects and broader simplification remain material context; this is not solely an AI-replacement case. Geography denotes group-wide reporting, not a verified country-by-country distribution.",
+        "sources": [
+            {
+                "name": "NatWest Group Q3 2026 results, Chief Financial Officer review",
+                "url": "https://investors.natwestgroup.com/results-centre.aspx",
+                "type": "primary",
+                "publishedDate": "2026-10-30"
+            },
+            {
+                "name": "ITV News (CEO comments and Q3 results reporting)",
+                "url": "https://www.itv.com/news/2026-10-30/natwest-efficiency-drive-results-in-job-cuts-and-420-million-of-cost-savings",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-30"
+            }
+        ],
+        "createdAt": "2026-10-31T17:22:12.022Z",
+        "updatedAt": "2026-10-31T17:22:12.022Z"
+    },
+    {
         "id": "ing-2026-10-29",
         "company": "ING",
         "industry": "Finance",

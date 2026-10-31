@@ -1,4 +1,5 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+NatWest,2026-10-30,,Finance,Global,ai_adjacent_restructuring,verified,primary,https://investors.natwestgroup.com/results-centre.aspx
 ING,2026-10-29,400,Finance,Global,ai_adjacent_restructuring,verified,primary,https://www.ingwb.com/en/insights/news/ing-to-simplify-the-wb-organisation-sharpen-our-focus-and-better-serve-clients
 Skydance,2026-10-26,,Media,United States,ai_adjacent_restructuring,verified,reputable_reporting,https://www.sanluisobispo.com/entertainment/article317786743.html
 Microsoft,2026-10-26,,Technology,"United States, Canada, United Kingdom, India",ai_reorg_or_spend_linked,verified,reputable_reporting,https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/
