@@ -1,5 +1,35 @@
 [
     {
+        "id": "comcast-2026-10-30",
+        "company": "Comcast",
+        "industry": "Media",
+        "geography": "United States",
+        "eventDate": "2026-10-30",
+        "layoffsCount": 994,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "primary",
+        "summary": "Comcast disclosed 994 planned job cuts across Pennsylvania, Washington, New Jersey and California during a broader organizational and cost transformation. Executives described simplification and accelerated AI adoption as parts of the same operating strategy, but did not say AI directly caused each eliminated position. The four-state figure is not a disclosed nationwide total. Comcast also plans more than 1,100 new positions; these are not netted against the announced cuts.",
+        "evidenceQuote": "Second, we're accelerating our technology transformation, product innovation, and AI adoption.",
+        "notes": "The October 30 Inquirer report gives 634 positions in Pennsylvania, 159 in Washington, 119 in New Jersey and 82 in California, totaling 994. This is a sum of reported state notices, not an independently disclosed company-wide total or an AI-only job count. Pennsylvania layoffs begin taking effect December 31, 2026; October 30 is the reporting date, not the date all departures occurred. The Inquirer reports more than 1,100 planned new positions, including more than 500 in Philadelphia. Gross cuts and prospective hiring are separate measures. In the October 22 Q3 earnings-call transcript, CFO Jason Armstrong describes simplifying the organizational structure and accelerating AI adoption, including customer-experience partnerships with Sierra and Cresta. He reports customer-service contact rates down roughly 20% and more than 30 million fewer service interactions year-to-date versus the prior year. These are operating metrics, not job counts, and the transcript does not establish that AI alone produced them or caused all 994 cuts. Attribution is mixed: the company confirms restructuring and AI-efficiency strategy; the link to these specific cuts is partly journalistic inference. State notice figures are verified through the Inquirer reporting, not a direct reading of each WARN filing.",
+        "sources": [
+            {
+                "name": "The Philadelphia Inquirer (four-state layoff notices, company statement and planned hiring)",
+                "url": "https://www.inquirer.com/business/comcast/comcast-layoffs-warn-notice-philadelphia-ai-jobs-20261030.html",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-10-30"
+            },
+            {
+                "name": "Comcast Q3 2026 earnings-call transcript, Jason Armstrong, page 6",
+                "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+                "type": "primary",
+                "publishedDate": "2026-10-22"
+            }
+        ],
+        "createdAt": "2026-11-01T17:21:09.658865Z",
+        "updatedAt": "2026-11-01T17:21:09.658865Z"
+    },
+    {
         "id": "natwest-2026-10-30",
         "company": "NatWest",
         "industry": "Finance",
