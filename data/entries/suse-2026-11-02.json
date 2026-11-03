@@ -1,0 +1,24 @@
+{
+  "id": "suse-2026-11-02",
+  "company": "SUSE",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-11-02",
+  "layoffsCount": 190,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "reputable_reporting",
+  "summary": "SUSE announced plans to reduce its global workforce by approximately 10%, or about 190 roles based on a reported 1,900 employees. In an internal memo reviewed by The Register, CEO Dirk-Peter van Leeuwen explicitly cited automation and AI, saying modern tooling permits less overhead and flatter reporting lines and has greatly diminished the requirement for some existing roles. The 190 figure is an estimate, not a disclosed exact tally of completed departures.",
+  "evidenceQuote": "The requirement for some existing roles has greatly diminished.",
+  "notes": "The Register published the November 2 CEO memo announcing an approximately 10% global reduction and reported a 1,900-strong workforce. The approximate 190 count is calculated as 10% of that reported base. The company had reviewed future strategy, required capabilities and team structures. Staff affected were due to be informed by November 4; specific roles were not identified publicly in the report. The memo explicitly connects the organisational change to automation and AI, while also describing investment prioritisation and evolving roles. Attribution is company-stated in an internal memo as quoted by a reputable reporter; the memo was not independently obtained as a public primary document. Earlier September voluntary-separation reporting is context, not a separate additional count.",
+  "sources": [
+    {
+      "name": "The Register (internal CEO memo reviewed by the publication)",
+      "url": "https://www.theregister.com/software/2026/11/02/suse-to-cut-one-in-ten-employees-because-of-ai/5306950",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-11-02"
+    }
+  ],
+  "createdAt": "2026-11-03T17:59:55.977104Z",
+  "updatedAt": "2026-11-03T17:59:55.977104Z"
+}

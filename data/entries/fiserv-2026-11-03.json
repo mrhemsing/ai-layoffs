@@ -1,0 +1,30 @@
+{
+  "id": "fiserv-2026-11-03",
+  "company": "Fiserv",
+  "industry": "Finance",
+  "geography": "Global",
+  "eventDate": "2026-11-03",
+  "layoffsCount": 3000,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "primary",
+  "summary": "Fiserv disclosed 3,000 employee and contractor reductions since June 2026, including a reduction of more than 10% in senior management. Its company-stated AI-everywhere efficiency strategy and Project Elevate transformation provide a broader AI connection, not confirmation that all 3,000 departures were direct AI replacements. November 3 is the disclosure date, not a new 3,000-person future round.",
+  "evidenceQuote": "As we simplify and focus our organization with an AI-everywhere mindset, we have increasing confidence that we can drive greater efficiency while investing in innovation and delivering differentiated client value.",
+  "notes": "RTTNews, reporting Reuters coverage of CEO Takis Georgakopoulos on the November 3 earnings call, confirms 3,000 employees and contractors reduced since June. The senior-management reduction is included, not an additional count. The source does not separate employee redundancies from contractor reductions or quantify the AI-only portion. Fiserv raised its Project Elevate savings target from $500 million to $1 billion after a portfolio review and identification of further efficiencies; it also plans to discontinue more than a dozen smaller non-core products. The company results release was read in full-text GlobeNewswire syndication on Stifel after the investor-relations page timed out. Company-stated AI strategy, portfolio changes and broader simplification are mixed factors.",
+  "sources": [
+    {
+      "name": "Fiserv Q3 2026 results (GlobeNewswire release syndicated by Stifel)",
+      "url": "https://www.stifel.wallst.com/research/company/companyNews.asp?symbol=107325&docKey=100-307u0451-1",
+      "type": "primary",
+      "publishedDate": "2026-11-03"
+    },
+    {
+      "name": "RTTNews reporting Reuters coverage of Fiserv workforce reductions",
+      "url": "https://www.rttnews.com/3707873/fiserv-reportedly-eliminates-3000-positions-since-june.aspx",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-11-03"
+    }
+  ],
+  "createdAt": "2026-11-03T17:59:55.977104Z",
+  "updatedAt": "2026-11-03T17:59:55.977104Z"
+}

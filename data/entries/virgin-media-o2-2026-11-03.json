@@ -1,0 +1,36 @@
+{
+  "id": "virgin-media-o2-2026-11-03",
+  "company": "Virgin Media O2",
+  "industry": "Technology",
+  "geography": "United Kingdom",
+  "eventDate": "2026-11-03",
+  "layoffsCount": null,
+  "status": "verified",
+  "aiRelevance": "ai_adjacent_restructuring",
+  "sourceQuality": "primary",
+  "summary": "Virgin Media O2 confirmed workforce reductions as part of a cost programme combining organisational delayering, greater AI adoption and digital channels. Press reports suggest thousands of cuts, potentially up to 4,000, but the company has not disclosed a final headcount figure; the tracker leaves the count unknown. AI is one company-stated efficiency lever alongside debt reduction and broadband-market pressures, not the sole cause of every cut.",
+  "evidenceQuote": "The company also expects a greater use of AI tools and digital channels to drive efficiency, productivity and better customer experience.",
+  "notes": "November 3 marks the company strategic announcement; reporting on possible job cuts preceded it. The company targets approximately GBP800 million annual run-rate savings by 2029, including GBP300 million from workforce reductions. Its roughly 30% figure refers to total people costs, not 30% of employees. Senior leadership reductions have already begun; further proposals are subject to consultation, with most reductions expected in non-customer-facing roles. HRreview on November 2 relays The Telegraph estimate of up to 4,000 out of approximately 16,000 staff and BBC reporting that the final number was undetermined. The estimate is not counted as confirmed layoffs. Official materials identify AI in customer service, network planning and fault management, and the Q3 results disclose a new voice AI agent for broadband fault calls. Contractor and supplier changes, fewer organisational layers, investment discipline, a shrinking competitive broadband market and leverage reduction are also material factors.",
+  "sources": [
+    {
+      "name": "Virgin Media O2 strategic plan announcement",
+      "url": "https://news.virginmediao2.co.uk/virgin-media-o2-prepares-ground-for-new-strategic-plan-to-simplify-the-business-and-drive-sustainable-growth/",
+      "type": "primary",
+      "publishedDate": "2026-11-03"
+    },
+    {
+      "name": "Virgin Media O2 Q3 2026 earnings release, page 1",
+      "url": "https://news.virginmediao2.co.uk/wp-content/uploads/2026/11/Virgin-Media-O2-Q3-2026-Earnings-Release.pdf",
+      "type": "primary",
+      "publishedDate": "2026-11-03"
+    },
+    {
+      "name": "HRreview (reported upper estimate and uncertainty)",
+      "url": "https://hrreview.co.uk/spotlight/virgin-media-o2-could-cut-up-to-4000-jobs-in-major-restructuring/403322",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-11-02"
+    }
+  ],
+  "createdAt": "2026-11-03T17:59:55.977104Z",
+  "updatedAt": "2026-11-03T17:59:55.977104Z"
+}

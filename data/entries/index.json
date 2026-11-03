@@ -1,5 +1,95 @@
 [
     {
+        "id": "fiserv-2026-11-03",
+        "company": "Fiserv",
+        "industry": "Finance",
+        "geography": "Global",
+        "eventDate": "2026-11-03",
+        "layoffsCount": 3000,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "primary",
+        "summary": "Fiserv disclosed 3,000 employee and contractor reductions since June 2026, including a reduction of more than 10% in senior management. Its company-stated AI-everywhere efficiency strategy and Project Elevate transformation provide a broader AI connection, not confirmation that all 3,000 departures were direct AI replacements. November 3 is the disclosure date, not a new 3,000-person future round.",
+        "evidenceQuote": "As we simplify and focus our organization with an AI-everywhere mindset, we have increasing confidence that we can drive greater efficiency while investing in innovation and delivering differentiated client value.",
+        "notes": "RTTNews, reporting Reuters coverage of CEO Takis Georgakopoulos on the November 3 earnings call, confirms 3,000 employees and contractors reduced since June. The senior-management reduction is included, not an additional count. The source does not separate employee redundancies from contractor reductions or quantify the AI-only portion. Fiserv raised its Project Elevate savings target from $500 million to $1 billion after a portfolio review and identification of further efficiencies; it also plans to discontinue more than a dozen smaller non-core products. The company results release was read in full-text GlobeNewswire syndication on Stifel after the investor-relations page timed out. Company-stated AI strategy, portfolio changes and broader simplification are mixed factors.",
+        "sources": [
+            {
+                "name": "Fiserv Q3 2026 results (GlobeNewswire release syndicated by Stifel)",
+                "url": "https://www.stifel.wallst.com/research/company/companyNews.asp?symbol=107325&docKey=100-307u0451-1",
+                "type": "primary",
+                "publishedDate": "2026-11-03"
+            },
+            {
+                "name": "RTTNews reporting Reuters coverage of Fiserv workforce reductions",
+                "url": "https://www.rttnews.com/3707873/fiserv-reportedly-eliminates-3000-positions-since-june.aspx",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-11-03"
+            }
+        ],
+        "createdAt": "2026-11-03T17:59:55.977104Z",
+        "updatedAt": "2026-11-03T17:59:55.977104Z"
+    },
+    {
+        "id": "virgin-media-o2-2026-11-03",
+        "company": "Virgin Media O2",
+        "industry": "Technology",
+        "geography": "United Kingdom",
+        "eventDate": "2026-11-03",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "ai_adjacent_restructuring",
+        "sourceQuality": "primary",
+        "summary": "Virgin Media O2 confirmed workforce reductions as part of a cost programme combining organisational delayering, greater AI adoption and digital channels. Press reports suggest thousands of cuts, potentially up to 4,000, but the company has not disclosed a final headcount figure; the tracker leaves the count unknown. AI is one company-stated efficiency lever alongside debt reduction and broadband-market pressures, not the sole cause of every cut.",
+        "evidenceQuote": "The company also expects a greater use of AI tools and digital channels to drive efficiency, productivity and better customer experience.",
+        "notes": "November 3 marks the company strategic announcement; reporting on possible job cuts preceded it. The company targets approximately GBP800 million annual run-rate savings by 2029, including GBP300 million from workforce reductions. Its roughly 30% figure refers to total people costs, not 30% of employees. Senior leadership reductions have already begun; further proposals are subject to consultation, with most reductions expected in non-customer-facing roles. HRreview on November 2 relays The Telegraph estimate of up to 4,000 out of approximately 16,000 staff and BBC reporting that the final number was undetermined. The estimate is not counted as confirmed layoffs. Official materials identify AI in customer service, network planning and fault management, and the Q3 results disclose a new voice AI agent for broadband fault calls. Contractor and supplier changes, fewer organisational layers, investment discipline, a shrinking competitive broadband market and leverage reduction are also material factors.",
+        "sources": [
+            {
+                "name": "Virgin Media O2 strategic plan announcement",
+                "url": "https://news.virginmediao2.co.uk/virgin-media-o2-prepares-ground-for-new-strategic-plan-to-simplify-the-business-and-drive-sustainable-growth/",
+                "type": "primary",
+                "publishedDate": "2026-11-03"
+            },
+            {
+                "name": "Virgin Media O2 Q3 2026 earnings release, page 1",
+                "url": "https://news.virginmediao2.co.uk/wp-content/uploads/2026/11/Virgin-Media-O2-Q3-2026-Earnings-Release.pdf",
+                "type": "primary",
+                "publishedDate": "2026-11-03"
+            },
+            {
+                "name": "HRreview (reported upper estimate and uncertainty)",
+                "url": "https://hrreview.co.uk/spotlight/virgin-media-o2-could-cut-up-to-4000-jobs-in-major-restructuring/403322",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-11-02"
+            }
+        ],
+        "createdAt": "2026-11-03T17:59:55.977104Z",
+        "updatedAt": "2026-11-03T17:59:55.977104Z"
+    },
+    {
+        "id": "suse-2026-11-02",
+        "company": "SUSE",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-11-02",
+        "layoffsCount": 190,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "SUSE announced plans to reduce its global workforce by approximately 10%, or about 190 roles based on a reported 1,900 employees. In an internal memo reviewed by The Register, CEO Dirk-Peter van Leeuwen explicitly cited automation and AI, saying modern tooling permits less overhead and flatter reporting lines and has greatly diminished the requirement for some existing roles. The 190 figure is an estimate, not a disclosed exact tally of completed departures.",
+        "evidenceQuote": "The requirement for some existing roles has greatly diminished.",
+        "notes": "The Register published the November 2 CEO memo announcing an approximately 10% global reduction and reported a 1,900-strong workforce. The approximate 190 count is calculated as 10% of that reported base. The company had reviewed future strategy, required capabilities and team structures. Staff affected were due to be informed by November 4; specific roles were not identified publicly in the report. The memo explicitly connects the organisational change to automation and AI, while also describing investment prioritisation and evolving roles. Attribution is company-stated in an internal memo as quoted by a reputable reporter; the memo was not independently obtained as a public primary document. Earlier September voluntary-separation reporting is context, not a separate additional count.",
+        "sources": [
+            {
+                "name": "The Register (internal CEO memo reviewed by the publication)",
+                "url": "https://www.theregister.com/software/2026/11/02/suse-to-cut-one-in-ten-employees-because-of-ai/5306950",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-11-02"
+            }
+        ],
+        "createdAt": "2026-11-03T17:59:55.977104Z",
+        "updatedAt": "2026-11-03T17:59:55.977104Z"
+    },
+    {
         "id": "comcast-2026-10-30",
         "company": "Comcast",
         "industry": "Media",

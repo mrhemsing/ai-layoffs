@@ -1,4 +1,7 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+Fiserv,2026-11-03,3000,Finance,Global,ai_adjacent_restructuring,verified,primary,https://www.stifel.wallst.com/research/company/companyNews.asp?symbol=107325&docKey=100-307u0451-1
+Virgin Media O2,2026-11-03,,Technology,United Kingdom,ai_adjacent_restructuring,verified,primary,https://news.virginmediao2.co.uk/virgin-media-o2-prepares-ground-for-new-strategic-plan-to-simplify-the-business-and-drive-sustainable-growth/
+SUSE,2026-11-02,190,Technology,Global,explicit_ai_cited,verified,reputable_reporting,https://www.theregister.com/software/2026/11/02/suse-to-cut-one-in-ten-employees-because-of-ai/5306950
 Comcast,2026-10-30,994,Media,United States,ai_adjacent_restructuring,verified,primary,https://www.inquirer.com/business/comcast/comcast-layoffs-warn-notice-philadelphia-ai-jobs-20261030.html
 NatWest,2026-10-30,,Finance,Global,ai_adjacent_restructuring,verified,primary,https://investors.natwestgroup.com/results-centre.aspx
 ING,2026-10-29,400,Finance,Global,ai_adjacent_restructuring,verified,primary,https://www.ingwb.com/en/insights/news/ing-to-simplify-the-wb-organisation-sharpen-our-focus-and-better-serve-clients
