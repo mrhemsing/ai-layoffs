@@ -1,0 +1,30 @@
+{
+  "id": "nice-2026-11-04",
+  "company": "NiCE",
+  "industry": "Technology",
+  "geography": "Global",
+  "eventDate": "2026-11-04",
+  "layoffsCount": 500,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "primary",
+  "summary": "NiCE announced a planned reduction of approximately 5% of its global workforce, reported as around 500 employees, while explicitly linking its operating-model changes to greater efficiency through AI. The company is also reducing management layers, simplifying decision-making and redirecting resources toward growth priorities including CX AI innovation. The exact headcount is undisclosed; approximately 500 is a reported estimate, not a company-confirmed tally or evidence that AI directly replaces every affected worker.",
+  "evidenceQuote": "NiCE to streamline its operating model and drive greater efficiency by leveraging AI, reducing workforce by approximately 5%",
+  "notes": "The November 4, 2026 official Q3 results announcement confirms the approximate 5% global reduction and explicitly identifies leveraging AI as an efficiency measure. CTech reports that this represents around 500 employees; this entry uses that approximate reported count, not an exact company disclosure. No geographic distribution is established. The restructuring also includes fewer management layers, simpler decision-making and stronger partner-led go-to-market and delivery capabilities, while maintaining investment in CX AI innovation, customer delivery and go-to-market capabilities. NiCE expects $15 million to $20 million in pretax restructuring costs, primarily in Q4 2026. These are planned workforce reductions, not a confirmed completed departure count. The company-stated AI connection applies to the broader operating-model transformation; it does not establish direct AI replacement of each eliminated role.",
+  "sources": [
+    {
+      "name": "NiCE official Q3 2026 results and restructuring announcement",
+      "url": "https://www.nice.com/press-releases/nice-exceeds-revenue-and-eps-guidance-ranges-reporting-8-year-over-year-revenue-growth-in-third-quarter-2026",
+      "type": "primary",
+      "publishedDate": "2026-11-04"
+    },
+    {
+      "name": "CTech: Nice lays off 5% of workforce as AI revenue surges and profits fall",
+      "url": "https://www.calcalistech.com/ctechnews/article/6apcspzm8",
+      "type": "reputable_reporting",
+      "publishedDate": "2026-11-04"
+    }
+  ],
+  "createdAt": "2026-11-06T17:26:34.637929Z",
+  "updatedAt": "2026-11-06T17:26:34.637929Z"
+}
