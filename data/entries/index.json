@@ -1,5 +1,41 @@
 [
     {
+        "id": "soundhound-ai-2026-11-04",
+        "company": "SoundHound AI",
+        "industry": "Technology",
+        "geography": "Global",
+        "eventDate": "2026-11-04",
+        "layoffsCount": null,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "SoundHound AI disclosed a restructuring plan reducing approximately 27% of its global workforce, with exact headcount undisclosed. Management identified AI and systems-driven operations as a $15 million component of a broader $120 million annualized cost-reduction program. LivePerson integration, overlapping team and vendor consolidation, cloud optimization and exits from noncore operations are additional factors; the entire workforce reduction is not attributed solely to AI.",
+        "evidenceQuote": "The Plan includes a reduction of the Company\u2019s current global workforce by approximately 27%.",
+        "notes": "The Form 8-K filed November 5, 2026 states that the plan was implemented November 4. Employee restructuring is expected to be substantially complete by year-end 2026, subject to local law, consultation requirements and business needs. Expected pretax charges are $18 million to $22 million, primarily severance and post-employment benefits. No absolute headcount or country breakdown is disclosed; layoffsCount remains null and no numerical jobs are added to the aggregate. The company earnings release furnished as Exhibit 99.1 confirms $120 million in annualized cost synergies, with over $80 million in actions scheduled to take effect before January 1, 2027. MarketBeat\u2019s full November 5 earnings-call coverage reports CFO John Collins\u2019 savings breakdown: approximately $48 million merger-related team/vendor consolidation, $15 million AI and systems-driven operations, $42 million cloud/infrastructure optimization, and $15 million resource reallocation and business-line exits or pauses. These dollar amounts cover the broader cost program, not an allocation of the 27% workforce reduction by cause. The AI connection is management-stated as reported in earnings-call coverage; the 8-K workforce passage itself does not cite AI. The official transcript was not independently retrieved, so no unverified verbatim internal-AI quotation is reproduced.",
+        "sources": [
+            {
+                "name": "SoundHound AI Form 8-K, Item 2.05",
+                "url": "https://www.sec.gov/Archives/edgar/data/1840856/000184085626000025/soun-20261105.htm",
+                "type": "primary",
+                "publishedDate": "2026-11-05"
+            },
+            {
+                "name": "SoundHound AI Q3 earnings release, Exhibit 99.1",
+                "url": "https://www.sec.gov/Archives/edgar/data/1840856/000184085626000025/soun-20261105ex991earnings.htm",
+                "type": "primary",
+                "publishedDate": "2026-11-05"
+            },
+            {
+                "name": "MarketBeat: SoundHound AI Q3 earnings-call highlights",
+                "url": "https://www.marketbeat.com/instant-alerts/transcript-soundhound-ai-q3-earnings-call-highlights-2026-11-05/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-11-05"
+            }
+        ],
+        "createdAt": "2026-11-07T17:37:56.189024Z",
+        "updatedAt": "2026-11-07T17:37:56.189024Z"
+    },
+    {
         "id": "nice-2026-11-04",
         "company": "NiCE",
         "industry": "Technology",
