@@ -1,5 +1,35 @@
 [
     {
+        "id": "vodafone-germany-2026-11-09",
+        "company": "Vodafone Germany",
+        "industry": "Technology",
+        "geography": "Germany",
+        "eventDate": "2026-11-09",
+        "layoffsCount": 2300,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "primary",
+        "summary": "Vodafone Germany announced approximately 2,300 planned workforce reductions over the next two fiscal years. The company explicitly linked structural changes and increased AI use to lower operating and personnel costs, including automation in network troubleshooting, marketing and customer service. AI is one contributing factor alongside competitive pressure, a shrinking TV market, mobile-price competition and inflation, not a claim that every affected role is directly replaced by AI.",
+        "evidenceQuote": "Mit den strukturellen Ver\u00e4nderungen und dem erh\u00f6hten Einsatz von KI gehen auch Einsparungen bei Sach-, Betriebs- und Personalkosten einher. Der Personalbestand wird in den kommenden zwei Gesch\u00e4ftsjahren um rund 2.300 Stellen reduziert.",
+        "notes": "The official November 9, 2026 announcement states that structural changes and increased AI use bring savings in material, operating and personnel costs, followed by a planned reduction of approximately 2,300 positions over the next two fiscal years. The evidence quote is the original German. This is an announced workforce-reduction target, not a completed dismissal count or a count of direct AI replacements. Vodafone seeks socially responsible solutions and plans detailed discussions with employee representatives from the beginning of the next calendar year. The operating-model changes bring sales and customer service closer together, align IT with commercial units and expand AI and automation across the company. The announcement also cites mobile customers using third-party providers, mobile-price competition, a shrinking TV market, fiber competition and general inflation. It maintains investment in AI, IT, fiber, digital services and customer channels. The record covers the German operation and this November announcement only. No percentage is derived from an unverified workforce denominator.",
+        "sources": [
+            {
+                "name": "Vodafone Germany official announcement: simpler structures, more AI and stronger competitiveness",
+                "url": "https://unternehmen.vodafone.de/newsroom/beschleunigter-umbau-durch-einfachere-strukturen-mehr-ki-staerkere-wettbewerbsfaehigkeit",
+                "type": "primary",
+                "publishedDate": "2026-11-09"
+            },
+            {
+                "name": "TelecomTV: Vodafone Germany transformation and planned job cuts",
+                "url": "https://www.telecomtv.com/content/rakuten/what-s-up-with-nvidia-vodafone-germany-rakuten-ast-spacemobile-56635/",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-11-09"
+            }
+        ],
+        "createdAt": "2026-11-09T18:06:21.557441Z",
+        "updatedAt": "2026-11-09T18:06:21.557441Z"
+    },
+    {
         "id": "soundhound-ai-2026-11-04",
         "company": "SoundHound AI",
         "industry": "Technology",
