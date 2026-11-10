@@ -1,4 +1,5 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+Qantas,2026-11-10,850,Other,Australia,explicit_ai_cited,verified,reputable_reporting,https://hr.economictimes.indiatimes.com/news/industry/australias-qantas-to-axe-850-jobs-in-offshoring-deal-with-accenture/135696688
 Vodafone Germany,2026-11-09,2300,Technology,Germany,explicit_ai_cited,verified,primary,https://unternehmen.vodafone.de/newsroom/beschleunigter-umbau-durch-einfachere-strukturen-mehr-ki-staerkere-wettbewerbsfaehigkeit
 SoundHound AI,2026-11-04,,Technology,Global,explicit_ai_cited,verified,primary,https://www.sec.gov/Archives/edgar/data/1840856/000184085626000025/soun-20261105.htm
 NiCE,2026-11-04,500,Technology,Global,explicit_ai_cited,verified,primary,https://www.nice.com/press-releases/nice-exceeds-revenue-and-eps-guidance-ranges-reporting-8-year-over-year-revenue-growth-in-third-quarter-2026

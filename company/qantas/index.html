@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qantas AI layoffs - AI Layoff Tracker with Receipts</title>
+    <meta name="description" content="Qantas AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact." />
+    <link rel="canonical" href="https://www.replacedbyai.app/company/qantas/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="Qantas AI layoffs - AI Layoff Tracker with Receipts" />
+    <meta property="og:description" content="Qantas AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.replacedbyai.app/company/qantas/" />
+    <meta name="twitter:card" content="summary" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1100px;
+        margin: 20px auto 40px;
+        padding: 0 16px;
+        color: #111;
+        background:
+          radial-gradient(circle at top, rgba(255,255,255,0.72), rgba(255,255,255,0.36) 30%, rgba(229,233,239,0.68) 58%, rgba(214,220,228,0.92) 100%),
+          #e1e6ed;
+        line-height: 1.55;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+      .ambient-bg {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        opacity: 1;
+      }
+      .ambient-shape {
+        position: absolute;
+        border-radius: 28px;
+        border: 2px solid rgba(53, 70, 92, 0.28);
+        background: rgba(255,255,255,0.14);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 30px rgba(34,44,60,0.08);
+        will-change: transform, opacity;
+      }
+      .ambient-shape.one {
+        width: 420px;
+        height: 420px;
+        top: 5%;
+        left: -40px;
+        transform: rotate(18deg);
+        animation: geoOne 20s ease-in-out infinite alternate;
+      }
+      .ambient-shape.two {
+        width: 300px;
+        height: 300px;
+        top: 22%;
+        right: 10px;
+        transform: rotate(34deg);
+        animation: geoTwo 24s ease-in-out infinite alternate;
+      }
+      .ambient-shape.three {
+        width: 240px;
+        height: 240px;
+        bottom: 10%;
+        left: 40px;
+        transform: rotate(12deg);
+        animation: geoThree 18s ease-in-out infinite alternate;
+      }
+      .ambient-shape.four {
+        width: 200px;
+        height: 200px;
+        bottom: 16%;
+        right: 80px;
+        transform: rotate(46deg);
+        animation: geoFour 26s ease-in-out infinite alternate;
+      }
+      @keyframes geoOne {
+        0% { transform: translate3d(0, 0, 0) rotate(18deg); opacity: 0.34; }
+        100% { transform: translate3d(46px, 24px, 0) rotate(26deg); opacity: 0.2; }
+      }
+      @keyframes geoTwo {
+        0% { transform: translate3d(0, 0, 0) rotate(34deg); opacity: 0.26; }
+        100% { transform: translate3d(-38px, 34px, 0) rotate(22deg); opacity: 0.16; }
+      }
+      @keyframes geoThree {
+        0% { transform: translate3d(0, 0, 0) rotate(12deg); opacity: 0.2; }
+        100% { transform: translate3d(24px, -16px, 0) rotate(20deg); opacity: 0.12; }
+      }
+      @keyframes geoFour {
+        0% { transform: translate3d(0, 0, 0) rotate(46deg); opacity: 0.18; }
+        100% { transform: translate3d(-18px, -26px, 0) rotate(56deg); opacity: 0.1; }
+      }
+      a { color: #0a58ca; }
+      .top-nav { display: flex; gap: 12px; align-items: center; justify-content: flex-end; margin-bottom: 0; font-size: 14px; }
+      .top-nav a { color: #111; text-decoration: none; }
+      .top-nav a:hover { text-decoration: underline; }
+      .hero { margin-bottom: 8px; }
+      .logo-link { display: inline-flex; color: inherit; text-decoration: none; }
+      .prompt-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        background: #111;
+        color: #f5f5f5;
+        border-radius: 12px;
+        font-family: Consolas, 'SFMono-Regular', Menlo, Monaco, monospace;
+        font-size: clamp(28px, 5vw, 42px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      }
+      .prompt-symbol { color: #7CFF6B; }
+      .prompt-text { white-space: nowrap; }
+      .prompt-cursor {
+        display: inline-block;
+        width: 0.65ch;
+        height: 1.05em;
+        background: #7CFF6B;
+        vertical-align: -0.12em;
+        animation: blink 1s steps(1, end) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+      h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; letter-spacing: 0; }
+      h2 { margin-top: 34px; }
+      .muted { color: #555; }
+      .card { background: #fff; border: 1px solid #dde2e8; border-radius: 8px; padding: 18px; margin: 18px 0; }
+      .pill { display: inline-block; padding: 5px 9px; border-radius: 999px; background: #f2f4f7; font-size: 13px; margin-right: 6px; }
+      .quote { padding: 12px 14px; border-left: 4px solid #ccd3dc; background: #fafafa; }
+      .source-list { padding-left: 20px; }
+      .footer { margin-top: 34px; font-size: 13px; color: #666; }
+      @media (max-width: 800px) {
+        .top-nav { justify-content: flex-start; flex-wrap: wrap; margin-bottom: 18px; }
+        .prompt-title { font-size: clamp(29.5px, 5.2vw, 43.7px); }
+        body {
+          background:
+            radial-gradient(circle at top, rgba(255,255,255,0.94), rgba(255,255,255,0.84) 36%, rgba(255,255,255,0.96) 66%),
+            linear-gradient(to bottom, #eceff3 0%, #ffffff 360px);
+        }
+        .ambient-shape.one { width: 220px; height: 220px; top: 10%; left: -70px; }
+        .ambient-shape.two { width: 180px; height: 180px; top: 34%; right: -60px; }
+        .ambient-shape.three { width: 150px; height: 150px; bottom: 10%; left: 6%; }
+        .ambient-shape.four { width: 120px; height: 120px; bottom: 22%; right: 4%; }
+      }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Qantas AI layoffs - AI Layoff Tracker with Receipts","description":"Qantas AI layoffs page in the Replaced by AI layoff tracker, with sourced receipts, dates, AI relevance labels, and reported job impact.","url":"https://www.replacedbyai.app/company/qantas/","isPartOf":{"@type":"WebSite","name":"Replaced by AI","url":"https://www.replacedbyai.app"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Qantas AI layoffs","description":"Qantas announced approximately 850 planned Australian job cuts over the coming years, with the first changes expected by mid-2027, under a corporate-services partnership with Accenture. Work in finance, procurement, HR and marketing will move partly to Accenture teams mostly in India, with some services delivered in Australia and further transformation through automation and AI. Qantas explicitly cited AI-enabled process redesign, but offshoring, legacy-system modernization and efficiency are central parts of the plan; these are not 850 confirmed direct AI replacements.","datePublished":"2026-11-10","dateModified":"2026-11-10T17:36:44.137302Z","mainEntityOfPage":"https://www.replacedbyai.app/company/qantas/","author":{"@type":"Organization","name":"Replaced by AI"},"publisher":{"@type":"Organization","name":"Replaced by AI"},"citation":"https://hr.economictimes.indiatimes.com/news/industry/australias-qantas-to-axe-850-jobs-in-offshoring-deal-with-accenture/135696688","keywords":["ai layoffs","ai layoff tracker","Qantas ai layoffs"]}</script>
+  </head>
+  <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-shape one"></div>
+      <div class="ambient-shape two"></div>
+      <div class="ambient-shape three"></div>
+      <div class="ambient-shape four"></div>
+    </div>
+    <nav class="top-nav" aria-label="Site navigation">
+      <a href="/about/">Methodology</a>
+      <a href="/company/">Companies</a>
+      <a href="/industries/">Industries</a>
+    </nav>
+    <div class="hero">
+      <a class="logo-link" href="/" aria-label="Replaced by AI">
+        <span class="prompt-title"><span class="prompt-symbol">&gt;</span><span class="prompt-text">/replaced -ai</span><span class="prompt-cursor" aria-hidden="true"></span></span>
+      </a>
+    </div>
+    <main>
+      <p class="muted">AI layoff tracker company page</p>
+      <h1>Qantas AI layoffs</h1>
+      <p class="muted">Last updated <time datetime="2026-11-10">November 10, 2026</time></p>
+      <p class="muted">1 sourced AI layoff event · 850 reported jobs impacted</p>
+      <article class="card">
+      <p class="muted"><time datetime="2026-11-10">November 10, 2026</time></p>
+      <h2>Qantas AI layoff details</h2>
+      <p><span class="pill">Explicit AI cited</span><span class="pill">reputable_reporting</span></p>
+      <p><strong>Reported layoffs:</strong> 850</p>
+      <p><strong>Industry:</strong> Other &middot; <strong>Geography:</strong> Australia</p>
+      <p>Qantas announced approximately 850 planned Australian job cuts over the coming years, with the first changes expected by mid-2027, under a corporate-services partnership with Accenture. Work in finance, procurement, HR and marketing will move partly to Accenture teams mostly in India, with some services delivered in Australia and further transformation through automation and AI. Qantas explicitly cited AI-enabled process redesign, but offshoring, legacy-system modernization and efficiency are central parts of the plan; these are not 850 confirmed direct AI replacements.</p>
+      <div class="quote">Some of the services they provide will move to Accenture, delivered mostly by its teams in India and some in Australia, and in time be transformed further with automation and AI.</div>
+      <p>Reuters, read in full via ETHRWorld syndication, reports 850 planned Australian cuts, around 3% of the 28,000-person Australian workforce. Its report identifies finance, procurement, human resources and marketing as the first-phase functions and quotes CEO Vanessa Hudson saying cuts will occur over the coming years, with the first round by mid-2027. NewsWire on news.com.au reproduces the company statement quoted here and Hudson’s explanation that redesigned processes will have automation and AI built in from the start. The role count is a planned reduction, not completed departures or an AI-only subset. Qantas’s quoted statement describes services moving to human teams at Accenture before further automation and AI transformation; the outsourcing and modernization dimensions must not be omitted. Direct access to the official newsroom release was blocked, so verification relies on the full Reuters syndication and NewsWire’s reproduced company statements rather than claiming a direct primary-source read.</p>
+      <h3>Sources</h3>
+      <ul class="source-list"><li><a href="https://hr.economictimes.indiatimes.com/news/industry/australias-qantas-to-axe-850-jobs-in-offshoring-deal-with-accenture/135696688" rel="noreferrer">Reuters via ETHRWorld: Qantas to axe 850 jobs in offshoring deal with Accenture</a>, 2026-11-10</li><li><a href="https://www.news.com.au/travel/qantas-set-to-lay-off-850-workers-after-striking-outsource-deal-in-india/news-story/b75e2961ecbb9f5b857e42f8afaab5f8?amp" rel="noreferrer">NewsWire via news.com.au: Qantas statement and CEO email on outsourcing and AI</a>, 2026-11-10</li></ul>
+    </article>
+      <section class="card">
+        <h2>Related AI layoffs</h2>
+        <h3>Other Other AI layoffs</h3><ul class="source-list">
+          <li><a href="/company/at-and-t/">AT&amp;T AI layoffs</a> - <time datetime="2026-09-23">September 23, 2026</time>, 2,100 reported jobs impacted</li>
+          <li><a href="/company/general-motors/">General Motors AI layoffs</a> - <time datetime="2026-06-22">June 22, 2026</time>, 1,300 reported jobs impacted</li>
+          <li><a href="/company/jumia/">Jumia AI layoffs</a> - <time datetime="2026-05-14">May 14, 2026</time>, 200 reported jobs impacted</li>
+          <li><a href="/company/walmart/">Walmart AI layoffs</a> - <time datetime="2026-05-12">May 12, 2026</time>, 1,000 reported jobs impacted</li>
+          <li><a href="/company/general-motors/">General Motors AI layoffs</a> - <time datetime="2026-05-11">May 11, 2026</time>, 600 reported jobs impacted</li>
+          <li><a href="/company/nike/">Nike AI layoffs</a> - <time datetime="2026-04-23">April 23, 2026</time>, 1,400 reported jobs impacted</li>
+        </ul>
+        <h3>Other AI layoffs from 2026</h3><ul class="source-list">
+          <li><a href="/company/vodafone-germany/">Vodafone Germany AI layoffs</a> - <time datetime="2026-11-09">November 9, 2026</time>, 2,300 reported jobs impacted</li>
+          <li><a href="/company/soundhound-ai/">SoundHound AI AI layoffs</a> - <time datetime="2026-11-04">November 4, 2026</time></li>
+          <li><a href="/company/nice/">NiCE AI layoffs</a> - <time datetime="2026-11-04">November 4, 2026</time>, 500 reported jobs impacted</li>
+          <li><a href="/company/block/">Block AI layoffs</a> - <time datetime="2026-11-04">November 4, 2026</time></li>
+          <li><a href="/company/fiserv/">Fiserv AI layoffs</a> - <time datetime="2026-11-03">November 3, 2026</time>, 3,000 reported jobs impacted</li>
+          <li><a href="/company/virgin-media-o2/">Virgin Media O2 AI layoffs</a> - <time datetime="2026-11-03">November 3, 2026</time></li>
+        </ul>
+      </section>
+    </main>
+    <p class="footer">&copy; <span id="copyrightYear"></span> B Average · <a href="/sitemap.xml">Sitemap</a> · <a href="/feed.xml">RSS</a></p>
+    <script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+  </body>
+</html>

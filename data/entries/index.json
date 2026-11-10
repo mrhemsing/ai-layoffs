@@ -1,5 +1,35 @@
 [
     {
+        "id": "qantas-2026-11-10",
+        "company": "Qantas",
+        "industry": "Other",
+        "geography": "Australia",
+        "eventDate": "2026-11-10",
+        "layoffsCount": 850,
+        "status": "verified",
+        "aiRelevance": "explicit_ai_cited",
+        "sourceQuality": "reputable_reporting",
+        "summary": "Qantas announced approximately 850 planned Australian job cuts over the coming years, with the first changes expected by mid-2027, under a corporate-services partnership with Accenture. Work in finance, procurement, HR and marketing will move partly to Accenture teams mostly in India, with some services delivered in Australia and further transformation through automation and AI. Qantas explicitly cited AI-enabled process redesign, but offshoring, legacy-system modernization and efficiency are central parts of the plan; these are not 850 confirmed direct AI replacements.",
+        "evidenceQuote": "Some of the services they provide will move to Accenture, delivered mostly by its teams in India and some in Australia, and in time be transformed further with automation and AI.",
+        "notes": "Reuters, read in full via ETHRWorld syndication, reports 850 planned Australian cuts, around 3% of the 28,000-person Australian workforce. Its report identifies finance, procurement, human resources and marketing as the first-phase functions and quotes CEO Vanessa Hudson saying cuts will occur over the coming years, with the first round by mid-2027. NewsWire on news.com.au reproduces the company statement quoted here and Hudson\u2019s explanation that redesigned processes will have automation and AI built in from the start. The role count is a planned reduction, not completed departures or an AI-only subset. Qantas\u2019s quoted statement describes services moving to human teams at Accenture before further automation and AI transformation; the outsourcing and modernization dimensions must not be omitted. Direct access to the official newsroom release was blocked, so verification relies on the full Reuters syndication and NewsWire\u2019s reproduced company statements rather than claiming a direct primary-source read.",
+        "sources": [
+            {
+                "name": "Reuters via ETHRWorld: Qantas to axe 850 jobs in offshoring deal with Accenture",
+                "url": "https://hr.economictimes.indiatimes.com/news/industry/australias-qantas-to-axe-850-jobs-in-offshoring-deal-with-accenture/135696688",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-11-10"
+            },
+            {
+                "name": "NewsWire via news.com.au: Qantas statement and CEO email on outsourcing and AI",
+                "url": "https://www.news.com.au/travel/qantas-set-to-lay-off-850-workers-after-striking-outsource-deal-in-india/news-story/b75e2961ecbb9f5b857e42f8afaab5f8?amp",
+                "type": "reputable_reporting",
+                "publishedDate": "2026-11-10"
+            }
+        ],
+        "createdAt": "2026-11-10T17:36:44.137302Z",
+        "updatedAt": "2026-11-10T17:36:44.137302Z"
+    },
+    {
         "id": "vodafone-germany-2026-11-09",
         "company": "Vodafone Germany",
         "industry": "Technology",
