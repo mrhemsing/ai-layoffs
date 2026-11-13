@@ -1,0 +1,24 @@
+{
+  "id": "umicore-2026-11-12",
+  "company": "Umicore",
+  "industry": "Other",
+  "geography": "Global",
+  "eventDate": "2026-11-12",
+  "layoffsCount": 350,
+  "status": "verified",
+  "aiRelevance": "explicit_ai_cited",
+  "sourceQuality": "primary",
+  "summary": "Umicore proposed organizational changes that could put up to approximately 350 employees at risk of job loss over the next two years, with union and works-council consultations underway. The company explicitly plans to reshape enterprise functions using automation, digital tools, AI and selective outsourcing. AI is one component alongside organizational simplification and cost reduction, not the sole cause or evidence of 350 direct AI replacements. The employee estimate excludes external contractor positions also in scope.",
+  "evidenceQuote": "The initiative aims to reshape enterprise functions and standardize processes using automation, digital tools, AI and selective outsourcing.",
+  "notes": "The official regulated announcement is dated November 12, 2026. It says proposed organizational changes could affect up to approximately 350 employees potentially facing job loss over the next two years; this is a proposed upper estimate, not completed departures or a count attributable solely to AI. Consultations with trade unions and works councils have begun, and the proposals remain subject to that process. Footnote 3 explicitly excludes external contractor positions that are also in scope; no contractor count is disclosed or added here. The changes mostly affect enterprise functions across different regions, so geography is Global rather than Belgium alone. Implementation of the broader operating-model initiative is anticipated to be phased through the end of 2029, with approximately EUR 60 million in annualized savings expected by the end of Q4 2028. These milestones are distinct from the two-year potential job-loss period. Organizational simplification, standardized processes, digital tools, automation, AI, selective outsourcing and cost reduction all contribute. The separately announced EUR 450 million Hoboken refining investment is not treated as another layoff round.",
+  "sources": [
+    {
+      "name": "Umicore regulated announcement: investment, operating-model changes and FY 2026 guidance",
+      "url": "https://www.umicore.com/en/media/newsroom/umicore-to-invest-450-million-euros-for-growth/",
+      "type": "primary",
+      "publishedDate": "2026-11-12"
+    }
+  ],
+  "createdAt": "2026-11-13T17:17:07.409153Z",
+  "updatedAt": "2026-11-13T17:17:07.409153Z"
+}

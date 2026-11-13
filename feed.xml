@@ -4,7 +4,14 @@
     <title>Replaced by AI Layoff Tracker</title>
     <link>https://www.replacedbyai.app/</link>
     <description>Recent sourced AI layoff tracker entries.</description>
-    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Umicore AI layoffs, November 12, 2026</title>
+      <link>https://www.replacedbyai.app/company/umicore/</link>
+      <guid>https://www.replacedbyai.app/company/umicore/#umicore-2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Umicore: 350 layoffs. Explicit AI cited. Umicore proposed organizational changes that could put up to approximately 350 employees at risk of job loss over the next two years, with union and works-council consultations underway. The company explicitly plans to reshape enterprise functions using automation, digital tools, AI and selective outsourcing. AI is one component alongside organizational simplification and cost reduction, not the sole cause or evidence of 350 direct AI replacements. The employee estimate excludes external contractor positions also in scope.</description>
+    </item>
     <item>
       <title>Qantas AI layoffs, November 10, 2026</title>
       <link>https://www.replacedbyai.app/company/qantas/</link>
@@ -137,13 +144,6 @@
       <guid>https://www.replacedbyai.app/company/honeybook/#honeybook-2026-10-08</guid>
       <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
       <description>HoneyBook: 30 layoffs. Explicit AI cited. HoneyBook is cutting around 30 to 35 employees, approximately 14% of its workforce, with most affected employees in Israel. The company explicitly linked the restructuring to aligning its structure and workflows with the AI era and integrating AI into its product and customer value proposition. This is company-stated strategic restructuring, not a claim that AI directly replaced the affected workers. The tracker uses 30, the lower end of the reported range, for aggregate totals.</description>
-    </item>
-    <item>
-      <title>DNB Bank AI layoffs, October 6, 2026</title>
-      <link>https://www.replacedbyai.app/company/dnb-bank/</link>
-      <guid>https://www.replacedbyai.app/company/dnb-bank/#dnb-bank-2026-10-06</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
-      <description>DNB Bank: 400 layoffs. Explicit AI cited. DNB Bank announced about 400 full-time-equivalent (FTE) reductions in Technology &amp; Services, scheduled for completion during Q4 2026. The company explicitly linked the restructuring to gains from AI agents, technology and digital solutions. This is a planned reduction, not a confirmed completed layoff count; DNB did not isolate an AI-only share of the approximately 400 FTEs.</description>
     </item>
   </channel>
 </rss>
