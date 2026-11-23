@@ -1,0 +1,30 @@
+{
+    "id": "procter-and-gamble-2026-11-19",
+    "company": "Procter & Gamble",
+    "industry": "Other",
+    "geography": "Global",
+    "eventDate": "2026-11-19",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Procter & Gamble presented a target to reduce its product-supply workforce, including contractors, by 20%\u201330% by 2030 as it expands manufacturing and logistics automation. The company linked this program to up to $1.8 billion in annual productivity savings and described increasing AI use across its operations. No absolute headcount was disclosed. This is a planned reduction under a broader automation and cost-efficiency program, not completed layoffs or evidence that AI alone replaces every affected role.",
+    "evidenceQuote": "We remain committed to delivering up to $1.8 billion in annual productivity savings and ... a 20% to 30% reduction in our product supply workforce, including contractors, by 2030.",
+    "notes": "Reuters, read in full via the Sacramento Bee, attributes the quoted target to Chief Product Supply Officer Luc Reynaert at the November 19, 2026 investor day. The percentage applies to product supply, including contractors, not the entire company workforce. P&G did not disclose the applicable baseline or absolute reduction count; layoffsCount remains null and no media estimate is included in job totals. HRD reports the automation of manufacturing, logistics and processes within an intelligent, self-orchestrating Product Supply network, and quotes Reynaert on the workforce skills required to scale the technology. Reuters separately reports CEO Shailesh Jejurikar highlighting increasing AI use to speed up processes. Classification is automation/efficiency cited rather than a claim of direct AI replacement. Rising raw-material, energy and freight costs also motivate savings. The up-to-$1.8-billion annual cost-of-goods-sold savings are part of a broader up-to-$10-billion productivity target across fiscal 2027\u20132030, not an additional sum. The 2030 product-supply target is distinct from the June 2025 plan for up to 7,000 non-manufacturing roles; that earlier round is not added to this record. Specific plants, countries, job types and contractor counting details were not disclosed. Geography is Global; no country allocation is inferred. The event date records the public presentation, not the completion date. No claim of directly reading WSJ or Barron\u2019s is made.",
+    "sources": [
+        {
+            "name": "Reuters via Sacramento Bee: P&G productivity savings and product-supply workforce target",
+            "url": "https://www.sacbee.com/news/business/article318161767.html",
+            "type": "reputable_reporting",
+            "publishedDate": "2026-11-19"
+        },
+        {
+            "name": "Human Resources Director: P&G automation push and workforce scope",
+            "url": "https://www.hcamag.com/us/specialization/change-management/pgs-automation-push-puts-up-to-30-of-supply-jobs-at-risk/598283",
+            "type": "reputable_reporting",
+            "publishedDate": "2026-11-20"
+        }
+    ],
+    "createdAt": "2026-11-23T17:19:59.779807Z",
+    "updatedAt": "2026-11-23T17:19:59.779807Z"
+}
