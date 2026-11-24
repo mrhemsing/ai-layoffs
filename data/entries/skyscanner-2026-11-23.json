@@ -1,0 +1,30 @@
+{
+    "id": "skyscanner-2026-11-23",
+    "company": "Skyscanner",
+    "industry": "Technology",
+    "geography": "Global",
+    "eventDate": "2026-11-23",
+    "layoffsCount": 150,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Skyscanner is proposing up to 150 job cuts, about 10% of its workforce, across software, marketing, commercial, strategy and other functions. Reporting links the restructuring to travellers increasingly using AI tools for travel search. This AI connection is journalist-inferred: Skyscanner said travel and search are rapidly changing but did not explicitly cite AI as the cause of the cuts. The figure is a reported proposed upper count, not completed layoffs or 150 confirmed AI replacements; hiring elsewhere may offset the net workforce impact.",
+    "evidenceQuote": "Travel and the role of search are rapidly changing. To build for the future and increase velocity, we are proposing changes across the organisation.",
+    "notes": "The Telegraph and STV News were read in full. November 23, 2026 is the public reporting date; The Telegraph says staff were informed the previous week, without identifying an exact internal announcement date. STV reports up to 150 jobs, around a tenth of the workforce, with the largest changes in software and changes in marketing, commercial, workplace and strategy. The Telegraph reports a roughly 1,500-person workforce and impacts at Edinburgh headquarters, London and overseas offices; geography is Global, and no Scotland-only count is inferred. Middle-management roles are reported among those heavily affected. Prospect says consultation is underway. The company told The Telegraph that hiring in other areas should mitigate the net effect and that website/app searches remain higher year on year; this is not evidence of a proven fall in search usage or a net loss of exactly 150 employees. Journalists frame the restructuring as responding to AI-driven travel-search competition and describe its ChatGPT integration and proprietary AI tools. The quoted company restructuring statement does not explicitly identify AI as the cause, so this is classified AI-adjacent restructuring, not explicit AI citation or direct worker replacement. The 150 value is the reported potential gross cuts, not an AI-attributable subset or completed departures.",
+    "sources": [
+        {
+            "name": "The Telegraph: Skyscanner to cut one in 10 jobs as holidaymakers turn to AI",
+            "url": "https://www.telegraph.co.uk/business/2026/11/23/skyscanner-to-cut-one-in-10-jobs-as-holidaymakers-turn-ai/",
+            "type": "reputable_reporting",
+            "publishedDate": "2026-11-23"
+        },
+        {
+            "name": "STV News: Skyscanner proposed cuts and company/union statements",
+            "url": "https://news.stv.tv/east-central/skyscanner-to-cut-around-150-jobs-as-more-holidaymakers-turn-to-ai-for-inspiration",
+            "type": "reputable_reporting",
+            "publishedDate": "2026-11-23"
+        }
+    ],
+    "createdAt": "2026-11-24T16:47:43.588671Z",
+    "updatedAt": "2026-11-24T16:47:43.588671Z"
+}
