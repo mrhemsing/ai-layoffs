@@ -1,4 +1,6 @@
 company,eventDate,layoffsCount,industry,geography,aiRelevance,status,sourceQuality,primary source URL
+SAP,2026-11-26,10000,Technology,Global,ai_adjacent_restructuring,verified,reputable_reporting,https://www.thehindubusinessline.com/info-tech/sap-weighs-10000-job-cuts-as-europes-top-software-company-pushes-ai-strategy/article71747963.ece
+Strauss Group,2026-11-25,,Other,Global,automation_efficiency_cited,verified,reputable_reporting,https://www.calcalistech.com/ctechnews/article/lpytrm57c
 Skyscanner,2026-11-23,150,Technology,Global,ai_adjacent_restructuring,verified,reputable_reporting,https://www.telegraph.co.uk/business/2026/11/23/skyscanner-to-cut-one-in-10-jobs-as-holidaymakers-turn-ai/
 Procter & Gamble,2026-11-19,,Other,Global,automation_efficiency_cited,verified,reputable_reporting,https://www.sacbee.com/news/business/article318161767.html
 Umicore,2026-11-12,350,Other,Global,explicit_ai_cited,verified,primary,https://www.umicore.com/en/media/newsroom/umicore-to-invest-450-million-euros-for-growth/

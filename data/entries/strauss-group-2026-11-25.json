@@ -1,0 +1,24 @@
+{
+    "id": "strauss-group-2026-11-25",
+    "company": "Strauss Group",
+    "industry": "Other",
+    "geography": "Global",
+    "eventDate": "2026-11-25",
+    "layoffsCount": null,
+    "status": "verified",
+    "aiRelevance": "automation_efficiency_cited",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Strauss Group announced an efficiency program to reduce management layers and redirect resources toward production, supply-chain improvements, automation, supporting information systems and international growth. The company did not disclose a layoff count; CTech estimates up to 200 employees. Implementation is expected to start in 2027. This is company-stated resource reallocation toward automation within a broader efficiency program, not a claim that AI or automation directly replaces every affected worker.",
+    "evidenceQuote": "Strauss said the new plan is intended, among other things, to simplify and streamline managerial and organizational processes and redirect resources toward its growth engines.",
+    "notes": "CTech\u2019s November 25 report was read in full. It reports board approval of the efficiency-plan framework, fewer management layers and expected annual savings of approximately NIS 100 million before tax. CTech attributes to Strauss the investment priorities of production capabilities, supply chain, innovation, automation, supporting information systems and international expansion. This is resource reallocation and organizational efficiency, not an AI-only cause or evidence of direct replacement of all affected roles. CTech\u2019s up-to-200 figure is explicitly an estimate, not a company-disclosed count; layoffsCount remains null and the estimate is excluded from numeric totals. Implementation is expected to begin in 2027 and continue thereafter. Geography is Global for the group-level program; no country allocation of layoffs is inferred from its Israeli headquarters. The roughly 150 cuts in January 2024 and another 150 in late 2022 are historical context, not part of this event. The official results webpage could not be extracted; this entry relies on CTech\u2019s reporting of the company statement, not direct verification of the primary announcement.",
+    "sources": [
+        {
+            "name": "CTech: Strauss plans up to 200 layoffs in new efficiency program",
+            "url": "https://www.calcalistech.com/ctechnews/article/lpytrm57c",
+            "type": "reputable_reporting",
+            "publishedDate": "2026-11-25"
+        }
+    ],
+    "createdAt": "2026-11-26T17:41:41.772671Z",
+    "updatedAt": "2026-11-26T17:41:41.772671Z"
+}
