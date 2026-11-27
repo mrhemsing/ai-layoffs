@@ -1,0 +1,24 @@
+{
+    "id": "swiggy-instamart-2026-11-27",
+    "company": "Swiggy (Instamart)",
+    "industry": "Technology",
+    "geography": "India",
+    "eventDate": "2026-11-27",
+    "layoffsCount": 340,
+    "status": "verified",
+    "aiRelevance": "ai_adjacent_restructuring",
+    "sourceQuality": "reputable_reporting",
+    "summary": "Swiggy is reportedly planning about 340 job cuts in corporate and support functions at Instamart. The Economic Times links the restructuring to increasing internal AI adoption and generative AI, citing people familiar with the matter. Widening losses at Instamart and intense quick-commerce competition are also important context. This is journalist-reported, not company-confirmed: Swiggy had not responded to requests for comment. The count represents planned cuts, not completed departures or 340 jobs proven to be replaced by AI.",
+    "evidenceQuote": "Instamart will continue to invest in stores, supply chain and frontline teams.",
+    "notes": "The Economic Times article was read in full. Its reporting cites unnamed sources for about 340 planned cuts, corporate and support functions, increasing internal AI adoption, and a restructuring that factors in generative AI, new ways of working and organisational design. The evidence quote is attributed by ET to a person in the know, not an official company statement. November 27, 2026 is the reporting date, not a verified internal announcement or completion date. ET reports competitive pressure from Blinkit and Amazon Now and widening quarterly adjusted EBITDA losses at Instamart; Swiggy consolidated net loss narrowed year on year, so the two measures should not be conflated. No AI-attributable subset or specific automated tasks are identified. Classified as AI-adjacent restructuring rather than direct worker replacement. Reuters also reported the case, but its full text was inaccessible during this review; the sourced record relies on the accessible ET article rather than claiming independent full-text Reuters verification.",
+    "sources": [
+        {
+            "name": "The Economic Times: Swiggy to lay off 340 Instamart employees as part of restructuring",
+            "url": "https://economictimes.indiatimes.com/tech/technology/swiggy-instamart-to-lay-off-340-employees-as-part-of-restructuring-exercise/articleshow/136211121.cms",
+            "type": "reputable_reporting",
+            "publishedDate": "2026-11-27"
+        }
+    ],
+    "createdAt": "2026-11-27T17:15:05.006452Z",
+    "updatedAt": "2026-11-27T17:15:05.006452Z"
+}
